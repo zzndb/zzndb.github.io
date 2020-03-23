@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Life on zzndb&#39;s world</title>
-    <link>http://127.0.0.1:8080/categories/life/</link>
+    <link>https://zzndb.github.io/categories/life/</link>
     <description>Recent content in Life on zzndb&#39;s world</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 19 Feb 2017 00:36:00 +0800</lastBuildDate>
     
-	<atom:link href="http://127.0.0.1:8080/categories/life/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://zzndb.github.io/categories/life/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>全站SSL</title>
-      <link>http://127.0.0.1:8080/post/2017-02-19-%E5%85%A8%E7%AB%99ssl/</link>
+      <link>https://zzndb.github.io/post/2017-02-19-%E5%85%A8%E7%AB%99ssl/</link>
       <pubDate>Sun, 19 Feb 2017 00:36:00 +0800</pubDate>
       
-      <guid>http://127.0.0.1:8080/post/2017-02-19-%E5%85%A8%E7%AB%99ssl/</guid>
+      <guid>https://zzndb.github.io/post/2017-02-19-%E5%85%A8%E7%AB%99ssl/</guid>
       <description>&lt;p&gt;&lt;strong&gt;2017年2月18发生好多&amp;hellip;..&lt;/strong&gt;&lt;/p&gt;</description>
     </item>
     
