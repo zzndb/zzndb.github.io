@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html><head>
+<title>关于adaway替换hosts的图文及资源分享</title>
+
+<meta charset="utf-8">
+<meta name="X-UA-Compatible" content="IE=edge">
+<meta name="google-site-verification" content="">
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+<meta content="telephone=no" name="format-detection">
+<meta name="renderer" content="webkit">
+<meta name="theme-color" content="#ffffff">
+
+
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-92199886-4', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+
+
+<script src="/vendor/js/jquery.min.js" ></script>
+<script src="/vendor/js/popper.min.js" ></script>
+<script src="/vendor/js/bootstrap.min.js" ></script>
+<script src="/vendor/js/smooth-scroll.polyfills.min.js" ></script>
+<link type="text/css" rel="stylesheet" href="/vendor/css/bootstrap.min.css">
+<script src="/vendor/js/vue.min.js" ></script>
+
+
+
+
+<link rel="stylesheet" href="https://zzndb.github.io/scss/journal.min.dd4a27a2ead65caf841b00fd0d3164288b4f1438f9d890ae21a83580bb7b91a1.css" integrity="sha256-3UonourWXK&#43;EGwD9DTFkKItPFDj52JCuIag1gLt7kaE=" media="screen">
+
+<script src="https://zzndb.github.io/js/loadCSS.js"></script>
+<script src="https://zzndb.github.io/js/table.js"></script>
+
+
+<script src="https://zzndb.github.io/js/toc.js"></script>
+
+
+<script>
+    loadCSS("https://fonts.googleapis.com/css?family=Lora|Montserrat|Fira+Mono|Noto+Serif+SC|Material+Icons");
+</script>
+
+
+
+
+
+
+</head><body>
+    	<div id="app"><div ref="sideContainer" class="side-container">
+    
+    <a class="a-block nav-head false" href="https://zzndb.github.io">
+    
+        <div class="nav-title">
+            zzndb&#39;s world
+        </div>
+        
+        <div class="nav-subtitle">
+            All things will better soon...let&#39;s see...
+        </div>
+        
+    </a>
+
+    <div class="nav-link-list">
+        
+        
+            
+                
+                
+                    
+                
+                <a class="a-block nav-link-item active" href="/posts">
+                    Archive
+                </a>
+        
+            
+                
+                
+                <a class="a-block nav-link-item false" href="/categories">
+                    Categories
+                </a>
+        
+            
+                
+                
+                <a class="a-block nav-link-item false" href="/tags">
+                    Tags
+                </a>
+        
+            
+                
+                
+                <a class="a-block nav-link-item false" href="/links">
+                    Friends
+                </a>
+        
+            
+                
+                
+                <a class="a-block nav-link-item false" href="/about">
+                    About
+                </a>
+        
+            
+                
+                
+                <a class="a-block nav-link-item false" href="/index.xml">
+                    RSS
+                </a>
+        
+    </div>
+
+    
+
+    <div class="nav-footer">
+        
+Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> by <a href="https://amazingrise.net">Rise</a>
+<br>
+Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a>'s <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> <br>
+<br>
+
+&copy;
+	
+	2017 zzndb
+	
+    本站遵循 <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" >CC-BY-NC 4.0 协议</a>
+
+    </div>
+    
+</div><div ref="extraContainer" class="extra-container">
+    
+    <div class="toc animated-visibility" :class="{ invisible: scrollY <= 140 }">
+
+
+	<div class="toc-content">
+	
+		
+		
+		
+		<center>- CATALOG -</center>
+			
+				
+				
+					
+						
+						
+							<ul>
+						
+							<ul>
+						
+						
+								<li>
+				 					<a href="#%e6%ad%a3%e5%bc%8f%e7%ac%ac%e4%ba%8c%e7%af%87" v-on:click="closeDrawer" id="正式第二篇-nav">
+										 正式第二篇
+									</a>
+								</li>
+						
+							</ul>
+						
+							</ul>
+						
+					
+				
+			
+	</div>
+
+</div>
+    
+    <div class="pagination">
+        <a id="globalBackToTop" class="pagination-action animated-visibility" href="#top" :class="{ invisible: scrollY == 0 }">
+            <i class="material-icons pagination-action-icon">
+                keyboard_arrow_up
+            </i>
+        </a>
+        
+    </div>
+</div><div class="single-column-drawer-container" ref="drawer"
+     v-bind:class="{ 'single-column-drawer-container-active': isDrawerOpen }">
+    <div class="drawer-content">
+        <div class="drawer-menu">
+            
+            
+                
+                    
+                    
+                        
+                    
+                    <a class="a-block drawer-menu-item active" href="/posts">
+                        Archive
+                    </a>
+            
+                
+                    
+                    
+                    <a class="a-block drawer-menu-item false" href="/categories">
+                        Categories
+                    </a>
+            
+                
+                    
+                    
+                    <a class="a-block drawer-menu-item false" href="/tags">
+                        Tags
+                    </a>
+            
+                
+                    
+                    
+                    <a class="a-block drawer-menu-item false" href="/links">
+                        Friends
+                    </a>
+            
+                
+                    
+                    
+                    <a class="a-block drawer-menu-item false" href="/about">
+                        About
+                    </a>
+            
+                
+                    
+                    
+                    <a class="a-block drawer-menu-item false" href="/index.xml">
+                        RSS
+                    </a>
+            
+            
+            <div class="toc">
+
+
+	<div class="toc-content">
+	
+		
+		
+		
+		<center>- CATALOG -</center>
+			
+				
+				
+					
+						
+						
+							<ul>
+						
+							<ul>
+						
+						
+								<li>
+				 					<a href="#%e6%ad%a3%e5%bc%8f%e7%ac%ac%e4%ba%8c%e7%af%87" v-on:click="closeDrawer" id="正式第二篇-nav">
+										 正式第二篇
+									</a>
+								</li>
+						
+							</ul>
+						
+							</ul>
+						
+					
+				
+			
+	</div>
+
+</div>
+            
+        </div>
+    </div>
+</div>
+<transition name="fade">
+    <div v-bind:class="{ 'single-column-drawer-mask': mounted }" v-if="isDrawerOpen" v-on:click="toggleDrawer"></div>
+</transition>
+<nav ref="navBar" class="navbar sticky-top navbar-light single-column-nav-container">
+    <div ref="navBackground" class="nav-background"></div>
+    <div class="container container-narrow nav-content">
+        <button id="nav_dropdown_btn" class="nav-dropdown-toggle" type="button" v-on:click="toggleDrawer">
+            <i class="material-icons">
+                menu
+            </i>
+        </button>
+        <a ref="navTitle" class="navbar-brand" href="https://zzndb.github.io">
+            zzndb&#39;s world
+        </a>
+    </div>
+</nav>
+<div class="single-column-header-container" ref="pageHead"
+     v-bind:style="{ transform: 'translateZ(0px) translateY('+.3*scrollY+'px)', opacity: 1-navOpacity }">
+    <a href="https://zzndb.github.io">
+        <div class="single-column-header-title">zzndb&#39;s world</div>
+        
+        <div class="single-column-header-subtitle">All things will better soon...let&#39;s see...</div>
+        
+
+    </a>
+</div>
+            <div id="content">
+<div ref="streamContainer" class="stream-container">
+    <div class="post-list-container post-list-container-shadow">
+        <div class="post">
+            
+            
+            
+
+            <div class="post-head-wrapper-text-only"
+                 style="background-image: url('/')">
+                <div class="post-title">
+                    关于adaway替换hosts的图文及资源分享
+                    <div class="post-meta">
+                        
+                        <time itemprop="datePublished">
+                            2017-02-17 10:00
+                        </time>
+                        
+
+                        
+                            <i class="material-icons" style="">folder</i>
+                                <a href="/categories/forfun">ForFun</a>
+                                &nbsp;
+                        
+
+                        
+                            <i class="material-icons" style="">label</i>
+                            
+                                <a href="/tags/share">share</a>
+                                &nbsp;
+                            
+                        
+                    </div>
+                </div>
+            </div>
+            
+            <div class="post-body-wrapper">
+                <div class="post-body">
+                    <h2 id="正式第二篇">正式第二篇</h2>
+<h6>
+其实是第1.5篇=.=
+</h6>
+<p><img src="/images/2017/02/2225108911.gif" alt="winter-solstice-2016-northern-hemisphere-4788310770712576-hp2x.gif"></p>
+<ul>
+<li>关于android端替换hosts达到fq目的 ^_+</li>
+<li>开始咯</li>
+</ul>
+<blockquote>
+<p>首先adaway顾名思义广告快走，利用它通过换hosts重定向广告ip达到屏蔽广告目的，我们也可以拿他来换hosts飞越疯人院 ^0^首先adaway顾名思义广告快走，利用它通过换hosts重定向广告ip达到屏蔽广告目的，我们也可以拿他来换hosts飞越疯人院 ^0^
+多说无益上正文：
+需要以下工具或权限</p>
+</blockquote>
+<ul>
+<li>
+<p>root权限</p>
+</li>
+<li>
+<p><a href="https://drive.google.com/open?id=0B6fM8TXXPW5QRE5wdHZkcERiQ0U" target="blank">钛备份一枚</a>（暂提供pro版，有经济实力请支持正版） tip：<a href="http://www.coolapk.com/apk/com.keramidas.TitaniumBackup" target="_balnk">钛备份酷安链接</a></p>
+</li>
+<li>
+<p><a href="https://drive.google.com/file/d/0B6fM8TXXPW5QOWdwaHNjRlRBclU/view?usp=drivesdk" target="_blank">adaway钛备份自用备份资源</a></p>
+</li>
+<li>
+<p>敏捷的大脑与灵活的小手</p>
+</li>
+</ul>
+<blockquote>
+<p>大概意思就是通过钛备份恢复我的自用备份，然后进adaway更新hosts</p>
+</blockquote>
+<ol>
+<li>
+<p>安装钛备份，进入授予root权限，关闭钛备份（杀死后台）</p>
+</li>
+<li>
+<p>将资源解压，将三个文件放到sd卡根目录（这里指有钛备份文件夹的）找到文件夹<code>TitaniumBackup</code>并把三文件放入</p>
+</li>
+<li>
+<p>进入钛备份，点击<code>备份/还原</code>下滑找到adaway那只白鸟 ^0^ <code>点击 点击恢复 程序+数据</code> 完成后退出钛备份</p>
+</li>
+<li>
+<p>进入adaway 赋予root权限<code>点击下载文件并屏蔽广告</code>提示重启重启即可,完成后应该差不多如下所示
+<img src="/images/2017/02/3645199827.png" alt="Screenshot_20170217-003217.png">
+The end！</p>
+</li>
+</ol>
+<p><strong>隐藏tip：本人分享资源或引用链多需飞越疯人院</strong></p>
+<p>以上！</p>
+                    
+                    <HR width="100%" id="EOF">
+                    <p style="color:#777;">Last modified on 2017-02-17</p>
+                    
+                </div>
+            </div>
+            
+            
+            <nav class="post-pagination">
+
+                
+                <a class="newer-posts" href="https://zzndb.github.io/links/">
+                    Next<br>Friend&#39;s
+                </a>
+                
+                
+                
+                <a class="older-posts" href="https://zzndb.github.io/posts/2017-02-16-%E8%AF%95%E7%9D%80%E5%8E%BB%E7%9C%8B%E7%9C%8B%E5%8F%A6%E5%A4%96%E4%B8%80%E4%B8%AA%E4%B8%96%E7%95%8C/">
+                    Previous<br>试着去看看另外一个世界
+                </a>
+                
+            </nav>
+            <div class="post-comment-wrapper">
+                
+
+
+
+
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+            </div><div id="single-column-footer">
+Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> by <a href="https://amazingrise.net">Rise</a>
+<br>
+Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a>'s <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> <br>
+<br>
+
+&copy;
+	
+	2017 zzndb
+	
+    本站遵循 <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" >CC-BY-NC 4.0 协议</a>
+</div>
+    	</div>
+    <script src="https://zzndb.github.io/js/journal.js"></script>
+    </body>
+</html>

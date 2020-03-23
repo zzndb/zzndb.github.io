@@ -13,28 +13,28 @@
     
         <item>
         <title>WTD定时器</title>
-        <link>https://zzndb.github.io/post/2017-07-17-wtd%E5%AE%9A%E6%97%B6%E5%99%A8/</link>
+        <link>https://zzndb.github.io/posts/2017-07-17-wtd%E5%AE%9A%E6%97%B6%E5%99%A8/</link>
         <pubDate>Mon, 17 Jul 2017 00:52:00 +0800</pubDate>
         
-        <guid>https://zzndb.github.io/post/2017-07-17-wtd%E5%AE%9A%E6%97%B6%E5%99%A8/</guid>
-        <description>zzndb&#39;s world https://zzndb.github.io/post/2017-07-17-wtd%E5%AE%9A%E6%97%B6%E5%99%A8/ -&lt;p&gt;另一种学习笔记记录方式&lt;/p&gt;
+        <guid>https://zzndb.github.io/posts/2017-07-17-wtd%E5%AE%9A%E6%97%B6%E5%99%A8/</guid>
+        <description>zzndb&#39;s world https://zzndb.github.io/posts/2017-07-17-wtd%E5%AE%9A%E6%97%B6%E5%99%A8/ -&lt;p&gt;另一种学习笔记记录方式&lt;/p&gt;
 &lt;p&gt;##思维导图&lt;/p&gt;
 &lt;p&gt;因为对电子的偏好，正好有个机会，于是自然的想参加不久后的&lt;em&gt;电子设计竞赛&lt;/em&gt;当然误打误撞来了计算机的我，当然是零基础入门了，面对看起来颇为复杂的&lt;em&gt;MSP430G2&lt;/em&gt;单片机指导书，感觉效率太低下了，刚好看到有人推荐&lt;strong&gt;xmind&lt;/strong&gt;这一LINUX下也有的思维导图工具，赶紧装在了我的大蜥蜴上，正好看到了WTD看门狗定时器这一章，所以赶紧用上了，成果如下：&lt;img src=&#34;https://zzndb.github.io/images/2017/07/253397290.png&#34; alt=&#34;WDT 看门狗定时器.png&#34;&gt;&lt;a href=&#34;https://zzndb.github.io/images/2017/07/420233643.svg&#34;&gt;WDT 看门狗定时器.svg&lt;/a&gt;
 额，差不多就这个样子，当然都是现学现用，感觉用了思维导图关于这章的知识点是要清晰很多了，感觉还算良好。
 :joy: :joy:&lt;/p&gt;
 &lt;p&gt;以上&lt;/p&gt;
-&lt;p&gt;&lt;del&gt;[1]图文无关:stuck_out_tongue:来自2017 年父亲节Google &lt;a href=&#34;https://www.google.com/doodles/fathers-day-2017&#34;&gt;Doodle&lt;/a&gt;&lt;/del&gt;&lt;/p&gt;- https://zzndb.github.io/post/2017-07-17-wtd%E5%AE%9A%E6%97%B6%E5%99%A8/ - </description>
+&lt;p&gt;&lt;del&gt;[1]图文无关:stuck_out_tongue:来自2017 年父亲节Google &lt;a href=&#34;https://www.google.com/doodles/fathers-day-2017&#34;&gt;Doodle&lt;/a&gt;&lt;/del&gt;&lt;/p&gt;- https://zzndb.github.io/posts/2017-07-17-wtd%E5%AE%9A%E6%97%B6%E5%99%A8/ - </description>
         </item>
     
     
     
         <item>
         <title>第一次AC的LeetCode</title>
-        <link>https://zzndb.github.io/post/2017-03-22-%E7%AC%AC%E4%B8%80%E6%AC%A1ac%E7%9A%84leetcode/</link>
+        <link>https://zzndb.github.io/posts/2017-03-22-%E7%AC%AC%E4%B8%80%E6%AC%A1ac%E7%9A%84leetcode/</link>
         <pubDate>Wed, 22 Mar 2017 14:50:00 +0800</pubDate>
         
-        <guid>https://zzndb.github.io/post/2017-03-22-%E7%AC%AC%E4%B8%80%E6%AC%A1ac%E7%9A%84leetcode/</guid>
-        <description>zzndb&#39;s world https://zzndb.github.io/post/2017-03-22-%E7%AC%AC%E4%B8%80%E6%AC%A1ac%E7%9A%84leetcode/ -&lt;p&gt;是的，第一次&lt;/p&gt;
+        <guid>https://zzndb.github.io/posts/2017-03-22-%E7%AC%AC%E4%B8%80%E6%AC%A1ac%E7%9A%84leetcode/</guid>
+        <description>zzndb&#39;s world https://zzndb.github.io/posts/2017-03-22-%E7%AC%AC%E4%B8%80%E6%AC%A1ac%E7%9A%84leetcode/ -&lt;p&gt;是的，第一次&lt;/p&gt;
 &lt;p&gt;当然前面也看过两道，貌似都是选的easy难度的。:joy:
 当然听着室友淡定的谈着两百多道，一百多道，，，&lt;/p&gt;
 &lt;p&gt;那又怎样，还是蛮激动的:stuck_out_tongue:&lt;/p&gt;
@@ -61,18 +61,18 @@ C例子代码如下&lt;/p&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;看看他的行数，我就不贴我的渣渣代码了，二十多行，也没有任何 技巧？可言。
 在我看来 &lt;code&gt;sum = (sum+nums[i])*nums[i];&lt;/code&gt;为这例，我所不及的地方。
 巧妙用了 1 与 0 在乘法运算中对结果带来的差异&lt;/p&gt;
-&lt;p&gt;以上，纪念第一次AC&lt;/p&gt;- https://zzndb.github.io/post/2017-03-22-%E7%AC%AC%E4%B8%80%E6%AC%A1ac%E7%9A%84leetcode/ - </description>
+&lt;p&gt;以上，纪念第一次AC&lt;/p&gt;- https://zzndb.github.io/posts/2017-03-22-%E7%AC%AC%E4%B8%80%E6%AC%A1ac%E7%9A%84leetcode/ - </description>
         </item>
     
     
     
         <item>
         <title>奔跑吧大蜥蜴</title>
-        <link>https://zzndb.github.io/post/2017-03-20-%E5%A5%94%E8%B7%91%E5%90%A7%E5%A4%A7%E8%9C%A5%E8%9C%B4/</link>
+        <link>https://zzndb.github.io/posts/2017-03-20-%E5%A5%94%E8%B7%91%E5%90%A7%E5%A4%A7%E8%9C%A5%E8%9C%B4/</link>
         <pubDate>Mon, 20 Mar 2017 20:05:00 +0800</pubDate>
         
-        <guid>https://zzndb.github.io/post/2017-03-20-%E5%A5%94%E8%B7%91%E5%90%A7%E5%A4%A7%E8%9C%A5%E8%9C%B4/</guid>
-        <description>zzndb&#39;s world https://zzndb.github.io/post/2017-03-20-%E5%A5%94%E8%B7%91%E5%90%A7%E5%A4%A7%E8%9C%A5%E8%9C%B4/ -&lt;p&gt;&lt;a href=&#34;https://www.opensuse.org&#34; target=&#34;_blank&#34;&gt;&lt;strong&gt;openSUSE tumbleeweed&lt;/strong&gt;&lt;/a&gt;　嗯，大蜥蜴 配置备忘&lt;/p&gt;
+        <guid>https://zzndb.github.io/posts/2017-03-20-%E5%A5%94%E8%B7%91%E5%90%A7%E5%A4%A7%E8%9C%A5%E8%9C%B4/</guid>
+        <description>zzndb&#39;s world https://zzndb.github.io/posts/2017-03-20-%E5%A5%94%E8%B7%91%E5%90%A7%E5%A4%A7%E8%9C%A5%E8%9C%B4/ -&lt;p&gt;&lt;a href=&#34;https://www.opensuse.org&#34; target=&#34;_blank&#34;&gt;&lt;strong&gt;openSUSE tumbleeweed&lt;/strong&gt;&lt;/a&gt;　嗯，大蜥蜴 配置备忘&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;begin edit&lt;/strong&gt; 2017-03-20 20:10:25 星期一&lt;br&gt;
 &lt;strong&gt;last edit&lt;/strong&gt; 2018-11-09 08:47:32 星期五&lt;/p&gt;
@@ -177,18 +177,18 @@ export LD_LIBRARY_PATH&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&l
 写得不错:laughing:&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;就这样&lt;/p&gt;
-&lt;p&gt;以上&lt;/p&gt;- https://zzndb.github.io/post/2017-03-20-%E5%A5%94%E8%B7%91%E5%90%A7%E5%A4%A7%E8%9C%A5%E8%9C%B4/ - </description>
+&lt;p&gt;以上&lt;/p&gt;- https://zzndb.github.io/posts/2017-03-20-%E5%A5%94%E8%B7%91%E5%90%A7%E5%A4%A7%E8%9C%A5%E8%9C%B4/ - </description>
         </item>
     
     
     
         <item>
         <title>关于typecho的链接后台打开设置</title>
-        <link>https://zzndb.github.io/post/2017-02-19-%E5%85%B3%E4%BA%8Etypecho%E7%9A%84%E9%93%BE%E6%8E%A5%E5%90%8E%E5%8F%B0%E6%89%93%E5%BC%80%E8%AE%BE%E7%BD%AE/</link>
+        <link>https://zzndb.github.io/posts/2017-02-19-%E5%85%B3%E4%BA%8Etypecho%E7%9A%84%E9%93%BE%E6%8E%A5%E5%90%8E%E5%8F%B0%E6%89%93%E5%BC%80%E8%AE%BE%E7%BD%AE/</link>
         <pubDate>Sun, 19 Feb 2017 11:02:00 +0800</pubDate>
         
-        <guid>https://zzndb.github.io/post/2017-02-19-%E5%85%B3%E4%BA%8Etypecho%E7%9A%84%E9%93%BE%E6%8E%A5%E5%90%8E%E5%8F%B0%E6%89%93%E5%BC%80%E8%AE%BE%E7%BD%AE/</guid>
-        <description>zzndb&#39;s world https://zzndb.github.io/post/2017-02-19-%E5%85%B3%E4%BA%8Etypecho%E7%9A%84%E9%93%BE%E6%8E%A5%E5%90%8E%E5%8F%B0%E6%89%93%E5%BC%80%E8%AE%BE%E7%BD%AE/ -&lt;p&gt;不久前的前两篇文章链接都是单纯插入链接，毕竟以前没怎么用过&lt;strong&gt;Markdown&lt;/strong&gt;，然后&lt;/p&gt;
+        <guid>https://zzndb.github.io/posts/2017-02-19-%E5%85%B3%E4%BA%8Etypecho%E7%9A%84%E9%93%BE%E6%8E%A5%E5%90%8E%E5%8F%B0%E6%89%93%E5%BC%80%E8%AE%BE%E7%BD%AE/</guid>
+        <description>zzndb&#39;s world https://zzndb.github.io/posts/2017-02-19-%E5%85%B3%E4%BA%8Etypecho%E7%9A%84%E9%93%BE%E6%8E%A5%E5%90%8E%E5%8F%B0%E6%89%93%E5%BC%80%E8%AE%BE%E7%BD%AE/ -&lt;p&gt;不久前的前两篇文章链接都是单纯插入链接，毕竟以前没怎么用过&lt;strong&gt;Markdown&lt;/strong&gt;，然后&lt;/p&gt;
 &lt;p&gt;发现。文章的链接都是在当前页面打开，so覆盖掉当前显示:worried:表示尴尬。&lt;/p&gt;
 &lt;p&gt;遂去搜索了一下，发现这取决于博客平台，然后typecho自带的mark down解析这样，换成&lt;a href=&#34;https://dt27.org/&#34; target=&#34;_blank&#34;&gt;DT27&lt;/a&gt;的markdown插件也是这样，好吧。&lt;/p&gt;
 &lt;p&gt;这篇&lt;a href=&#34;https://github.com/GcsSloop/AndroidNote/blob/master/Course/Markdown/markdown-link.md&#34; target=&#34;_blank&#34;&gt;github文章&lt;/a&gt;表面了这一点&lt;/p&gt;
@@ -197,18 +197,18 @@ export LD_LIBRARY_PATH&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&l
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;a&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;href&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;https://blog.zzndb.com.cn&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;target&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;_blank&amp;#34;&lt;/span&gt;&amp;gt;zzndb&amp;#39;s world&amp;lt;/&lt;span style=&#34;color:#f92672&#34;&gt;a&lt;/span&gt;&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;效果：&lt;a href=&#34;https://blog.zzndb.com.cn&#34; target=&#34;_blank&#34;&gt;zzndb&amp;rsquo;s world&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;貌似只有这样:confused:&lt;/p&gt;
-&lt;p&gt;以上&lt;/p&gt;- https://zzndb.github.io/post/2017-02-19-%E5%85%B3%E4%BA%8Etypecho%E7%9A%84%E9%93%BE%E6%8E%A5%E5%90%8E%E5%8F%B0%E6%89%93%E5%BC%80%E8%AE%BE%E7%BD%AE/ - </description>
+&lt;p&gt;以上&lt;/p&gt;- https://zzndb.github.io/posts/2017-02-19-%E5%85%B3%E4%BA%8Etypecho%E7%9A%84%E9%93%BE%E6%8E%A5%E5%90%8E%E5%8F%B0%E6%89%93%E5%BC%80%E8%AE%BE%E7%BD%AE/ - </description>
         </item>
     
     
     
         <item>
         <title>全站SSL</title>
-        <link>https://zzndb.github.io/post/2017-02-19-%E5%85%A8%E7%AB%99ssl/</link>
+        <link>https://zzndb.github.io/posts/2017-02-19-%E5%85%A8%E7%AB%99ssl/</link>
         <pubDate>Sun, 19 Feb 2017 00:36:00 +0800</pubDate>
         
-        <guid>https://zzndb.github.io/post/2017-02-19-%E5%85%A8%E7%AB%99ssl/</guid>
-        <description>zzndb&#39;s world https://zzndb.github.io/post/2017-02-19-%E5%85%A8%E7%AB%99ssl/ -&lt;p&gt;&lt;strong&gt;2017年2月18发生好多&amp;hellip;..&lt;/strong&gt;&lt;/p&gt;
+        <guid>https://zzndb.github.io/posts/2017-02-19-%E5%85%A8%E7%AB%99ssl/</guid>
+        <description>zzndb&#39;s world https://zzndb.github.io/posts/2017-02-19-%E5%85%A8%E7%AB%99ssl/ -&lt;p&gt;&lt;strong&gt;2017年2月18发生好多&amp;hellip;..&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;想为站点添加SSL证书，也就是链接旁的小绿锁，想了想好久前在buyssl花了貌似五六块购买的一年证书还没用呢（因为不会:expressionless:），然后想着今天开干，然后我失败了，真麻烦:expressionless: 还把服务器文件破坏了，还没备份:expressionless: 想着把面板卸了重装，也许可以，机智的备份了web+数据库然后重装。。。:shit:可以问题更多了，，，
 机智的我继续重装，(⊙﹏⊙)额安装失败:confused:什么鬼。。。。。&lt;/p&gt;
 &lt;p&gt;无数次过去，又发现不会恢复数据库:confounded:搜索到的是什么鬼，完全没对上文件路径嘛?&lt;/p&gt;
@@ -217,7 +217,7 @@ export LD_LIBRARY_PATH&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&l
 &lt;p&gt;然后就有了前面三篇&lt;del&gt;伪时间&lt;/del&gt;文章:wink:&lt;/p&gt;
 &lt;p&gt;宝塔面板，配置SSL真心方便:satisfied:然后，你们可以看到链接旁的小绿锁:sunglasses:
 然后，现在凌晨快一点了。。。。19号:sob:&lt;/p&gt;
-&lt;p&gt;以上，纯属吐槽一下:stuck_out_tongue:&lt;/p&gt;- https://zzndb.github.io/post/2017-02-19-%E5%85%A8%E7%AB%99ssl/ - </description>
+&lt;p&gt;以上，纯属吐槽一下:stuck_out_tongue:&lt;/p&gt;- https://zzndb.github.io/posts/2017-02-19-%E5%85%A8%E7%AB%99ssl/ - </description>
         </item>
     
     
@@ -261,11 +261,11 @@ export LD_LIBRARY_PATH&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&l
     
         <item>
         <title>关于adaway替换hosts的图文及资源分享</title>
-        <link>https://zzndb.github.io/post/2017-02-17-%E5%85%B3%E4%BA%8Eadaway%E6%9B%BF%E6%8D%A2hosts%E7%9A%84%E5%9B%BE%E6%96%87%E5%8F%8A%E8%B5%84%E6%BA%90%E5%88%86%E4%BA%AB/</link>
+        <link>https://zzndb.github.io/posts/2017-02-17-%E5%85%B3%E4%BA%8Eadaway%E6%9B%BF%E6%8D%A2hosts%E7%9A%84%E5%9B%BE%E6%96%87%E5%8F%8A%E8%B5%84%E6%BA%90%E5%88%86%E4%BA%AB/</link>
         <pubDate>Fri, 17 Feb 2017 10:00:00 +0800</pubDate>
         
-        <guid>https://zzndb.github.io/post/2017-02-17-%E5%85%B3%E4%BA%8Eadaway%E6%9B%BF%E6%8D%A2hosts%E7%9A%84%E5%9B%BE%E6%96%87%E5%8F%8A%E8%B5%84%E6%BA%90%E5%88%86%E4%BA%AB/</guid>
-        <description>zzndb&#39;s world https://zzndb.github.io/post/2017-02-17-%E5%85%B3%E4%BA%8Eadaway%E6%9B%BF%E6%8D%A2hosts%E7%9A%84%E5%9B%BE%E6%96%87%E5%8F%8A%E8%B5%84%E6%BA%90%E5%88%86%E4%BA%AB/ -&lt;h2 id=&#34;正式第二篇&#34;&gt;正式第二篇&lt;/h2&gt;
+        <guid>https://zzndb.github.io/posts/2017-02-17-%E5%85%B3%E4%BA%8Eadaway%E6%9B%BF%E6%8D%A2hosts%E7%9A%84%E5%9B%BE%E6%96%87%E5%8F%8A%E8%B5%84%E6%BA%90%E5%88%86%E4%BA%AB/</guid>
+        <description>zzndb&#39;s world https://zzndb.github.io/posts/2017-02-17-%E5%85%B3%E4%BA%8Eadaway%E6%9B%BF%E6%8D%A2hosts%E7%9A%84%E5%9B%BE%E6%96%87%E5%8F%8A%E8%B5%84%E6%BA%90%E5%88%86%E4%BA%AB/ -&lt;h2 id=&#34;正式第二篇&#34;&gt;正式第二篇&lt;/h2&gt;
 &lt;h6&gt;
 其实是第1.5篇=.=
 &lt;/h6&gt;
@@ -313,18 +313,18 @@ The end！&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;&lt;strong&gt;隐藏tip：本人分享资源或引用链多需飞越疯人院&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;以上！&lt;/p&gt;- https://zzndb.github.io/post/2017-02-17-%E5%85%B3%E4%BA%8Eadaway%E6%9B%BF%E6%8D%A2hosts%E7%9A%84%E5%9B%BE%E6%96%87%E5%8F%8A%E8%B5%84%E6%BA%90%E5%88%86%E4%BA%AB/ - </description>
+&lt;p&gt;以上！&lt;/p&gt;- https://zzndb.github.io/posts/2017-02-17-%E5%85%B3%E4%BA%8Eadaway%E6%9B%BF%E6%8D%A2hosts%E7%9A%84%E5%9B%BE%E6%96%87%E5%8F%8A%E8%B5%84%E6%BA%90%E5%88%86%E4%BA%AB/ - </description>
         </item>
     
     
     
         <item>
         <title>试着去看看另外一个世界</title>
-        <link>https://zzndb.github.io/post/2017-02-16-%E8%AF%95%E7%9D%80%E5%8E%BB%E7%9C%8B%E7%9C%8B%E5%8F%A6%E5%A4%96%E4%B8%80%E4%B8%AA%E4%B8%96%E7%95%8C/</link>
+        <link>https://zzndb.github.io/posts/2017-02-16-%E8%AF%95%E7%9D%80%E5%8E%BB%E7%9C%8B%E7%9C%8B%E5%8F%A6%E5%A4%96%E4%B8%80%E4%B8%AA%E4%B8%96%E7%95%8C/</link>
         <pubDate>Thu, 16 Feb 2017 20:51:00 +0800</pubDate>
         
-        <guid>https://zzndb.github.io/post/2017-02-16-%E8%AF%95%E7%9D%80%E5%8E%BB%E7%9C%8B%E7%9C%8B%E5%8F%A6%E5%A4%96%E4%B8%80%E4%B8%AA%E4%B8%96%E7%95%8C/</guid>
-        <description>zzndb&#39;s world https://zzndb.github.io/post/2017-02-16-%E8%AF%95%E7%9D%80%E5%8E%BB%E7%9C%8B%E7%9C%8B%E5%8F%A6%E5%A4%96%E4%B8%80%E4%B8%AA%E4%B8%96%E7%95%8C/ -&lt;p&gt;&lt;strong&gt;信仰&lt;/strong&gt;
+        <guid>https://zzndb.github.io/posts/2017-02-16-%E8%AF%95%E7%9D%80%E5%8E%BB%E7%9C%8B%E7%9C%8B%E5%8F%A6%E5%A4%96%E4%B8%80%E4%B8%AA%E4%B8%96%E7%95%8C/</guid>
+        <description>zzndb&#39;s world https://zzndb.github.io/posts/2017-02-16-%E8%AF%95%E7%9D%80%E5%8E%BB%E7%9C%8B%E7%9C%8B%E5%8F%A6%E5%A4%96%E4%B8%80%E4%B8%AA%E4%B8%96%E7%95%8C/ -&lt;p&gt;&lt;strong&gt;信仰&lt;/strong&gt;
 &lt;img src=&#34;https://zzndb.github.io/images/2017/02/1455974186.gif&#34; alt=&#34;holidays-2017-eastern-europe-day-2-5670496677920768-hp2x.gif&#34;&gt;&lt;/p&gt;
 &lt;h4 id=&#34;第一篇正式的博客&#34;&gt;第一篇正式的博客=.=。&lt;/h4&gt;
 &lt;p&gt;因为众所周知的的原因，我们要面对着这不怎么自由的互联网&lt;!--more--&gt;(&lt;a href=&#34;https://github.com/racaljk/hosts/wiki/%E5%85%B3%E4%BA%8E%E4%B8%AD%E5%9B%BD%E7%9A%84%E4%BA%92%E8%81%94%E7%BD%91&#34; target=&#34;_blank&#34;&gt;关于不怎么自由 Github 上的的一篇文章&lt;/a&gt;),以及我们大多数人还要面对的，那不怎么良心的进入互联网的入口&amp;mdash;国内的各种搜索引擎，像什么百毒之流，对，就是那个有着各种垃圾推广，什么莆田系，什么医疗竞价排名&amp;hellip;.的那个。&lt;/p&gt;
@@ -403,23 +403,23 @@ The end！&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;tip：链接资源或引用链多需飞越&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;n6&gt;&lt;del&gt;如有获取困难请联系，楼下评论即可&lt;/del&gt;&lt;/n6&gt;
 .
-以上&lt;/p&gt;- https://zzndb.github.io/post/2017-02-16-%E8%AF%95%E7%9D%80%E5%8E%BB%E7%9C%8B%E7%9C%8B%E5%8F%A6%E5%A4%96%E4%B8%80%E4%B8%AA%E4%B8%96%E7%95%8C/ - </description>
+以上&lt;/p&gt;- https://zzndb.github.io/posts/2017-02-16-%E8%AF%95%E7%9D%80%E5%8E%BB%E7%9C%8B%E7%9C%8B%E5%8F%A6%E5%A4%96%E4%B8%80%E4%B8%AA%E4%B8%96%E7%95%8C/ - </description>
         </item>
     
     
     
         <item>
         <title>2017年2月16日再次装上了Typecho</title>
-        <link>https://zzndb.github.io/post/2017-02-16-2017%E5%B9%B42%E6%9C%8816%E6%97%A5%E5%86%8D%E6%AC%A1%E8%A3%85%E4%B8%8A%E4%BA%86typecho/</link>
+        <link>https://zzndb.github.io/posts/2017-02-16-2017%E5%B9%B42%E6%9C%8816%E6%97%A5%E5%86%8D%E6%AC%A1%E8%A3%85%E4%B8%8A%E4%BA%86typecho/</link>
         <pubDate>Thu, 16 Feb 2017 12:34:00 +0800</pubDate>
         
-        <guid>https://zzndb.github.io/post/2017-02-16-2017%E5%B9%B42%E6%9C%8816%E6%97%A5%E5%86%8D%E6%AC%A1%E8%A3%85%E4%B8%8A%E4%BA%86typecho/</guid>
-        <description>zzndb&#39;s world https://zzndb.github.io/post/2017-02-16-2017%E5%B9%B42%E6%9C%8816%E6%97%A5%E5%86%8D%E6%AC%A1%E8%A3%85%E4%B8%8A%E4%BA%86typecho/ -&lt;h1 id=&#34;有感&#34;&gt;有感&lt;/h1&gt;
+        <guid>https://zzndb.github.io/posts/2017-02-16-2017%E5%B9%B42%E6%9C%8816%E6%97%A5%E5%86%8D%E6%AC%A1%E8%A3%85%E4%B8%8A%E4%BA%86typecho/</guid>
+        <description>zzndb&#39;s world https://zzndb.github.io/posts/2017-02-16-2017%E5%B9%B42%E6%9C%8816%E6%97%A5%E5%86%8D%E6%AC%A1%E8%A3%85%E4%B8%8A%E4%BA%86typecho/ -&lt;h1 id=&#34;有感&#34;&gt;有感&lt;/h1&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Maybe nobody can see this except me &amp;gt;.&lt;Maybe nobody can see this except me &gt;.&amp;lt;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;&lt;em&gt;&lt;strong&gt;Do what i want what i should, for myself!!&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;&lt;del&gt;假装这篇文章是二月十六写的，but,十八发生了太多，so重新复制完成假装这篇文章是二月十六写的&lt;/del&gt;&lt;/p&gt;- https://zzndb.github.io/post/2017-02-16-2017%E5%B9%B42%E6%9C%8816%E6%97%A5%E5%86%8D%E6%AC%A1%E8%A3%85%E4%B8%8A%E4%BA%86typecho/ - </description>
+&lt;p&gt;&lt;del&gt;假装这篇文章是二月十六写的，but,十八发生了太多，so重新复制完成假装这篇文章是二月十六写的&lt;/del&gt;&lt;/p&gt;- https://zzndb.github.io/posts/2017-02-16-2017%E5%B9%B42%E6%9C%8816%E6%97%A5%E5%86%8D%E6%AC%A1%E8%A3%85%E4%B8%8A%E4%BA%86typecho/ - </description>
         </item>
     
     
