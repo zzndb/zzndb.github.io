@@ -1,0 +1,48 @@
+baseURL = "https://zzndb.github.io"
+languageCode = "en-us"
+title = "zzndb's world"
+theme = "diary"
+googleAnalytics = "UA-92199886-4"
+
+[params]
+  AuthorName = "zzndb"
+  subtitle = "All things will better soon...let's see..."
+  enableEmoji = true
+  enableGitalk = true
+
+[params.gitalk]
+  owner = "zzndb"
+  repo = "zzndb.github.io"
+  client_id = "bcdd179c4f94968792d9"
+  client_secret = "f628bcd3c8d58385d50b807e842cce7ba9fd7f0d"
+[taxonomies]
+   tag = "tags"
+   category = "categories"
+
+[[menu.main]]
+url = "/categories"
+name = "Categories"
+weight = 2
+[[menu.main]]
+url = "/tags"
+name = "Tags"
+weight = 3
+[[menu.main]]
+url = "/posts"
+name = "Archive"
+weight = 1
+[[menu.main]]
+url = "/index.xml"
+name = "RSS"
+weight = 6
+[[menu.main]]
+url = "/about"
+name = "About"
+weight = 5
+[[menu.main]]
+url = "/links"
+name = "Friends"
+weight = 4
+
+[markup.goldmark.renderer]
+  unsafe = true
