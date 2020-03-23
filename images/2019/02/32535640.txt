@@ -1,0 +1,269 @@
+#!/sbin/sh
+#
+# SuperSU installer ZIP
+# Copyright (c) 2012-2017 - Chainfire, CCMT
+#
+# ----- GENERIC INFO ------
+#
+# The following su binary versions are included in the full package. Each
+# should be installed only if the system has the same or newer API level
+# as listed. The script may fall back to a different binary on older API
+# levels. supolicy are all ndk/pie/19+ for 32 bit, ndk/pie/20+ for 64 bit.
+#
+# binary        ARCH/path   build type      API
+#
+# arm-v5te      arm         ndk non-pie     7+
+# x86           x86         ndk non-pie     7+
+#
+# x86           x86         ndk pie         17+   (su.pie, naming exception)
+# arm-v7a       armv7       ndk pie         17+
+# mips          mips        ndk pie         17+
+#
+# arm64-v8a     arm64       ndk pie         20+
+# mips64        mips64      ndk pie         20+
+# x86_64        x64         ndk pie         20+
+#
+# Non-static binaries are supported to be PIE (Position Independent
+# Executable) from API level 16, and required from API level 20 (which will
+# refuse to execute non-static non-PIE).
+#
+# The script performs several actions in various ways, sometimes
+# multiple times, due to different recoveries and firmwares behaving
+# differently, and it thus being required for the correct result.
+#
+# Overridable variables (shell):
+#   BIN - Location of architecture specific files (native folder)
+#   BINTOOLS - Location of architecture specific files (native, oldest 32-bit)
+#   COM - Location of common files (APK folder)
+#   LESSLOGGING - Reduce ui_print logging (true/false)
+#   NOOVERRIDE - Do not read variables from /system/.supersu or
+#                /data/.supersu
+#
+# Overridable variables (shell, /system/.supersu, /cache/.supersu,
+# /data/.supersu):
+#   SYSTEMLESS - Do a system-less install? (true/false, 6.0+ only)
+#   PATCHBOOTIMAGE - Automatically patch boot image? (true/false,
+#                    SYSTEMLESS only)
+#   SIGNBOOTIMAGE - (Force) Sign boot image for Android Verified Boot (v1)
+#                   (true/false, PATCHBOOTIMAGE only)
+#   BOOTIMAGE - Boot image location (PATCHBOOTIMAGE only)
+#   STOCKBOOTIMAGE - Stock boot image location (PATCHBOOTIMAGE only)
+#   BINDSYSTEMXBIN - Poor man's overlay on /system/xbin (true/false,
+#                    SYSTEMLESS only)
+#   PERMISSIVE - Set sepolicy to fake-permissive (true/false, PATCHBOOTIMAGE
+#                only)
+#   KEEPVERITY - Do not remove dm-verity (true/false, PATCHBOOTIMAGE only)
+#   KEEPFORCEENCRYPT - Do not replace forceencrypt with encryptable (true/
+#                      false, PATCHBOOTIMAGE only)
+#   REMOVEENCRYPTABLE - Remove the encryptable flag, needed on newer
+#                       Samsung devices to disable forced encryption.
+#                       Automatically used on Samsung 7.0+ if unencrypted
+#                       /data detected (true/false, PATCHBOOTIMAGE only).
+#   FRP - Place files in boot image that allow root to survive a factory
+#         reset (true/false, PATCHBOOTIMAGE only). Reverts to su binaries
+#         from the time the ZIP was originally flashed, updates are lost.
+#   BINDSBIN - Place files directly in /data rather than in /data/su.img,
+#              and create a poor man's overlay on /sbin (true/false,
+#              PATCHBOOTIMAGE only)
+# Shell overrides all, /data/.supersu overrides /cache/.supersu overrides
+# /system/.supersu
+#
+# Note that if SELinux is set to enforcing, the daemonsu binary expects
+# to be run at startup (usually from install-recovery.sh, 99SuperSUDaemon,
+# app_process, or init.supersu.rc) from u:r:supersu:s0 (7.0+), u:r:init:s0 or
+# u:r:kernel:s0 contexts. Depending on the current policies, it can also
+# deal with u:r:init_shell:s0 and u:r:toolbox:s0 contexts. Any other context
+# will lead to issues eventually.
+#
+# ----- "SYSTEM" INSTALL -----
+#
+# "System" install puts all the files needed in /system and does not need
+# any boot image modifications. Default install method pre-Android-6.0
+# (excluding Samsung-5.1).
+#
+# Even on Android-6.0+, the script attempts to detect if the current
+# firmware is compatible with a system-only installation (see the
+# "detect_systemless_required" function), and will prefer that
+# (unless the SYSTEMLESS variable is set) if so. This will catch the
+# case of several custom ROMs that users like to use custom boot images
+# with - SuperSU will not need to patch these. It can also catch some
+# locked bootloader cases that do allow security policy updates.
+#
+# To install SuperSU properly, aside from cleaning old versions and
+# other superuser-type apps from the system, the following files need to
+# be installed:
+#
+# API   source                        target                              chmod   chcon                       required
+#
+# 7-19  common/Superuser.apk          /system/app/Superuser.apk           0644    u:object_r:system_file:s0   gui
+# 20+   common/Superuser.apk          /system/app/SuperSU/SuperSU.apk     0644    u:object_r:system_file:s0   gui
+#
+# 17+   common/install-recovery.sh    /system/etc/install-recovery.sh     0755    *1                          required
+# 17+                                 /system/bin/install-recovery.sh     (symlink to /system/etc/...)        required
+# *1: same as /system/bin/toolbox: u:object_r:system_file:s0 if API < 20, u:object_r:toolbox_exec:s0 if API >= 20
+#
+# 7+    ARCH/su *2                    /system/xbin/su                     *3      u:object_r:system_file:s0   required
+# 7+                                  /system/bin/.ext/.su                *3      u:object_r:system_file:s0   gui
+# 17+                                 /system/xbin/daemonsu               0755    u:object_r:system_file:s0   required
+# *2: su.pie for 17+ x86(_32) only
+# *3: 06755 if API < 18, 0755 if API >= 18
+#
+# 19+   ARCH/supolicy                 /system/xbin/supolicy               0755    u:object_r:system_file:s0   required
+# 19+   ARCH/libsupol.so              /system/lib(64)/libsupol.so         0644    u:object_r:system_file:s0   required
+#
+# 21+   /system/bin/app_process32 *5  /system/bin/app_process32_original  0755    u:object_r:zygote_exec:s0   required
+# 21+   /system/bin/app_process64 *5  /system/bin/app_process64_original  0755    u:object_r:zygote_exec:s0   required
+# 21+   /system/bin/app_processXX *5  /system/bin/app_process_init        0755    u:object_r:system_file:s0   required
+# 21+                                 /system/bin/app_process             (symlink to /system/xbin/daemonsu)  required
+# 21+                             *5  /system/bin/app_process32           (symlink to /system/xbin/daemonsu)  required
+# 21+                             *5  /system/bin/app_process64           (symlink to /system/xbin/daemonsu)  required
+# *5: Only do this for the relevant bits. On a 64 bits system, leave the 32 bits files alone, or dynamic linker errors
+#     will prevent the system from fully working in subtle ways. The bits of the su binary must also match!
+#
+# 17+   common/99SuperSUDaemon *6     /system/etc/init.d/99SuperSUDaemon  0755    u:object_r:system_file:s0   optional
+# *6: only place this file if /system/etc/init.d is present
+#
+# 17+   'echo 1 >' or 'touch' *7      /system/etc/.installed_su_daemon    0644    u:object_r:system_file:s0   optional
+# *7: the file just needs to exist or some recoveries will nag you. Even with it there, it may still happen.
+#
+# It may seem some files are installed multiple times needlessly, but
+# it only seems that way. Installing files differently or symlinking
+# instead of copying (unless specified) will lead to issues eventually.
+#
+# After installation, run '/system/xbin/su --install', which may need to
+# perform some additional installation steps. Ideally, at one point,
+# a lot of this script will be moved there.
+#
+# The included chattr(.pie) binaries are used to remove ext2's immutable
+# flag on some files. This flag is no longer set by SuperSU's OTA
+# survival since API level 18, so there is no need for the 64 bit versions.
+# Note that chattr does not need to be installed to the system, it's just
+# used by this script, and not supported by the busybox used in older
+# recoveries.
+#
+# ----- "SYSTEM-LESS" INSTALL -----
+#
+# "System-less" install requires a modified boot image (the script can patch
+# many boot images on-the-fly), but does not touch /system at all. Instead
+# it keeps all the needed files in an image (/data/su.img) which is mounted
+# to /su. Default install method on all Android-6.0+ and Samsung-5.1+
+# devices.
+#
+# Note that even on 6.0+, system compatibility is checked. See the "SYSTEM"
+# install section above.
+#
+# An ext4 image is created as /data/su.img, or /cache/su.img if /data could
+# not be mounted. Similarly, the APK is placed as either /data/SuperSU.apk
+# or /cache/SuperSU.apk. This is so we are not dependent on /data decryption
+# working in recovery, which in the past has proved an issue on brand-new
+# Android versions and devices.
+#
+# /sbin/launch_daemonsu.sh, which is added a service to init.rc, will mount
+# the image at /su, and launch daemonsu from /su/bin/daemonsu. But before it
+# does that, it will try to merge /data/su.img and /cache/su.img (leading),
+# if both are present. It will also try to install the SuperSU APK.
+#
+# In BINDSBIN mode the files are placed in /data/adb/su (3rd party tools
+# should refer to /sbin/supersu or readlink /sbin/supersu_link) instead
+# of an image mounted as /su, and an overlay is created on top of /sbin.
+# This is the default behavior on Android O and newer.
+#
+# Files are expected at the following places (/su being the mountpoint of
+# the ext4 image, replace with /data/adb/su in BINDSBIN mode):
+#
+# API   source                        target                              chmod   chcon                       required
+#
+# 22+   common/Superuser.apk          /[data|cache]/SuperSU.apk           0644    u:object_r:system_file:s0   gui
+#
+# 22+   ARCH/su *1                    /su/bin/su                          0755    u:object_r:system_file:s0   required
+# 22+                                 /su/bin/daemonsu                    0755    u:object_r:system_file:s0   required
+# *1: su.pie for 17+ x86(_32) only
+#
+# 22+   ARCH/supolicy                 /su/bin/supolicy_wrapped            0755    u:object_r:system_file:s0   required
+# 22+   /su/bin/su (symlink) *2       /su/bin/supolicy                    0755    u:object_r:system_file:s0   required
+# 22+   ARCH/libsupol.so              /su/lib/libsupol.so                 0644    u:object_r:system_file:s0   required
+# *2: when called this way, su sets the correct LD_LIBRARY_PATH and calls supolicy_wrapped
+#
+# 22+   ARCH/sukernel                 /su/bin/sukernel                    0755    u:object_r:system_file:s0   required
+#
+# These files are automatically created on launch by daemonsu as needed:
+# 22+   /system/bin/sh                /su/bin/sush                        0755    u:object_r:system_file:s0   required
+# 22+   /system/bin/app_process[64]   /su/bin/app_process                 0755    u:object_r:system_file:s0   required
+#
+# These files are injected into the boot image ramdisk:
+# 22+   common/launch_daemonsu.sh     /sbin/launch_daemonsu.sh            0700    u:object_r:rootfs:s0        required
+#
+# On devices where / is in the system partition:
+# 22+   ARCH/suinit                   /init                               0750    u:object_r:rootfs:s0        required
+#
+# The automated boot image patcher included makes the following modifications
+# to the ramdisk:
+#
+# - On devices using split policy (ODP2+):
+# --- Compiles split policy into single policy
+# --- Patches init to load single policy instead of split policy
+# - On device that early-load /system, /vendor and /odm based on DTB (ODP2+):
+# --- Patches DTB verity settings (unless KEEPVERITY is set)
+# --- TODO: KEEPVERITY doesn't support /system on these devices at this time
+# --- TODO: DTB is not backup/restored on re-patch
+# - Uses the supolicy tool to patch the sepolicy file
+# --- Optionally combined from parts with secilc
+# --- Also patching recovery's sepolicy if required
+# - Injects /sbin/launch_daemon.sh
+# - Injects /sbin/fbe_bypass.sh (24+, unless KEEPFORCEENCRYPT is set)
+# - Creates /su
+# - Removes /verity_key (unless KEEPVERITY is set)
+# - Patches /*fstab*
+# --- Removes support_scfs and verify flags (unless KEEPVERITY is set)
+# --- Changes forceencrypt/forcefdeorfbe into encryptable, or removes them (if REMOVEENCRYPTABLE is set)
+# --- Set ro mounts to use noatime
+# - Patches /init.rc
+# --- Removes 'setprop selinux.reload_policy' occurences
+# --- Adds a SuperSU:PATCH marker with the version of the sukernel tool
+# --- Adds a SuperSU:STOCK marker listed the SHA1 of the original boot image
+# - Adds /init.supersu.rc
+# --- Adds a sukernel.mount property trigger that mounts /data/su.img to /su
+# --- Adds the daemonsu service that launches /sbin/launch_daemon.sh
+# --- Adds exec /sbin/launch_daemonsu.sh on post-fs-data
+# - Patches /init.environ.rc (if BINDSBIN is not set)
+# --- Adds PATH variable if it does not exist
+# --- Prepends /su/bin to the PATH variable
+# - Patches /*.rc
+# --- Adds a seclabel to services and execs that are missing one
+# - In case the device has the root directory inside the system partition:
+# --- /system_root contents are copied to /boot
+# --- All files mentioned above are modified in /boot instead of /
+# --- /boot/*fstab* is modified to mount / to /system_root, and
+#     bind-mount /system to /system_root/system
+# --- Kernel binary is patched to load from initramfs instead of system
+# --- Our own init binary (suinit) replaces /init
+# - In case a ChromeOS bootloader is used
+# --- Boot image is signed with keys from common/chromeos
+# - Otherwise
+# --- Android Verified Boot (v1) signature is detected, and if present (or SIGNBOOTIMAGE is set):
+# --- Boot image is signed with keys from common/avb
+#
+# In case this documentation becomes outdated, please note that the sukernel
+# tool is very chatty, and its output tells you exactly what it is doing
+# and how. In TWRP, you can view this output by catting /tmp/recovery.log
+# after flashing the ZIP.
+#
+# The boot image patcher creates a backup of the boot image it patches, for
+# future restoration. It cannot re-patch a patched boot image, it will restore
+# the previous boot image first. /[data|cache]/stock_boot_*.gz
+#
+# The boot image patcher currently supports kernel binaries and ramdisks compressed
+# in gzip, bzip2, lz4 (legacy), lz4 (modern), lzo, lzma, and xz formats.
+#
+# During boot image patch, /data/custom_ramdisk_patch.sh will be called,
+# with the name of the ramdisk cpio file as parameter. The script must
+# replace the input file and return a 0 exit code.
+#
+# Just before flashing, the boot image patcher will call
+# /data/custom_boot_image_patch.sh with the name of the patched boot image
+# as parameter. A device-specific patcher can further patch the boot image
+# if needed. It must replace the input file and return a 0 exit code.
+#
+# For Android Verified Boot, if /tmp/avb/custom.pk8 and /tmp/avb/custom.x509.der
+# are present, these are used to sign the boot image instead of SuperSU's
+# default keys.

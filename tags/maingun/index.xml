@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Maingun on zzndb&#39;s world</title>
+    <link>http://127.0.0.1:8080/tags/maingun/</link>
+    <description>Recent content in Maingun on zzndb&#39;s world</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 11 May 2019 17:51:00 +0800</lastBuildDate>
+    
+	<atom:link href="http://127.0.0.1:8080/tags/maingun/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>启用域名邮箱</title>
+      <link>http://127.0.0.1:8080/post/2019-05-11-%E5%90%AF%E7%94%A8%E5%9F%9F%E5%90%8D%E9%82%AE%E7%AE%B1/</link>
+      <pubDate>Sat, 11 May 2019 17:51:00 +0800</pubDate>
+      
+      <guid>http://127.0.0.1:8080/post/2019-05-11-%E5%90%AF%E7%94%A8%E5%9F%9F%E5%90%8D%E9%82%AE%E7%AE%B1/</guid>
+      <description>&lt;p&gt;其实最开始只是因为没有一个好的评论回复邮件提醒解决方案，然后现在感觉有点香啊。&lt;/p&gt;
+&lt;p&gt;TL;DR: 利用 Mailgun 弄了域名邮箱，顺便解决了博客评论邮件提醒的问题。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

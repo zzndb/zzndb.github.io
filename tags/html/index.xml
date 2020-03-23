@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>HTML on zzndb&#39;s world</title>
+    <link>http://127.0.0.1:8080/tags/html/</link>
+    <description>Recent content in HTML on zzndb&#39;s world</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 19 Feb 2017 11:02:00 +0800</lastBuildDate>
+    
+	<atom:link href="http://127.0.0.1:8080/tags/html/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>关于typecho的链接后台打开设置</title>
+      <link>http://127.0.0.1:8080/post/2017-02-19-%E5%85%B3%E4%BA%8Etypecho%E7%9A%84%E9%93%BE%E6%8E%A5%E5%90%8E%E5%8F%B0%E6%89%93%E5%BC%80%E8%AE%BE%E7%BD%AE/</link>
+      <pubDate>Sun, 19 Feb 2017 11:02:00 +0800</pubDate>
+      
+      <guid>http://127.0.0.1:8080/post/2017-02-19-%E5%85%B3%E4%BA%8Etypecho%E7%9A%84%E9%93%BE%E6%8E%A5%E5%90%8E%E5%8F%B0%E6%89%93%E5%BC%80%E8%AE%BE%E7%BD%AE/</guid>
+      <description>&lt;p&gt;不久前的前两篇文章链接都是单纯插入链接，毕竟以前没怎么用过&lt;strong&gt;Markdown&lt;/strong&gt;，然后&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

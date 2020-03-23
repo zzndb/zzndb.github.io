@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html><head>
+<title>奔跑吧大蜥蜴</title>
+
+<meta charset="utf-8">
+<meta name="X-UA-Compatible" content="IE=edge">
+<meta name="google-site-verification" content="">
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+<meta content="telephone=no" name="format-detection">
+<meta name="renderer" content="webkit">
+<meta name="theme-color" content="#ffffff">
+
+
+
+
+<script src="/vendor/js/jquery.min.js" ></script>
+<script src="/vendor/js/popper.min.js" ></script>
+<script src="/vendor/js/bootstrap.min.js" ></script>
+<script src="/vendor/js/smooth-scroll.polyfills.min.js" ></script>
+<link type="text/css" rel="stylesheet" href="/vendor/css/bootstrap.min.css">
+<script src="/vendor/js/vue.min.js" ></script>
+
+
+
+
+<link rel="stylesheet" href="http://127.0.0.1:8080/scss/journal.min.dd4a27a2ead65caf841b00fd0d3164288b4f1438f9d890ae21a83580bb7b91a1.css" integrity="sha256-3UonourWXK&#43;EGwD9DTFkKItPFDj52JCuIag1gLt7kaE=" media="screen">
+
+<script src="http://127.0.0.1:8080/js/loadCSS.js"></script>
+<script src="http://127.0.0.1:8080/js/table.js"></script>
+
+
+<script src="http://127.0.0.1:8080/js/toc.js"></script>
+
+
+<script>
+    loadCSS("https://fonts.googleapis.com/css?family=Lora|Montserrat|Fira+Mono|Noto+Serif+SC|Material+Icons");
+</script>
+
+
+
+
+
+
+</head><body>
+    	<div id="app"><div ref="sideContainer" class="side-container">
+    
+    <a class="a-block nav-head false" href="http://127.0.0.1:8080">
+    
+        <div class="nav-title">
+            zzndb&#39;s world
+        </div>
+        
+        <div class="nav-subtitle">
+            All things will better soon...let&#39;s see...
+        </div>
+        
+    </a>
+
+    <div class="nav-link-list">
+        
+        
+            
+                
+                
+                <a class="a-block nav-link-item false" href="/posts">
+                    Archive
+                </a>
+        
+            
+                
+                
+                <a class="a-block nav-link-item false" href="/categories">
+                    Categories
+                </a>
+        
+            
+                
+                
+                <a class="a-block nav-link-item false" href="/tags">
+                    Tags
+                </a>
+        
+            
+                
+                
+                <a class="a-block nav-link-item false" href="/links">
+                    Friends
+                </a>
+        
+            
+                
+                
+                <a class="a-block nav-link-item false" href="/about">
+                    About
+                </a>
+        
+            
+                
+                
+                <a class="a-block nav-link-item false" href="/index.xml">
+                    RSS
+                </a>
+        
+    </div>
+
+    
+
+    <div class="nav-footer">
+        
+Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> by <a href="https://amazingrise.net">Rise</a>
+<br>
+Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a>'s <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> <br>
+<br>
+
+&copy;
+	
+	2017 zzndb
+	
+    本站遵循 <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" >CC-BY-NC 4.0 协议</a>
+
+    </div>
+    
+</div><div ref="extraContainer" class="extra-container">
+    
+    <div class="toc animated-visibility" :class="{ invisible: scrollY <= 140 }">
+
+
+	<div class="toc-content">
+	
+		
+		
+		
+		<center>- CATALOG -</center>
+			
+				
+				
+					
+						
+						
+							<ul>
+						
+							<ul>
+						
+							<ul>
+						
+						
+								<li>
+				 					<a href="#%e9%85%8d%e7%bd%ae%e6%ba%90" v-on:click="closeDrawer" id="配置源-nav">
+										 配置源：
+									</a>
+								</li>
+						
+							</ul>
+						
+							</ul>
+						
+							</ul>
+						
+					
+				
+			
+				
+				
+					
+						
+						
+							<ul>
+						
+							<ul>
+						
+							<ul>
+						
+						
+								<li>
+				 					<a href="#wiki" v-on:click="closeDrawer" id="wiki-nav">
+										 wiki
+									</a>
+								</li>
+						
+							</ul>
+						
+							</ul>
+						
+							</ul>
+						
+					
+				
+			
+				
+				
+					
+						
+						
+							<ul>
+						
+							<ul>
+						
+							<ul>
+						
+						
+								<li>
+				 					<a href="#%e5%ad%97%e4%bd%93" v-on:click="closeDrawer" id="字体-nav">
+										 字体
+									</a>
+								</li>
+						
+							</ul>
+						
+							</ul>
+						
+							</ul>
+						
+					
+				
+			
+				
+				
+					
+						
+						
+							<ul>
+						
+							<ul>
+						
+							<ul>
+						
+						
+								<li>
+				 					<a href="#btrfs-balance" v-on:click="closeDrawer" id="btrfs-balance-nav">
+										 Btrfs Balance
+									</a>
+								</li>
+						
+							</ul>
+						
+							</ul>
+						
+							</ul>
+						
+					
+				
+			
+				
+				
+					
+						
+						
+							<ul>
+						
+							<ul>
+						
+							<ul>
+						
+						
+								<li>
+				 					<a href="#quartusii--modelsim_ase" v-on:click="closeDrawer" id="quartusii--modelsim_ase-nav">
+										 quartusii &amp; modelsim_ase
+									</a>
+								</li>
+						
+							</ul>
+						
+							</ul>
+						
+							</ul>
+						
+					
+				
+			
+				
+				
+					
+						
+						
+							<ul>
+						
+							<ul>
+						
+							<ul>
+						
+						
+								<li>
+				 					<a href="#other" v-on:click="closeDrawer" id="other-nav">
+										 other
+									</a>
+								</li>
+						
+							</ul>
+						
+							</ul>
+						
+							</ul>
+						
+					
+				
+			
+	</div>
+
+</div>
+    
+    <div class="pagination">
+        <a id="globalBackToTop" class="pagination-action animated-visibility" href="#top" :class="{ invisible: scrollY == 0 }">
+            <i class="material-icons pagination-action-icon">
+                keyboard_arrow_up
+            </i>
+        </a>
+        
+    </div>
+</div><div class="single-column-drawer-container" ref="drawer"
+     v-bind:class="{ 'single-column-drawer-container-active': isDrawerOpen }">
+    <div class="drawer-content">
+        <div class="drawer-menu">
+            
+            
+                
+                    
+                    
+                    <a class="a-block drawer-menu-item false" href="/posts">
+                        Archive
+                    </a>
+            
+                
+                    
+                    
+                    <a class="a-block drawer-menu-item false" href="/categories">
+                        Categories
+                    </a>
+            
+                
+                    
+                    
+                    <a class="a-block drawer-menu-item false" href="/tags">
+                        Tags
+                    </a>
+            
+                
+                    
+                    
+                    <a class="a-block drawer-menu-item false" href="/links">
+                        Friends
+                    </a>
+            
+                
+                    
+                    
+                    <a class="a-block drawer-menu-item false" href="/about">
+                        About
+                    </a>
+            
+                
+                    
+                    
+                    <a class="a-block drawer-menu-item false" href="/index.xml">
+                        RSS
+                    </a>
+            
+            
+            <div class="toc">
+
+
+	<div class="toc-content">
+	
+		
+		
+		
+		<center>- CATALOG -</center>
+			
+				
+				
+					
+						
+						
+							<ul>
+						
+							<ul>
+						
+							<ul>
+						
+						
+								<li>
+				 					<a href="#%e9%85%8d%e7%bd%ae%e6%ba%90" v-on:click="closeDrawer" id="配置源-nav">
+										 配置源：
+									</a>
+								</li>
+						
+							</ul>
+						
+							</ul>
+						
+							</ul>
+						
+					
+				
+			
+				
+				
+					
+						
+						
+							<ul>
+						
+							<ul>
+						
+							<ul>
+						
+						
+								<li>
+				 					<a href="#wiki" v-on:click="closeDrawer" id="wiki-nav">
+										 wiki
+									</a>
+								</li>
+						
+							</ul>
+						
+							</ul>
+						
+							</ul>
+						
+					
+				
+			
+				
+				
+					
+						
+						
+							<ul>
+						
+							<ul>
+						
+							<ul>
+						
+						
+								<li>
+				 					<a href="#%e5%ad%97%e4%bd%93" v-on:click="closeDrawer" id="字体-nav">
+										 字体
+									</a>
+								</li>
+						
+							</ul>
+						
+							</ul>
+						
+							</ul>
+						
+					
+				
+			
+				
+				
+					
+						
+						
+							<ul>
+						
+							<ul>
+						
+							<ul>
+						
+						
+								<li>
+				 					<a href="#btrfs-balance" v-on:click="closeDrawer" id="btrfs-balance-nav">
+										 Btrfs Balance
+									</a>
+								</li>
+						
+							</ul>
+						
+							</ul>
+						
+							</ul>
+						
+					
+				
+			
+				
+				
+					
+						
+						
+							<ul>
+						
+							<ul>
+						
+							<ul>
+						
+						
+								<li>
+				 					<a href="#quartusii--modelsim_ase" v-on:click="closeDrawer" id="quartusii--modelsim_ase-nav">
+										 quartusii &amp; modelsim_ase
+									</a>
+								</li>
+						
+							</ul>
+						
+							</ul>
+						
+							</ul>
+						
+					
+				
+			
+				
+				
+					
+						
+						
+							<ul>
+						
+							<ul>
+						
+							<ul>
+						
+						
+								<li>
+				 					<a href="#other" v-on:click="closeDrawer" id="other-nav">
+										 other
+									</a>
+								</li>
+						
+							</ul>
+						
+							</ul>
+						
+							</ul>
+						
+					
+				
+			
+	</div>
+
+</div>
+            
+        </div>
+    </div>
+</div>
+<transition name="fade">
+    <div v-bind:class="{ 'single-column-drawer-mask': mounted }" v-if="isDrawerOpen" v-on:click="toggleDrawer"></div>
+</transition>
+<nav ref="navBar" class="navbar sticky-top navbar-light single-column-nav-container">
+    <div ref="navBackground" class="nav-background"></div>
+    <div class="container container-narrow nav-content">
+        <button id="nav_dropdown_btn" class="nav-dropdown-toggle" type="button" v-on:click="toggleDrawer">
+            <i class="material-icons">
+                menu
+            </i>
+        </button>
+        <a ref="navTitle" class="navbar-brand" href="http://127.0.0.1:8080">
+            zzndb&#39;s world
+        </a>
+    </div>
+</nav>
+<div class="single-column-header-container" ref="pageHead"
+     v-bind:style="{ transform: 'translateZ(0px) translateY('+.3*scrollY+'px)', opacity: 1-navOpacity }">
+    <a href="http://127.0.0.1:8080">
+        <div class="single-column-header-title">zzndb&#39;s world</div>
+        
+        <div class="single-column-header-subtitle">All things will better soon...let&#39;s see...</div>
+        
+
+    </a>
+</div>
+            <div id="content">
+<div ref="streamContainer" class="stream-container">
+    <div class="post-list-container post-list-container-shadow">
+        <div class="post">
+            
+            
+            
+                
+            
+
+            <div class="post-head-wrapper"
+                 style="background-image: url('/images/2017/03/openSUSE.png')">
+                <div class="post-title">
+                    奔跑吧大蜥蜴
+                    <div class="post-meta">
+                        
+                        <time itemprop="datePublished">
+                            2017-03-20 20:05
+                        </time>
+                        
+
+                        
+                            <i class="material-icons" style="">folder</i>
+                                <a href="/categories/forfun">ForFun</a>
+                                &nbsp;
+                        
+
+                        
+                            <i class="material-icons" style="">label</i>
+                            
+                                <a href="/tags/opensuse">openSUSE</a>
+                                &nbsp;
+                            
+                                <a href="/tags/%E5%A4%87%E5%BF%98">备忘</a>
+                                &nbsp;
+                            
+                                <a href="/tags/quartusii">quartusii</a>
+                                &nbsp;
+                            
+                                <a href="/tags/btrfs">Btrfs</a>
+                                &nbsp;
+                            
+                                <a href="/tags/modelsim">modelsim</a>
+                                &nbsp;
+                            
+                        
+                    </div>
+                </div>
+            </div>
+            
+            <div class="post-body-wrapper">
+                <div class="post-body">
+                    <p><a href="https://www.opensuse.org" target="_blank"><strong>openSUSE tumbleeweed</strong></a>　嗯，大蜥蜴 配置备忘</p>
+<blockquote>
+<p><strong>begin edit</strong> 2017-03-20 20:10:25 星期一<br>
+<strong>last edit</strong> 2018-11-09 08:47:32 星期五</p>
+</blockquote>
+<hr>
+<h3 id="配置源">配置源：</h3>
+<blockquote>
+<p><strong>Google-Chrome</strong>
+<a href="http://dl.google.com/linux/chrome/rpm/stable/x86_64">http://dl.google.com/linux/chrome/rpm/stable/x86_64</a></p>
+<blockquote>
+<p><a href="https://www.google.com/linuxrepositories/" title="Detail">Detail</a>:</p>
+</blockquote>
+</blockquote>
+<ul>
+<li>下载并导入密钥：
+<code>wget https://dl.google.com/linux/linux_signing_key.pub sudo rpm --import linux_signing_key.pub</code></li>
+<li>安装</li>
+<li>ps：目前已入<code>chromium</code> SUSE编译，默认源里自带,能不折腾就少折腾还能直接用<a href="https://software.opensuse.org/search" title="obs">obs</a>的one click install（毕竟时间宝贵<del>处于人生早上五点多中的我不禁感叹</del>)</li>
+</ul>
+<hr>
+<blockquote>
+<p><strong>Packman</strong><br>
+<a href="https://mirrors.tuna.tsinghua.edu.cn/packman/suse/openSUSE_Tumbleweed/">https://mirrors.tuna.tsinghua.edu.cn/packman/suse/openSUSE_Tumbleweed/</a> (主要是一些版权相关官方源缺乏的 比如各种解码器)</p>
+</blockquote>
+<blockquote>
+<p>~~Wine
+<a href="http://download.opensuse.org/repositories/Emulators:/Wine/openSUSE_Tumbleweed/~~(">http://download.opensuse.org/repositories/Emulators:/Wine/openSUSE_Tumbleweed/~~(</a>已弃用感觉并无多大意义)</p>
+</blockquote>
+<blockquote>
+<p><strong>openSUSE_zh</strong><br>
+<a href="http://download.opensuse.org/repositories/home:/opensuse_zh/openSUSE_Tumbleweed/">http://download.opensuse.org/repositories/home:/opensuse_zh/openSUSE_Tumbleweed/</a> (一些本地化应用)</p>
+</blockquote>
+<blockquote>
+<p>~~ ownCloud Server Version stable (openSUSE_Leap_42.2)
+<a href="http://download.owncloud.org/download/repositories/stable/openSUSE_Leap_42.2">http://download.owncloud.org/download/repositories/stable/openSUSE_Leap_42.2</a> ~~ (已弃用 往事不要再提)</p>
+</blockquote>
+<blockquote>
+<p><strong>Nametrac</strong><br>
+<a href="http://download.opensuse.org/repositories/home:/namtrac:/subpixel/openSUSE_Factory/">http://download.opensuse.org/repositories/home:/namtrac:/subpixel/openSUSE_Factory/</a></p>
+<blockquote>
+<p>Detail<br>
+主要是利用源里的<code>libfreetype6</code>对字体进行渲染(因为德国大佬的版权意识，默认源的版本渲染较差 <del>感觉还是比较明显应该非玄学:joy:</del>)</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><strong>X11:Bumblebee</strong><br>
+<a href="https://download.opensuse.org/repositories/X11:/Bumblebee/openSUSE_Tumbleweed/">https://download.opensuse.org/repositories/X11:/Bumblebee/openSUSE_Tumbleweed/</a></p>
+<blockquote>
+<p>Detail<br>
+独显相关折腾wiki-&gt;<a href="https://en.opensuse.org/SDB:NVIDIA_Bumblebee" title="SDB:NVIDIA_Bumblebee">SDB:NVIDIA_Bumblebee</a>
+<strong>oss &amp;&amp; non-oss</strong><br>
+自带，由于潜在的网络问题可用国内的<a href="https://mirrors.tuna.tsinghua.edu.cn/opensuse/tumbleweed/repo/" title="tuna">tuna</a>、<a href="https://mirrors.ustc.edu.cn/opensuse/tumbleweed/repo/" title="ustc">ustc</a> 等代替</p>
+</blockquote>
+</blockquote>
+<hr>
+<h3 id="wiki">wiki</h3>
+<blockquote>
+<p>最初接触某样东西 官方的文档通常是最行之有效的学习方法</p>
+<ul>
+<li><a href="http://opensuse-guide.org/ " target="_blank"><strong>openSUSE官方帮助文档</strong></a></li>
+</ul>
+</blockquote>
+<blockquote>
+<ul>
+<li>&lt;a = href=&quot;https://lug.ustc.edu.cn/sites/opensuse-guide/index.php&rdquo; target=&rdquo;_bank&quot;&gt;<strong>配置文档中文版</strong></a>（感谢来自中科大的翻译）</li>
+</ul>
+</blockquote>
+<hr>
+<h3 id="字体">字体</h3>
+<ul>
+<li>文泉驿微米黑 <code>wqy-microhei-fonts</code></li>
+<li>思源黑体 <code>noto-sans-sc-*</code> <code>noto-serif-sc-*</code></li>
+<li>自用terminal <code>Source Code Pro</code></li>
+</ul>
+<blockquote>
+<p>另对于 wps 字体缺失: <a href="https://my.oschina.net/renwofei423/blog/635798" title="详情看这儿">详情看这儿</a></p>
+</blockquote>
+<h3 id="btrfs-balance">Btrfs Balance</h3>
+<p>每次 Balance 都卡得想骂娘，得知其实没多少必要频繁 Balance 遂关闭之</p>
+<ul>
+<li><a href="https://en.opensuse.org/SDB:Disable_btrfsmaintenance" target="_blank">Disable_btrfsmaintenance</a></li>
+</ul>
+<h3 id="quartusii--modelsim_ase">quartusii &amp; modelsim_ase</h3>
+<p>根据<a href="https://wiki.archlinux.org/index.php/Altera_Design_Software#Manual_installation">Archwiki</a>及实践证实，正常安装17.1以上版本<code>quartusii</code>确实会挂起，无响应</p>
+<p>Solution: 分别安装<code>Help &amp; modelsim</code></p>
+<hr>
+<p>modelsim打不开，如上wiki也提到，同时根据<a href="https://twoerner.blogspot.com/2017/10/running-modelsim-altera-from-quartus.html">这里</a>的步骤，解决</p>
+<p>Solution: 编译32bit freetype2 2.5 之前版本，将得到的<code>lib</code>目录添加到其运行环境<code>LD_LIBRARY_PATH</code>即可</p>
+<p>这里我在<code>${quartusiiInstallVersion}/modelsim_ase/vco</code>文件较为靠上的位置添加了<code>lib</code>目录</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># just for example</span>
+<span style="color:#75715e"># vco file line 10</span>
+export LD_LIBRARY_PATH<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;/my/compile/file/dir/freetype-2.4.7-32bit/lib&#34;</span>:$LD_LIBRARY_PATH
+</code></pre></div><h3 id="other">other</h3>
+<p>值得借鉴的初始化配置</p>
+<ul>
+<li><a href="https://www.mawenbao.com/note/opensuse-tumbleweed-summary.html" target="_blank">人家的博客</a></li>
+</ul>
+<hr>
+<p>还有这个 &mdash;- owncloud 相关：</p>
+<ul>
+<li><a href="https://www.logcg.com/archives/2007.html" target="_blank">还是人家的博客</a>
+写得不错:laughing:</li>
+</ul>
+<p>就这样</p>
+<p>以上</p>
+                    
+                    <HR width="100%" id="EOF">
+                    <p style="color:#777;">Last modified on 2017-03-20</p>
+                    
+                </div>
+            </div>
+            
+            
+            <nav class="post-pagination">
+
+                
+                <a class="newer-posts" href="http://127.0.0.1:8080/post/2017-03-22-%E7%AC%AC%E4%B8%80%E6%AC%A1ac%E7%9A%84leetcode/">
+                    Next<br>第一次AC的LeetCode
+                </a>
+                
+                
+                
+                <a class="older-posts" href="http://127.0.0.1:8080/post/2017-02-19-%E5%85%B3%E4%BA%8Etypecho%E7%9A%84%E9%93%BE%E6%8E%A5%E5%90%8E%E5%8F%B0%E6%89%93%E5%BC%80%E8%AE%BE%E7%BD%AE/">
+                    Previous<br>关于typecho的链接后台打开设置
+                </a>
+                
+            </nav>
+            <div class="post-comment-wrapper">
+                
+
+
+
+
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+            </div><div id="single-column-footer">
+Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> by <a href="https://amazingrise.net">Rise</a>
+<br>
+Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a>'s <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> <br>
+<br>
+
+&copy;
+	
+	2017 zzndb
+	
+    本站遵循 <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" >CC-BY-NC 4.0 协议</a>
+</div>
+    	</div>
+    <script src="http://127.0.0.1:8080/js/journal.js"></script>
+    </body>
+</html>

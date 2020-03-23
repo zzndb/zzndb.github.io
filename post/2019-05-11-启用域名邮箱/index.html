@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html><head>
+<title>启用域名邮箱</title>
+
+<meta charset="utf-8">
+<meta name="X-UA-Compatible" content="IE=edge">
+<meta name="google-site-verification" content="">
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+<meta content="telephone=no" name="format-detection">
+<meta name="renderer" content="webkit">
+<meta name="theme-color" content="#ffffff">
+
+
+
+
+<script src="/vendor/js/jquery.min.js" ></script>
+<script src="/vendor/js/popper.min.js" ></script>
+<script src="/vendor/js/bootstrap.min.js" ></script>
+<script src="/vendor/js/smooth-scroll.polyfills.min.js" ></script>
+<link type="text/css" rel="stylesheet" href="/vendor/css/bootstrap.min.css">
+<script src="/vendor/js/vue.min.js" ></script>
+
+
+
+
+<link rel="stylesheet" href="http://127.0.0.1:8080/scss/journal.min.dd4a27a2ead65caf841b00fd0d3164288b4f1438f9d890ae21a83580bb7b91a1.css" integrity="sha256-3UonourWXK&#43;EGwD9DTFkKItPFDj52JCuIag1gLt7kaE=" media="screen">
+
+<script src="http://127.0.0.1:8080/js/loadCSS.js"></script>
+<script src="http://127.0.0.1:8080/js/table.js"></script>
+
+
+<script src="http://127.0.0.1:8080/js/toc.js"></script>
+
+
+<script>
+    loadCSS("https://fonts.googleapis.com/css?family=Lora|Montserrat|Fira+Mono|Noto+Serif+SC|Material+Icons");
+</script>
+
+
+
+
+
+
+</head><body>
+    	<div id="app"><div ref="sideContainer" class="side-container">
+    
+    <a class="a-block nav-head false" href="http://127.0.0.1:8080">
+    
+        <div class="nav-title">
+            zzndb&#39;s world
+        </div>
+        
+        <div class="nav-subtitle">
+            All things will better soon...let&#39;s see...
+        </div>
+        
+    </a>
+
+    <div class="nav-link-list">
+        
+        
+            
+                
+                
+                <a class="a-block nav-link-item false" href="/posts">
+                    Archive
+                </a>
+        
+            
+                
+                
+                <a class="a-block nav-link-item false" href="/categories">
+                    Categories
+                </a>
+        
+            
+                
+                
+                <a class="a-block nav-link-item false" href="/tags">
+                    Tags
+                </a>
+        
+            
+                
+                
+                <a class="a-block nav-link-item false" href="/links">
+                    Friends
+                </a>
+        
+            
+                
+                
+                <a class="a-block nav-link-item false" href="/about">
+                    About
+                </a>
+        
+            
+                
+                
+                <a class="a-block nav-link-item false" href="/index.xml">
+                    RSS
+                </a>
+        
+    </div>
+
+    
+
+    <div class="nav-footer">
+        
+Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> by <a href="https://amazingrise.net">Rise</a>
+<br>
+Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a>'s <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> <br>
+<br>
+
+&copy;
+	
+	2017 zzndb
+	
+    本站遵循 <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" >CC-BY-NC 4.0 协议</a>
+
+    </div>
+    
+</div><div ref="extraContainer" class="extra-container">
+    
+    <div class="toc animated-visibility" :class="{ invisible: scrollY <= 140 }">
+
+
+	<div class="toc-content">
+	
+		
+		
+		
+		<center>- CATALOG -</center>
+			
+				
+				
+					
+						
+						
+							<ul>
+						
+						
+								<li>
+				 					<a href="#%e9%82%ae%e4%bb%b6%e6%8f%90%e9%86%92%e6%8f%92%e4%bb%b6" v-on:click="closeDrawer" id="邮件提醒插件-nav">
+										 邮件提醒插件
+									</a>
+								</li>
+						
+							</ul>
+						
+					
+				
+			
+				
+				
+					
+						
+						
+							<ul>
+						
+						
+								<li>
+				 					<a href="#%e5%9f%9f%e5%90%8d%e9%82%ae%e7%ae%b1" v-on:click="closeDrawer" id="域名邮箱-nav">
+										 域名邮箱
+									</a>
+								</li>
+						
+							</ul>
+						
+					
+				
+			
+	</div>
+
+</div>
+    
+    <div class="pagination">
+        <a id="globalBackToTop" class="pagination-action animated-visibility" href="#top" :class="{ invisible: scrollY == 0 }">
+            <i class="material-icons pagination-action-icon">
+                keyboard_arrow_up
+            </i>
+        </a>
+        
+    </div>
+</div><div class="single-column-drawer-container" ref="drawer"
+     v-bind:class="{ 'single-column-drawer-container-active': isDrawerOpen }">
+    <div class="drawer-content">
+        <div class="drawer-menu">
+            
+            
+                
+                    
+                    
+                    <a class="a-block drawer-menu-item false" href="/posts">
+                        Archive
+                    </a>
+            
+                
+                    
+                    
+                    <a class="a-block drawer-menu-item false" href="/categories">
+                        Categories
+                    </a>
+            
+                
+                    
+                    
+                    <a class="a-block drawer-menu-item false" href="/tags">
+                        Tags
+                    </a>
+            
+                
+                    
+                    
+                    <a class="a-block drawer-menu-item false" href="/links">
+                        Friends
+                    </a>
+            
+                
+                    
+                    
+                    <a class="a-block drawer-menu-item false" href="/about">
+                        About
+                    </a>
+            
+                
+                    
+                    
+                    <a class="a-block drawer-menu-item false" href="/index.xml">
+                        RSS
+                    </a>
+            
+            
+            <div class="toc">
+
+
+	<div class="toc-content">
+	
+		
+		
+		
+		<center>- CATALOG -</center>
+			
+				
+				
+					
+						
+						
+							<ul>
+						
+						
+								<li>
+				 					<a href="#%e9%82%ae%e4%bb%b6%e6%8f%90%e9%86%92%e6%8f%92%e4%bb%b6" v-on:click="closeDrawer" id="邮件提醒插件-nav">
+										 邮件提醒插件
+									</a>
+								</li>
+						
+							</ul>
+						
+					
+				
+			
+				
+				
+					
+						
+						
+							<ul>
+						
+						
+								<li>
+				 					<a href="#%e5%9f%9f%e5%90%8d%e9%82%ae%e7%ae%b1" v-on:click="closeDrawer" id="域名邮箱-nav">
+										 域名邮箱
+									</a>
+								</li>
+						
+							</ul>
+						
+					
+				
+			
+	</div>
+
+</div>
+            
+        </div>
+    </div>
+</div>
+<transition name="fade">
+    <div v-bind:class="{ 'single-column-drawer-mask': mounted }" v-if="isDrawerOpen" v-on:click="toggleDrawer"></div>
+</transition>
+<nav ref="navBar" class="navbar sticky-top navbar-light single-column-nav-container">
+    <div ref="navBackground" class="nav-background"></div>
+    <div class="container container-narrow nav-content">
+        <button id="nav_dropdown_btn" class="nav-dropdown-toggle" type="button" v-on:click="toggleDrawer">
+            <i class="material-icons">
+                menu
+            </i>
+        </button>
+        <a ref="navTitle" class="navbar-brand" href="http://127.0.0.1:8080">
+            zzndb&#39;s world
+        </a>
+    </div>
+</nav>
+<div class="single-column-header-container" ref="pageHead"
+     v-bind:style="{ transform: 'translateZ(0px) translateY('+.3*scrollY+'px)', opacity: 1-navOpacity }">
+    <a href="http://127.0.0.1:8080">
+        <div class="single-column-header-title">zzndb&#39;s world</div>
+        
+        <div class="single-column-header-subtitle">All things will better soon...let&#39;s see...</div>
+        
+
+    </a>
+</div>
+            <div id="content">
+<div ref="streamContainer" class="stream-container">
+    <div class="post-list-container post-list-container-shadow">
+        <div class="post">
+            
+            
+            
+
+            <div class="post-head-wrapper-text-only"
+                 style="background-image: url('/')">
+                <div class="post-title">
+                    启用域名邮箱
+                    <div class="post-meta">
+                        
+                        <time itemprop="datePublished">
+                            2019-05-11 17:51
+                        </time>
+                        
+
+                        
+                            <i class="material-icons" style="">folder</i>
+                                <a href="/categories/forfun">ForFun</a>
+                                &nbsp;
+                        
+
+                        
+                            <i class="material-icons" style="">label</i>
+                            
+                                <a href="/tags/maingun">Maingun</a>
+                                &nbsp;
+                            
+                        
+                    </div>
+                </div>
+            </div>
+            
+            <div class="post-body-wrapper">
+                <div class="post-body">
+                    <p>其实最开始只是因为没有一个好的评论回复邮件提醒解决方案，然后现在感觉有点香啊。</p>
+<p>TL;DR: 利用 Mailgun 弄了域名邮箱，顺便解决了博客评论邮件提醒的问题。</p>
+<h1 id="邮件提醒插件">邮件提醒插件</h1>
+<p>几年前刚弄这个也不会有人来的博客的时候就有找过 typecho 的这种邮件评论插件，用来告知有人来留下了脚印，不然就得自己反复上线检查 ，然后就找到一个「CommentToMail」用上了，现在 Github 还能<a href="https://github.com/search?q=typecho+mail&amp;ref=opensearch">找到</a>它及一些衍生版本。它本身是利用已有邮箱通过「PHP」的如「PHPMailer」的库进行邮件发送，由于自己是个<del>假</del>谷粉，邮箱不多 Gmail 倒是有几个，便去单独注册了一个开始了这并不稳的使用，不知道是不是插件本身的问题，还是 Gmail 比较特殊，一直都不稳定，时好时坏，当然因为并没有人来的缘故:worried:，就搁这儿没管它了。</p>
+<p>然后时隔一年多今天莫名的又来试了试，嗯，还是不好使，在辗转几个衍生插件之后，发现一些插件中除了原始的「smtp」之类的方式还有一个叫做「<a href="https://www.mailgun.com/" target="_blank">Mailgun</a>」的东西，就去了解了一下</p>
+<blockquote>
+<p><strong>10,000 emails free every month.</strong>
+<strong>Powerful APIs</strong> that enable you to send, receive and track email effortlessly.</p>
+</blockquote>
+<p>看着不错嘛，注册，登录，照着文档看了看，绑定了信用卡（不然就只有一个试用「domains」，反正账户可以设置月最大邮件发送数，<strong>设置成10K</strong>:relieved:），然后开启了新世界大门。</p>
+<p>然后照着自带的「domain」教程，去tx云添加了解析，得到了有解析指向「mailgun」的域名「zzndb.com.cn」，拿着 key 和 domain 去插件测试了一下评论邮件提醒效果，稳得不行。（欢迎看到这儿的dalao们留个脚印测试测试:wink:</p>
+<h1 id="域名邮箱">域名邮箱</h1>
+<p>在域名对应「domain setting」可以新建 「SMTP credentials」，使用这个相当于我们自建的域名邮箱（如test@zzndb.com.cn）会<strong>通过 Mailgun 提供的 SMTP server 实现邮件的发送</strong>，再加上它的另一个功能「<strong>Receiving Routes」进行邮件转发，就能实现邮件的接收</strong>。</p>
+<p>这里我把它转发到了我的一个主「Gmail」帐号，配合 tg 的 Gmail bot ，在目前的网络环境下~~（毕竟有v6校园网）~~不要太爽，在Gmail里添加这个邮箱（<a href="https://medium.com/issacaption/using-a-custom-domain-in-gmail-for-free-with-mailgun-and-sendgrid-2c54e681f378" target="_blank">参见</a>），就能直接通过Gmail发送这个域名邮箱的邮件。</p>
+<p>这里放出域名邮箱地址~~（照旧不直接给~~
+<code>echo &quot;emRiQHp6bmRiLmNvbS5jbgo=&quot; | base64 -d</code></p>
+<p>当然「Maingun」毕竟是提供面向开发者的邮件发送服务，有多种方便API还能直接通过「curl」发送邮件:joy:，还附送了其他如反垃圾的机制~~，还不要钱~~。</p>
+<p><del>感觉有了自己的域名邮箱，逼格高了不少啊，香！！</del></p>
+<hr>
+<p>done！</p>
+<p><del>又水了一篇:laughing:</del></p>
+                    
+                    <HR width="100%" id="EOF">
+                    <p style="color:#777;">Last modified on 2019-05-11</p>
+                    
+                </div>
+            </div>
+            
+            
+            <nav class="post-pagination">
+
+                
+                <a class="newer-posts" href="http://127.0.0.1:8080/post/2019-06-08-%E5%9C%A8-gcp-%E4%B8%8A%E9%83%A8%E7%BD%B2-nextcloud-%E7%9B%B8%E5%85%B3%E6%8A%98%E8%85%BE/">
+                    Next<br>在 GCP 上部署 Nextcloud 相关折腾
+                </a>
+                
+                
+                
+                <a class="older-posts" href="http://127.0.0.1:8080/post/2019-05-10-install-postgresql-on-opensuse/">
+                    Previous<br>install PostgreSQL on openSUSE
+                </a>
+                
+            </nav>
+            <div class="post-comment-wrapper">
+                
+
+
+
+
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+            </div><div id="single-column-footer">
+Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> by <a href="https://amazingrise.net">Rise</a>
+<br>
+Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a>'s <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> <br>
+<br>
+
+&copy;
+	
+	2017 zzndb
+	
+    本站遵循 <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" >CC-BY-NC 4.0 协议</a>
+</div>
+    	</div>
+    <script src="http://127.0.0.1:8080/js/journal.js"></script>
+    </body>
+</html>

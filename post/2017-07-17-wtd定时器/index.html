@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html><head>
+<title>WTD定时器</title>
+
+<meta charset="utf-8">
+<meta name="X-UA-Compatible" content="IE=edge">
+<meta name="google-site-verification" content="">
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+<meta content="telephone=no" name="format-detection">
+<meta name="renderer" content="webkit">
+<meta name="theme-color" content="#ffffff">
+
+
+
+
+<script src="/vendor/js/jquery.min.js" ></script>
+<script src="/vendor/js/popper.min.js" ></script>
+<script src="/vendor/js/bootstrap.min.js" ></script>
+<script src="/vendor/js/smooth-scroll.polyfills.min.js" ></script>
+<link type="text/css" rel="stylesheet" href="/vendor/css/bootstrap.min.css">
+<script src="/vendor/js/vue.min.js" ></script>
+
+
+
+
+<link rel="stylesheet" href="http://127.0.0.1:8080/scss/journal.min.dd4a27a2ead65caf841b00fd0d3164288b4f1438f9d890ae21a83580bb7b91a1.css" integrity="sha256-3UonourWXK&#43;EGwD9DTFkKItPFDj52JCuIag1gLt7kaE=" media="screen">
+
+<script src="http://127.0.0.1:8080/js/loadCSS.js"></script>
+<script src="http://127.0.0.1:8080/js/table.js"></script>
+
+
+<script src="http://127.0.0.1:8080/js/toc.js"></script>
+
+
+<script>
+    loadCSS("https://fonts.googleapis.com/css?family=Lora|Montserrat|Fira+Mono|Noto+Serif+SC|Material+Icons");
+</script>
+
+
+
+
+
+
+</head><body>
+    	<div id="app"><div ref="sideContainer" class="side-container">
+    
+    <a class="a-block nav-head false" href="http://127.0.0.1:8080">
+    
+        <div class="nav-title">
+            zzndb&#39;s world
+        </div>
+        
+        <div class="nav-subtitle">
+            All things will better soon...let&#39;s see...
+        </div>
+        
+    </a>
+
+    <div class="nav-link-list">
+        
+        
+            
+                
+                
+                <a class="a-block nav-link-item false" href="/posts">
+                    Archive
+                </a>
+        
+            
+                
+                
+                <a class="a-block nav-link-item false" href="/categories">
+                    Categories
+                </a>
+        
+            
+                
+                
+                <a class="a-block nav-link-item false" href="/tags">
+                    Tags
+                </a>
+        
+            
+                
+                
+                <a class="a-block nav-link-item false" href="/links">
+                    Friends
+                </a>
+        
+            
+                
+                
+                <a class="a-block nav-link-item false" href="/about">
+                    About
+                </a>
+        
+            
+                
+                
+                <a class="a-block nav-link-item false" href="/index.xml">
+                    RSS
+                </a>
+        
+    </div>
+
+    
+
+    <div class="nav-footer">
+        
+Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> by <a href="https://amazingrise.net">Rise</a>
+<br>
+Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a>'s <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> <br>
+<br>
+
+&copy;
+	
+	2017 zzndb
+	
+    本站遵循 <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" >CC-BY-NC 4.0 协议</a>
+
+    </div>
+    
+</div><div ref="extraContainer" class="extra-container">
+    
+    <div class="toc animated-visibility" :class="{ invisible: scrollY <= 140 }">
+
+
+</div>
+    
+    <div class="pagination">
+        <a id="globalBackToTop" class="pagination-action animated-visibility" href="#top" :class="{ invisible: scrollY == 0 }">
+            <i class="material-icons pagination-action-icon">
+                keyboard_arrow_up
+            </i>
+        </a>
+        
+    </div>
+</div><div class="single-column-drawer-container" ref="drawer"
+     v-bind:class="{ 'single-column-drawer-container-active': isDrawerOpen }">
+    <div class="drawer-content">
+        <div class="drawer-menu">
+            
+            
+                
+                    
+                    
+                    <a class="a-block drawer-menu-item false" href="/posts">
+                        Archive
+                    </a>
+            
+                
+                    
+                    
+                    <a class="a-block drawer-menu-item false" href="/categories">
+                        Categories
+                    </a>
+            
+                
+                    
+                    
+                    <a class="a-block drawer-menu-item false" href="/tags">
+                        Tags
+                    </a>
+            
+                
+                    
+                    
+                    <a class="a-block drawer-menu-item false" href="/links">
+                        Friends
+                    </a>
+            
+                
+                    
+                    
+                    <a class="a-block drawer-menu-item false" href="/about">
+                        About
+                    </a>
+            
+                
+                    
+                    
+                    <a class="a-block drawer-menu-item false" href="/index.xml">
+                        RSS
+                    </a>
+            
+            
+            <div class="toc">
+
+
+</div>
+            
+        </div>
+    </div>
+</div>
+<transition name="fade">
+    <div v-bind:class="{ 'single-column-drawer-mask': mounted }" v-if="isDrawerOpen" v-on:click="toggleDrawer"></div>
+</transition>
+<nav ref="navBar" class="navbar sticky-top navbar-light single-column-nav-container">
+    <div ref="navBackground" class="nav-background"></div>
+    <div class="container container-narrow nav-content">
+        <button id="nav_dropdown_btn" class="nav-dropdown-toggle" type="button" v-on:click="toggleDrawer">
+            <i class="material-icons">
+                menu
+            </i>
+        </button>
+        <a ref="navTitle" class="navbar-brand" href="http://127.0.0.1:8080">
+            zzndb&#39;s world
+        </a>
+    </div>
+</nav>
+<div class="single-column-header-container" ref="pageHead"
+     v-bind:style="{ transform: 'translateZ(0px) translateY('+.3*scrollY+'px)', opacity: 1-navOpacity }">
+    <a href="http://127.0.0.1:8080">
+        <div class="single-column-header-title">zzndb&#39;s world</div>
+        
+        <div class="single-column-header-subtitle">All things will better soon...let&#39;s see...</div>
+        
+
+    </a>
+</div>
+            <div id="content">
+<div ref="streamContainer" class="stream-container">
+    <div class="post-list-container post-list-container-shadow">
+        <div class="post">
+            
+            
+            
+
+            <div class="post-head-wrapper-text-only"
+                 style="background-image: url('/')">
+                <div class="post-title">
+                    WTD定时器
+                    <div class="post-meta">
+                        
+                        <time itemprop="datePublished">
+                            2017-07-17 00:52
+                        </time>
+                        
+
+                        
+
+                        
+                            <i class="material-icons" style="">label</i>
+                            
+                                <a href="/tags/msp430g2">MSP430G2</a>
+                                &nbsp;
+                            
+                                <a href="/tags/xmind">Xmind</a>
+                                &nbsp;
+                            
+                        
+                    </div>
+                </div>
+            </div>
+            
+            <div class="post-body-wrapper">
+                <div class="post-body">
+                    <p>另一种学习笔记记录方式</p>
+<p>##思维导图</p>
+<p>因为对电子的偏好，正好有个机会，于是自然的想参加不久后的<em>电子设计竞赛</em>当然误打误撞来了计算机的我，当然是零基础入门了，面对看起来颇为复杂的<em>MSP430G2</em>单片机指导书，感觉效率太低下了，刚好看到有人推荐<strong>xmind</strong>这一LINUX下也有的思维导图工具，赶紧装在了我的大蜥蜴上，正好看到了WTD看门狗定时器这一章，所以赶紧用上了，成果如下：<img src="/images/2017/07/253397290.png" alt="WDT 看门狗定时器.png"><a href="/images/2017/07/420233643.svg">WDT 看门狗定时器.svg</a>
+额，差不多就这个样子，当然都是现学现用，感觉用了思维导图关于这章的知识点是要清晰很多了，感觉还算良好。
+:joy: :joy:</p>
+<p>以上</p>
+<p><del>[1]图文无关:stuck_out_tongue:来自2017 年父亲节Google <a href="https://www.google.com/doodles/fathers-day-2017">Doodle</a></del></p>
+                    
+                    <HR width="100%" id="EOF">
+                    <p style="color:#777;">Last modified on 2017-07-17</p>
+                    
+                </div>
+            </div>
+            
+            
+            <nav class="post-pagination">
+
+                
+                <a class="newer-posts" href="http://127.0.0.1:8080/post/2017-07-20-number4-ac/">
+                    Next<br>Number4 AC
+                </a>
+                
+                
+                
+                <a class="older-posts" href="http://127.0.0.1:8080/post/2017-03-22-%E7%AC%AC%E4%B8%80%E6%AC%A1ac%E7%9A%84leetcode/">
+                    Previous<br>第一次AC的LeetCode
+                </a>
+                
+            </nav>
+            <div class="post-comment-wrapper">
+                
+
+
+
+
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+            </div><div id="single-column-footer">
+Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> by <a href="https://amazingrise.net">Rise</a>
+<br>
+Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a>'s <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> <br>
+<br>
+
+&copy;
+	
+	2017 zzndb
+	
+    本站遵循 <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" >CC-BY-NC 4.0 协议</a>
+</div>
+    	</div>
+    <script src="http://127.0.0.1:8080/js/journal.js"></script>
+    </body>
+</html>

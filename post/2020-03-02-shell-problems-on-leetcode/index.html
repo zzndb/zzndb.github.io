@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html><head>
+<title>Shell Problems On LeetCode</title>
+
+<meta charset="utf-8">
+<meta name="X-UA-Compatible" content="IE=edge">
+<meta name="google-site-verification" content="">
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+<meta content="telephone=no" name="format-detection">
+<meta name="renderer" content="webkit">
+<meta name="theme-color" content="#ffffff">
+
+
+
+
+<script src="/vendor/js/jquery.min.js" ></script>
+<script src="/vendor/js/popper.min.js" ></script>
+<script src="/vendor/js/bootstrap.min.js" ></script>
+<script src="/vendor/js/smooth-scroll.polyfills.min.js" ></script>
+<link type="text/css" rel="stylesheet" href="/vendor/css/bootstrap.min.css">
+<script src="/vendor/js/vue.min.js" ></script>
+
+
+
+
+<link rel="stylesheet" href="http://127.0.0.1:8080/scss/journal.min.dd4a27a2ead65caf841b00fd0d3164288b4f1438f9d890ae21a83580bb7b91a1.css" integrity="sha256-3UonourWXK&#43;EGwD9DTFkKItPFDj52JCuIag1gLt7kaE=" media="screen">
+
+<script src="http://127.0.0.1:8080/js/loadCSS.js"></script>
+<script src="http://127.0.0.1:8080/js/table.js"></script>
+
+
+<script src="http://127.0.0.1:8080/js/toc.js"></script>
+
+
+<script>
+    loadCSS("https://fonts.googleapis.com/css?family=Lora|Montserrat|Fira+Mono|Noto+Serif+SC|Material+Icons");
+</script>
+
+
+
+
+
+
+</head><body>
+    	<div id="app"><div ref="sideContainer" class="side-container">
+    
+    <a class="a-block nav-head false" href="http://127.0.0.1:8080">
+    
+        <div class="nav-title">
+            zzndb&#39;s world
+        </div>
+        
+        <div class="nav-subtitle">
+            All things will better soon...let&#39;s see...
+        </div>
+        
+    </a>
+
+    <div class="nav-link-list">
+        
+        
+            
+                
+                
+                <a class="a-block nav-link-item false" href="/posts">
+                    Archive
+                </a>
+        
+            
+                
+                
+                <a class="a-block nav-link-item false" href="/categories">
+                    Categories
+                </a>
+        
+            
+                
+                
+                <a class="a-block nav-link-item false" href="/tags">
+                    Tags
+                </a>
+        
+            
+                
+                
+                <a class="a-block nav-link-item false" href="/links">
+                    Friends
+                </a>
+        
+            
+                
+                
+                <a class="a-block nav-link-item false" href="/about">
+                    About
+                </a>
+        
+            
+                
+                
+                <a class="a-block nav-link-item false" href="/index.xml">
+                    RSS
+                </a>
+        
+    </div>
+
+    
+
+    <div class="nav-footer">
+        
+Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> by <a href="https://amazingrise.net">Rise</a>
+<br>
+Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a>'s <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> <br>
+<br>
+
+&copy;
+	
+	2017 zzndb
+	
+    本站遵循 <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" >CC-BY-NC 4.0 协议</a>
+
+    </div>
+    
+</div><div ref="extraContainer" class="extra-container">
+    
+    <div class="toc animated-visibility" :class="{ invisible: scrollY <= 140 }">
+
+
+	<div class="toc-content">
+	
+		
+		
+		
+		<center>- CATALOG -</center>
+			
+				
+				
+					
+						
+						
+							<ul>
+						
+						
+								<li>
+				 					<a href="#192-word-frequency" v-on:click="closeDrawer" id="192-word-frequency-nav">
+										 192 Word Frequency
+									</a>
+								</li>
+						
+							</ul>
+						
+					
+				
+			
+				
+				
+					
+						
+						
+							<ul>
+						
+							<ul>
+						
+						
+								<li>
+				 					<a href="#%e4%b8%80%e5%b9%b4%e5%89%8d-ac-%e7%89%88%e6%9c%ac" v-on:click="closeDrawer" id="一年前-ac-版本-nav">
+										 一年前 AC 版本：
+									</a>
+								</li>
+						
+							</ul>
+						
+							</ul>
+						
+					
+				
+			
+				
+				
+					
+						
+						
+							<ul>
+						
+							<ul>
+						
+						
+								<li>
+				 					<a href="#%e7%8e%b0%e5%9c%a8%e7%9a%84-ac-%e7%89%88%e6%9c%ac" v-on:click="closeDrawer" id="现在的-ac-版本-nav">
+										 现在的 AC 版本：
+									</a>
+								</li>
+						
+							</ul>
+						
+							</ul>
+						
+					
+				
+			
+				
+				
+					
+						
+						
+							<ul>
+						
+						
+								<li>
+				 					<a href="#193-valid-phone-numbers" v-on:click="closeDrawer" id="193-valid-phone-numbers-nav">
+										 193 Valid Phone Numbers
+									</a>
+								</li>
+						
+							</ul>
+						
+					
+				
+			
+				
+				
+					
+						
+						
+							<ul>
+						
+							<ul>
+						
+						
+								<li>
+				 					<a href="#%e4%b8%80%e4%b8%aa-grep-%e7%89%88%e6%9c%ac" v-on:click="closeDrawer" id="一个-grep-版本-nav">
+										 一个 grep 版本：
+									</a>
+								</li>
+						
+							</ul>
+						
+							</ul>
+						
+					
+				
+			
+				
+				
+					
+						
+						
+							<ul>
+						
+						
+								<li>
+				 					<a href="#194-transpose-file" v-on:click="closeDrawer" id="194-transpose-file-nav">
+										 194 Transpose File
+									</a>
+								</li>
+						
+							</ul>
+						
+					
+				
+			
+				
+				
+					
+						
+						
+							<ul>
+						
+							<ul>
+						
+						
+								<li>
+				 					<a href="#%e7%8e%b0%e5%9c%a8%e7%9a%84-ac-%e7%89%88%e6%9c%ac-1" v-on:click="closeDrawer" id="现在的-ac-版本-1-nav">
+										 现在的 AC 版本：
+									</a>
+								</li>
+						
+							</ul>
+						
+							</ul>
+						
+					
+				
+			
+				
+				
+					
+						
+						
+							<ul>
+						
+						
+								<li>
+				 					<a href="#195-tenth-line" v-on:click="closeDrawer" id="195-tenth-line-nav">
+										 195 Tenth Line
+									</a>
+								</li>
+						
+							</ul>
+						
+					
+				
+			
+				
+				
+					
+						
+						
+							<ul>
+						
+							<ul>
+						
+						
+								<li>
+				 					<a href="#sed-%e7%9a%84-ac-%e7%89%88%e6%9c%ac" v-on:click="closeDrawer" id="sed-的-ac-版本-nav">
+										 sed 的 AC 版本
+									</a>
+								</li>
+						
+							</ul>
+						
+							</ul>
+						
+					
+				
+			
+	</div>
+
+</div>
+    
+    <div class="pagination">
+        <a id="globalBackToTop" class="pagination-action animated-visibility" href="#top" :class="{ invisible: scrollY == 0 }">
+            <i class="material-icons pagination-action-icon">
+                keyboard_arrow_up
+            </i>
+        </a>
+        
+    </div>
+</div><div class="single-column-drawer-container" ref="drawer"
+     v-bind:class="{ 'single-column-drawer-container-active': isDrawerOpen }">
+    <div class="drawer-content">
+        <div class="drawer-menu">
+            
+            
+                
+                    
+                    
+                    <a class="a-block drawer-menu-item false" href="/posts">
+                        Archive
+                    </a>
+            
+                
+                    
+                    
+                    <a class="a-block drawer-menu-item false" href="/categories">
+                        Categories
+                    </a>
+            
+                
+                    
+                    
+                    <a class="a-block drawer-menu-item false" href="/tags">
+                        Tags
+                    </a>
+            
+                
+                    
+                    
+                    <a class="a-block drawer-menu-item false" href="/links">
+                        Friends
+                    </a>
+            
+                
+                    
+                    
+                    <a class="a-block drawer-menu-item false" href="/about">
+                        About
+                    </a>
+            
+                
+                    
+                    
+                    <a class="a-block drawer-menu-item false" href="/index.xml">
+                        RSS
+                    </a>
+            
+            
+            <div class="toc">
+
+
+	<div class="toc-content">
+	
+		
+		
+		
+		<center>- CATALOG -</center>
+			
+				
+				
+					
+						
+						
+							<ul>
+						
+						
+								<li>
+				 					<a href="#192-word-frequency" v-on:click="closeDrawer" id="192-word-frequency-nav">
+										 192 Word Frequency
+									</a>
+								</li>
+						
+							</ul>
+						
+					
+				
+			
+				
+				
+					
+						
+						
+							<ul>
+						
+							<ul>
+						
+						
+								<li>
+				 					<a href="#%e4%b8%80%e5%b9%b4%e5%89%8d-ac-%e7%89%88%e6%9c%ac" v-on:click="closeDrawer" id="一年前-ac-版本-nav">
+										 一年前 AC 版本：
+									</a>
+								</li>
+						
+							</ul>
+						
+							</ul>
+						
+					
+				
+			
+				
+				
+					
+						
+						
+							<ul>
+						
+							<ul>
+						
+						
+								<li>
+				 					<a href="#%e7%8e%b0%e5%9c%a8%e7%9a%84-ac-%e7%89%88%e6%9c%ac" v-on:click="closeDrawer" id="现在的-ac-版本-nav">
+										 现在的 AC 版本：
+									</a>
+								</li>
+						
+							</ul>
+						
+							</ul>
+						
+					
+				
+			
+				
+				
+					
+						
+						
+							<ul>
+						
+						
+								<li>
+				 					<a href="#193-valid-phone-numbers" v-on:click="closeDrawer" id="193-valid-phone-numbers-nav">
+										 193 Valid Phone Numbers
+									</a>
+								</li>
+						
+							</ul>
+						
+					
+				
+			
+				
+				
+					
+						
+						
+							<ul>
+						
+							<ul>
+						
+						
+								<li>
+				 					<a href="#%e4%b8%80%e4%b8%aa-grep-%e7%89%88%e6%9c%ac" v-on:click="closeDrawer" id="一个-grep-版本-nav">
+										 一个 grep 版本：
+									</a>
+								</li>
+						
+							</ul>
+						
+							</ul>
+						
+					
+				
+			
+				
+				
+					
+						
+						
+							<ul>
+						
+						
+								<li>
+				 					<a href="#194-transpose-file" v-on:click="closeDrawer" id="194-transpose-file-nav">
+										 194 Transpose File
+									</a>
+								</li>
+						
+							</ul>
+						
+					
+				
+			
+				
+				
+					
+						
+						
+							<ul>
+						
+							<ul>
+						
+						
+								<li>
+				 					<a href="#%e7%8e%b0%e5%9c%a8%e7%9a%84-ac-%e7%89%88%e6%9c%ac-1" v-on:click="closeDrawer" id="现在的-ac-版本-1-nav">
+										 现在的 AC 版本：
+									</a>
+								</li>
+						
+							</ul>
+						
+							</ul>
+						
+					
+				
+			
+				
+				
+					
+						
+						
+							<ul>
+						
+						
+								<li>
+				 					<a href="#195-tenth-line" v-on:click="closeDrawer" id="195-tenth-line-nav">
+										 195 Tenth Line
+									</a>
+								</li>
+						
+							</ul>
+						
+					
+				
+			
+				
+				
+					
+						
+						
+							<ul>
+						
+							<ul>
+						
+						
+								<li>
+				 					<a href="#sed-%e7%9a%84-ac-%e7%89%88%e6%9c%ac" v-on:click="closeDrawer" id="sed-的-ac-版本-nav">
+										 sed 的 AC 版本
+									</a>
+								</li>
+						
+							</ul>
+						
+							</ul>
+						
+					
+				
+			
+	</div>
+
+</div>
+            
+        </div>
+    </div>
+</div>
+<transition name="fade">
+    <div v-bind:class="{ 'single-column-drawer-mask': mounted }" v-if="isDrawerOpen" v-on:click="toggleDrawer"></div>
+</transition>
+<nav ref="navBar" class="navbar sticky-top navbar-light single-column-nav-container">
+    <div ref="navBackground" class="nav-background"></div>
+    <div class="container container-narrow nav-content">
+        <button id="nav_dropdown_btn" class="nav-dropdown-toggle" type="button" v-on:click="toggleDrawer">
+            <i class="material-icons">
+                menu
+            </i>
+        </button>
+        <a ref="navTitle" class="navbar-brand" href="http://127.0.0.1:8080">
+            zzndb&#39;s world
+        </a>
+    </div>
+</nav>
+<div class="single-column-header-container" ref="pageHead"
+     v-bind:style="{ transform: 'translateZ(0px) translateY('+.3*scrollY+'px)', opacity: 1-navOpacity }">
+    <a href="http://127.0.0.1:8080">
+        <div class="single-column-header-title">zzndb&#39;s world</div>
+        
+        <div class="single-column-header-subtitle">All things will better soon...let&#39;s see...</div>
+        
+
+    </a>
+</div>
+            <div id="content">
+<div ref="streamContainer" class="stream-container">
+    <div class="post-list-container post-list-container-shadow">
+        <div class="post">
+            
+            
+            
+
+            <div class="post-head-wrapper-text-only"
+                 style="background-image: url('/')">
+                <div class="post-title">
+                    Shell Problems On LeetCode
+                    <div class="post-meta">
+                        
+                        <time itemprop="datePublished">
+                            2020-03-02 16:28
+                        </time>
+                        
+
+                        
+                            <i class="material-icons" style="">folder</i>
+                                <a href="/categories/code">Code</a>
+                                &nbsp;
+                        
+
+                        
+                            <i class="material-icons" style="">label</i>
+                            
+                                <a href="/tags/leetcode">Leetcode</a>
+                                &nbsp;
+                            
+                                <a href="/tags/shell-script">Shell Script</a>
+                                &nbsp;
+                            
+                        
+                    </div>
+                </div>
+            </div>
+            
+            <div class="post-body-wrapper">
+                <div class="post-body">
+                    <p>目前只有四道（已经一年多过去了还是只有四道。。。</p>
+<h1 id="192-word-frequency">192 Word Frequency</h1>
+<p>题目链接：<a target="_blank" href="https://leetcode.com/problems/word-frequency/"><a href="https://leetcode.com/problems/word-frequency/">https://leetcode.com/problems/word-frequency/</a></a>
+用人话说的题目描述：
+给你一个文本 <code>words.txt</code> 里面包含若干行英文句子，统计每个单词的词频，以降序输出
+例如输入：</p>
+<pre><code>the day is sunny the the
+the sunny is is
+</code></pre><p>正确输出：</p>
+<pre><code>the 4
+is 3
+sunny 2
+day 1
+</code></pre><h2 id="一年前-ac-版本">一年前 AC 版本：</h2>
+<pre><code>cat words.txt | sed -E &quot;s/( )+/\n/g&quot; | awk '{a[$0]++;} END {for (i in a) print i &quot; &quot; a[i];}' | sort -nrk 2 -t ' ' | awk '$2!=&quot;&quot; {print $0}'
+</code></pre><p>貌似我当年并不知道 <code>tr</code> ？竟然用 <code>sed</code> 进行空格替换处理，还贴心的为<code>sort</code>指定了分隔符，还二次使用了 <code>awk</code> 就为了去除可能在单词间多余的空格的情况。</p>
+<p>也许是因为使用了不应该有的 <code>cat</code> 以及不知道 <code>tr</code> 使用了叫重的 <code>sed + awk</code> 完成本应该一个 <code>tr</code> 就能完成的工作，最后耗时 8ms ，现在来看打败了 8.85% 的 AC 提交者。</p>
+<h2 id="现在的-ac-版本">现在的 AC 版本：</h2>
+<pre><code>tr -s &quot; &quot; &quot;\n&quot; &lt; words.txt | awk 'BEING{}{key[$1]++}END{for (i in key) print i&quot; &quot;key[i]}' | sort -rnk 2
+</code></pre><p><code>tr</code>：预处理文本，格式化为每行一个单词，为后续处理做准备</p>
+<ul>
+<li><code>-s</code>：压缩重复匹配，这里处理单词间多于一个空格的情况</li>
+<li><code>&quot; &quot; &quot;\n&quot;</code>：替换前一个匹配空格到后面字符，这里替换为回车</li>
+<li><code>&lt;</code>：直接重定向输入，避免使用无意义的 <code>cat</code> 程序</li>
+<li><code>words.txt</code>：目标文本</li>
+</ul>
+<p><code>awk</code>：完成主要的词频统计
+<code>sort</code>：完成最后降序排序</p>
+<ul>
+<li><code>-r</code>：降序</li>
+<li><code>-n</code>：根据数字值排序</li>
+<li><code>-k</code>：指定排序关键字位置，这里为 2</li>
+</ul>
+<p>最后耗时 0ms 打败 100% 的提交者？内存占用 3.3 MB 打败 86.21% 提交者。</p>
+<h1 id="193-valid-phone-numbers">193 Valid Phone Numbers</h1>
+<p>题目链接：<a target="_blank" href="https://leetcode.com/problems/valid-phone-numbers/"><a href="https://leetcode.com/problems/valid-phone-numbers/">https://leetcode.com/problems/valid-phone-numbers/</a></a>
+用人话说的题目描述：
+给你一个文本文件<code>file.txt</code>每行包含一个电话号码，给你正确的格式要求<code>(xxx) xxx-xxxx or xxx-xxx-xxxx</code>打印出正确的电话号码</p>
+<p>这个在一年前就试过了各种实现，都不太理想，让我现在想通过正则匹配实现，我也差不多只能想到<code>grep，awk，sed</code>来做，结果都不太好，最好还是 8ms 的运行时间，他们实现都大同小异，无非是用类似<code>^((\([0-9]{3}\)\ )|([0-9]{3}-))[0-9]{3}-[0-9]{4}*$</code>来匹配，当然实现中得注意命令行字符的意义，该转义转义（详见<code>regex</code> <a target="_blank" href=https://linux.die.net/man/7/regex>manpage</a>）。</p>
+<h2 id="一个-grep-版本">一个 <code>grep</code> 版本：</h2>
+<pre><code>grep &quot;^\(\(([0-9]\{3\})\ \)\|\([0-9]\{3\}-\)\)[0-9]\{3\}-[0-9]\{4\}$&quot; file.txt
+</code></pre><h1 id="194-transpose-file">194 Transpose File</h1>
+<p>题目链接：<a target="_blank" href="https://leetcode.com/problems/transpose-file/"><a href="https://leetcode.com/problems/transpose-file/">https://leetcode.com/problems/transpose-file/</a></a>
+用人话说的题目描述：
+给你一个文本文件<code>file.txt</code>将内容进行转置。
+输入例如：</p>
+<pre><code>ame age
+alice 21
+ryan 30
+</code></pre><p>正确输出：</p>
+<pre><code>name alice ryan
+age 21 30
+</code></pre><p>因为之前太菜一直没做出来，就只有现在的版本了。</p>
+<h2 id="现在的-ac-版本-1">现在的 AC 版本：</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">awk -F<span style="color:#e6db74">&#39; &#39;</span> <span style="color:#e6db74">&#39;
+</span><span style="color:#e6db74">BEGIN {
+</span><span style="color:#e6db74">    count=0;
+</span><span style="color:#e6db74">}
+</span><span style="color:#e6db74"># read all to a array
+</span><span style="color:#e6db74">{
+</span><span style="color:#e6db74">    for (j=1; j&lt;=NF; j++){
+</span><span style="color:#e6db74">        count++; 
+</span><span style="color:#e6db74">        key[count]=$j;
+</span><span style="color:#e6db74">    } 
+</span><span style="color:#e6db74">    row=NR;
+</span><span style="color:#e6db74">    col=NF;
+</span><span style="color:#e6db74">}
+</span><span style="color:#e6db74">END {
+</span><span style="color:#e6db74">    for (i=1; i&lt;=col; i++){
+</span><span style="color:#e6db74">        tmp=&#34;&#34;;
+</span><span style="color:#e6db74">        for (j=0; j&lt;row; j++){
+</span><span style="color:#e6db74">            if(tmp == &#34;&#34;) {
+</span><span style="color:#e6db74">                tmp=key[i+col*j];
+</span><span style="color:#e6db74">            } 
+</span><span style="color:#e6db74">            else {
+</span><span style="color:#e6db74">                tmp=tmp&#34; &#34;key[i+col*j];
+</span><span style="color:#e6db74">            }
+</span><span style="color:#e6db74">        } 
+</span><span style="color:#e6db74">    print tmp;
+</span><span style="color:#e6db74">    }
+</span><span style="color:#e6db74">}&#39;</span> file.txt
+</code></pre></div><p>在 <code>awk</code> 的 <code>BEGIN</code> 部分初始化计数变量便于将所有字符串写入一个数组；在中间每一行都执行部分，通过内置变量 <code>NF</code> 得到列数，以将一行内容依次写入数组，顺便更新计数变量，得到行列数<code>row &amp; col</code>；最后的 <code>END</code> 部分俩 <code>for</code> 循环打印转置后的每一行。</p>
+<p>最关键的就是转置的算法，这里我通过观察找到的这个规律：</p>
+<ul>
+<li>转置后有之前列数行，所以第一个 for 使用列数计数，从 1 开始是为了便于得到数组值（其实为 0 后面加 1 还更统一</li>
+<li>转置后每一行有之前行数个元素，所以使用行数计数，从 0 开始是为了便于计算元素之前位置</li>
+<li>通过具体例子分析不难得出后面元素值的计算公式</li>
+</ul>
+<pre><code>1  2  3  4
+5  6  7  8
+9  10 11 12
+    ↓
+1  5  9       #  1     1+col   1+col*(row-1)
+2  6  10  =   #  2     2+col   3+col*(row-1)
+3  7  11      #  *     *       *
+4  8  12      #  col   col+col col+col*(row-1)
+</code></pre><p><del>我上面这是什么玩意儿？？</del></p>
+<p>最后耗时 4 ms 打败 98.17% 的提交者，内存占用 4.6 MB。</p>
+<h1 id="195-tenth-line">195 Tenth Line</h1>
+<p>题目链接：<a target="_blank" href="https://leetcode.com/problems/tenth-line/"><a href="https://leetcode.com/problems/tenth-line/">https://leetcode.com/problems/tenth-line/</a></a>
+用人话说的题目描述：
+给你一个文本文件<code>file.txt</code>输出第十行。</p>
+<p>一道真正的简单题，直接用 <code>awk</code> 或者 <code>sed</code> 指定行号就行</p>
+<h2 id="sed-的-ac-版本"><code>sed</code> 的 AC 版本</h2>
+<pre><code>sed -n 10p file.txt
+</code></pre><ul>
+<li><code>-n</code>：等效于 <code>--quiet or --silent</code>，抑制默认的匹配输出</li>
+<li><code>10</code>：指定行号</li>
+<li><code>p</code>：打印匹配
+最后耗时 0 ms。</li>
+</ul>
+<p>经试验用 <code>awk</code> 打印耗时 4 ms ，大概是 <code>awk</code> 依旧对每行都处理了，而 <code>sed</code> 直接输出对应行了。</p>
+<hr>
+<p>以上。</p>
+                    
+                    <HR width="100%" id="EOF">
+                    <p style="color:#777;">Last modified on 2020-03-02</p>
+                    
+                </div>
+            </div>
+            
+            
+            <nav class="post-pagination">
+
+                
+                <a class="newer-posts">
+                    Next<br>No newer posts.
+                </a>
+                
+                
+                
+                <a class="older-posts" href="http://127.0.0.1:8080/post/2019-06-08-%E5%9C%A8-gcp-%E4%B8%8A%E9%83%A8%E7%BD%B2-nextcloud-%E7%9B%B8%E5%85%B3%E6%8A%98%E8%85%BE/">
+                    Previous<br>在 GCP 上部署 Nextcloud 相关折腾
+                </a>
+                
+            </nav>
+            <div class="post-comment-wrapper">
+                
+
+
+
+
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+            </div><div id="single-column-footer">
+Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> by <a href="https://amazingrise.net">Rise</a>
+<br>
+Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a>'s <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> <br>
+<br>
+
+&copy;
+	
+	2017 zzndb
+	
+    本站遵循 <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" >CC-BY-NC 4.0 协议</a>
+</div>
+    	</div>
+    <script src="http://127.0.0.1:8080/js/journal.js"></script>
+    </body>
+</html>
