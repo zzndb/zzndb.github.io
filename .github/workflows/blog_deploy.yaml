@@ -16,11 +16,10 @@ jobs:
 
       - name: build
         run: |
-          tree
+          ls -al
           ./prepare_hugo_extended.sh
-          tree
+          ls -al
           ./hugo -D 
-          tree
 
       - name: deploy
         uses: JamesIves/github-pages-deploy-action@releases/v3
