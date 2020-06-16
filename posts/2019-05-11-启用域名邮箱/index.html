@@ -221,6 +221,24 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
 						
 						
 							<li>
+								<a href="#%e6%9b%b4%e6%96%b0" onclick="collapseOthers(`#更新-nav`)" id="更新-nav">
+									更新
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
 								<a href="#%e9%82%ae%e4%bb%b6%e6%8f%90%e9%86%92%e6%8f%92%e4%bb%b6" onclick="collapseOthers(`#邮件提醒插件-nav`)" id="邮件提醒插件-nav">
 									邮件提醒插件
 								</a>
@@ -363,6 +381,24 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
 						
 						
 							<li>
+								<a href="#%e6%9b%b4%e6%96%b0" onclick="collapseOthers(`#更新-nav`)" id="更新-nav">
+									更新
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
 								<a href="#%e9%82%ae%e4%bb%b6%e6%8f%90%e9%86%92%e6%8f%92%e4%bb%b6" onclick="collapseOthers(`#邮件提醒插件-nav`)" id="邮件提醒插件-nav">
 									邮件提醒插件
 								</a>
@@ -479,6 +515,11 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
                 
                     <p>其实最开始只是因为没有一个好的评论回复邮件提醒解决方案，然后现在感觉有点香啊。</p>
 <p>TL;DR: 利用 Mailgun 弄了域名邮箱，顺便解决了博客评论邮件提醒的问题。</p>
+<hr>
+<p>UP: 2020-06-16 18:02</p>
+<h1 id="更新">更新</h1>
+<p>自2020年6月起对于之前的白嫖用户，你只有最多1250的免费邮件额度，之后便开始以每1000封邮件0.80美刀的价格开始收费，除了邮件转发的其他东西估计也没给白嫖用户剩啥了。毕竟白嫖也不好对此说啥，另外听说Yandex给提供免费域名邮箱，就是不知道API能不能和Mailgun一样友好，之后有机会会去试一试。</p>
+<hr>
 <h1 id="邮件提醒插件">邮件提醒插件</h1>
 <p>几年前刚弄这个也不会有人来的博客的时候就有找过 typecho 的这种邮件评论插件，用来告知有人来留下了脚印，不然就得自己反复上线检查 ，然后就找到一个「CommentToMail」用上了，现在 Github 还能<a href="https://github.com/search?q=typecho+mail&amp;ref=opensearch">找到</a>它及一些衍生版本。它本身是利用已有邮箱通过「PHP」的如「PHPMailer」的库进行邮件发送，由于自己是个<del>假</del>谷粉，邮箱不多 Gmail 倒是有几个，便去单独注册了一个开始了这并不稳的使用，不知道是不是插件本身的问题，还是 Gmail 比较特殊，一直都不稳定，时好时坏，当然因为并没有人来的缘故:worried:，就搁这儿没管它了。</p>
 <p>然后时隔一年多今天莫名的又来试了试，嗯，还是不好使，在辗转几个衍生插件之后，发现一些插件中除了原始的「smtp」之类的方式还有一个叫做「<a href="https://www.mailgun.com/" target="_blank">Mailgun</a>」的东西，就去了解了一下</p>

@@ -387,6 +387,11 @@ rm -rf /mnt/nextcloud_data
         <guid>https://zzndb.github.io/posts/2019-05-11-%E5%90%AF%E7%94%A8%E5%9F%9F%E5%90%8D%E9%82%AE%E7%AE%B1/</guid>
         <description>zzndb&#39;s world https://zzndb.github.io/posts/2019-05-11-%E5%90%AF%E7%94%A8%E5%9F%9F%E5%90%8D%E9%82%AE%E7%AE%B1/ -&lt;p&gt;其实最开始只是因为没有一个好的评论回复邮件提醒解决方案，然后现在感觉有点香啊。&lt;/p&gt;
 &lt;p&gt;TL;DR: 利用 Mailgun 弄了域名邮箱，顺便解决了博客评论邮件提醒的问题。&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;UP: 2020-06-16 18:02&lt;/p&gt;
+&lt;h1 id=&#34;更新&#34;&gt;更新&lt;/h1&gt;
+&lt;p&gt;自2020年6月起对于之前的白嫖用户，你只有最多1250的免费邮件额度，之后便开始以每1000封邮件0.80美刀的价格开始收费，除了邮件转发的其他东西估计也没给白嫖用户剩啥了。毕竟白嫖也不好对此说啥，另外听说Yandex给提供免费域名邮箱，就是不知道API能不能和Mailgun一样友好，之后有机会会去试一试。&lt;/p&gt;
+&lt;hr&gt;
 &lt;h1 id=&#34;邮件提醒插件&#34;&gt;邮件提醒插件&lt;/h1&gt;
 &lt;p&gt;几年前刚弄这个也不会有人来的博客的时候就有找过 typecho 的这种邮件评论插件，用来告知有人来留下了脚印，不然就得自己反复上线检查 ，然后就找到一个「CommentToMail」用上了，现在 Github 还能&lt;a href=&#34;https://github.com/search?q=typecho+mail&amp;amp;ref=opensearch&#34;&gt;找到&lt;/a&gt;它及一些衍生版本。它本身是利用已有邮箱通过「PHP」的如「PHPMailer」的库进行邮件发送，由于自己是个&lt;del&gt;假&lt;/del&gt;谷粉，邮箱不多 Gmail 倒是有几个，便去单独注册了一个开始了这并不稳的使用，不知道是不是插件本身的问题，还是 Gmail 比较特殊，一直都不稳定，时好时坏，当然因为并没有人来的缘故:worried:，就搁这儿没管它了。&lt;/p&gt;
 &lt;p&gt;然后时隔一年多今天莫名的又来试了试，嗯，还是不好使，在辗转几个衍生插件之后，发现一些插件中除了原始的「smtp」之类的方式还有一个叫做「&lt;a href=&#34;https://www.mailgun.com/&#34; target=&#34;_blank&#34;&gt;Mailgun&lt;/a&gt;」的东西，就去了解了一下&lt;/p&gt;
