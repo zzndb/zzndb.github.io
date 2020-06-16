@@ -1,0 +1,27 @@
+name: blog deploy
+on: 
+  push:
+      branches:
+        - source
+
+jobs:
+  build:
+    name: hugo build & deploy
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v2
+        with:
+          persist-credentials: false
+
+      - name: build
+        run: |
+          ./prepare_hugo_extended.sh
+          ./hugo -D 
+
+      - name: deploy
+        uses: JamesIves/github-pages-deploy-action@releases/v3
+        with: 
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BRANCH: master
+          FOLDER: public
