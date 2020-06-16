@@ -2,13 +2,24 @@
 <html><head>
 <title>树莓派温控风扇（GPIO&amp;三极管）</title>
 
+
+
+
 <meta charset="utf-8">
 <meta name="X-UA-Compatible" content="IE=edge">
 <meta name="google-site-verification" content="">
 <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
 <meta content="telephone=no" name="format-detection">
+<meta name="description" content="一超简陋的三极管开关功能检验">
 <meta name="renderer" content="webkit">
 <meta name="theme-color" content="#ffffff">
+
+
+
+
+
+
+
 
 
 
@@ -38,18 +49,28 @@ if (!doNotTrack) {
 
 
 
-<link rel="stylesheet" href="https://zzndb.github.io/scss/journal.min.dd4a27a2ead65caf841b00fd0d3164288b4f1438f9d890ae21a83580bb7b91a1.css" integrity="sha256-3UonourWXK&#43;EGwD9DTFkKItPFDj52JCuIag1gLt7kaE=" media="screen">
+
+
+<link rel="stylesheet" href="https://zzndb.github.io/scss/journal.min.47aa1ffb60880ad8c72feecd6962a14331eca7a7a30e08354a1ca91009b8bc5b.css" integrity="sha256-R6of&#43;2CICtjHL&#43;7NaWKhQzHsp6ejDgg1ShypEAm4vFs=" media="screen">
+
+
+
+<link rel="stylesheet" href="https://zzndb.github.io/scss/dark-mode.min.b13808e7c98cd5aa981a3822fd3421e26f1015876bb15a3fbf8ed5991c382367.css" integrity="sha256-sTgI58mM1aqYGjgi/TQh4m8QFYdrsVo/v47VmRw4I2c=" media="screen">
+
 
 <script src="https://zzndb.github.io/js/loadCSS.js"></script>
-<script src="https://zzndb.github.io/js/table.js"></script>
-
-
-<script src="https://zzndb.github.io/js/toc.js"></script>
-
-
 <script>
-    loadCSS("https://fonts.googleapis.com/css?family=Lora|Montserrat|Fira+Mono|Noto+Serif+SC|Material+Icons");
+  loadCSS("https://fonts.googleapis.com/css?family=Lora|Montserrat|Fira+Mono|Noto+Serif+SC|Material+Icons");
 </script>
+
+
+
+
+  
+    <script src="https://zzndb.github.io/js/toc-collapse.js"></script>
+  
+
+
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
 <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
@@ -68,6 +89,8 @@ if (!doNotTrack) {
         gitalk.render('gitalk-container')
   }
 </script>
+
+
 
 
 
@@ -93,48 +116,66 @@ if (!doNotTrack) {
         
         
             
-                
-                
-                    
-                
-                <a class="a-block nav-link-item active" href="/posts">
-                    Archive
-                </a>
-        
+            
             
                 
-                
-                <a class="a-block nav-link-item false" href="/categories">
-                    Categories
-                </a>
+            
+            
+            
+            <a class="a-block nav-link-item active" href="/posts">
+                Archive
+            </a>
+            
         
             
-                
-                
-                <a class="a-block nav-link-item false" href="/tags">
-                    Tags
-                </a>
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/categories">
+                Categories
+            </a>
+            
         
             
-                
-                
-                <a class="a-block nav-link-item false" href="/links">
-                    Friends
-                </a>
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/tags">
+                Tags
+            </a>
+            
         
             
-                
-                
-                <a class="a-block nav-link-item false" href="/about">
-                    About
-                </a>
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/links">
+                Friends
+            </a>
+            
         
             
-                
-                
-                <a class="a-block nav-link-item false" href="/index.xml">
-                    RSS
-                </a>
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/about">
+                About
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/index.xml">
+                RSS
+            </a>
+            
         
     </div>
 
@@ -149,13 +190,14 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
 
 &copy;
 	
-	2017 zzndb
+	2020 zzndb&#39;s world
 	
     本站遵循 <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" >CC-BY-NC 4.0 协议</a>
 
     </div>
     
 </div><div ref="extraContainer" class="extra-container">
+    
     
     <div class="toc animated-visibility" :class="{ invisible: scrollY <= 140 }">
 
@@ -166,41 +208,24 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
 		
 		
 		<center>- CATALOG -</center>
+		
+		
+		<ul>
 			
 				
 				
 					
 						
 						
-							<ul>
 						
 						
-								<li>
-				 					<a href="#%e7%bc%98%e7%94%b1" v-on:click="closeDrawer" id="缘由-nav">
-										 缘由
-									</a>
-								</li>
 						
-							</ul>
+							<li>
+								<a href="#%e7%bc%98%e7%94%b1" onclick="collapseOthers(`#缘由-nav`)" id="缘由-nav">
+									缘由
+								</a>
+							</li>
 						
-					
-				
-			
-				
-				
-					
-						
-						
-							<ul>
-						
-						
-								<li>
-				 					<a href="#%e5%87%86%e5%a4%87" v-on:click="closeDrawer" id="准备-nav">
-										 准备
-									</a>
-								</li>
-						
-							</ul>
 						
 					
 				
@@ -210,20 +235,15 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
 					
 						
 						
-							<ul>
-						
-							<ul>
 						
 						
-								<li>
-				 					<a href="#%e5%be%97%e5%88%b0%e6%b8%a9%e5%ba%a6" v-on:click="closeDrawer" id="得到温度-nav">
-										 得到温度
-									</a>
-								</li>
 						
-							</ul>
+							<li>
+								<a href="#%e5%87%86%e5%a4%87" onclick="collapseOthers(`#准备-nav`)" id="准备-nav">
+									准备
+								</a>
+							</li>
 						
-							</ul>
 						
 					
 				
@@ -233,20 +253,19 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
 					
 						
 						
-							<ul>
-						
-							<ul>
 						
 						
-								<li>
-				 					<a href="#%e5%ae%9e%e7%8e%b0%e5%bc%80%e5%85%b3" v-on:click="closeDrawer" id="实现开关-nav">
-										 实现开关
-									</a>
-								</li>
+							
+								<ul class="collapse" data-toggle="collapse">
+							
 						
-							</ul>
 						
-							</ul>
+							<li>
+								<a href="#%e5%be%97%e5%88%b0%e6%b8%a9%e5%ba%a6" onclick="collapseOthers(`#得到温度-nav`)" id="得到温度-nav">
+									得到温度
+								</a>
+							</li>
+						
 						
 					
 				
@@ -256,20 +275,15 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
 					
 						
 						
-							<ul>
-						
-							<ul>
 						
 						
-								<li>
-				 					<a href="#shell-%e6%93%8d%e4%bd%9cgpio" v-on:click="closeDrawer" id="shell-操作gpio-nav">
-										 shell 操作GPIO
-									</a>
-								</li>
 						
-							</ul>
+							<li>
+								<a href="#%e5%ae%9e%e7%8e%b0%e5%bc%80%e5%85%b3" onclick="collapseOthers(`#实现开关-nav`)" id="实现开关-nav">
+									实现开关
+								</a>
+							</li>
 						
-							</ul>
 						
 					
 				
@@ -279,16 +293,15 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
 					
 						
 						
-							<ul>
 						
 						
-								<li>
-				 					<a href="#%e5%ae%9e%e6%88%98" v-on:click="closeDrawer" id="实战-nav">
-										 实战
-									</a>
-								</li>
 						
-							</ul>
+							<li>
+								<a href="#shell-%e6%93%8d%e4%bd%9cgpio" onclick="collapseOthers(`#shell-操作gpio-nav`)" id="shell-操作gpio-nav">
+									shell 操作GPIO
+								</a>
+							</li>
+						
 						
 					
 				
@@ -298,20 +311,19 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
 					
 						
 						
-							<ul>
 						
-							<ul>
+							
+								</ul>
+							
 						
 						
-								<li>
-				 					<a href="#shell-%e8%84%9a%e6%9c%ac" v-on:click="closeDrawer" id="shell-脚本-nav">
-										 Shell 脚本
-									</a>
-								</li>
 						
-							</ul>
+							<li>
+								<a href="#%e5%ae%9e%e6%88%98" onclick="collapseOthers(`#实战-nav`)" id="实战-nav">
+									实战
+								</a>
+							</li>
 						
-							</ul>
 						
 					
 				
@@ -321,20 +333,19 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
 					
 						
 						
-							<ul>
-						
-							<ul>
 						
 						
-								<li>
-				 					<a href="#%e5%ae%9e%e7%89%a9%e5%9b%be" v-on:click="closeDrawer" id="实物图-nav">
-										 实物图
-									</a>
-								</li>
+							
+								<ul class="collapse" data-toggle="collapse">
+							
 						
-							</ul>
 						
-							</ul>
+							<li>
+								<a href="#shell-%e8%84%9a%e6%9c%ac" onclick="collapseOthers(`#shell-脚本-nav`)" id="shell-脚本-nav">
+									Shell 脚本
+								</a>
+							</li>
+						
 						
 					
 				
@@ -344,20 +355,42 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
 					
 						
 						
-							<ul>
 						
 						
-								<li>
-				 					<a href="#other" v-on:click="closeDrawer" id="other-nav">
-										 Other
-									</a>
-								</li>
 						
-							</ul>
+							<li>
+								<a href="#%e5%ae%9e%e7%89%a9%e5%9b%be" onclick="collapseOthers(`#实物图-nav`)" id="实物图-nav">
+									实物图
+								</a>
+							</li>
+						
 						
 					
 				
 			
+				
+				
+					
+						
+						
+						
+							
+								</ul>
+							
+						
+						
+						
+							<li>
+								<a href="#other" onclick="collapseOthers(`#other-nav`)" id="other-nav">
+									Other
+								</a>
+							</li>
+						
+						
+					
+				
+			
+		</ul>
 	</div>
 
 </div>
@@ -369,6 +402,16 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
             </i>
         </a>
         
+        <a class="pagination-action" v-on:click="toggleDarkMode">
+            <i class="material-icons pagination-action-icon" v-if="isDarkMode">
+                brightness_4
+            </i>
+            <i class="material-icons pagination-action-icon" v-else="isDarkMode">
+                brightness_7
+            </i>
+        </a>
+        
+        
     </div>
 </div><div class="single-column-drawer-container" ref="drawer"
      v-bind:class="{ 'single-column-drawer-container-active': isDrawerOpen }">
@@ -376,49 +419,68 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
         <div class="drawer-menu">
             
             
-                
-                    
-                    
-                        
-                    
-                    <a class="a-block drawer-menu-item active" href="/posts">
-                        Archive
-                    </a>
             
                 
-                    
-                    
-                    <a class="a-block drawer-menu-item false" href="/categories">
-                        Categories
-                    </a>
-            
+                
                 
                     
-                    
-                    <a class="a-block drawer-menu-item false" href="/tags">
-                        Tags
-                    </a>
+                
+                
+                
+                <a class="a-block drawer-menu-item active" href="/posts">
+                    Archive
+                </a>
+                
             
                 
-                    
-                    
-                    <a class="a-block drawer-menu-item false" href="/links">
-                        Friends
-                    </a>
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/categories">
+                    Categories
+                </a>
+                
             
                 
-                    
-                    
-                    <a class="a-block drawer-menu-item false" href="/about">
-                        About
-                    </a>
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/tags">
+                    Tags
+                </a>
+                
             
                 
-                    
-                    
-                    <a class="a-block drawer-menu-item false" href="/index.xml">
-                        RSS
-                    </a>
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/links">
+                    Friends
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/about">
+                    About
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/index.xml">
+                    RSS
+                </a>
+                
             
             
             <div class="toc">
@@ -430,41 +492,24 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
 		
 		
 		<center>- CATALOG -</center>
+		
+		
+		<ul>
 			
 				
 				
 					
 						
 						
-							<ul>
 						
 						
-								<li>
-				 					<a href="#%e7%bc%98%e7%94%b1" v-on:click="closeDrawer" id="缘由-nav">
-										 缘由
-									</a>
-								</li>
 						
-							</ul>
+							<li>
+								<a href="#%e7%bc%98%e7%94%b1" onclick="collapseOthers(`#缘由-nav`)" id="缘由-nav">
+									缘由
+								</a>
+							</li>
 						
-					
-				
-			
-				
-				
-					
-						
-						
-							<ul>
-						
-						
-								<li>
-				 					<a href="#%e5%87%86%e5%a4%87" v-on:click="closeDrawer" id="准备-nav">
-										 准备
-									</a>
-								</li>
-						
-							</ul>
 						
 					
 				
@@ -474,20 +519,15 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
 					
 						
 						
-							<ul>
-						
-							<ul>
 						
 						
-								<li>
-				 					<a href="#%e5%be%97%e5%88%b0%e6%b8%a9%e5%ba%a6" v-on:click="closeDrawer" id="得到温度-nav">
-										 得到温度
-									</a>
-								</li>
 						
-							</ul>
+							<li>
+								<a href="#%e5%87%86%e5%a4%87" onclick="collapseOthers(`#准备-nav`)" id="准备-nav">
+									准备
+								</a>
+							</li>
 						
-							</ul>
 						
 					
 				
@@ -497,20 +537,19 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
 					
 						
 						
-							<ul>
-						
-							<ul>
 						
 						
-								<li>
-				 					<a href="#%e5%ae%9e%e7%8e%b0%e5%bc%80%e5%85%b3" v-on:click="closeDrawer" id="实现开关-nav">
-										 实现开关
-									</a>
-								</li>
+							
+								<ul class="collapse" data-toggle="collapse">
+							
 						
-							</ul>
 						
-							</ul>
+							<li>
+								<a href="#%e5%be%97%e5%88%b0%e6%b8%a9%e5%ba%a6" onclick="collapseOthers(`#得到温度-nav`)" id="得到温度-nav">
+									得到温度
+								</a>
+							</li>
+						
 						
 					
 				
@@ -520,20 +559,15 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
 					
 						
 						
-							<ul>
-						
-							<ul>
 						
 						
-								<li>
-				 					<a href="#shell-%e6%93%8d%e4%bd%9cgpio" v-on:click="closeDrawer" id="shell-操作gpio-nav">
-										 shell 操作GPIO
-									</a>
-								</li>
 						
-							</ul>
+							<li>
+								<a href="#%e5%ae%9e%e7%8e%b0%e5%bc%80%e5%85%b3" onclick="collapseOthers(`#实现开关-nav`)" id="实现开关-nav">
+									实现开关
+								</a>
+							</li>
 						
-							</ul>
 						
 					
 				
@@ -543,16 +577,15 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
 					
 						
 						
-							<ul>
 						
 						
-								<li>
-				 					<a href="#%e5%ae%9e%e6%88%98" v-on:click="closeDrawer" id="实战-nav">
-										 实战
-									</a>
-								</li>
 						
-							</ul>
+							<li>
+								<a href="#shell-%e6%93%8d%e4%bd%9cgpio" onclick="collapseOthers(`#shell-操作gpio-nav`)" id="shell-操作gpio-nav">
+									shell 操作GPIO
+								</a>
+							</li>
+						
 						
 					
 				
@@ -562,20 +595,19 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
 					
 						
 						
-							<ul>
 						
-							<ul>
+							
+								</ul>
+							
 						
 						
-								<li>
-				 					<a href="#shell-%e8%84%9a%e6%9c%ac" v-on:click="closeDrawer" id="shell-脚本-nav">
-										 Shell 脚本
-									</a>
-								</li>
 						
-							</ul>
+							<li>
+								<a href="#%e5%ae%9e%e6%88%98" onclick="collapseOthers(`#实战-nav`)" id="实战-nav">
+									实战
+								</a>
+							</li>
 						
-							</ul>
 						
 					
 				
@@ -585,20 +617,19 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
 					
 						
 						
-							<ul>
-						
-							<ul>
 						
 						
-								<li>
-				 					<a href="#%e5%ae%9e%e7%89%a9%e5%9b%be" v-on:click="closeDrawer" id="实物图-nav">
-										 实物图
-									</a>
-								</li>
+							
+								<ul class="collapse" data-toggle="collapse">
+							
 						
-							</ul>
 						
-							</ul>
+							<li>
+								<a href="#shell-%e8%84%9a%e6%9c%ac" onclick="collapseOthers(`#shell-脚本-nav`)" id="shell-脚本-nav">
+									Shell 脚本
+								</a>
+							</li>
+						
 						
 					
 				
@@ -608,20 +639,42 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
 					
 						
 						
-							<ul>
 						
 						
-								<li>
-				 					<a href="#other" v-on:click="closeDrawer" id="other-nav">
-										 Other
-									</a>
-								</li>
 						
-							</ul>
+							<li>
+								<a href="#%e5%ae%9e%e7%89%a9%e5%9b%be" onclick="collapseOthers(`#实物图-nav`)" id="实物图-nav">
+									实物图
+								</a>
+							</li>
+						
 						
 					
 				
 			
+				
+				
+					
+						
+						
+						
+							
+								</ul>
+							
+						
+						
+						
+							<li>
+								<a href="#other" onclick="collapseOthers(`#other-nav`)" id="other-nav">
+									Other
+								</a>
+							</li>
+						
+						
+					
+				
+			
+		</ul>
 	</div>
 
 </div>
@@ -643,6 +696,16 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
         <a ref="navTitle" class="navbar-brand" href="https://zzndb.github.io">
             zzndb&#39;s world
         </a>
+        
+        <button type="button" class="nav-darkmode-toggle" v-on:click="toggleDarkMode">
+            <i class="material-icons" v-if="isDarkMode">
+                brightness_4
+            </i>
+            <i class="material-icons" v-else="isDarkMode">
+                brightness_7
+            </i>
+        </button>
+        
     </div>
 </nav>
 <div class="single-column-header-container" ref="pageHead"
@@ -664,9 +727,15 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
             
 
             <div class="post-head-wrapper-text-only"
-                 style="background-image: url('/')">
+                
+            >
                 <div class="post-title">
                     树莓派温控风扇（GPIO&amp;三极管）
+                    
+                    <div class="post-subtitle">
+                        一超简陋的三极管开关功能检验
+                    </div>
+                    
                     <div class="post-meta">
                         
                         <time itemprop="datePublished">
@@ -693,12 +762,15 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
                                 &nbsp;
                             
                         
+                        
                     </div>
                 </div>
             </div>
             
             <div class="post-body-wrapper">
-                <div class="post-body">
+                
+                <div class="post-body" v-pre>
+                
                     <p>让树莓派不算太吃灰的一小步:joy:</p>
 <hr>
 <p>2018-10-01 16:44:05 星期一</p>
@@ -790,7 +862,7 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
 <span style="color:#75715e"># use raspberrypi gpio3 and triode to control the fan</span>
 <span style="color:#75715e"># run fan when temp above 50</span>
 <span style="color:#75715e"># stop run when temp lower 38</span>
-ionum<span style="color:#f92672">=</span>461
+ionum<span style="color:#f92672">=</span><span style="color:#ae81ff">461</span>
 initdir<span style="color:#f92672">=</span>/sys/class/gpio
 <span style="color:#75715e">#iodir=/sys/class/gpio/gpio3</span>
 iodir<span style="color:#f92672">=</span>/sys/class/gpio/gpio$ionum
@@ -823,7 +895,7 @@ temp<span style="color:#f92672">=</span>
 <span style="color:#75715e"># main loop</span>
 <span style="color:#66d9ef">while</span> true; <span style="color:#66d9ef">do</span>
         ON_OFF
-        sleep 5
+        sleep <span style="color:#ae81ff">5</span>
 <span style="color:#66d9ef">done</span>
 </code></pre></div><hr>
 <p>在大蜥蜴上直接<code>echo 3 &gt; /sys/class/gpio/export</code>貌似不行，显示<code>write error: Invalid argument</code><br>
@@ -839,14 +911,14 @@ export  gpio461  gpiochip458  unexport
 <p>然后是自启动：
 在<code>debian</code>系（如<code>raspbian</code>）中，可以直接将脚本文件写入<code>/etc/rc.local</code>中，这也是树莓派官方文档提供的自启动方法</p>
 <p>在大蜥蜴中貌似并没有这个文件，<a href="https://forum.suse.org.cn/t/topic/9331" title="听说已弃用">听说已弃用</a>，那就写个<code>systemd service``Fan.service</code>来启动吧，如下</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-systemd" data-lang="systemd"><span style="color:#960050;background-color:#1e0010">[Unit]</span>
-<span style="color:#a6e22e">Description</span><span style="color:#f92672">=</span><span style="color:#e6db74">Fan Boot service</span>
-<span style="color:#960050;background-color:#1e0010">[Service]</span>
-<span style="color:#a6e22e">User</span><span style="color:#f92672">=</span><span style="color:#e6db74">root</span>
-<span style="color:#a6e22e">Group</span><span style="color:#f92672">=</span><span style="color:#e6db74">root</span>
-<span style="color:#a6e22e">ExecStart</span><span style="color:#f92672">=</span><span style="color:#e6db74">/usr/local/config/Fanboot.sh</span>
-<span style="color:#960050;background-color:#1e0010">[Install]</span>
-<span style="color:#a6e22e">WantedBy</span><span style="color:#f92672">=</span><span style="color:#e6db74">multi-user.target</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-systemd" data-lang="systemd"><span style="color:#66d9ef">[Unit]</span>
+<span style="color:#a6e22e">Description</span><span style="color:#f92672">=</span><span style="color:#e6db74">Fan Boot service</span>
+<span style="color:#66d9ef">[Service]</span>
+<span style="color:#a6e22e">User</span><span style="color:#f92672">=</span><span style="color:#e6db74">root</span>
+<span style="color:#a6e22e">Group</span><span style="color:#f92672">=</span><span style="color:#e6db74">root</span>
+<span style="color:#a6e22e">ExecStart</span><span style="color:#f92672">=</span><span style="color:#e6db74">/usr/local/config/Fanboot.sh</span>
+<span style="color:#66d9ef">[Install]</span>
+<span style="color:#a6e22e">WantedBy</span><span style="color:#f92672">=</span><span style="color:#e6db74">multi-user.target</span>
 </code></pre></div><p>放在<code>/usr/lib/systemd/system/</code>中，执行<code>systemctl enable Fan.service</code>开启自启动<code>systemd start Fan.service</code>启动</p>
 <h2 id="实物图">实物图</h2>
 <p><img src="/images/2018/09/614717856.jpg" alt="实物图"></p>
@@ -863,7 +935,7 @@ export  gpio461  gpiochip458  unexport
 </section>
                     
                     <HR width="100%" id="EOF">
-                    <p style="color:#777;">Last modified on 2018-09-25</p>
+		    <p style="color:#777;">Last modified on 2018-09-25</p>
                     
                 </div>
             </div>
@@ -873,13 +945,13 @@ export  gpio461  gpiochip458  unexport
 
                 
                 <a class="newer-posts" href="https://zzndb.github.io/posts/2019-02-25-adbox-%E6%8A%98%E8%85%BE%E8%AE%B0/">
-                    Next<br>AdBox 折腾记
+			Next<br>AdBox 折腾记
                 </a>
                 
                 
                 
                 <a class="older-posts" href="https://zzndb.github.io/posts/2017-07-22-no.6-ac/">
-                    Previous<br>No.6 AC
+			Previous<br>No.6 AC
                 </a>
                 
             </nav>
@@ -888,6 +960,7 @@ export  gpio461  gpiochip458  unexport
 
 
 <div id="gitalk-container"></div>
+
 
 
 
@@ -906,11 +979,111 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
 
 &copy;
 	
-	2017 zzndb
+	2020 zzndb&#39;s world
 	
     本站遵循 <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" >CC-BY-NC 4.0 协议</a>
 </div>
-    	</div>
-    <script src="https://zzndb.github.io/js/journal.js"></script>
+            </div>
+    <script>
+let app;
+
+app = new Vue({
+    el: '#app',
+    data: {
+        scrollY: 0,
+        navOpacity: 0,
+        isDrawerOpen: false,
+        mounted: false,
+        isDarkMode: false
+    },
+    methods: {
+            sgn(t, x) {
+                let k = 1. / (1. - 2 * t);
+                if (x <= t) return 0;
+                else if (x >= 1 - t) return 1;
+                else {
+                    return k * (x - t);
+                }
+            },
+            handleScroll() {
+                this.scrollY = window.scrollY;
+                this.navOpacity = this.sgn(.0, Math.min(1, Math.max(0, window.scrollY / (this.pageHeadHeight() - this.navBarHeight() * 0.8))));
+                const {navBar, navBackground, navTitle, extraContainer, streamContainer} = this.$refs;
+
+                if (this.navOpacity >= 1) {
+                    navBackground.style.opacity = 1;
+                    navTitle.style.opacity = 1;
+                } else {
+                    navBackground.style.opacity = 0;
+                    navTitle.style.opacity = 0;
+                }
+            },
+            handleResize() {
+                const {navBar, navBackground, navTitle, extraContainer, streamContainer} = this.$refs;
+                extraContainer.style.left = (streamContainer.offsetWidth - extraContainer.offsetWidth) + 'px';
+            },
+            navBarHeight() {
+                return this.$refs.navBar.offsetHeight;
+            },
+            pageHeadHeight() {
+                return this.$refs.pageHead.offsetHeight;
+            },
+            toggleDrawer() {
+                this.isDrawerOpen = !this.isDrawerOpen;
+                document.getElementsByTagName('html')[0].style.overflow = this.isDrawerOpen ? 'hidden' : 'unset';
+            },
+            closeDrawer() {
+                this.isDrawerOpen = false;
+                document.getElementsByTagName('html')[0].style.overflow = this.isDrawerOpen ? 'hidden' : 'unset';
+            },
+            toggleDarkMode() {
+                this.isDarkMode = !this.isDarkMode;
+                if (this.isDarkMode==true){
+                    document.cookie = "night=1;path=/";
+                    document.body.classList.add("night");
+                } else {
+                    document.cookie = "night=0;path=/";
+                    document.body.classList.remove("night");
+                }
+            }
+    },
+    created() {
+        window.addEventListener('scroll', this.handleScroll);
+        window.addEventListener('resize', this.handleResize);
+        window._nonDesktop = function () {
+            let check = false;
+            (function (a) {
+                if (/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows ce|xda|xiino|android|ipad|playbook|silk/i.test(a) || /1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i.test(a.substr(0, 4))) check = true;
+            })(navigator.userAgent || navigator.vendor || window.opera);
+            return check;
+        };
+        
+        var night = document.cookie.replace(/(?:(?:^|.*;\s*)night\s*\=\s*([^;]*).*$)|^.*$/, "$1");
+        if (night==""){
+            if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                
+            }
+        }else{
+            
+            if (night=="1") {
+                this.toggleDarkMode();
+            }
+        }
+    },
+    mounted() {
+        this.handleScroll();
+        this.handleResize();
+        this.mounted = true;
+
+        
+    },
+    destroyed() {
+        window.removeEventListener('scroll', this.handleScroll);
+        window.removeEventListener('resize', this.handleResize);
+    }
+});
+</script>
+
+<script src="https://zzndb.github.io/js/journal.js"></script>
     </body>
 </html>
