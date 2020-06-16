@@ -21,5 +21,15 @@
 &lt;p&gt;主要内容：在 GCP 上创建 openSUSE 实例、LNMP+Nextcloud+SSL (certbot) 、Mailgun 的一个应用场景、GCP IPV6&lt;/p&gt;</description>
     </item>
     
+    <item>
+      <title>启用域名邮箱</title>
+      <link>https://zzndb.github.io/posts/2019-05-11-%E5%90%AF%E7%94%A8%E5%9F%9F%E5%90%8D%E9%82%AE%E7%AE%B1/</link>
+      <pubDate>Sat, 11 May 2019 17:51:00 +0800</pubDate>
+      
+      <guid>https://zzndb.github.io/posts/2019-05-11-%E5%90%AF%E7%94%A8%E5%9F%9F%E5%90%8D%E9%82%AE%E7%AE%B1/</guid>
+      <description>&lt;p&gt;其实最开始只是因为没有一个好的评论回复邮件提醒解决方案，然后现在感觉有点香啊。&lt;/p&gt;
+&lt;p&gt;TL;DR: 利用 Mailgun 弄了域名邮箱，顺便解决了博客评论邮件提醒的问题。&lt;/p&gt;</description>
+    </item>
+    
   </channel>
 </rss>
