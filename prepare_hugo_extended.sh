@@ -11,7 +11,7 @@ prep() {
         | grep 'url' | sed 's/.* "\(https.*tar.gz\)"/\1/')"
 
     [[ $URL == "" ]] && exit 1
-    wget $URL -O $HG_FILE
+    wget $URL -qO $HG_FILE
     [[ ! -f $HG_FILE ]] && exit 2
     tar vxf $HG_FILE
     [[ ! -f hugo ]] && exit 3
