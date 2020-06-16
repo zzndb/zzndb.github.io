@@ -14,7 +14,7 @@ prep() {
     wget $URL -qO $HG_FILE
     [[ ! -f $HG_FILE ]] && exit 2
     tar vxf $HG_FILE
-    [[ ! -f hugo ]] && exit 3
+    exit 0
 }
 
 prep
