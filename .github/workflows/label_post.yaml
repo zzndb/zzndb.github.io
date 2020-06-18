@@ -19,7 +19,7 @@ jobs:
       - name: get post env
         id: get_env
         run: |
-          FILE=$(echo "$(printf "$(git show --pretty="" --name-only)")" | tr -d "\"" | tr ' ' '-' | grep ".*.md$")
+          FILE=$(echo $(printf "$(git show --pretty='' --name-only)") | tr -d '"' | tr ' ' '-' | grep '.*.md$')
           [[ $(echo $FILE | wc -l) != "1" ]] && exit 1
           POST=${FILE#content} # delete pre 'content' 
           POST=${POST/.md\/}   # replace '.md' with '/'
