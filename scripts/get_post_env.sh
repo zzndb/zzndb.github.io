@@ -3,7 +3,7 @@
 
 git status
 git log
-ls -t content/posts/ | head -n 1
+git show $(git log -n 1 --pretty=format:%h) --pretty='' --name-only content/posts/
 exit 1
 FILE=$(printf "%s" "$(git log -n 1 --pretty='' --name-only 'content/posts/' | tr -d '"' | tr ' ' '-' | grep '.*.md$')")
 [[ $(echo -e "$FILE" | wc -l) != "1" ]] && exit 1
