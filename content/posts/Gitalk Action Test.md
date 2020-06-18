@@ -6,4 +6,4 @@ tags: [test]
 description: a test post 
 ---
 
-a test post... 0x07
+a test post... 0x08
