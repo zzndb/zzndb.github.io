@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # by zzndb
 
-FILE=$(printf "%s" "$(git show --pretty='' --name-only | tr -d '"' | tr ' ' '-' | grep '.*.md$')")
+FILE=$(printf "%s" "$(git log -n 1 --pretty='' --name-only 'content/posts/' | tr -d '"' | tr ' ' '-' | grep '.*.md$')")
 [[ $(echo -e "$FILE" | wc -l) != "1" ]] && exit 1
 POST=${FILE#content} # delete pre 'content' 
 POST=${POST/.md/\/}   # replace '.md' with '/'
