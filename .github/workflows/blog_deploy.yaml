@@ -16,7 +16,7 @@ jobs:
 
       - name: build
         run: |
-          ./prepare_hugo_extended.sh
+          ./scripts/prepare_hugo_extended.sh
           ./hugo -D 
 
       - name: deploy

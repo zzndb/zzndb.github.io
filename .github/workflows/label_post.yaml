@@ -19,18 +19,7 @@ jobs:
       - name: get post env
         id: get_env
         run: |
-          FILE=$(echo $(printf "$(git show --pretty='' --name-only)") | tr -d '"' | tr ' ' '-' | grep '.*.md$')
-          [[ $(echo $FILE | wc -l) != "1" ]] && exit 1
-          POST=${FILE#content} # delete pre 'content' 
-          POST=${POST/.md\/}   # replace '.md' with '/'
-          POST_ENCO=$(node <<< "console.log(encodeURI('$POST')")
-          POST_HASH=$(node <<< "console.log(require('crypto').createHash('md5').update('$POST_ENCO', 'utf-8').digest('hex'))")
-          POST_LINK="https://zzndb.github.io$POST"
-          POST_NAME=${POST#/posts/} # delete start '/posts/'
-          POST_NAME=${POST_NAME%/}  # delete end '/'
-          echo "::set-env name=post_name::${POST_NAME}"
-          echo "::set-env name=post_hash::${POST_HASH}"
-          echo "::set-env name=post_url::${POST_LINK}"
+          ./scripts/get_post_env.sh
 
       - name: new issue with above env
         uses: octokit/request-action@v2.x
