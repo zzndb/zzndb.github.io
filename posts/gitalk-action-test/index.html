@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html><head>
-<title>Tags</title>
+<title>Test</title>
 
 
 
@@ -10,7 +10,7 @@
 <meta name="google-site-verification" content="">
 <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
 <meta content="telephone=no" name="format-detection">
-<meta name="description" content="">
+<meta name="description" content="a test post">
 <meta name="renderer" content="webkit">
 <meta name="theme-color" content="#ffffff">
 
@@ -66,7 +66,29 @@ if (!doNotTrack) {
 
 
 
+  
+    <script src="https://zzndb.github.io/js/toc-collapse.js"></script>
+  
 
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<script src="/vendor/js/md5.min.js"></script>
+<script>
+  var gitalk = new Gitalk({
+  clientID: 'bcdd179c4f94968792d9',
+  clientSecret: 'f628bcd3c8d58385d50b807e842cce7ba9fd7f0d',
+  repo: 'zzndb.github.io',
+  owner: 'zzndb',
+  admin: ['zzndb'],
+  id: md5(location.pathname),
+  distractionFreeMode: 'false'
+  });
+  window.onload = function () {
+        gitalk.render('gitalk-container')
+  }
+</script>
 
 
 
@@ -96,9 +118,11 @@ if (!doNotTrack) {
             
             
             
+                
             
             
-            <a class="a-block nav-link-item false" href="/posts">
+            
+            <a class="a-block nav-link-item active" href="/posts">
                 Archive
             </a>
             
@@ -116,11 +140,9 @@ if (!doNotTrack) {
             
             
             
-                
             
             
-            
-            <a class="a-block nav-link-item active" href="/tags">
+            <a class="a-block nav-link-item false" href="/tags">
                 Tags
             </a>
             
@@ -177,6 +199,11 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
 </div><div ref="extraContainer" class="extra-container">
     
     
+    <div class="toc animated-visibility" :class="{ invisible: scrollY <= 140 }">
+
+
+</div>
+    
     <div class="pagination">
         <a id="globalBackToTop" class="pagination-action animated-visibility" href="#top" :class="{ invisible: scrollY == 0 }">
             <i class="material-icons pagination-action-icon">
@@ -194,30 +221,6 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
         </a>
         
         
-        
-            <div class="pagination-indicator">
-                <span style="text-align: center">
-                    3<br><div style="display: inline-block; transform: rotate(-28deg)">-</div><br>4
-                </span>
-            </div>
-            
-            
-            <a class="pagination-action" href="/tags/page/2/">
-                <i class="material-icons pagination-action-icon">
-                    chevron_left
-                </i>
-            </a>
-            
-
-            
-            <a class="pagination-action" href="/tags/page/4/">
-                <i class="material-icons pagination-action-icon">
-                    chevron_right
-                </i>
-            </a>
-            
-        
-        
     </div>
 </div><div class="single-column-drawer-container" ref="drawer"
      v-bind:class="{ 'single-column-drawer-container-active': isDrawerOpen }">
@@ -229,9 +232,11 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
                 
                 
                 
+                    
                 
                 
-                <a class="a-block drawer-menu-item false" href="/posts">
+                
+                <a class="a-block drawer-menu-item active" href="/posts">
                     Archive
                 </a>
                 
@@ -249,11 +254,9 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
                 
                 
                 
-                    
                 
                 
-                
-                <a class="a-block drawer-menu-item active" href="/tags">
+                <a class="a-block drawer-menu-item false" href="/tags">
                     Tags
                 </a>
                 
@@ -288,6 +291,11 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
                 </a>
                 
             
+            
+            <div class="toc">
+
+
+</div>
             
         </div>
     </div>
@@ -331,170 +339,87 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
             <div id="content">
 <div ref="streamContainer" class="stream-container">
     <div class="post-list-container post-list-container-shadow">
-        <a class="a-block">
-            <div class="post-item-wrapper post-item-wrapper-no-hover">
-                <div class="post-item post-item-no-gaps">
-                    <div class="post-item-info-wrapper">
-                        <div class="post-item-title post-item-title-small">
-                            Tags
-                        </div>
+        <div class="post">
+            
+            
+            
+
+            <div class="post-head-wrapper-text-only"
+                
+            >
+                <div class="post-title">
+                    Test
+                    
+                    <div class="post-subtitle">
+                        a test post
+                    </div>
+                    
+                    <div class="post-meta">
+                        
+                        <time itemprop="datePublished">
+                            2020-06-18 00:36
+                        </time>
+                        
+
+                        
+
+                        
+                            <i class="material-icons" style="">label</i>
+                            
+                                <a href="/tags/test">test</a>
+                                &nbsp;
+                            
+                        
+                        
                     </div>
                 </div>
             </div>
-        </a>
-        
-        
-                <a href="https://zzndb.github.io/tags/raspberry-pi/" class="a-block">
-                    <div class="post-item-wrapper">
-                        <div class="post-item post-item-no-gaps">
-                            <div class="post-item-info-wrapper"> 
-                                <div class="post-item-title">
-                                    Raspberry Pi
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+            
+            <div class="post-body-wrapper">
+                
+                <div class="post-body" v-pre>
+                
+                    <p>a test post&hellip;</p>
+
+                    
+                    <HR width="100%" id="EOF">
+		    <p style="color:#777;">Last modified on 2020-06-18</p>
+                    
+                </div>
+            </div>
+            
+            
+            <nav class="post-pagination">
+
+                
+                <a class="newer-posts">
+			Next<br>No newer posts.
                 </a>
-        
-                <a href="https://zzndb.github.io/tags/msp430g2/" class="a-block">
-                    <div class="post-item-wrapper">
-                        <div class="post-item post-item-no-gaps">
-                            <div class="post-item-info-wrapper"> 
-                                <div class="post-item-title">
-                                    MSP430G2
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                
+                
+                
+                <a class="older-posts" href="https://zzndb.github.io/posts/2020-03-02-shell-problems-on-leetcode/">
+			Previous<br>Shell Problems On LeetCode
                 </a>
-        
-                <a href="https://zzndb.github.io/tags/xmind/" class="a-block">
-                    <div class="post-item-wrapper">
-                        <div class="post-item post-item-no-gaps">
-                            <div class="post-item-info-wrapper"> 
-                                <div class="post-item-title">
-                                    Xmind
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-        
-                <a href="https://zzndb.github.io/tags/btrfs/" class="a-block">
-                    <div class="post-item-wrapper">
-                        <div class="post-item post-item-no-gaps">
-                            <div class="post-item-info-wrapper"> 
-                                <div class="post-item-title">
-                                    Btrfs
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-        
-                <a href="https://zzndb.github.io/tags/modelsim/" class="a-block">
-                    <div class="post-item-wrapper">
-                        <div class="post-item post-item-no-gaps">
-                            <div class="post-item-info-wrapper"> 
-                                <div class="post-item-title">
-                                    modelsim
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-        
-                <a href="https://zzndb.github.io/tags/quartusii/" class="a-block">
-                    <div class="post-item-wrapper">
-                        <div class="post-item post-item-no-gaps">
-                            <div class="post-item-info-wrapper"> 
-                                <div class="post-item-title">
-                                    quartusii
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-        
-                <a href="https://zzndb.github.io/tags/%E5%A4%87%E5%BF%98/" class="a-block">
-                    <div class="post-item-wrapper">
-                        <div class="post-item post-item-no-gaps">
-                            <div class="post-item-info-wrapper"> 
-                                <div class="post-item-title">
-                                    备忘
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-        
-                <a href="https://zzndb.github.io/tags/html/" class="a-block">
-                    <div class="post-item-wrapper">
-                        <div class="post-item post-item-no-gaps">
-                            <div class="post-item-info-wrapper"> 
-                                <div class="post-item-title">
-                                    HTML
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-        
-                <a href="https://zzndb.github.io/tags/typecho/" class="a-block">
-                    <div class="post-item-wrapper">
-                        <div class="post-item post-item-no-gaps">
-                            <div class="post-item-info-wrapper"> 
-                                <div class="post-item-title">
-                                    typecho
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-        
-                <a href="https://zzndb.github.io/tags/%E6%B5%81%E6%B0%B4%E5%B8%90/" class="a-block">
-                    <div class="post-item-wrapper">
-                        <div class="post-item post-item-no-gaps">
-                            <div class="post-item-info-wrapper"> 
-                                <div class="post-item-title">
-                                    流水帐
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-        
-    </div>
-</div>
+                
+            </nav>
+            <div class="post-comment-wrapper">
+                
+
+
+<div id="gitalk-container"></div>
+
+
+
+
 
 
             </div>
-
-<div class="pagination">
-    
-    <a class="pagination-action" href="/tags/page/2/" style="opacity:1">
-    
-        <i class="material-icons pagination-action-icon">
-            chevron_left
-        </i>
-    </a>
-
-        <div class="pagination-indicator">
-            <span>3/4</span>
         </div>
-
-        
-        <a class="pagination-action" href="/tags/page/4/"
-           style="opacity:1">
-        
-                <i class="material-icons pagination-action-icon">
-                    chevron_right
-                </i>
-            </a>
+    </div>
 </div>
 
-
-<div id="single-column-footer">
+            </div><div id="single-column-footer">
 Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> by <a href="https://amazingrise.net">Rise</a>
 <br>
 Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a>'s <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> <br>

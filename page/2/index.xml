@@ -5,9 +5,57 @@
     <description>Recent content on zzndb&#39;s world</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 02 Mar 2020 16:28:00 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 18 Jun 2020 00:36:00 +0800</lastBuildDate>
     
         <atom:link href="https://zzndb.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+        <item>
+        <title>Number4 AC</title>
+        <link>https://zzndb.github.io/posts/2017-07-20-number4-ac/</link>
+        <pubDate>Thu, 20 Jul 2017 23:14:00 +0800</pubDate>
+        
+        <guid>https://zzndb.github.io/posts/2017-07-20-number4-ac/</guid>
+        <description>zzndb&#39;s world https://zzndb.github.io/posts/2017-07-20-number4-ac/ -&lt;p&gt;话不多说，一道easy难度的题&lt;/p&gt;
+&lt;!--more--&gt;
+&lt;p&gt;&lt;em&gt;Given an array consisting of n integers, find the contiguous subarray of given length k that has the maximum average value. And you need to output the maximum average value.&lt;/em&gt;
+&lt;strong&gt;Description:&lt;/strong&gt;
+*Example 1:
+Input: [1,12,-5,-6,50,3], k = 4
+Output: 12.75
+Explanation: Maximum average is (12-5-6+50)/4 = 51/4 = 12.75
+Note:
+1 &amp;lt;= k &amp;lt;= n &amp;lt;= 30,000.
+Elements of the given array will be in the range [-10,000, 10,000].
+*&lt;!--more--&gt;
+&lt;strong&gt;Mycode:&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;Solution&lt;/span&gt; {
+&lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt;
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;double&lt;/span&gt; findMaxAverage(vector&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&amp;amp;&lt;/span&gt; nums, &lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; k) {
+        &lt;span style=&#34;color:#66d9ef&#34;&gt;auto&lt;/span&gt; be &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; nums.begin(), en &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; nums.end();
+        &lt;span style=&#34;color:#66d9ef&#34;&gt;double&lt;/span&gt; sum &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;;
+        &lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; tmp0 &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;, tmp1 &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;;
+        &lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt;(&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; i &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; k; i &lt;span style=&#34;color:#f92672&#34;&gt;!=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;; &lt;span style=&#34;color:#f92672&#34;&gt;--&lt;/span&gt;i, &lt;span style=&#34;color:#f92672&#34;&gt;++&lt;/span&gt;be){
+            tmp1 &lt;span style=&#34;color:#f92672&#34;&gt;+=&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt;be;
+        }
+        sum &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; tmp1;
+        &lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt;(; be &lt;span style=&#34;color:#f92672&#34;&gt;!=&lt;/span&gt; en; &lt;span style=&#34;color:#f92672&#34;&gt;++&lt;/span&gt;be){
+            tmp0 &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; tmp1 &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt;(be &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt; k) &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt;be;
+            &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt;(tmp0 &lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt; sum){
+                sum &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; tmp0;
+            }
+            tmp1 &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; tmp0;
+        }
+        &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; sum&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;k;
+    }
+};
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;!--more--&gt;
+&lt;p&gt;全页截图：
+&lt;img src=&#34;https://zzndb.github.io/images/2017/07/3019175156.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;以上&lt;/p&gt;
+&lt;p&gt;:stuck_out_tongue_closed_eyes:&lt;/p&gt;- https://zzndb.github.io/posts/2017-07-20-number4-ac/ - </description>
+        </item>
     
     
     
@@ -404,22 +452,6 @@ The end！&lt;/p&gt;
 &lt;p&gt;&lt;n6&gt;&lt;del&gt;如有获取困难请联系，楼下评论即可&lt;/del&gt;&lt;/n6&gt;
 .
 以上&lt;/p&gt;- https://zzndb.github.io/posts/2017-02-16-%E8%AF%95%E7%9D%80%E5%8E%BB%E7%9C%8B%E7%9C%8B%E5%8F%A6%E5%A4%96%E4%B8%80%E4%B8%AA%E4%B8%96%E7%95%8C/ - </description>
-        </item>
-    
-    
-    
-        <item>
-        <title>2017年2月16日再次装上了Typecho</title>
-        <link>https://zzndb.github.io/posts/2017-02-16-2017%E5%B9%B42%E6%9C%8816%E6%97%A5%E5%86%8D%E6%AC%A1%E8%A3%85%E4%B8%8A%E4%BA%86typecho/</link>
-        <pubDate>Thu, 16 Feb 2017 12:34:00 +0800</pubDate>
-        
-        <guid>https://zzndb.github.io/posts/2017-02-16-2017%E5%B9%B42%E6%9C%8816%E6%97%A5%E5%86%8D%E6%AC%A1%E8%A3%85%E4%B8%8A%E4%BA%86typecho/</guid>
-        <description>zzndb&#39;s world https://zzndb.github.io/posts/2017-02-16-2017%E5%B9%B42%E6%9C%8816%E6%97%A5%E5%86%8D%E6%AC%A1%E8%A3%85%E4%B8%8A%E4%BA%86typecho/ -&lt;h1 id=&#34;有感&#34;&gt;有感&lt;/h1&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Maybe nobody can see this except me &amp;gt;.&lt;Maybe nobody can see this except me &gt;.&amp;lt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;em&gt;&lt;strong&gt;Do what i want what i should, for myself!!&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;&lt;del&gt;假装这篇文章是二月十六写的，but,十八发生了太多，so重新复制完成假装这篇文章是二月十六写的&lt;/del&gt;&lt;/p&gt;- https://zzndb.github.io/posts/2017-02-16-2017%E5%B9%B42%E6%9C%8816%E6%97%A5%E5%86%8D%E6%AC%A1%E8%A3%85%E4%B8%8A%E4%BA%86typecho/ - </description>
         </item>
     
     
