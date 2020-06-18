@@ -13,3 +13,4 @@ POST_NAME=${POST_NAME%/}  # delete end '/'
 echo "::set-env name=post_name::${POST_NAME}"
 echo "::set-env name=post_hash::${POST_HASH}"
 echo "::set-env name=post_url::${POST_LINK}"
+exit 0
