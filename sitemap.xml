@@ -3,31 +3,6 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://zzndb.github.io/posts/</loc>
-    <lastmod>2020-06-18T00:36:00+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://zzndb.github.io/tags/</loc>
-    <lastmod>2020-06-18T00:36:00+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://zzndb.github.io/posts/gitalk-action-test/</loc>
-    <lastmod>2020-06-18T00:36:00+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://zzndb.github.io/tags/test/</loc>
-    <lastmod>2020-06-18T00:36:00+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://zzndb.github.io/</loc>
-    <lastmod>2020-06-18T00:36:00+08:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://zzndb.github.io/categories/</loc>
     <lastmod>2020-03-02T16:28:00+08:00</lastmod>
   </url>
@@ -43,12 +18,27 @@
   </url>
   
   <url>
+    <loc>https://zzndb.github.io/posts/</loc>
+    <lastmod>2020-03-02T16:28:00+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://zzndb.github.io/posts/2020-03-02-shell-problems-on-leetcode/</loc>
     <lastmod>2020-03-02T16:28:00+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://zzndb.github.io/tags/shell-script/</loc>
+    <lastmod>2020-03-02T16:28:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://zzndb.github.io/tags/</loc>
+    <lastmod>2020-03-02T16:28:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://zzndb.github.io/</loc>
     <lastmod>2020-03-02T16:28:00+08:00</lastmod>
   </url>
   
