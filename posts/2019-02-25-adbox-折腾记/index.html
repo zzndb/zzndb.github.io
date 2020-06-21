@@ -779,19 +779,19 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
 <p>UP: 2019-02-25 11:18:24 星期一</p>
 <hr>
 <p>盒子<code>build.prop</code>的部分产品信息</p>
-<pre><code class="language-prob" data-lang="prob">...
-ro.build.version.release=4.4.2
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">...
+ro.build.version.release<span style="color:#f92672">=</span>4.4.2
 ...
-ro.product.model=GF-WM28H
-ro.product.brand=HiSTBAndroidV5
-ro.product.name=Hi3798MV100
-ro.product.device=Hi3798MV100
-ro.product.board=bigfish
-ro.product.cpu.abi=armeabi-v7a
-ro.product.cpu.abi2=armeabi
-ro.product.manufacturer=Hisilicon
+ro.product.model<span style="color:#f92672">=</span>GF-WM28H
+ro.product.brand<span style="color:#f92672">=</span>HiSTBAndroidV5
+ro.product.name<span style="color:#f92672">=</span>Hi3798MV100
+ro.product.device<span style="color:#f92672">=</span>Hi3798MV100
+ro.product.board<span style="color:#f92672">=</span>bigfish
+ro.product.cpu.abi<span style="color:#f92672">=</span>armeabi-v7a
+ro.product.cpu.abi2<span style="color:#f92672">=</span>armeabi
+ro.product.manufacturer<span style="color:#f92672">=</span>Hisilicon
 ...
-</code></pre><p>最开始拿着<code>GF-WM28H</code>（盒子后面有写） Google 一下，第一页全是卖它的遥控器的&hellip; 还好第二页有个靠谱的 <a href="https://www.v2ex.com/t/342195">V2EX 上的</a>折腾，看了看貌似还不是一个版本？从<code>build.prop</code>来看我家这个貌似是某为海思半导体的 SOC ？至于 RAM 我估计就1G，ROM 根据自带系统设置里面显示貌似也就剩几百 MB 了，粗略估计2G ROM&hellip;</p>
+</code></pre></div><p>最开始拿着<code>GF-WM28H</code>（盒子后面有写） Google 一下，第一页全是卖它的遥控器的&hellip; 还好第二页有个靠谱的 <a href="https://www.v2ex.com/t/342195">V2EX 上的</a>折腾，看了看貌似还不是一个版本？从<code>build.prop</code>来看我家这个貌似是某为海思半导体的 SOC ？至于 RAM 我估计就1G，ROM 根据自带系统设置里面显示貌似也就剩几百 MB 了，粗略估计2G ROM&hellip;</p>
 <p>然后他是拆机串口进去的<code>root shell</code>，我在学校倒是有<code>USB-TTL</code>的模块（折腾树莓派的时候入的），可是家里没有，还得拆机，手残党必然妈见打系列啊，只好作罢。</p>
 <p>虽然不甘心的我还是试了试放 apk 文件到 U盘 进自带的文件管理里面，真找不到文件，屏蔽后缀关键词海星。当然天真的我最开始还以为是专门识别特定后缀，为此还用 shell 脚本复制 apk 为各种后缀组合（也不知道我为啥假定后缀名是三位 :relaxed:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#66d9ef">for</span> i in <span style="color:#f92672">{</span>a-zA-Z<span style="color:#f92672">}{</span>a-zA-Z<span style="color:#f92672">}{</span>a-zA-Z<span style="color:#f92672">}</span>;

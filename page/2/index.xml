@@ -18,7 +18,7 @@
         
         <guid>https://zzndb.github.io/posts/2017-07-17-wtd%E5%AE%9A%E6%97%B6%E5%99%A8/</guid>
         <description>zzndb&#39;s world https://zzndb.github.io/posts/2017-07-17-wtd%E5%AE%9A%E6%97%B6%E5%99%A8/ -&lt;p&gt;另一种学习笔记记录方式&lt;/p&gt;
-&lt;p&gt;##思维导图&lt;/p&gt;
+&lt;h2 id=&#34;思维导图&#34;&gt;思维导图&lt;/h2&gt;
 &lt;p&gt;因为对电子的偏好，正好有个机会，于是自然的想参加不久后的&lt;em&gt;电子设计竞赛&lt;/em&gt;当然误打误撞来了计算机的我，当然是零基础入门了，面对看起来颇为复杂的&lt;em&gt;MSP430G2&lt;/em&gt;单片机指导书，感觉效率太低下了，刚好看到有人推荐&lt;strong&gt;xmind&lt;/strong&gt;这一LINUX下也有的思维导图工具，赶紧装在了我的大蜥蜴上，正好看到了WTD看门狗定时器这一章，所以赶紧用上了，成果如下：&lt;img src=&#34;https://zzndb.github.io/images/2017/07/253397290.png&#34; alt=&#34;WDT 看门狗定时器.png&#34;&gt;&lt;a href=&#34;https://zzndb.github.io/images/2017/07/420233643.svg&#34;&gt;WDT 看门狗定时器.svg&lt;/a&gt;
 额，差不多就这个样子，当然都是现学现用，感觉用了思维导图关于这章的知识点是要清晰很多了，感觉还算良好。
 :joy: :joy:&lt;/p&gt;
@@ -39,15 +39,15 @@
 当然听着室友淡定的谈着两百多道，一百多道，，，&lt;/p&gt;
 &lt;p&gt;那又怎样，还是蛮激动的:stuck_out_tongue:&lt;/p&gt;
 &lt;p&gt;当然其间犯了很多低级问题，以及情况考虑不完全等智商问题:confused:？看了看那个简单的 C 例子，我，，，,特地来记录一下:joy:&lt;/p&gt;
-&lt;p&gt;就是这个简单的数组题通过率也老高了的
-&lt;em&gt;&lt;strong&gt;485. Max Consecutive Ones&lt;/strong&gt;&lt;/em&gt;
-题目描述：&lt;em&gt;Given a binary array, find the maximum number of consecutive 1s in this array.&lt;/em&gt;
-举例：
+&lt;p&gt;就是这个简单的数组题通过率也老高了的&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;485. Max Consecutive Ones&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;题目描述：&lt;em&gt;Given a binary array, find the maximum number of consecutive 1s in this array.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;举例：
 &lt;em&gt;Input: [1,1,0,1,1,1]
 Output: 3
 Explanation: The first two digits or the last three digits are consecutive 1s.
-The maximum number of consecutive 1s is 3.&lt;/em&gt;
-C例子代码如下&lt;/p&gt;
+The maximum number of consecutive 1s is 3.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;C例子代码如下&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-c&#34; data-lang=&#34;c&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;findMaxConsecutiveOnes&lt;/span&gt;(&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; nums, &lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; numsSize) {
  &lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; max &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;;
  &lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; sum &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;;
@@ -58,7 +58,7 @@ C例子代码如下&lt;/p&gt;
  }
 &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; max;
 }
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;看看他的行数，我就不贴我的渣渣代码了，二十多行，也没有任何 技巧？可言。
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;看看他的行数，我就不贴我的渣渣代码了，二十多行，也没有任何技巧？可言。
 在我看来 &lt;code&gt;sum = (sum+nums[i])*nums[i];&lt;/code&gt;为这例，我所不及的地方。
 巧妙用了 1 与 0 在乘法运算中对结果带来的差异&lt;/p&gt;
 &lt;p&gt;以上，纪念第一次AC&lt;/p&gt;- https://zzndb.github.io/posts/2017-03-22-%E7%AC%AC%E4%B8%80%E6%AC%A1ac%E7%9A%84leetcode/ - </description>

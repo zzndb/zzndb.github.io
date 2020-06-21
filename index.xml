@@ -367,14 +367,16 @@ rm -rf /mnt/nextcloud_data
 &lt;blockquote&gt;
 &lt;p&gt;感谢上述参考连接，及以下文章/档&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;&lt;a href=&#34;https://sellingfreesoftwareforaliving.blogspot.com/2018/05/opensuse-leap-423-on-google-cloud.html&#34;&gt;https://sellingfreesoftwareforaliving.blogspot.com/2018/05/opensuse-leap-423-on-google-cloud.html&lt;/a&gt;
-&lt;a href=&#34;https://en.opensuse.org/SDB:Nextcloud&#34;&gt;https://en.opensuse.org/SDB:Nextcloud&lt;/a&gt;
-&lt;a href=&#34;https://docs.nextcloud.com/server/16/admin_manual/installation/nginx.html&#34;&gt;https://docs.nextcloud.com/server/16/admin_manual/installation/nginx.html&lt;/a&gt;
-&lt;a href=&#34;https://help.nextcloud.com/t/howto-change-move-data-directory-after-installation/17170&#34;&gt;https://help.nextcloud.com/t/howto-change-move-data-directory-after-installation/17170&lt;/a&gt;
-&lt;a href=&#34;https://www.scalingphpbook.com/blog/2014/02/14/best-zend-opcache-settings.html&#34;&gt;https://www.scalingphpbook.com/blog/2014/02/14/best-zend-opcache-settings.html&lt;/a&gt;
-&lt;a href=&#34;https://docs.nextcloud.com/server/16/admin_manual/installation/source_installation.html&#34;&gt;https://docs.nextcloud.com/server/16/admin_manual/installation/source_installation.html&lt;/a&gt;
-&lt;a href=&#34;https://certbot.eff.org/lets-encrypt/leap-nginx&#34;&gt;https://certbot.eff.org/lets-encrypt/leap-nginx&lt;/a&gt;
-&lt;a href=&#34;https://certbot.eff.org/docs/using.html&#34;&gt;https://certbot.eff.org/docs/using.html&lt;/a&gt;&lt;/p&gt;- https://zzndb.github.io/posts/2019-06-08-%E5%9C%A8-gcp-%E4%B8%8A%E9%83%A8%E7%BD%B2-nextcloud-%E7%9B%B8%E5%85%B3%E6%8A%98%E8%85%BE/ - </description>
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://sellingfreesoftwareforaliving.blogspot.com/2018/05/opensuse-leap-423-on-google-cloud.html&#34;&gt;https://sellingfreesoftwareforaliving.blogspot.com/2018/05/opensuse-leap-423-on-google-cloud.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://en.opensuse.org/SDB:Nextcloud&#34;&gt;https://en.opensuse.org/SDB:Nextcloud&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://docs.nextcloud.com/server/16/admin_manual/installation/nginx.html&#34;&gt;https://docs.nextcloud.com/server/16/admin_manual/installation/nginx.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://help.nextcloud.com/t/howto-change-move-data-directory-after-installation/17170&#34;&gt;https://help.nextcloud.com/t/howto-change-move-data-directory-after-installation/17170&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.scalingphpbook.com/blog/2014/02/14/best-zend-opcache-settings.html&#34;&gt;https://www.scalingphpbook.com/blog/2014/02/14/best-zend-opcache-settings.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://docs.nextcloud.com/server/16/admin_manual/installation/source_installation.html&#34;&gt;https://docs.nextcloud.com/server/16/admin_manual/installation/source_installation.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://certbot.eff.org/lets-encrypt/leap-nginx&#34;&gt;https://certbot.eff.org/lets-encrypt/leap-nginx&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://certbot.eff.org/docs/using.html&#34;&gt;https://certbot.eff.org/docs/using.html&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;- https://zzndb.github.io/posts/2019-06-08-%E5%9C%A8-gcp-%E4%B8%8A%E9%83%A8%E7%BD%B2-nextcloud-%E7%9B%B8%E5%85%B3%E6%8A%98%E8%85%BE/ - </description>
         </item>
     
     
@@ -710,19 +712,19 @@ osc ci &lt;span style=&#34;color:#75715e&#34;&gt;# commit&lt;/span&gt;
 &lt;p&gt;UP: 2019-02-25 11:18:24 星期一&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;盒子&lt;code&gt;build.prop&lt;/code&gt;的部分产品信息&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-prob&#34; data-lang=&#34;prob&#34;&gt;...
-ro.build.version.release=4.4.2
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;...
+ro.build.version.release&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;4.4.2
 ...
-ro.product.model=GF-WM28H
-ro.product.brand=HiSTBAndroidV5
-ro.product.name=Hi3798MV100
-ro.product.device=Hi3798MV100
-ro.product.board=bigfish
-ro.product.cpu.abi=armeabi-v7a
-ro.product.cpu.abi2=armeabi
-ro.product.manufacturer=Hisilicon
+ro.product.model&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;GF-WM28H
+ro.product.brand&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;HiSTBAndroidV5
+ro.product.name&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;Hi3798MV100
+ro.product.device&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;Hi3798MV100
+ro.product.board&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;bigfish
+ro.product.cpu.abi&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;armeabi-v7a
+ro.product.cpu.abi2&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;armeabi
+ro.product.manufacturer&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;Hisilicon
 ...
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;最开始拿着&lt;code&gt;GF-WM28H&lt;/code&gt;（盒子后面有写） Google 一下，第一页全是卖它的遥控器的&amp;hellip; 还好第二页有个靠谱的 &lt;a href=&#34;https://www.v2ex.com/t/342195&#34;&gt;V2EX 上的&lt;/a&gt;折腾，看了看貌似还不是一个版本？从&lt;code&gt;build.prop&lt;/code&gt;来看我家这个貌似是某为海思半导体的 SOC ？至于 RAM 我估计就1G，ROM 根据自带系统设置里面显示貌似也就剩几百 MB 了，粗略估计2G ROM&amp;hellip;&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;最开始拿着&lt;code&gt;GF-WM28H&lt;/code&gt;（盒子后面有写） Google 一下，第一页全是卖它的遥控器的&amp;hellip; 还好第二页有个靠谱的 &lt;a href=&#34;https://www.v2ex.com/t/342195&#34;&gt;V2EX 上的&lt;/a&gt;折腾，看了看貌似还不是一个版本？从&lt;code&gt;build.prop&lt;/code&gt;来看我家这个貌似是某为海思半导体的 SOC ？至于 RAM 我估计就1G，ROM 根据自带系统设置里面显示貌似也就剩几百 MB 了，粗略估计2G ROM&amp;hellip;&lt;/p&gt;
 &lt;p&gt;然后他是拆机串口进去的&lt;code&gt;root shell&lt;/code&gt;，我在学校倒是有&lt;code&gt;USB-TTL&lt;/code&gt;的模块（折腾树莓派的时候入的），可是家里没有，还得拆机，手残党必然妈见打系列啊，只好作罢。&lt;/p&gt;
 &lt;p&gt;虽然不甘心的我还是试了试放 apk 文件到 U盘 进自带的文件管理里面，真找不到文件，屏蔽后缀关键词海星。当然天真的我最开始还以为是专门识别特定后缀，为此还用 shell 脚本复制 apk 为各种后缀组合（也不知道我为啥假定后缀名是三位 :relaxed:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; i in &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;a-zA-Z&lt;span style=&#34;color:#f92672&#34;&gt;}{&lt;/span&gt;a-zA-Z&lt;span style=&#34;color:#f92672&#34;&gt;}{&lt;/span&gt;a-zA-Z&lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;;
