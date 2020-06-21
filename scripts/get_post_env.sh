@@ -4,7 +4,7 @@
 FILE=$(printf "%s" "$(git log -n 1 --pretty='' --name-only 'content/posts/' | tr -d '"' | grep '.*.md$')")
 [[ $(echo -e "$FILE" | wc -l) != "1" ]] && exit 1 # always label one post
 [[ ! -f $FILE ]] && exit 2
-FILE=$(tr ' ' '-' <<< $FILE) 
+FILE=$(tr ' ' '-' <<< $FILE | tr '[:upper:]' '[:lower:]')
 POST=${FILE#content} # delete pre 'content' 
 POST=${POST/.md/\/}   # replace '.md' with '/'
 POST_ENCO=$(node <<< "console.log(encodeURI('$POST'))")
