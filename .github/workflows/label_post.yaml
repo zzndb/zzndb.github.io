@@ -15,7 +15,7 @@ jobs:
         uses: actions/checkout@v2
         with:
           persist-credentials: false
-          fetch-depth: 0
+          fetch-depth: 0 # fetch all history to check changed post file
 
       - name: get post env
         id: get_env
