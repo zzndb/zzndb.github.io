@@ -12,7 +12,7 @@ POST_HASH=$(node <<< "console.log(require('crypto').createHash('md5').update('$P
 POST_LINK="https://zzndb.github.io$POST"
 POST_NAME=${POST#/posts/} # delete start '/posts/'
 POST_NAME=${POST_NAME%/}  # delete end '/'
-echo "::set-env name=post_name::${POST_NAME}"
-echo "::set-env name=post_hash::${POST_HASH}"
-echo "::set-env name=post_url::${POST_LINK}"
-# exit 0
+echo "::set-output name=post_name::${POST_NAME}"
+echo "::set-output name=post_hash::${POST_HASH}"
+echo "::set-output name=post_url::${POST_LINK}"
+exit 0

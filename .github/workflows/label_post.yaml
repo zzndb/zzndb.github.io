@@ -21,7 +21,6 @@ jobs:
         id: get_env
         run: |
           source ./scripts/get_post_env.sh
-          printenv
 
       - name: new issue with above env
         uses: octokit/request-action@v2.x
