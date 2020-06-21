@@ -1,4 +1,4 @@
-#!/usr/bin/env -S bash -x 
+#!/usr/bin/env bash
 # by zzndb
 
 FILE=$(printf "%s" "$(git log -n 1 --pretty='' --name-only 'content/posts/' | tr -d '"' | grep '.*.md$')")

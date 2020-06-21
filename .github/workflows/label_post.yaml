@@ -20,7 +20,7 @@ jobs:
       - name: get post env
         id: get_env
         run: |
-          ./scripts/get_post_env.sh
+          bash -x ./scripts/get_post_env.sh
           printenv
 
       - name: new issue with above env
