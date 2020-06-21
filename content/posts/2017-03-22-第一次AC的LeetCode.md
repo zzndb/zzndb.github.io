@@ -15,13 +15,17 @@ description: 一道简单题，记的流水帐
 当然其间犯了很多低级问题，以及情况考虑不完全等智商问题:confused:？看了看那个简单的 C 例子，我，，，,特地来记录一下:joy:
 
 就是这个简单的数组题通过率也老高了的
+
 ***485. Max Consecutive Ones***
+
 题目描述：*Given a binary array, find the maximum number of consecutive 1s in this array.*
+
 举例：
     *Input: [1,1,0,1,1,1]
     Output: 3
     Explanation: The first two digits or the last three digits are consecutive 1s.
         The maximum number of consecutive 1s is 3.*
+
 C例子代码如下
 ```c
 int findMaxConsecutiveOnes(int* nums, int numsSize) {
@@ -35,7 +39,7 @@ int findMaxConsecutiveOnes(int* nums, int numsSize) {
 return max;
 }
 ```
-看看他的行数，我就不贴我的渣渣代码了，二十多行，也没有任何 技巧？可言。
+看看他的行数，我就不贴我的渣渣代码了，二十多行，也没有任何技巧？可言。
 在我看来 `sum = (sum+nums[i])*nums[i];`为这例，我所不及的地方。
 巧妙用了 1 与 0 在乘法运算中对结果带来的差异
 

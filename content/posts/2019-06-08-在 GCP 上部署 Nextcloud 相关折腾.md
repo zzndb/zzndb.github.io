@@ -267,11 +267,11 @@ rm -rf /mnt/nextcloud_data
 # Reference
 > 感谢上述参考连接，及以下文章/档
 
-https://sellingfreesoftwareforaliving.blogspot.com/2018/05/opensuse-leap-423-on-google-cloud.html
-https://en.opensuse.org/SDB:Nextcloud
-https://docs.nextcloud.com/server/16/admin_manual/installation/nginx.html
-https://help.nextcloud.com/t/howto-change-move-data-directory-after-installation/17170
-https://www.scalingphpbook.com/blog/2014/02/14/best-zend-opcache-settings.html
-https://docs.nextcloud.com/server/16/admin_manual/installation/source_installation.html
-https://certbot.eff.org/lets-encrypt/leap-nginx
-https://certbot.eff.org/docs/using.html
+* https://sellingfreesoftwareforaliving.blogspot.com/2018/05/opensuse-leap-423-on-google-cloud.html
+* https://en.opensuse.org/SDB:Nextcloud
+* https://docs.nextcloud.com/server/16/admin_manual/installation/nginx.html
+* https://help.nextcloud.com/t/howto-change-move-data-directory-after-installation/17170
+* https://www.scalingphpbook.com/blog/2014/02/14/best-zend-opcache-settings.html
+* https://docs.nextcloud.com/server/16/admin_manual/installation/source_installation.html 
+* https://certbot.eff.org/lets-encrypt/leap-nginx 
+* https://certbot.eff.org/docs/using.html 
