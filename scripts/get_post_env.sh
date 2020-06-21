@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/env -S bash -x 
 # by zzndb
 
 FILE=$(printf "%s" "$(git log -n 1 --pretty='' --name-only 'content/posts/' | tr -d '"' | grep '.*.md$')")
@@ -15,4 +15,4 @@ POST_NAME=${POST_NAME%/}  # delete end '/'
 echo "::set-env name=post_name::${POST_NAME}"
 echo "::set-env name=post_hash::${POST_HASH}"
 echo "::set-env name=post_url::${POST_LINK}"
-exit 0
+# exit 0
