@@ -1,4 +1,4 @@
-baseURL = "https://zzndb.github.io"
+baseURL = "https://blog.zzndb.ml"
 languageCode = "en-us"
 title = "zzndb's world"
 theme = "diary"
