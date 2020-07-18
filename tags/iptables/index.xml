@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>iptables on zzndb&#39;s world</title>
-    <link>https://zzndb.github.io/tags/iptables/</link>
+    <link>https://blog.zzndb.ml/tags/iptables/</link>
     <description>Recent content in iptables on zzndb&#39;s world</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 25 Feb 2019 07:19:00 +0800</lastBuildDate>
     
-	<atom:link href="https://zzndb.github.io/tags/iptables/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://blog.zzndb.ml/tags/iptables/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>AdBox 折腾记</title>
-      <link>https://zzndb.github.io/posts/2019-02-25-adbox-%E6%8A%98%E8%85%BE%E8%AE%B0/</link>
+      <link>https://blog.zzndb.ml/posts/2019-02-25-adbox-%E6%8A%98%E8%85%BE%E8%AE%B0/</link>
       <pubDate>Mon, 25 Feb 2019 07:19:00 +0800</pubDate>
       
-      <guid>https://zzndb.github.io/posts/2019-02-25-adbox-%E6%8A%98%E8%85%BE%E8%AE%B0/</guid>
+      <guid>https://blog.zzndb.ml/posts/2019-02-25-adbox-%E6%8A%98%E8%85%BE%E8%AE%B0/</guid>
       <description>&lt;p&gt;对家里几年前办宽带给的联通 IPTV 盒子的一些折腾。&lt;/p&gt;</description>
     </item>
     
