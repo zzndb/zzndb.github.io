@@ -1,17 +1,14 @@
 +++
 title = "bc round to the specified number of decimal places"
 author = ["zzndb"]
+description = "对 `bc` 的小数结果精度控制以及舍入的碎碎念"
 date = 2021-04-04
 publishDate = 2021-04-04
-lastmod = 2021-04-04T22:22:20+08:00
+lastmod = 2021-04-04T22:37:56+08:00
 tags = ["Shell Script"]
 categories = ["code"]
 draft = false
 +++
-
-对 `bc` 的结果精度控制以及舍入的一些碎碎念
-
-<!--more-->
 
 `bc` 一个命令行计算器， `dc` 的继承者？
 
