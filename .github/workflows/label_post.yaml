@@ -29,6 +29,8 @@ jobs:
           route: GET /repos/:repository/labels/:name
           repository: ${{ github.repository }}
           name: ${{ steps.get_env.outputs.post_hash }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: new issue with above env
         if: ${{ fromJson(steps.check.outputs.data).id == NaN }}
