@@ -22,7 +22,16 @@ jobs:
         run: |
           bash -x ./scripts/get_post_env.sh
 
+      - name: check issue existence
+        id: check
+        uses: octokit/request-action@v2.x
+        with:
+          route: GET /repos/:repository/labels/:name
+          repository: ${{ github.repository }}
+          name: ${{ steps.get_env.outputs.post_hash }}
+
       - name: new issue with above env
+        if: ${{ fromJson(steps.check.outputs.data).id == NaN }}
         uses: octokit/request-action@v2.x
         with: 
           route: POST /repos/:repository/issues
