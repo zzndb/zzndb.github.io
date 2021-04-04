@@ -6,10 +6,15 @@
     <description>Recent content in Posts on zzndb&#39;s world</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 02 Mar 2020 16:28:00 +0800</lastBuildDate>
-    
-	<atom:link href="https://blog.zzndb.ml/posts/index.xml" rel="self" type="application/rss+xml" />
-    
+    <lastBuildDate>Sun, 04 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.zzndb.ml/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>bc round to the specified number of decimal places</title>
+      <link>https://blog.zzndb.ml/posts/20210404203010-bc_round_to_the_specified_number_of_decimal_places/</link>
+      <pubDate>Sun, 04 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.zzndb.ml/posts/20210404203010-bc_round_to_the_specified_number_of_decimal_places/</guid>
+      <description>&lt;p&gt;对 &lt;code&gt;bc&lt;/code&gt; 的结果精度控制以及舍入的一些碎碎念&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Shell Problems On LeetCode</title>

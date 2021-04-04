@@ -5,9 +5,57 @@
     <description>Recent content on zzndb&#39;s world</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 02 Mar 2020 16:28:00 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 04 Apr 2021 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="https://blog.zzndb.ml/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+        <item>
+        <title>Number4 AC</title>
+        <link>https://blog.zzndb.ml/posts/2017-07-20-number4-ac/</link>
+        <pubDate>Thu, 20 Jul 2017 23:14:00 +0800</pubDate>
+        
+        <guid>https://blog.zzndb.ml/posts/2017-07-20-number4-ac/</guid>
+        <description>zzndb&#39;s world https://blog.zzndb.ml/posts/2017-07-20-number4-ac/ -&lt;p&gt;话不多说，一道easy难度的题&lt;/p&gt;
+&lt;!--more--&gt;
+&lt;p&gt;&lt;em&gt;Given an array consisting of n integers, find the contiguous subarray of given length k that has the maximum average value. And you need to output the maximum average value.&lt;/em&gt;
+&lt;strong&gt;Description:&lt;/strong&gt;
+*Example 1:
+Input: [1,12,-5,-6,50,3], k = 4
+Output: 12.75
+Explanation: Maximum average is (12-5-6+50)/4 = 51/4 = 12.75
+Note:
+1 &amp;lt;= k &amp;lt;= n &amp;lt;= 30,000.
+Elements of the given array will be in the range [-10,000, 10,000].
+*&lt;!--more--&gt;
+&lt;strong&gt;Mycode:&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;Solution&lt;/span&gt; {
+&lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt;
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;double&lt;/span&gt; findMaxAverage(vector&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&amp;amp;&lt;/span&gt; nums, &lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; k) {
+        &lt;span style=&#34;color:#66d9ef&#34;&gt;auto&lt;/span&gt; be &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; nums.begin(), en &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; nums.end();
+        &lt;span style=&#34;color:#66d9ef&#34;&gt;double&lt;/span&gt; sum &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;;
+        &lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; tmp0 &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;, tmp1 &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;;
+        &lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt;(&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; i &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; k; i &lt;span style=&#34;color:#f92672&#34;&gt;!=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;; &lt;span style=&#34;color:#f92672&#34;&gt;--&lt;/span&gt;i, &lt;span style=&#34;color:#f92672&#34;&gt;++&lt;/span&gt;be){
+            tmp1 &lt;span style=&#34;color:#f92672&#34;&gt;+=&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt;be;
+        }
+        sum &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; tmp1;
+        &lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt;(; be &lt;span style=&#34;color:#f92672&#34;&gt;!=&lt;/span&gt; en; &lt;span style=&#34;color:#f92672&#34;&gt;++&lt;/span&gt;be){
+            tmp0 &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; tmp1 &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt;(be &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt; k) &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt;be;
+            &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt;(tmp0 &lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt; sum){
+                sum &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; tmp0;
+            }
+            tmp1 &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; tmp0;
+        }
+        &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; sum&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;k;
+    }
+};
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;!--more--&gt;
+&lt;p&gt;全页截图：
+&lt;img src=&#34;https://blog.zzndb.ml/images/2017/07/3019175156.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;以上&lt;/p&gt;
+&lt;p&gt;:stuck_out_tongue_closed_eyes:&lt;/p&gt;- https://blog.zzndb.ml/posts/2017-07-20-number4-ac/ - </description>
+        </item>
     
     
     
@@ -137,7 +185,7 @@ The maximum number of consecutive 1s is 3.&lt;/em&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;blockquote&gt;
 &lt;ul&gt;
-&lt;li&gt;&amp;lt;a = href=&amp;quot;https://lug.ustc.edu.cn/sites/opensuse-guide/index.php&amp;rdquo; target=&amp;rdquo;_bank&amp;quot;&amp;gt;&lt;strong&gt;配置文档中文版&lt;/strong&gt;&lt;/a&gt;（感谢来自中科大的翻译）&lt;/li&gt;
+&lt;li&gt;&amp;lt;a = href=&amp;ldquo;&lt;a href=&#34;https://lug.ustc.edu.cn/sites/opensuse-guide/index.php%22&#34;&gt;https://lug.ustc.edu.cn/sites/opensuse-guide/index.php&amp;quot;&lt;/a&gt; target=&amp;quot;_bank&amp;rdquo;&amp;gt;&lt;strong&gt;配置文档中文版&lt;/strong&gt;&lt;/a&gt;（感谢来自中科大的翻译）&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/blockquote&gt;
 &lt;hr&gt;
@@ -389,7 +437,7 @@ The end！&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;对于方法2，没什么好说的，那么请允许我来梳理一下我的飞越抗争史吧！:relaxed:&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;最开始接触 Goolge 大法是因为玩一手游，最开始用过&lt;a href=&#34;https://zh.wikipedia.org/wiki/Fqrouter&#34; target=&#34;_blank&#34;&gt; fqrouter &lt;/a&gt;(已挂)、&lt;a href=&#34;https://zh.wikipedia.org/wiki/%E8%B3%BD%E9%A2%A8&#34; target=&#34;_balnk&#34;&gt;赛风&lt;/a&gt;*向他们致敬**、以及各种     vpn 应用&amp;hellip;这一些统统应该叫做 VPN 吧！ 再后来的
+&lt;p&gt;最开始接触 Goolge 大法是因为玩一手游，最开始用过&lt;a href=&#34;https://zh.wikipedia.org/wiki/Fqrouter&#34; target=&#34;_blank&#34;&gt; fqrouter &lt;/a&gt;(已挂)、&lt;a href=&#34;https://zh.wikipedia.org/wiki/%E8%B3%BD%E9%A2%A8&#34; target=&#34;_balnk&#34;&gt;赛风&lt;/a&gt;&lt;em&gt;向他们致敬&lt;/em&gt;*、以及各种     vpn 应用&amp;hellip;这一些统统应该叫做 VPN 吧！ 再后来的
 &lt;a href=&#34;https://zh.wikipedia.org/wiki/Shadowsocks&#34; target=&#34;_blank&#34;&gt;shadowsocks&lt;/a&gt;、
 &lt;a href=&#34;https://github.com/breakwa11/shadowsocks-rss&#34; target=&#34;_blank&#34;&gt;SSR&lt;/a&gt; 这俩应该是现在主流的飞越方式吧！ 
 其实任何人都可以去购买未墙区域的 vps 自己来搭建代理服务器，用前面两种工具实现 fq代理，而且教程也不少，有意请自行 google 。&lt;/p&gt;
@@ -404,22 +452,6 @@ The end！&lt;/p&gt;
 &lt;p&gt;&lt;n6&gt;&lt;del&gt;如有获取困难请联系，楼下评论即可&lt;/del&gt;&lt;/n6&gt;
 .
 以上&lt;/p&gt;- https://blog.zzndb.ml/posts/2017-02-16-%E8%AF%95%E7%9D%80%E5%8E%BB%E7%9C%8B%E7%9C%8B%E5%8F%A6%E5%A4%96%E4%B8%80%E4%B8%AA%E4%B8%96%E7%95%8C/ - </description>
-        </item>
-    
-    
-    
-        <item>
-        <title>2017年2月16日再次装上了Typecho</title>
-        <link>https://blog.zzndb.ml/posts/2017-02-16-2017%E5%B9%B42%E6%9C%8816%E6%97%A5%E5%86%8D%E6%AC%A1%E8%A3%85%E4%B8%8A%E4%BA%86typecho/</link>
-        <pubDate>Thu, 16 Feb 2017 12:34:00 +0800</pubDate>
-        
-        <guid>https://blog.zzndb.ml/posts/2017-02-16-2017%E5%B9%B42%E6%9C%8816%E6%97%A5%E5%86%8D%E6%AC%A1%E8%A3%85%E4%B8%8A%E4%BA%86typecho/</guid>
-        <description>zzndb&#39;s world https://blog.zzndb.ml/posts/2017-02-16-2017%E5%B9%B42%E6%9C%8816%E6%97%A5%E5%86%8D%E6%AC%A1%E8%A3%85%E4%B8%8A%E4%BA%86typecho/ -&lt;h1 id=&#34;有感&#34;&gt;有感&lt;/h1&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Maybe nobody can see this except me &amp;gt;.&lt;Maybe nobody can see this except me &gt;.&amp;lt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;em&gt;&lt;strong&gt;Do what i want what i should, for myself!!&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;&lt;del&gt;假装这篇文章是二月十六写的，but,十八发生了太多，so重新复制完成假装这篇文章是二月十六写的&lt;/del&gt;&lt;/p&gt;- https://blog.zzndb.ml/posts/2017-02-16-2017%E5%B9%B42%E6%9C%8816%E6%97%A5%E5%86%8D%E6%AC%A1%E8%A3%85%E4%B8%8A%E4%BA%86typecho/ - </description>
         </item>
     
     

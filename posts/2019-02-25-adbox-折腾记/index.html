@@ -38,7 +38,6 @@ if (!doNotTrack) {
 </script>
 
 
-
 <script src="/vendor/js/jquery.min.js" ></script>
 <script src="/vendor/js/popper.min.js" ></script>
 <script src="/vendor/js/bootstrap.min.js" ></script>
@@ -51,11 +50,11 @@ if (!doNotTrack) {
 
 
 
-<link rel="stylesheet" href="https://blog.zzndb.ml/scss/journal.min.53daeeea3d699f3fbf6fc37aec26cd946368bc5d703cdf22c09675bc5ad74048.css" integrity="sha256-U9ru6j1pnz&#43;/b8N67CbNlGNovF1wPN8iwJZ1vFrXQEg=" media="screen">
+<link rel="stylesheet" href="https://blog.zzndb.ml/scss/journal.min.674a8248dc81542f79010f10d22a81252b3f3e1323f502a58d05cd055429756e.css" integrity="sha256-Z0qCSNyBVC95AQ8Q0iqBJSs/PhMj9QKljQXNBVQpdW4=" media="screen">
 
 
 
-<link rel="stylesheet" href="https://blog.zzndb.ml/scss/dark-mode.min.68f6cfde9f4fe5bb08e05b4dc8cb4f72aa5749a0464da0093918e3650acac147.css" integrity="sha256-aPbP3p9P5bsI4FtNyMtPcqpXSaBGTaAJORjjZQrKwUc=" media="screen">
+<link rel="stylesheet" href="https://blog.zzndb.ml/scss/dark-mode.min.aa4e63f56d9f36e1d169feedc5ffde34760c13c1add1326974148d3c85a51fcc.css" integrity="sha256-qk5j9W2fNuHRaf7txf/eNHYME8Gt0TJpdBSNPIWlH8w=" media="screen">
 
 
 <script src="https://blog.zzndb.ml/js/loadCSS.js"></script>
@@ -190,7 +189,7 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
 
 &copy;
 	
-	2020 zzndb&#39;s world
+	2021 zzndb&#39;s world
 	
     本站遵循 <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" >CC-BY-NC 4.0 协议</a>
 
@@ -832,8 +831,8 @@ sudo wpa_passphrase ap_name ap_passwd &gt;&gt; wpa_supplicant.conf
 <span style="color:#75715e">## 把配置文件放回去</span>
 adb push wpa_supplicant.conf /data/misc/wifi/wpa_supplicant.conf
 
-<span style="color:#75715e">## 如添加多个 wifi 配置 可为其分配不同的优先级</span> 
-<span style="color:#75715e">### 用你喜欢的工具 修改配置文件 在单个配置文件中 添加 priority=num</span> 
+<span style="color:#75715e">## 如添加多个 wifi 配置 可为其分配不同的优先级 </span>
+<span style="color:#75715e">### 用你喜欢的工具 修改配置文件 在单个配置文件中 添加 priority=num </span>
 <span style="color:#75715e">### num 越大 优先级越高 更改后文件示例如下</span>
 ...
 network<span style="color:#f92672">={</span>
@@ -944,27 +943,27 @@ adb reboot fastboot
 <span style="color:#75715e"># To install SuperSU properly, aside from cleaning old versions and</span>
 <span style="color:#75715e"># other superuser-type apps from the system, the following files need to</span>
 <span style="color:#75715e"># be installed:</span>
-#
+<span style="color:#75715e">#</span>
 <span style="color:#75715e"># API   source                        target                              chmod   chcon                       required</span>
-#
+<span style="color:#75715e">#</span>
 <span style="color:#75715e"># 7-19  common/Superuser.apk          /system/app/Superuser.apk           0644    u:object_r:system_file:s0   gui</span>
-#
+<span style="color:#75715e">#</span>
 <span style="color:#75715e"># 17+   common/install-recovery.sh    /system/etc/install-recovery.sh     0755    *1                          required</span>
 <span style="color:#75715e"># 17+                                 /system/bin/install-recovery.sh     (symlink to /system/etc/...)        required</span>
 <span style="color:#75715e"># *1: same as /system/bin/toolbox: u:object_r:system_file:s0 if API &lt; 20, u:object_r:toolbox_exec:s0 if API &gt;= 20</span>
-#
+<span style="color:#75715e">#</span>
 <span style="color:#75715e"># 7+    ARCH/su *2                    /system/xbin/su                     *3      u:object_r:system_file:s0   required</span>
 <span style="color:#75715e"># 7+                                  /system/bin/.ext/.su                *3      u:object_r:system_file:s0   gui</span>
 <span style="color:#75715e"># 17+                                 /system/xbin/daemonsu               0755    u:object_r:system_file:s0   required</span>
 <span style="color:#75715e"># *2: su.pie for 17+ x86(_32) only</span>
 <span style="color:#75715e"># *3: 06755 if API &lt; 18, 0755 if API &gt;= 18</span>
-#
+<span style="color:#75715e">#</span>
 <span style="color:#75715e"># 17+   common/99SuperSUDaemon *6     /system/etc/init.d/99SuperSUDaemon  0755    u:object_r:system_file:s0   optional</span>
 <span style="color:#75715e"># *6: only place this file if /system/etc/init.d is present</span>
-#
+<span style="color:#75715e">#</span>
 <span style="color:#75715e"># 17+   &#39;echo 1 &gt;&#39; or &#39;touch&#39; *7      /system/etc/.installed_su_daemon    0644    u:object_r:system_file:s0   optional</span>
 <span style="color:#75715e"># *7: the file just needs to exist or some recoveries will nag you. Even with it there, it may still happen.</span>
-#
+<span style="color:#75715e">#</span>
 <span style="color:#75715e"># After installation, run &#39;/system/xbin/su --install&#39;, which may need to</span>
 <span style="color:#75715e"># perform some additional installation steps. Ideally, at one point,</span>
 <span style="color:#75715e"># a lot of this script will be moved there.</span>
@@ -1095,7 +1094,7 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
 
 &copy;
 	
-	2020 zzndb&#39;s world
+	2021 zzndb&#39;s world
 	
     本站遵循 <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" >CC-BY-NC 4.0 协议</a>
 </div>

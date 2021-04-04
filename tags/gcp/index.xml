@@ -6,11 +6,7 @@
     <description>Recent content in GCP on zzndb&#39;s world</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 08 Jun 2019 15:53:00 +0800</lastBuildDate>
-    
-	<atom:link href="https://blog.zzndb.ml/tags/gcp/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Sat, 08 Jun 2019 15:53:00 +0800</lastBuildDate><atom:link href="https://blog.zzndb.ml/tags/gcp/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>在 GCP 上部署 Nextcloud 相关折腾</title>
       <link>https://blog.zzndb.ml/posts/2019-06-08-%E5%9C%A8-gcp-%E4%B8%8A%E9%83%A8%E7%BD%B2-nextcloud-%E7%9B%B8%E5%85%B3%E6%8A%98%E8%85%BE/</link>
