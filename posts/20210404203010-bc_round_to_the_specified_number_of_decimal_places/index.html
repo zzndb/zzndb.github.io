@@ -10,7 +10,7 @@
 <meta name="google-site-verification" content="">
 <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
 <meta content="telephone=no" name="format-detection">
-<meta name="description" content="">
+<meta name="description" content="对 `bc` 的小数结果精度控制以及舍入的碎碎念">
 <meta name="renderer" content="webkit">
 <meta name="theme-color" content="#ffffff">
 
@@ -419,6 +419,10 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
                 <div class="post-title">
                     bc round to the specified number of decimal places
                     
+                    <div class="post-subtitle">
+                        对 `bc` 的小数结果精度控制以及舍入的碎碎念
+                    </div>
+                    
                     <div class="post-meta">
                         
                         <time itemprop="datePublished">
@@ -448,8 +452,7 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
                 
                 <div class="post-body" v-pre>
                 
-                    <p>对 <code>bc</code> 的结果精度控制以及舍入的一些碎碎念</p>
-<p><code>bc</code> 一个命令行计算器， <code>dc</code> 的继承者？</p>
+                    <p><code>bc</code> 一个命令行计算器， <code>dc</code> 的继承者？</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">bc -l <span style="color:#f92672">&lt;&lt;&lt;</span> <span style="color:#e6db74">&#34;1/3&#34;</span>
 </code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">0.3333333333333333
 </code></pre></div><p>提供了 <strong>scale</strong> 变量来控制结果小数位数</p>
@@ -473,6 +476,7 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
 <li><a href="https://askubuntu.com/a/863756">https://askubuntu.com/a/863756</a></li>
 <li><a href="https://askubuntu.com/a/179949">https://askubuntu.com/a/179949</a></li>
 </ul>
+
                     
                     <HR width="100%" id="EOF">
 		    <p style="color:#777;">Last modified on 2021-04-04</p>
