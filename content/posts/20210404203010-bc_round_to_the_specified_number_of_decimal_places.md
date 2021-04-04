@@ -4,13 +4,13 @@ author = ["zzndb"]
 description = "对 `bc` 的小数结果精度控制以及舍入的碎碎念"
 date = 2021-04-04
 publishDate = 2021-04-04
-lastmod = 2021-04-04T22:37:56+08:00
+lastmod = 2021-04-04T23:15:01+08:00
 tags = ["Shell Script"]
 categories = ["code"]
 draft = false
 +++
 
-`bc` 一个命令行计算器， `dc` 的继承者？
+`bc` ，一个命令行计算器， `dc` 的继承者？
 
 ```bash
 bc -l <<< "1/3"
