@@ -271,26 +271,6 @@ export LD_LIBRARY_PATH&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&l
     
     
         <item>
-        <title>About</title>
-        <link>https://blog.zzndb.ml/about/</link>
-        <pubDate>Sat, 18 Feb 2017 23:08:00 +0800</pubDate>
-        
-        <guid>https://blog.zzndb.ml/about/</guid>
-        <description>zzndb&#39;s world https://blog.zzndb.ml/about/ -&lt;p&gt;&lt;strong&gt;A computer professional student。&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;此处省略若干字；(反正很菜就是了 :(&lt;/p&gt;
-&lt;p&gt;略懂 Android、Linux 搞机、&lt;a href=&#34;https://www.opensuse.org/#Tumbleweed&#34; target=&#34;_blank&#34;&gt;openSUSE Tumbleweed&lt;/a&gt; 日常使用中&amp;hellip;&lt;/p&gt;
-&lt;p&gt;&lt;del&gt;The end！&lt;/del&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Contact Me:&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Email: &lt;code&gt;echo &amp;quot;emRiQHp6bmRiLmNvbS5jbgo=&amp;quot; | base64 -d&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;TG: &lt;a href=&#34;https://t.me/zzndb&#34; target=&#34;_blank&#34; &gt;zzndb&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;OBS: &lt;a href=&#34;https://build.opensuse.org/project/show/home:zzndb&#34; title=&#34;zzndb&#34;&gt;home:zzndb&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;del&gt;&lt;a href=&#34;https://blog.zzndb.com.cn/try&#34; target=&#34;_blank&#34;&gt;NULL&lt;/a&gt;&lt;/del&gt;&lt;/p&gt;
-- https://blog.zzndb.ml/about/ - </description>
-        </item>
-    
-    
-    
-        <item>
         <title>Friend&#39;s</title>
         <link>https://blog.zzndb.ml/links/</link>
         <pubDate>Sat, 18 Feb 2017 08:08:00 +0800</pubDate>
@@ -303,6 +283,33 @@ export LD_LIBRARY_PATH&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&l
 &lt;li&gt;&lt;a href=&#34;http://rilzob.com/&#34;&gt;极氙世界&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 - https://blog.zzndb.ml/links/ - </description>
+        </item>
+    
+    
+    
+        <item>
+        <title>About</title>
+        <link>https://blog.zzndb.ml/about/</link>
+        <pubDate>Sat, 18 Feb 2017 00:00:00 +0000</pubDate>
+        
+        <guid>https://blog.zzndb.ml/about/</guid>
+        <description>zzndb&#39;s world https://blog.zzndb.ml/about/ -&lt;h2 id=&#34;这里是&#34;&gt;&lt;strong&gt;这里是？&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;这里会放些自己写的各种流水帐，记些有的没的……&lt;/p&gt;
+&lt;p&gt;主要是给自己看，当然如果有幸一些东西能对你有所帮助，那感觉还是蛮好的。&lt;/p&gt;
+&lt;h2 id=&#34;关于我&#34;&gt;&lt;strong&gt;关于我？&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;A computer professional graduate.&lt;/p&gt;
+&lt;p&gt;不过，总的来看是啥也不会……&lt;/p&gt;
+&lt;p&gt;还尽喜欢整些有的没的，比如 Android、Linux 搞机&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.opensuse.org/#Tumbleweed&#34;&gt;openSUSE Tumbleweed&lt;/a&gt; 作为桌面系统日常使用中……&lt;/p&gt;
+&lt;p&gt;在接触 Emacs+Evil 前主用 Vim ，神之编辑器系统做得还不赖&lt;/p&gt;
+&lt;p&gt;一个无情的 &lt;a href=&#34;https://build.opensuse.org&#34;&gt;OBS&lt;/a&gt; 入门级打包工，主要整些自己用源里没有的包，自己动手丰衣足食嘛！&lt;/p&gt;
+&lt;p&gt;……&lt;/p&gt;
+&lt;h2 id=&#34;联系我&#34;&gt;&lt;strong&gt;联系我？&lt;/strong&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Email: &lt;code&gt;echo &amp;quot;bWVAenpuZGIubWwK&amp;quot; | base64 -d&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;TG: @zzndb&lt;/li&gt;
+&lt;/ul&gt;
+- https://blog.zzndb.ml/about/ - </description>
         </item>
     
     
