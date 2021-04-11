@@ -17,7 +17,7 @@
         <pubDate>Sun, 04 Apr 2021 00:00:00 +0000</pubDate>
         
         <guid>https://blog.zzndb.ml/posts/20210404203010-bc_round_to_the_specified_number_of_decimal_places/</guid>
-        <description>zzndb&#39;s world https://blog.zzndb.ml/posts/20210404203010-bc_round_to_the_specified_number_of_decimal_places/ -&lt;p&gt;&lt;code&gt;bc&lt;/code&gt; ，一个命令行计算器， &lt;code&gt;dc&lt;/code&gt; 的继承者？&lt;/p&gt;
+        <description>zzndb&#39;s world https://blog.zzndb.ml/posts/20210404203010-bc_round_to_the_specified_number_of_decimal_places/ -&lt;p&gt;&lt;code&gt;bc&lt;/code&gt; ，一个命令行计算器， &lt;del&gt;&lt;code&gt;dc&lt;/code&gt; 的继承者？&lt;/del&gt; 也许是继承者，不过更是 POSIX 标准的一部分&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;bc -l &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;1/3&amp;#34;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;0.3333333333333333
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;提供了 &lt;strong&gt;scale&lt;/strong&gt; 变量来控制结果小数位数&lt;/p&gt;
@@ -32,7 +32,80 @@
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;对指定位数小数进行舍入&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;bc -l &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;scale=3; a=0.333333; r=10^scale; ((a+a)*r+0.5)/r&amp;#34;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;0.667
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;BTW，直接用 &lt;code&gt;printf&lt;/code&gt; 格式化也能进行舍入&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;需要注意的是，在舍入前有进行会影响精度的操作（如做除法）会按指定位数丢失后面精度，让后面的一通舍入操作失败&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;bc -l &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;scale=3; a=0.333333; r=10^scale; ((a+a)/1*r+0.5)/r&amp;#34;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;0.666
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;不过，这对这个看起来只是个计算器，而实则是个任意精度计算语言（An arbitrary precision calculator language）的 &lt;code&gt;bc&lt;/code&gt; 来说不算啥问题，你可以先算好，再限制精度来计算舍入。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;bc -l &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;a=0.333333; ra=(a+a)/1; scale=3; r=10^scale; (ra*r+0.5)/r&amp;#34;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;0.667
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;details&gt;
+&lt;summary&gt;
+既然是个语言，你还能在里面编程……
+&lt;/summary&gt;
+&lt;p class=&#34;details&#34;&gt;
+&lt;p&gt;来自其 manpage 中一个计算自然常数 e 的 1-10 次幂估算值的例子：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;bc -l &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;\
+&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;         scale = 20
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;         define e(x){
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;             auto a, b, c, i, s
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;             a = 1
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;             b = 1
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;             s = 1
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;             for (i = 1; 1 == 1; i++){
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;                 a = a*x
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;                 b = b*i
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;                 c = a/b
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;                 if (c == 0) {
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;                      return(s)
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;                 }
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;                 s = s+c
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;             }
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;         }
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;         for (i = 1; i &amp;lt;= 10; ++i) {
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;             e(i)
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;         }
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;2.718281828459045&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;7.38905609893065&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;20.085536923187668&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;54.598150033144236&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;148.4131591025766&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;403.4287934927351&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;1096.6331584284585&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;2980.9579870417283&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;8103.083927575384&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;22026.465794806718&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;不过 POSIX 标准里的 &lt;code&gt;bc&lt;/code&gt; 并没有位运算…… sigh&lt;/p&gt;
+&lt;/p&gt;
+&lt;/details&gt;
+&lt;p&gt;BTW，直接用 &lt;code&gt;printf&lt;/code&gt; 格式化也能进行舍入&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;printf &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;%.3f&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;$(&lt;/span&gt;bc -l &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;scale=3; a=0.333333; a+a&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;0.667
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;reference&#34;&gt;Reference&lt;/h2&gt;
