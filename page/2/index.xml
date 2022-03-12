@@ -289,7 +289,7 @@ The maximum number of consecutive 1s is 3.&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;……&lt;/p&gt;
 &lt;h2 id=&#34;联系我&#34;&gt;&lt;strong&gt;联系我？&lt;/strong&gt;&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;Email: &lt;code&gt;echo &amp;quot;enpuZGIwMDFAZ21haWwuY29tCg=&lt;/code&gt;&amp;quot; | base64 -d=&lt;/li&gt;
+&lt;li&gt;Email: &lt;code&gt;echo &amp;quot;enpuZGIwMDFAZ21haWwuY29tCg==&amp;quot; | base64 -d&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;TG: @zzndb&lt;/li&gt;
 &lt;li&gt;PGP 指纹：&lt;code&gt;2944 7B45 7B33 2FF3 C6DE  F8B9 6106 CD71 758D 94DF&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;PGP 公钥：&lt;a href=&#34;https://github.com/zzndb.gpg&#34;&gt;https://github.com/zzndb.gpg&lt;/a&gt;&lt;/li&gt;
