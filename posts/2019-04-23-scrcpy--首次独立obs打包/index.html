@@ -659,27 +659,27 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
 </blockquote>
 </blockquote>
 <p>首先在自己本地的OBS项目目录建立新项目 <a href="https://openbuildservice.org/help/manuals/obs-beginners-guide/">前期具体初始化操作参见</a></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">osc mkpac scrcpy
-</code></pre></div><p>然后在项目目录下扒下最新源代码，和这里必要的 prebuild <code>scrcpy-server-v1.8.jar</code>文件（就不考虑自己编译 server 了，还得 android sdk</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">wget https://github.com/Genymobile/scrcpy/archive/v1.8.tar.gz
-wget https://github.com/Genymobile/scrcpy/releases/download/v1.8/scrcpy-server-v1.8.jar
-</code></pre></div><p>源代码改个标准名字</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">mv v1.8.tar.gz scrcpy-1.8.tar.gz
-</code></pre></div><p>开写 spec 文件</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">vim scrcpy.spec <span style="color:#75715e"># 默认加载了模板 spec 文件</span>
-</code></pre></div><p>写了写 <code>Name, Version, Summary, Licence, Url，Source</code>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>osc mkpac scrcpy
+</span></span></code></pre></div><p>然后在项目目录下扒下最新源代码，和这里必要的 prebuild <code>scrcpy-server-v1.8.jar</code>文件（就不考虑自己编译 server 了，还得 android sdk</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>wget https://github.com/Genymobile/scrcpy/archive/v1.8.tar.gz
+</span></span><span style="display:flex;"><span>wget https://github.com/Genymobile/scrcpy/releases/download/v1.8/scrcpy-server-v1.8.jar
+</span></span></code></pre></div><p>源代码改个标准名字</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>mv v1.8.tar.gz scrcpy-1.8.tar.gz
+</span></span></code></pre></div><p>开写 spec 文件</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>vim scrcpy.spec <span style="color:#75715e"># 默认加载了模板 spec 文件</span>
+</span></span></code></pre></div><p>写了写 <code>Name, Version, Summary, Licence, Url，Source</code>
 从官方实验<code>Hardware</code>源里面，剽窃了<code>Group</code>信息<code>Hardware/Mobile</code>:satisfied:</p>
 <blockquote>
 <p>记首次<del>独立</del>OBS打包</p>
 </blockquote>
 <p>差不多这样：</p>
-<pre><code class="language-spec" data-lang="spec">Name:           scrcpy
+<pre tabindex="0"><code class="language-spec" data-lang="spec">Name:           scrcpy
 Version:        1.8
 Release:        0
 Summary:        Display and control your Android device
 # FIXME: Select a correct license from https://github.com/openSUSE/spec-cleaner#spdx-licenses
 License:        Apache-2.0
-# FIXME: use correct group, see &quot;https://en.opensuse.org/openSUSE:Package_group_guidelines&quot;
+# FIXME: use correct group, see &#34;https://en.opensuse.org/openSUSE:Package_group_guidelines&#34;
 Group:          Hardware/Mobile
 Url:            https://github.com/Genymobile/scrcpy
 Source:         %{name}-%{version}.tar.gz   
@@ -697,32 +697,32 @@ Source1:        %{name}-server-v%{version}.jar
 <p>You need adb. It is available in the Android SDK platform tools, or packaged in your distribution (android-adb-tools).</p>
 </blockquote>
 <p>找了找</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">zse android
-zse adb
-</code></pre></div><p>没有！！
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>zse android
+</span></span><span style="display:flex;"><span>zse adb
+</span></span></code></pre></div><p>没有！！
 然后去 software.opensuse.org 搜了搜，没有！！
 遂放弃 adb ，跳过</p>
 <blockquote>
 <p>后面发现，竟然没啥影响。。。</p>
 </blockquote>
 <p>然后说要 ffmepg 和 sdl2 然后随手一搜</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">zse --providers ffmpeg-4
-zse --providers libSDL2-2_0-0
-</code></pre></div><p>好家伙一堆。。。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>zse --providers ffmpeg-4
+</span></span><span style="display:flex;"><span>zse --providers libSDL2-2_0-0
+</span></span></code></pre></div><p>好家伙一堆。。。</p>
 <p>看了看和大蜥蜴差不多的 Fedora 的依赖包名
 <code>SDL2-devel ffms2-devel meson gcc make</code></p>
 <p>照着名字大概在源里找了找，尝试<strong>写上</strong>了<code>ffmpeg-4, meson, gcc, libSDL2-devel</code></p>
 <p>照着编译指南写了写<code>%build，%install</code>部分。</p>
 <p>先本地试试再说</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">osc build --local-package openSUSE_Tumbleweed x86_64 scrcpy.spec
-</code></pre></div><p>看了看报错</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">Dependency <span style="color:#e6db74">&#34;libavformat&#34;</span> not found
-</code></pre></div><p>再次在源里寻找，尝试<strong>添加</strong>了<code>ffmpeg-4-libavformat-devel</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>osc build --local-package openSUSE_Tumbleweed x86_64 scrcpy.spec
+</span></span></code></pre></div><p>看了看报错</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>Dependency <span style="color:#e6db74">&#34;libavformat&#34;</span> not found
+</span></span></code></pre></div><p>再次在源里寻找，尝试<strong>添加</strong>了<code>ffmpeg-4-libavformat-devel</code></p>
 <p>再次尝试，看起来依赖问题没有了，报<code>scrcpy-server.jar</code>相关的错，去本地的编译目录看了看，还真没有我给的 server 文件，难道还得自己操作源文件？</p>
 <h2 id="编译安装">编译安装</h2>
 <p>一顿操作之后&hellip;</p>
 <p>好吧，看来源代码之类的会自己解压过去，<strong>其他文件还得自己在<code>%prep</code>预编译阶段复制过去</strong></p>
-<pre><code class="language-spec" data-lang="spec">%prep
+<pre tabindex="0"><code class="language-spec" data-lang="spec">%prep
 %setup -q
 cp %{_sourcedir}/%{name}-server-v%{version}.jar .
 
@@ -732,7 +732,7 @@ meson x --buildtype release --strip -Db_lto=true -Dprebuilt_server=./server/scrc
 cd x
 ninja
 </code></pre><p>开始在<code>%{install}</code>部分直接用编译指南给的<code>ninja -install</code>给了和我本地编译一样的错误，貌似是找不到规则，看了看编译指南的描述，貌似就安装了两个文件，看了看编译得到的东西也就一个可执行文件，考虑自己安装好了</p>
-<pre><code class="language-spec" data-lang="spec">%install
+<pre tabindex="0"><code class="language-spec" data-lang="spec">%install
 install -Dm 0755 x/app/scrcpy %{buildroot}%{_bindir}/%{name}
 install -Dm 0644 server/scrcpy-server.jar %{buildroot}/usr/local/share/%{name}/scrcpy-server.jar
 </code></pre><blockquote>
@@ -745,7 +745,7 @@ install -Dm 0644 server/scrcpy-server.jar %{buildroot}/usr/local/share/%{name}/s
 </blockquote>
 </blockquote>
 <p>按照模板改了改<code>%license，和%doc</code>部分，添加了上面安装的两个文件，声明了对公共目录<code>/usr/local/share</code>的归属</p>
-<pre><code class="language-spec" data-lang="spec">%files
+<pre tabindex="0"><code class="language-spec" data-lang="spec">%files
 %license LICENSE
 %doc README.md
 %{_bindir}/%{name}
@@ -754,7 +754,7 @@ install -Dm 0644 server/scrcpy-server.jar %{buildroot}/usr/local/share/%{name}/s
 %dir /usr/local/share/%{name}
 </code></pre><p>然后<code>%changelog</code>保持默认为空，毕竟有<code>.changes</code>文件</p>
 <p>最后完整spec</p>
-<pre><code class="language-spec" data-lang="spec"># 省略前面 Copyright
+<pre tabindex="0"><code class="language-spec" data-lang="spec"># 省略前面 Copyright
 
 Name:           scrcpy
 Version:        1.8
@@ -762,7 +762,7 @@ Release:        0
 Summary:        Display and control your Android device
 # FIXME: Select a correct license from https://github.com/openSUSE/spec-cleaner#spdx-licenses
 License:        Apache-2.0
-# FIXME: use correct group, see &quot;https://en.opensuse.org/openSUSE:Package_group_guidelines&quot;
+# FIXME: use correct group, see &#34;https://en.opensuse.org/openSUSE:Package_group_guidelines&#34;
 Group:          Hardware/Mobile
 Url:            https://github.com/Genymobile/scrcpy
 Source:         %{name}-%{version}.tar.gz   
@@ -799,10 +799,10 @@ install -Dm 0644 server/scrcpy-server.jar %{buildroot}/usr/local/share/%{name}/s
 
 %changelog
 </code></pre><p>然后写 <code>.change</code>文件，提交编译</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">osc ar <span style="color:#75715e"># auto add or remove file</span>
-osc vc <span style="color:#75715e"># change file</span>
-osc ci <span style="color:#75715e"># commit</span>
-</code></pre></div><p><img src="/images/2019/04/417551773.png" alt="2019-04-23_10-58.png"></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>osc ar <span style="color:#75715e"># auto add or remove file</span>
+</span></span><span style="display:flex;"><span>osc vc <span style="color:#75715e"># change file</span>
+</span></span><span style="display:flex;"><span>osc ci <span style="color:#75715e"># commit</span>
+</span></span></code></pre></div><p><img src="/images/2019/04/417551773.png" alt="2019-04-23_10-58.png"></p>
 <p>yeah！</p>
 <h1 id="总结">总结</h1>
 <blockquote>

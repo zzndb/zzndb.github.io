@@ -30,27 +30,27 @@ Note:
 Elements of the given array will be in the range [-10,000, 10,000].
 *&lt;!--more--&gt;
 &lt;strong&gt;Mycode:&lt;/strong&gt;&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;Solution&lt;/span&gt; {
-&lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt;
-    &lt;span style=&#34;color:#66d9ef&#34;&gt;double&lt;/span&gt; findMaxAverage(vector&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&amp;amp;&lt;/span&gt; nums, &lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; k) {
-        &lt;span style=&#34;color:#66d9ef&#34;&gt;auto&lt;/span&gt; be &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; nums.begin(), en &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; nums.end();
-        &lt;span style=&#34;color:#66d9ef&#34;&gt;double&lt;/span&gt; sum &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;;
-        &lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; tmp0 &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;, tmp1 &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;;
-        &lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt;(&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; i &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; k; i &lt;span style=&#34;color:#f92672&#34;&gt;!=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;; &lt;span style=&#34;color:#f92672&#34;&gt;--&lt;/span&gt;i, &lt;span style=&#34;color:#f92672&#34;&gt;++&lt;/span&gt;be){
-            tmp1 &lt;span style=&#34;color:#f92672&#34;&gt;+=&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt;be;
-        }
-        sum &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; tmp1;
-        &lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt;(; be &lt;span style=&#34;color:#f92672&#34;&gt;!=&lt;/span&gt; en; &lt;span style=&#34;color:#f92672&#34;&gt;++&lt;/span&gt;be){
-            tmp0 &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; tmp1 &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt;(be &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt; k) &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt;be;
-            &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt;(tmp0 &lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt; sum){
-                sum &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; tmp0;
-            }
-            tmp1 &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; tmp0;
-        }
-        &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; sum&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;k;
-    }
-};
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;!--more--&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;Solution&lt;/span&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;double&lt;/span&gt; findMaxAverage(vector&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&amp;amp;&lt;/span&gt; nums, &lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; k) {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#66d9ef&#34;&gt;auto&lt;/span&gt; be &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; nums.begin(), en &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; nums.end();
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#66d9ef&#34;&gt;double&lt;/span&gt; sum &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; tmp0 &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;, tmp1 &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt;(&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; i &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; k; i &lt;span style=&#34;color:#f92672&#34;&gt;!=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;; &lt;span style=&#34;color:#f92672&#34;&gt;--&lt;/span&gt;i, &lt;span style=&#34;color:#f92672&#34;&gt;++&lt;/span&gt;be){
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            tmp1 &lt;span style=&#34;color:#f92672&#34;&gt;+=&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt;be;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        sum &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; tmp1;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt;(; be &lt;span style=&#34;color:#f92672&#34;&gt;!=&lt;/span&gt; en; &lt;span style=&#34;color:#f92672&#34;&gt;++&lt;/span&gt;be){
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            tmp0 &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; tmp1 &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt;(be &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt; k) &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt;be;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt;(tmp0 &lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt; sum){
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                sum &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; tmp0;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            tmp1 &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; tmp0;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; sum&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;k;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;};
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;!--more--&gt;
 &lt;p&gt;全页截图：
 &lt;img src=&#34;https://blog.zzndb.ml/images/2017/07/3019175156.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;以上&lt;/p&gt;
@@ -96,17 +96,17 @@ Output: 3
 Explanation: The first two digits or the last three digits are consecutive 1s.
 The maximum number of consecutive 1s is 3.&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;C例子代码如下&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-c&#34; data-lang=&#34;c&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;findMaxConsecutiveOnes&lt;/span&gt;(&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; nums, &lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; numsSize) {
- &lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; max &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;;
- &lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; sum &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;;
- &lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; (&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; i&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;; i&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;numsSize; i&lt;span style=&#34;color:#f92672&#34;&gt;++&lt;/span&gt;)
- {
-     sum &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; (sum&lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt;nums[i])&lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt;nums[i];
-     &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt;(max&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;sum){max&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;sum;}
- }
-&lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; max;
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;看看他的行数，我就不贴我的渣渣代码了，二十多行，也没有任何技巧？可言。
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-c&#34; data-lang=&#34;c&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;findMaxConsecutiveOnes&lt;/span&gt;(&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; nums, &lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; numsSize) {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; max &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; sum &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; (&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; i&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;; i&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;numsSize; i&lt;span style=&#34;color:#f92672&#34;&gt;++&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;     sum &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; (sum&lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt;nums[i])&lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt;nums[i];
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;     &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt;(max&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;sum){max&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;sum;}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt; }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; max;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;看看他的行数，我就不贴我的渣渣代码了，二十多行，也没有任何技巧？可言。
 在我看来 &lt;code&gt;sum = (sum+nums[i])*nums[i];&lt;/code&gt;为这例，我所不及的地方。
 巧妙用了 1 与 0 在乘法运算中对结果带来的差异&lt;/p&gt;
 &lt;p&gt;以上，纪念第一次AC&lt;/p&gt;- https://blog.zzndb.ml/posts/2017-03-22-%E7%AC%AC%E4%B8%80%E6%AC%A1ac%E7%9A%84leetcode/ - </description>
@@ -210,10 +210,10 @@ The maximum number of consecutive 1s is 3.&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;modelsim打不开，如上wiki也提到，同时根据&lt;a href=&#34;https://twoerner.blogspot.com/2017/10/running-modelsim-altera-from-quartus.html&#34;&gt;这里&lt;/a&gt;的步骤，解决&lt;/p&gt;
 &lt;p&gt;Solution: 编译32bit freetype2 2.5 之前版本，将得到的&lt;code&gt;lib&lt;/code&gt;目录添加到其运行环境&lt;code&gt;LD_LIBRARY_PATH&lt;/code&gt;即可&lt;/p&gt;
 &lt;p&gt;这里我在&lt;code&gt;${quartusiiInstallVersion}/modelsim_ase/vco&lt;/code&gt;文件较为靠上的位置添加了&lt;code&gt;lib&lt;/code&gt;目录&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# just for example&lt;/span&gt;
-&lt;span style=&#34;color:#75715e&#34;&gt;# vco file line 10&lt;/span&gt;
-export LD_LIBRARY_PATH&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;/my/compile/file/dir/freetype-2.4.7-32bit/lib&amp;#34;&lt;/span&gt;:$LD_LIBRARY_PATH
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;other&#34;&gt;other&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# just for example&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# vco file line 10&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;export LD_LIBRARY_PATH&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;/my/compile/file/dir/freetype-2.4.7-32bit/lib&amp;#34;&lt;/span&gt;:$LD_LIBRARY_PATH
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;other&#34;&gt;other&lt;/h3&gt;
 &lt;p&gt;值得借鉴的初始化配置&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://www.mawenbao.com/note/opensuse-tumbleweed-summary.html&#34; target=&#34;_blank&#34;&gt;人家的博客&lt;/a&gt;&lt;/li&gt;
@@ -242,8 +242,8 @@ export LD_LIBRARY_PATH&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&l
 &lt;p&gt;这篇&lt;a href=&#34;https://github.com/GcsSloop/AndroidNote/blob/master/Course/Markdown/markdown-link.md&#34; target=&#34;_blank&#34;&gt;github文章&lt;/a&gt;表面了这一点&lt;/p&gt;
 &lt;p&gt;So,我把前面文章的链接全&lt;strong&gt;手动&lt;/strong&gt;&lt;code&gt;html标签&lt;/code&gt;:expressionless:毕竟小白，如有大神赐教，不甚感激。&lt;/p&gt;
 &lt;p&gt;如上，链接都用&lt;code&gt;html标签&lt;/code&gt;表示，当然都很简单，格式例：&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;a&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;href&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;https://blog.zzndb.com.cn&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;target&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;_blank&amp;#34;&lt;/span&gt;&amp;gt;zzndb&amp;#39;s world&amp;lt;/&lt;span style=&#34;color:#f92672&#34;&gt;a&lt;/span&gt;&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;效果：&lt;a href=&#34;https://blog.zzndb.com.cn&#34; target=&#34;_blank&#34;&gt;zzndb&amp;rsquo;s world&lt;/a&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;a&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;href&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;https://blog.zzndb.com.cn&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;target&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;_blank&amp;#34;&lt;/span&gt;&amp;gt;zzndb&amp;#39;s world&amp;lt;/&lt;span style=&#34;color:#f92672&#34;&gt;a&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;效果：&lt;a href=&#34;https://blog.zzndb.com.cn&#34; target=&#34;_blank&#34;&gt;zzndb&amp;rsquo;s world&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;貌似只有这样:confused:&lt;/p&gt;
 &lt;p&gt;以上&lt;/p&gt;- https://blog.zzndb.ml/posts/2017-02-19-%E5%85%B3%E4%BA%8Etypecho%E7%9A%84%E9%93%BE%E6%8E%A5%E5%90%8E%E5%8F%B0%E6%89%93%E5%BC%80%E8%AE%BE%E7%BD%AE/ - </description>
         </item>
@@ -289,8 +289,10 @@ export LD_LIBRARY_PATH&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&l
 &lt;p&gt;……&lt;/p&gt;
 &lt;h2 id=&#34;联系我&#34;&gt;&lt;strong&gt;联系我？&lt;/strong&gt;&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;Email: &lt;code&gt;echo &amp;quot;bWVAenpuZGIubWwK&amp;quot; | base64 -d&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Email: &lt;code&gt;echo &amp;quot;enpuZGIwMDFAZ21haWwuY29tCg=&lt;/code&gt;&amp;quot; | base64 -d=&lt;/li&gt;
 &lt;li&gt;TG: @zzndb&lt;/li&gt;
+&lt;li&gt;PGP 指纹：&amp;quot;&lt;code&gt;2944 7B45 7B33 2FF3 C6DE  F8B9 6106 CD71 758D 94DF&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;PGP 公钥：&lt;a href=&#34;https://github.com/zzndb.gpg&#34;&gt;https://github.com/zzndb.gpg&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 - https://blog.zzndb.ml/about/ - </description>
         </item>

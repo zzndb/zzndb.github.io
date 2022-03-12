@@ -391,23 +391,23 @@ Example2: x = -123, return -321</em>
 <p><em>Note:
 The input is assumed to be a 32-bit signed integer. Your function should return 0 when the reversed integer overflows.</em>
 <strong>Code:</strong></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span> {
-<span style="color:#66d9ef">public</span><span style="color:#f92672">:</span>
-    <span style="color:#66d9ef">int</span> reverse(<span style="color:#66d9ef">int</span> x) {
-       <span style="color:#66d9ef">long</span> <span style="color:#66d9ef">long</span> re <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
-        <span style="color:#66d9ef">while</span>(x) {
-            re <span style="color:#f92672">=</span> re<span style="color:#f92672">*</span><span style="color:#ae81ff">10</span> <span style="color:#f92672">+</span> x<span style="color:#f92672">%</span><span style="color:#ae81ff">10</span>;
-            x <span style="color:#f92672">/=</span> <span style="color:#ae81ff">10</span>;
-        }
-        <span style="color:#66d9ef">return</span> (re<span style="color:#f92672">&gt;</span>INT_MAX <span style="color:#f92672">||</span> re<span style="color:#f92672">&lt;</span>INT_MIN) <span style="color:#f92672">?</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">:</span> re;
-    }
-};
-</code></pre></div><p><strong>FullWeb:</strong>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span> {
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> reverse(<span style="color:#66d9ef">int</span> x) {
+</span></span><span style="display:flex;"><span>       <span style="color:#66d9ef">long</span> <span style="color:#66d9ef">long</span> re <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">while</span>(x) {
+</span></span><span style="display:flex;"><span>            re <span style="color:#f92672">=</span> re<span style="color:#f92672">*</span><span style="color:#ae81ff">10</span> <span style="color:#f92672">+</span> x<span style="color:#f92672">%</span><span style="color:#ae81ff">10</span>;
+</span></span><span style="display:flex;"><span>            x <span style="color:#f92672">/=</span> <span style="color:#ae81ff">10</span>;
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> (re<span style="color:#f92672">&gt;</span>INT_MAX <span style="color:#f92672">||</span> re<span style="color:#f92672">&lt;</span>INT_MIN) <span style="color:#f92672">?</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">:</span> re;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>};
+</span></span></code></pre></div><p><strong>FullWeb:</strong>
 <img src="/images/2017/07/1309455879.png" alt="">
 <strong>ThoughtFulPoint:</strong></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp">re <span style="color:#f92672">=</span> re<span style="color:#f92672">*</span><span style="color:#ae81ff">10</span> <span style="color:#f92672">+</span> x<span style="color:#f92672">%</span><span style="color:#ae81ff">10</span>;
-            x <span style="color:#f92672">/=</span> <span style="color:#ae81ff">10</span>;
-</code></pre></div><p>以上</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>re <span style="color:#f92672">=</span> re<span style="color:#f92672">*</span><span style="color:#ae81ff">10</span> <span style="color:#f92672">+</span> x<span style="color:#f92672">%</span><span style="color:#ae81ff">10</span>;
+</span></span><span style="display:flex;"><span>            x <span style="color:#f92672">/=</span> <span style="color:#ae81ff">10</span>;
+</span></span></code></pre></div><p>以上</p>
                     
                     <HR width="100%" id="EOF">
 		    <p style="color:#777;">Last modified on 2017-07-21</p>

@@ -797,19 +797,19 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
 用人话说的题目描述：
 给你一个文本 <code>words.txt</code> 里面包含若干行英文句子，统计每个单词的词频，以降序输出
 例如输入：</p>
-<pre><code>the day is sunny the the
+<pre tabindex="0"><code>the day is sunny the the
 the sunny is is
 </code></pre><p>正确输出：</p>
-<pre><code>the 4
+<pre tabindex="0"><code>the 4
 is 3
 sunny 2
 day 1
 </code></pre><h2 id="一年前-ac-版本">一年前 AC 版本：</h2>
-<pre><code>cat words.txt | sed -E &quot;s/( )+/\n/g&quot; | awk '{a[$0]++;} END {for (i in a) print i &quot; &quot; a[i];}' | sort -nrk 2 -t ' ' | awk '$2!=&quot;&quot; {print $0}'
+<pre tabindex="0"><code>cat words.txt | sed -E &#34;s/( )+/\n/g&#34; | awk &#39;{a[$0]++;} END {for (i in a) print i &#34; &#34; a[i];}&#39; | sort -nrk 2 -t &#39; &#39; | awk &#39;$2!=&#34;&#34; {print $0}&#39;
 </code></pre><p>貌似我当年并不知道 <code>tr</code> ？竟然用 <code>sed</code> 进行空格替换处理，还贴心的为<code>sort</code>指定了分隔符，还二次使用了 <code>awk</code> 就为了去除可能在单词间多余的空格的情况。</p>
 <p>也许是因为使用了不应该有的 <code>cat</code> 以及不知道 <code>tr</code> 使用了叫重的 <code>sed + awk</code> 完成本应该一个 <code>tr</code> 就能完成的工作，最后耗时 8ms ，现在来看打败了 8.85% 的 AC 提交者。</p>
 <h2 id="现在的-ac-版本">现在的 AC 版本：</h2>
-<pre><code>tr -s &quot; &quot; &quot;\n&quot; &lt; words.txt | awk 'BEING{}{key[$1]++}END{for (i in key) print i&quot; &quot;key[i]}' | sort -rnk 2
+<pre tabindex="0"><code>tr -s &#34; &#34; &#34;\n&#34; &lt; words.txt | awk &#39;BEING{}{key[$1]++}END{for (i in key) print i&#34; &#34;key[i]}&#39; | sort -rnk 2
 </code></pre><p><code>tr</code>：预处理文本，格式化为每行一个单词，为后续处理做准备</p>
 <ul>
 <li><code>-s</code>：压缩重复匹配，这里处理单词间多于一个空格的情况</li>
@@ -831,55 +831,55 @@ day 1
 给你一个文本文件<code>file.txt</code>每行包含一个电话号码，给你正确的格式要求<code>(xxx) xxx-xxxx or xxx-xxx-xxxx</code>打印出正确的电话号码</p>
 <p>这个在一年前就试过了各种实现，都不太理想，让我现在想通过正则匹配实现，我也差不多只能想到<code>grep，awk，sed</code>来做，结果都不太好，最好还是 8ms 的运行时间，他们实现都大同小异，无非是用类似<code>^((\([0-9]{3}\)\ )|([0-9]{3}-))[0-9]{3}-[0-9]{4}*$</code>来匹配，当然实现中得注意命令行字符的意义，该转义转义（详见<code>regex</code> <a target="_blank" href=https://linux.die.net/man/7/regex>manpage</a>）。</p>
 <h2 id="一个-grep-版本">一个 <code>grep</code> 版本：</h2>
-<pre><code>grep &quot;^\(\(([0-9]\{3\})\ \)\|\([0-9]\{3\}-\)\)[0-9]\{3\}-[0-9]\{4\}$&quot; file.txt
+<pre tabindex="0"><code>grep &#34;^\(\(([0-9]\{3\})\ \)\|\([0-9]\{3\}-\)\)[0-9]\{3\}-[0-9]\{4\}$&#34; file.txt
 </code></pre><h1 id="194-transpose-file">194 Transpose File</h1>
 <p>题目链接：<a target="_blank" href="https://leetcode.com/problems/transpose-file/"><a href="https://leetcode.com/problems/transpose-file/">https://leetcode.com/problems/transpose-file/</a></a>
 用人话说的题目描述：
 给你一个文本文件<code>file.txt</code>将内容进行转置。
 输入例如：</p>
-<pre><code>ame age
+<pre tabindex="0"><code>ame age
 alice 21
 ryan 30
 </code></pre><p>正确输出：</p>
-<pre><code>name alice ryan
+<pre tabindex="0"><code>name alice ryan
 age 21 30
 </code></pre><p>因为之前太菜一直没做出来，就只有现在的版本了。</p>
 <h2 id="现在的-ac-版本-1">现在的 AC 版本：</h2>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">awk -F<span style="color:#e6db74">&#39; &#39;</span> <span style="color:#e6db74">&#39;
-</span><span style="color:#e6db74">BEGIN {
-</span><span style="color:#e6db74">    count=0;
-</span><span style="color:#e6db74">}
-</span><span style="color:#e6db74"># read all to a array
-</span><span style="color:#e6db74">{
-</span><span style="color:#e6db74">    for (j=1; j&lt;=NF; j++){
-</span><span style="color:#e6db74">        count++; 
-</span><span style="color:#e6db74">        key[count]=$j;
-</span><span style="color:#e6db74">    } 
-</span><span style="color:#e6db74">    row=NR;
-</span><span style="color:#e6db74">    col=NF;
-</span><span style="color:#e6db74">}
-</span><span style="color:#e6db74">END {
-</span><span style="color:#e6db74">    for (i=1; i&lt;=col; i++){
-</span><span style="color:#e6db74">        tmp=&#34;&#34;;
-</span><span style="color:#e6db74">        for (j=0; j&lt;row; j++){
-</span><span style="color:#e6db74">            if(tmp == &#34;&#34;) {
-</span><span style="color:#e6db74">                tmp=key[i+col*j];
-</span><span style="color:#e6db74">            } 
-</span><span style="color:#e6db74">            else {
-</span><span style="color:#e6db74">                tmp=tmp&#34; &#34;key[i+col*j];
-</span><span style="color:#e6db74">            }
-</span><span style="color:#e6db74">        } 
-</span><span style="color:#e6db74">    print tmp;
-</span><span style="color:#e6db74">    }
-</span><span style="color:#e6db74">}&#39;</span> file.txt
-</code></pre></div><p>在 <code>awk</code> 的 <code>BEGIN</code> 部分初始化计数变量便于将所有字符串写入一个数组；在中间每一行都执行部分，通过内置变量 <code>NF</code> 得到列数，以将一行内容依次写入数组，顺便更新计数变量，得到行列数<code>row &amp; col</code>；最后的 <code>END</code> 部分俩 <code>for</code> 循环打印转置后的每一行。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>awk -F<span style="color:#e6db74">&#39; &#39;</span> <span style="color:#e6db74">&#39;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">BEGIN {
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    count=0;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">}
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74"># read all to a array
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">{
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    for (j=1; j&lt;=NF; j++){
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        count++; 
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        key[count]=$j;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    } 
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    row=NR;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    col=NF;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">}
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">END {
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    for (i=1; i&lt;=col; i++){
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        tmp=&#34;&#34;;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        for (j=0; j&lt;row; j++){
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">            if(tmp == &#34;&#34;) {
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">                tmp=key[i+col*j];
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">            } 
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">            else {
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">                tmp=tmp&#34; &#34;key[i+col*j];
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">            }
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        } 
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    print tmp;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    }
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">}&#39;</span> file.txt
+</span></span></code></pre></div><p>在 <code>awk</code> 的 <code>BEGIN</code> 部分初始化计数变量便于将所有字符串写入一个数组；在中间每一行都执行部分，通过内置变量 <code>NF</code> 得到列数，以将一行内容依次写入数组，顺便更新计数变量，得到行列数<code>row &amp; col</code>；最后的 <code>END</code> 部分俩 <code>for</code> 循环打印转置后的每一行。</p>
 <p>最关键的就是转置的算法，这里我通过观察找到的这个规律：</p>
 <ul>
 <li>转置后有之前列数行，所以第一个 for 使用列数计数，从 1 开始是为了便于得到数组值（其实为 0 后面加 1 还更统一</li>
 <li>转置后每一行有之前行数个元素，所以使用行数计数，从 0 开始是为了便于计算元素之前位置</li>
 <li>通过具体例子分析不难得出后面元素值的计算公式</li>
 </ul>
-<pre><code>1  2  3  4
+<pre tabindex="0"><code>1  2  3  4
 5  6  7  8
 9  10 11 12
     ↓
@@ -895,7 +895,7 @@ age 21 30
 给你一个文本文件<code>file.txt</code>输出第十行。</p>
 <p>一道真正的简单题，直接用 <code>awk</code> 或者 <code>sed</code> 指定行号就行</p>
 <h2 id="sed-的-ac-版本"><code>sed</code> 的 AC 版本</h2>
-<pre><code>sed -n 10p file.txt
+<pre tabindex="0"><code>sed -n 10p file.txt
 </code></pre><ul>
 <li><code>-n</code>：等效于 <code>--quiet or --silent</code>，抑制默认的匹配输出</li>
 <li><code>10</code>：指定行号</li>

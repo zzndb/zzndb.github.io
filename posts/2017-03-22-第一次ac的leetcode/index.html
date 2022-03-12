@@ -396,17 +396,17 @@ Output: 3
 Explanation: The first two digits or the last three digits are consecutive 1s.
 The maximum number of consecutive 1s is 3.</em></p>
 <p>C例子代码如下</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">findMaxConsecutiveOnes</span>(<span style="color:#66d9ef">int</span><span style="color:#f92672">*</span> nums, <span style="color:#66d9ef">int</span> numsSize) {
- <span style="color:#66d9ef">int</span> max <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
- <span style="color:#66d9ef">int</span> sum <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
- <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>; i<span style="color:#f92672">&lt;</span>numsSize; i<span style="color:#f92672">++</span>)
- {
-     sum <span style="color:#f92672">=</span> (sum<span style="color:#f92672">+</span>nums[i])<span style="color:#f92672">*</span>nums[i];
-     <span style="color:#66d9ef">if</span>(max<span style="color:#f92672">&lt;</span>sum){max<span style="color:#f92672">=</span>sum;}
- }
-<span style="color:#66d9ef">return</span> max;
-}
-</code></pre></div><p>看看他的行数，我就不贴我的渣渣代码了，二十多行，也没有任何技巧？可言。
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">findMaxConsecutiveOnes</span>(<span style="color:#66d9ef">int</span><span style="color:#f92672">*</span> nums, <span style="color:#66d9ef">int</span> numsSize) {
+</span></span><span style="display:flex;"><span> <span style="color:#66d9ef">int</span> max <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span> <span style="color:#66d9ef">int</span> sum <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span> <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>; i<span style="color:#f92672">&lt;</span>numsSize; i<span style="color:#f92672">++</span>)
+</span></span><span style="display:flex;"><span> {
+</span></span><span style="display:flex;"><span>     sum <span style="color:#f92672">=</span> (sum<span style="color:#f92672">+</span>nums[i])<span style="color:#f92672">*</span>nums[i];
+</span></span><span style="display:flex;"><span>     <span style="color:#66d9ef">if</span>(max<span style="color:#f92672">&lt;</span>sum){max<span style="color:#f92672">=</span>sum;}
+</span></span><span style="display:flex;"><span> }
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">return</span> max;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>看看他的行数，我就不贴我的渣渣代码了，二十多行，也没有任何技巧？可言。
 在我看来 <code>sum = (sum+nums[i])*nums[i];</code>为这例，我所不及的地方。
 巧妙用了 1 与 0 在乘法运算中对结果带来的差异</p>
 <p>以上，纪念第一次AC</p>

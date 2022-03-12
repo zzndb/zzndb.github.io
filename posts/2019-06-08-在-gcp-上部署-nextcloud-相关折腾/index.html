@@ -752,7 +752,7 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
 <p>如果在 GCP 上建过 VM 实例，有看一看提供的镜像，就会发现并没有 openSUSE ，去 GCP <a herf="https://cloud.google.com/" target="_blank">官网</a>搜索一下就会找到<a herf="https://cloud.google.com/compute/docs/images#community_supported_images" target="_blank">这个</a> Images 页面，对应的 Community supported images 部分就有我大蜥蜴，貌似只提供了提供 gcloud 命令行工具安装的操作。</p>
 <p>安装 gcloud 详见<a herf="https://cloud.google.com/sdk/docs/quickstart-linux" target="_blank">官方文档</a></p>
 <p>选择创建 openSUSE 实例</p>
-<pre><code># 获取镜像列表，通常没有最新的，不过我大蜥蜴跨版本升级都不是事儿！
+<pre tabindex="0"><code># 获取镜像列表，通常没有最新的，不过我大蜥蜴跨版本升级都不是事儿！
 gcloud compute images list --project opensuse-cloud --no-standard-images
 # 比如当前我得到如下结果
 NAME                          PROJECT         FAMILY         DEPRECATED  STATUS
@@ -768,11 +768,11 @@ gcloud compute instances create instance_name --image-family opensuse-leap --ima
 <ol>
 <li>修改软件源为最新版本（如 Leap 15 -&gt; Leap 15.1</li>
 </ol>
-<pre><code>sed -i 's/15.0/15.1/g' /etc/zypp/repos.d/*.repo
+<pre tabindex="0"><code>sed -i &#39;s/15.0/15.1/g&#39; /etc/zypp/repos.d/*.repo
 </code></pre><ol start="2">
 <li>dist-upgrade</li>
 </ol>
-<pre><code>sudo zypper dup
+<pre tabindex="0"><code>sudo zypper dup
 </code></pre><h1 id="lnmp">LNMP</h1>
 <blockquote>
 <p>为什么是LNMP？
@@ -780,20 +780,20 @@ gcloud compute instances create instance_name --image-family opensuse-leap --ima
 </blockquote>
 <p>以下操作主要参考女王几年前写的蜥蜴wiki <a herf="https://zh.opensuse.org/SDB:%E6%90%AD%E5%BB%BALNMP%E6%9C%8D%E5%8A%A1%E5%99%A8" target="_blank">SDB:搭建LNMP服务器</a>，以及自己踩的坑。</p>
 <p>安装 Nginx，PHP-fpm，mariadb</p>
-<pre><code>sudo zypper in nginx php7-fpm
+<pre tabindex="0"><code>sudo zypper in nginx php7-fpm
 sudo zypper in mariadb mariadb-tools php7-mysql
 </code></pre><p>利用自带脚本进行数据库安全配置，如设置管理员密码，和一些不安全设置的移除（一路<code>y</code>就行，具体执行操作可参考对应提示</p>
-<pre><code>mysql_secure_installation
+<pre tabindex="0"><code>mysql_secure_installation
 </code></pre><blockquote>
 <p>如果也不会 LNMP 配置可参照上述 wiki 进行 <code>hello wrold</code> 级网站配置，先熟悉熟悉基本操作。主要是创建独立 vhosts 网站配置，解析 HTML，配合 php-fpm 解析 PHP 文件，基础 ssl 配置等等。</p>
 </blockquote>
 <p>创建 nextcloud 网站 vhosts 配置文件（参考官方文档 <a herf="https://docs.nextcloud.com/server/16/admin_manual/installation/nginx.html" target="_blank">installation/nginx</a></p>
-<pre><code>vim /etc/nginx/vhost.d/your.domain.conf
+<pre tabindex="0"><code>vim /etc/nginx/vhost.d/your.domain.conf
 # 根据实际情况 copy 对应上述官方文档提供的配置文件
 # 修改实际情况修改 server_name ssl_certificate ssl_certificate_key 等区域
 # 根据配置注释进行一些可选修改
 </code></pre><p>修改 php-fpm 配置文件（主配置文件 php-fpm.conf 使用默认设置即可，或者根据注释内容自行修改，www.conf 在默认配置的基础上配置用户用户组。</p>
-<pre><code>cp /etc/php7/fpm/php-fpm.conf.default /etc/php7/fpm/php-fpm.conf
+<pre tabindex="0"><code>cp /etc/php7/fpm/php-fpm.conf.default /etc/php7/fpm/php-fpm.conf
 cp /etc/php7/fpm/php-fpm.d/www.conf.default /etc/php7/fpm/php-fpm.d/www.conf
 vim /etc/php7/fpm/php-fpm.d/www.conf
 # 修改用户，用户组为 接下来要装的 nextcloud 文件的用户与用户组，保证具有访问权限
@@ -803,10 +803,10 @@ user = wwwrun
 group = www
 ...
 </code></pre><p>安装 Nextcloud 所需 php 模块（参考蜥蜴编译的版本 <a herf="https://build.opensuse.org/package/view_file/openSUSE:Factory/nextcloud/nextcloud.spec " target="_blank">spec文件</a>，<a herf="https://docs.nextcloud.com/server/16/admin_manual/installation/source_installation.html#prerequisites-for-manual-installation" target="_blank">官方文档</a></p>
-<pre><code>sudo zypper in php7-curl php7-gd php7-mbstring php7 openssl php7-posix php7-zip php7-zlib php7-intl php7-bz2 php7-fileinfo php7-pear php7-openssl php7-opcache
+<pre tabindex="0"><code>sudo zypper in php7-curl php7-gd php7-mbstring php7 openssl php7-posix php7-zip php7-zlib php7-intl php7-bz2 php7-fileinfo php7-pear php7-openssl php7-opcache
 # 还有一些可选，详见上官方文档
 </code></pre><p>配置 LNMP 自启动</p>
-<pre><code>systemctl enable nginx
+<pre tabindex="0"><code>systemctl enable nginx
 systemctl enable php-fpm
 systemctl enable mysql
 </code></pre><h1 id="ssl">SSL</h1>
@@ -818,11 +818,11 @@ systemctl enable mysql
 </blockquote>
 <p>一般域名提供商都会提供DNS解析？比如在配置这个nextcloud用的<a herf="https://www.freenom.com" target="_blank">freenom</a>免域名费 .ml 域名，就带了DNS解析，直接配置 A/AAAA 记录（IPV4/6）指向对应服务器地址即可。或者拿着域名去 <a herf="https://www.cloudflare.com" target="_blank">Cloudflare</a>，还随便上了 CDN 大船。(注意这里如果选择类似 CDN 的解析，由于其一般自带SSL证书，和普通 DNS 解析操作步骤有所不同。约定以下内容称**「普通解析」域名对应 IP 即为服务器 IP；「非普通解析」域名对应 IP 可为上层 CDN 提供的 IP**</p>
 <p>安装 certbot 和 其 nginx 插件（如果非普通 DNS 解析还需安装对应插件 <a herf="https://certbot.eff.org/docs/packaging.html" target="_blank">参见这里</a> 名为 certbot-dns-xx 的包名</p>
-<pre><code>sudo zypper install certbot python3-certbot-nginx
+<pre tabindex="0"><code>sudo zypper install certbot python3-certbot-nginx
 # 比如 选择 cloudflare 还需安装 certbot-dns-cloudflare, 源里具体包名可先 zypper search 得到，如下 cloudflare 的
 sudo zypper install python3-certbot-dns-cloudflare
 </code></pre><p>创建证书 <strong>「普通解析」</strong></p>
-<pre><code>sudo certbot --nginx
+<pre tabindex="0"><code>sudo certbot --nginx
 # 根据提示操作即可，可自动配置到网站配置文件
 </code></pre><p><del>创建证书（非普通解析以 Cloudflare 为例）</del>（其实还并不清楚具体区别，先用了上述方法再上的 Cloudflare</p>
 <p>考虑到 certbot 创建的证书有效期不算久，不过 certbot 有 renew 的功能，加上我在具体操作时为了在 GCP 上实现 IPV6 访问，建立了负载均衡器，在<strong>负载均衡器前端需要网站证书</strong>（话说我现在上了 Cloudflare 日常访问证书已经变了，可负载均衡器貌似还在用之前默认配置的真正的证书正常运行），所以有了下面这个结合我之前弄的 Mailgun 实现的 <strong>certbot 更新证书自动邮件通知</strong>，并将证书作为附件发送。</p>
@@ -834,7 +834,7 @@ When Certbot detects that a certificate is due for renewal, <code>--pre-hook</co
 You can also specify hooks by placing files in subdirectories of Certbot’s configuration directory.</p>
 </blockquote>
 <p>将如下脚本放置在 certbot 配置目录<code>/etc/letsencrypt/renewal-hooks/deploy</code>，每当部署 renew 证书之后便会运行该目录下脚本</p>
-<pre><code>#!/usr/bin/env bash
+<pre tabindex="0"><code>#!/usr/bin/env bash
 log_file=/var/log/letsencrypt/letsencrypt.log
 cert_file=/tmp/certificates.tar.bz2
 
@@ -842,13 +842,13 @@ cert_file=/tmp/certificates.tar.bz2
 tar -cjf $cert_file -C /etc/letsencrypt/live -h .
 
 # send mail
-curl -s --user 'api:YOUR-MAILGUN-KEY' \  # replace your maingun key
+curl -s --user &#39;api:YOUR-MAILGUN-KEY&#39; \  # replace your maingun key
     https://api.mailgun.net/v3/YOUR-MAILGUN-DOMAIN/messages \ # need replace
-    -F from='&lt;YOU@YOUR_DOMAIN_NAME&gt;' \ # need replace
-    -F to='foo@example.com' \ # need replace
-    -F subject='Certificates Renew Notification' \
-    -F text='like subject says' \
-    -F text='check the new certificates and change it on your gcp balance loader!' \
+    -F from=&#39;&lt;YOU@YOUR_DOMAIN_NAME&gt;&#39; \ # need replace
+    -F to=&#39;foo@example.com&#39; \ # need replace
+    -F subject=&#39;Certificates Renew Notification&#39; \
+    -F text=&#39;like subject says&#39; \
+    -F text=&#39;check the new certificates and change it on your gcp balance loader!&#39; \
     -F attachment=@$log_file \
     -F attachment=@$cert_file
 
@@ -856,15 +856,15 @@ curl -s --user 'api:YOUR-MAILGUN-KEY' \  # replace your maingun key
 [[ -f $cert_file ]] &amp;&amp; rm -f $cert_file
 </code></pre><p>上述脚本大致就是将当前 certbot 运行日志和所有证书文件通过 Mailgun 以邮件形式发送（已经将我的 api key 和邮箱都去掉了，上述注释 <code>replace</code> 所在行需要进行替换）。</p>
 <p>部署上述脚本 <code>mail_notify.sh</code>，并添加 certbot 自动更新定时任务 <strong>「普通解析」</strong></p>
-<pre><code>cp mail_notify.sh /etc/letsencrypt/renewal-hooks/deploy
+<pre tabindex="0"><code>cp mail_notify.sh /etc/letsencrypt/renewal-hooks/deploy
 
 # add to cron
 sudo crontab -e
 # enter follow https://certbot.eff.org/lets-encrypt/leap-nginx
-0 0,12 * * * python -c 'import random; import time; time.sleep(random.random() * 3600)' &amp;&amp; certbot renew
+0 0,12 * * * python -c &#39;import random; import time; time.sleep(random.random() * 3600)&#39; &amp;&amp; certbot renew
 </code></pre><p>对应的 <strong>「非普通解析」</strong>，除在创建定时任务时运行命令不同外还需配置访问对应 DNS 的配置文件，以下以 Cloudflare 为例，具体得到配置文件 <code>cloudflare.ini</code> 请<a herf="https://certbot-dns-cloudflare.readthedocs.io/en/stable/index.html#module-certbot_dns_cloudflare" target="_blank">参见模块文档</a>，添加定时任务如下</p>
-<pre><code>sudo crontab -e
-0 0,12 * * * python -c 'import random; import time; time.sleep(random.random() * 3600)' &amp;&amp; certbot renew --dns-cloudflare --dns-cloud-flare-credentials /path/to/your/cloudflare.ini
+<pre tabindex="0"><code>sudo crontab -e
+0 0,12 * * * python -c &#39;import random; import time; time.sleep(random.random() * 3600)&#39; &amp;&amp; certbot renew --dns-cloudflare --dns-cloud-flare-credentials /path/to/your/cloudflare.ini
 </code></pre><hr>
 <blockquote>
 <p>由于说它证书时间不长还是有几个月的，上述脚本并没有经过实际验证，只是手动运行试过感觉良好，这不刚才为写这篇<del>流水帐</del>试了试，貌似它每次部署成功都会运行一次脚本，所以如果你有多个站点地址，更新成功多少次就会发多少次。。。好吧不管了，看最后一个邮件即可。（手动苦笑</p>
@@ -874,7 +874,7 @@ sudo crontab -e
 <p>由于源里面的 Nextcloud 绑定了 Apache 所以选择手动安装方式</p>
 </blockquote>
 <p>以下部分<a herf="https://en.opensuse.org/SDB:Nextcloud" target="_blank">参考文档</a></p>
-<pre><code># sudo needed
+<pre tabindex="0"><code># sudo needed
 
 mkdir /mnt/nextcloud_data
 chmod -R 0770 /mnt/nextcloud_data
@@ -895,27 +895,27 @@ cp -r nextcloud /srv/www/htdocs
 chown -R wwwrun /srv/www/htdocs/nextcloud/
 </code></pre><p>部署到对应目录之后，修改前文创建的网站配置文件 <code>/etc/nginx/vhost.d/your.domain.conf</code> 
 将<code>root</code>之后路径修改为<code>/srv/www/htdocs/nextcloud/;</code></p>
-<pre><code>    ...
+<pre tabindex="0"><code>    ...
     root /srv/www/htdocs/nextcloud/;
     ...
 </code></pre><p>创建 nextcloud 数据库</p>
-<pre><code># login
+<pre tabindex="0"><code># login
 mysql -u root -p
 # create database
 create database nextcloud;
 # create nextcloud user
-create user nextclouduser@localhost identified by 'some-password-here';
+create user nextclouduser@localhost identified by &#39;some-password-here&#39;;
 # grant all privileges on nextcloud
-grant all privileges on nextcloud.* to nextclouduser@localhost identified by 'some-password-here';
+grant all privileges on nextcloud.* to nextclouduser@localhost identified by &#39;some-password-here&#39;;
 # exit
 exit;
 </code></pre><p>启动 LNMP</p>
-<pre><code>systemctl start nginx
+<pre tabindex="0"><code>systemctl start nginx
 systemctl start php-fpm
 systemctl start mysql
 </code></pre><p>访问服务器地址进行 nextcloud 配置，填写用户名密码，数据库用户名密码，数据存放位置。</p>
 <p>一切配置正常之后，删掉之前的安装文件</p>
-<pre><code># after running check
+<pre tabindex="0"><code># after running check
 rm -rf /mnt/nextcloud_data
 </code></pre><h2 id="玄学优化">玄学优化</h2>
 <p>感觉没啥好说的，参见 <a href="https://yourdomain.xx/settings/admin/overview">https://yourdomain.xx/settings/admin/overview</a> 界面，根据提示文档安装模块调整参数进行优化即可。</p>

@@ -745,10 +745,10 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
 <p>modelsim打不开，如上wiki也提到，同时根据<a href="https://twoerner.blogspot.com/2017/10/running-modelsim-altera-from-quartus.html">这里</a>的步骤，解决</p>
 <p>Solution: 编译32bit freetype2 2.5 之前版本，将得到的<code>lib</code>目录添加到其运行环境<code>LD_LIBRARY_PATH</code>即可</p>
 <p>这里我在<code>${quartusiiInstallVersion}/modelsim_ase/vco</code>文件较为靠上的位置添加了<code>lib</code>目录</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># just for example</span>
-<span style="color:#75715e"># vco file line 10</span>
-export LD_LIBRARY_PATH<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;/my/compile/file/dir/freetype-2.4.7-32bit/lib&#34;</span>:$LD_LIBRARY_PATH
-</code></pre></div><h3 id="other">other</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># just for example</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># vco file line 10</span>
+</span></span><span style="display:flex;"><span>export LD_LIBRARY_PATH<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;/my/compile/file/dir/freetype-2.4.7-32bit/lib&#34;</span>:$LD_LIBRARY_PATH
+</span></span></code></pre></div><h3 id="other">other</h3>
 <p>值得借鉴的初始化配置</p>
 <ul>
 <li><a href="https://www.mawenbao.com/note/opensuse-tumbleweed-summary.html" target="_blank">人家的博客</a></li>

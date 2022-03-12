@@ -620,50 +620,50 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
 <blockquote>
 <p>lines begin &lsquo;#&rsquo; are human read comment <strong>Do Not Just Copy Past All Line</strong></p>
 </blockquote>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># install postgresql from factory repo (oss)</span>
-sudo zypper in postgresql postgresql-server postgresql-contrib
-
-<span style="color:#75715e"># enable postgresql service start at boot</span>
-systemctl enable postgresql
-<span style="color:#75715e"># start postgresql service</span>
-systemctl start postgresql
-</code></pre></div><pre><code># create database, user &amp; grant super user ..
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># install postgresql from factory repo (oss)</span>
+</span></span><span style="display:flex;"><span>sudo zypper in postgresql postgresql-server postgresql-contrib
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># enable postgresql service start at boot</span>
+</span></span><span style="display:flex;"><span>systemctl enable postgresql
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># start postgresql service</span>
+</span></span><span style="display:flex;"><span>systemctl start postgresql
+</span></span></code></pre></div><pre tabindex="0"><code># create database, user &amp; grant super user ..
 su
-su postgres # switch to user 'postgres'
+su postgres # switch to user &#39;postgres&#39;
 psql # run postgresql interactive terminal
 
 CREATE DATABASE &lt;database&gt;;
-CREATE USER &lt;username&gt; WITH ENCRYPTED PASSWORD '&lt;passwd&gt;';
+CREATE USER &lt;username&gt; WITH ENCRYPTED PASSWORD &#39;&lt;passwd&gt;&#39;;
 ALTER USER &lt;username&gt; WITH SUPERUSER;
 ALTER DATABASE &lt;database&gt; OWNER TO &lt;username&gt;;
 
-# change default admin user 'postgres' password to login from 'pgadmin4' below
+# change default admin user &#39;postgres&#39; password to login from &#39;pgadmin4&#39; below
 \password
 
 # exit interactive terminal
 \q
 
-# more psql info plz check its usage (in psql interactive terminal run '\?' to get help
+# more psql info plz check its usage (in psql interactive terminal run &#39;\?&#39; to get help
 </code></pre><p>edit config file to use password connect to postgresql
 use your favorite editor change <code>/var/ib/pgsql/data/pg_hba.conf</code> (<em>sudo needed</em></p>
 <hr>
 <p><strong>change</strong></p>
-<pre><code># IPv4 local connections:
+<pre tabindex="0"><code># IPv4 local connections:
 host    all             all             127.0.0.1/32            ident
 # IPv6 local connections:
 host    all             all             ::1/128                 ident
 </code></pre><p><strong>to</strong></p>
-<pre><code>
+<pre tabindex="0"><code>
 # IPv4 local connections:
 host    all             all             127.0.0.1/32            trust
 # IPv6 local connections:
 host    all             all             ::1/128                 trust
 </code></pre><hr>
-<pre><code># restart postgresql to apply change
+<pre tabindex="0"><code># restart postgresql to apply change
 systemctl restart postgresql
-</code></pre><pre><code># install pgadmin for more friendly ui
+</code></pre><pre tabindex="0"><code># install pgadmin for more friendly ui
 sudo zypper in --no-recommends pgadmin4
-# run it through application 'pgAdmin4' shortcut or just run 'pgAdmin4' from terminal
+# run it through application &#39;pgAdmin4&#39; shortcut or just run &#39;pgAdmin4&#39; from terminal
 </code></pre><h1 id="connect-use-pgadmin4">connect use pgadmin4</h1>
 <ul>
 <li>
@@ -707,7 +707,7 @@ sudo zypper in --no-recommends pgadmin4
                 
                 
                 
-                <a class="older-posts" href="https://blog.zzndb.ml/posts/2019-04-23-scrcpy-%E9%A6%96%E6%AC%A1%E7%8B%AC%E7%AB%8Bobs%E6%89%93%E5%8C%85/">
+                <a class="older-posts" href="https://blog.zzndb.ml/posts/2019-04-23-scrcpy--%E9%A6%96%E6%AC%A1%E7%8B%AC%E7%AB%8Bobs%E6%89%93%E5%8C%85/">
 			Previous<br>scrcpy--首次独立OBS打包
                 </a>
                 
