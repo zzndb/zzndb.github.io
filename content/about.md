@@ -2,7 +2,7 @@
 title = "About"
 author = ["zzndb"]
 date = 2017-02-18
-lastmod = 2022-03-12T22:49:42+08:00
+lastmod = 2022-03-12T23:08:11+08:00
 draft = false
 +++
 
@@ -34,5 +34,5 @@ A computer professional graduate.
 
 -   Email: `echo "enpuZGIwMDFAZ21haWwuY29tCg=`" | base64 -d=
 -   TG: @zzndb
--   PGP 指纹："`2944 7B45 7B33 2FF3 C6DE  F8B9 6106 CD71 758D 94DF`
+-   PGP 指纹：`2944 7B45 7B33 2FF3 C6DE  F8B9 6106 CD71 758D 94DF`
 -   PGP 公钥：<https://github.com/zzndb.gpg>
