@@ -32,7 +32,7 @@ A computer professional graduate.
 
 ## **联系我？** {#联系我}
 
--   Email: `echo "enpuZGIwMDFAZ21haWwuY29tCg=`" | base64 -d=
+-   Email: `echo "enpuZGIwMDFAZ21haWwuY29tCg==" | base64 -d`
 -   TG: @zzndb
 -   PGP 指纹：`2944 7B45 7B33 2FF3 C6DE  F8B9 6106 CD71 758D 94DF`
 -   PGP 公钥：<https://github.com/zzndb.gpg>
