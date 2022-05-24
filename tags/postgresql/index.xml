@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>PostgreSQL on zzndb&#39;s world</title>
-    <link>https://blog.zzndb.ml/tags/postgresql/</link>
+    <link>https://blog.zzndb.me/tags/postgresql/</link>
     <description>Recent content in PostgreSQL on zzndb&#39;s world</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 10 May 2019 01:03:00 +0800</lastBuildDate><atom:link href="https://blog.zzndb.ml/tags/postgresql/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 10 May 2019 01:03:00 +0800</lastBuildDate><atom:link href="https://blog.zzndb.me/tags/postgresql/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>install PostgreSQL on openSUSE</title>
-      <link>https://blog.zzndb.ml/posts/2019-05-10-install-postgresql-on-opensuse/</link>
+      <link>https://blog.zzndb.me/posts/2019-05-10-install-postgresql-on-opensuse/</link>
       <pubDate>Fri, 10 May 2019 01:03:00 +0800</pubDate>
       
-      <guid>https://blog.zzndb.ml/posts/2019-05-10-install-postgresql-on-opensuse/</guid>
+      <guid>https://blog.zzndb.me/posts/2019-05-10-install-postgresql-on-opensuse/</guid>
       <description>&lt;p&gt;Install &lt;em&gt;PostgreSQL&lt;/em&gt; on openSUSE and use &lt;em&gt;pgAdmin4&lt;/em&gt; connect it.&lt;/p&gt;
 &lt;p&gt;Test on current &lt;em&gt;openSUSE Tumbleweed 20190507&lt;/em&gt;&lt;/p&gt;</description>
     </item>

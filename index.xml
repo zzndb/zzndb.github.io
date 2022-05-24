@@ -1,23 +1,23 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>zzndb&#39;s world</title>
-    <link>https://blog.zzndb.ml/</link>
+    <link>https://blog.zzndb.me/</link>
     <description>Recent content on zzndb&#39;s world</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 04 Apr 2021 00:00:00 +0000</lastBuildDate>
     
-        <atom:link href="https://blog.zzndb.ml/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://blog.zzndb.me/index.xml" rel="self" type="application/rss+xml" />
     
     
     
         <item>
         <title>bc round to the specified number of decimal places</title>
-        <link>https://blog.zzndb.ml/posts/20210404203010-bc_round_to_the_specified_number_of_decimal_places/</link>
+        <link>https://blog.zzndb.me/posts/20210404203010-bc_round_to_the_specified_number_of_decimal_places/</link>
         <pubDate>Sun, 04 Apr 2021 00:00:00 +0000</pubDate>
         
-        <guid>https://blog.zzndb.ml/posts/20210404203010-bc_round_to_the_specified_number_of_decimal_places/</guid>
-        <description>zzndb&#39;s world https://blog.zzndb.ml/posts/20210404203010-bc_round_to_the_specified_number_of_decimal_places/ -&lt;p&gt;&lt;code&gt;bc&lt;/code&gt; ，一个命令行计算器， &lt;del&gt;&lt;code&gt;dc&lt;/code&gt; 的继承者？&lt;/del&gt; 也许是继承者，不过更是 POSIX 标准的一部分&lt;/p&gt;
+        <guid>https://blog.zzndb.me/posts/20210404203010-bc_round_to_the_specified_number_of_decimal_places/</guid>
+        <description>zzndb&#39;s world https://blog.zzndb.me/posts/20210404203010-bc_round_to_the_specified_number_of_decimal_places/ -&lt;p&gt;&lt;code&gt;bc&lt;/code&gt; ，一个命令行计算器， &lt;del&gt;&lt;code&gt;dc&lt;/code&gt; 的继承者？&lt;/del&gt; 也许是继承者，不过更是 POSIX 标准的一部分&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;bc -l &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;1/3&amp;#34;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;0.3333333333333333
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;提供了 &lt;strong&gt;scale&lt;/strong&gt; 变量来控制结果小数位数&lt;/p&gt;
@@ -114,18 +114,18 @@
 &lt;li&gt;&lt;a href=&#34;https://askubuntu.com/a/863756&#34;&gt;https://askubuntu.com/a/863756&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://askubuntu.com/a/179949&#34;&gt;https://askubuntu.com/a/179949&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-- https://blog.zzndb.ml/posts/20210404203010-bc_round_to_the_specified_number_of_decimal_places/ - </description>
+- https://blog.zzndb.me/posts/20210404203010-bc_round_to_the_specified_number_of_decimal_places/ - </description>
         </item>
     
     
     
         <item>
         <title>Shell Problems On LeetCode</title>
-        <link>https://blog.zzndb.ml/posts/2020-03-02-shell-problems-on-leetcode/</link>
+        <link>https://blog.zzndb.me/posts/2020-03-02-shell-problems-on-leetcode/</link>
         <pubDate>Mon, 02 Mar 2020 16:28:00 +0800</pubDate>
         
-        <guid>https://blog.zzndb.ml/posts/2020-03-02-shell-problems-on-leetcode/</guid>
-        <description>zzndb&#39;s world https://blog.zzndb.ml/posts/2020-03-02-shell-problems-on-leetcode/ -&lt;p&gt;目前只有四道（已经一年多过去了还是只有四道。。。&lt;/p&gt;
+        <guid>https://blog.zzndb.me/posts/2020-03-02-shell-problems-on-leetcode/</guid>
+        <description>zzndb&#39;s world https://blog.zzndb.me/posts/2020-03-02-shell-problems-on-leetcode/ -&lt;p&gt;目前只有四道（已经一年多过去了还是只有四道。。。&lt;/p&gt;
 &lt;h1 id=&#34;192-word-frequency&#34;&gt;192 Word Frequency&lt;/h1&gt;
 &lt;p&gt;题目链接：&lt;a target=&#34;_blank&#34; href=&#34;https://leetcode.com/problems/word-frequency/&#34;&gt;&lt;a href=&#34;https://leetcode.com/problems/word-frequency/&#34;&gt;https://leetcode.com/problems/word-frequency/&lt;/a&gt;&lt;/a&gt;
 用人话说的题目描述：
@@ -238,18 +238,18 @@ age 21 30
 &lt;/ul&gt;
 &lt;p&gt;经试验用 &lt;code&gt;awk&lt;/code&gt; 打印耗时 4 ms ，大概是 &lt;code&gt;awk&lt;/code&gt; 依旧对每行都处理了，而 &lt;code&gt;sed&lt;/code&gt; 直接输出对应行了。&lt;/p&gt;
 &lt;hr&gt;
-&lt;p&gt;以上。&lt;/p&gt;- https://blog.zzndb.ml/posts/2020-03-02-shell-problems-on-leetcode/ - </description>
+&lt;p&gt;以上。&lt;/p&gt;- https://blog.zzndb.me/posts/2020-03-02-shell-problems-on-leetcode/ - </description>
         </item>
     
     
     
         <item>
         <title>在 GCP 上部署 Nextcloud 相关折腾</title>
-        <link>https://blog.zzndb.ml/posts/2019-06-08-%E5%9C%A8-gcp-%E4%B8%8A%E9%83%A8%E7%BD%B2-nextcloud-%E7%9B%B8%E5%85%B3%E6%8A%98%E8%85%BE/</link>
+        <link>https://blog.zzndb.me/posts/2019-06-08-%E5%9C%A8-gcp-%E4%B8%8A%E9%83%A8%E7%BD%B2-nextcloud-%E7%9B%B8%E5%85%B3%E6%8A%98%E8%85%BE/</link>
         <pubDate>Sat, 08 Jun 2019 15:53:00 +0800</pubDate>
         
-        <guid>https://blog.zzndb.ml/posts/2019-06-08-%E5%9C%A8-gcp-%E4%B8%8A%E9%83%A8%E7%BD%B2-nextcloud-%E7%9B%B8%E5%85%B3%E6%8A%98%E8%85%BE/</guid>
-        <description>zzndb&#39;s world https://blog.zzndb.ml/posts/2019-06-08-%E5%9C%A8-gcp-%E4%B8%8A%E9%83%A8%E7%BD%B2-nextcloud-%E7%9B%B8%E5%85%B3%E6%8A%98%E8%85%BE/ -&lt;p&gt;上个月折腾上了 Google Cloud Platform 的车，记录在其上部署 Nextcloud 相关的经历，由于成文在搭建之后回忆写出，难免有步骤缺失/错误，欢迎指正。&lt;/p&gt;
+        <guid>https://blog.zzndb.me/posts/2019-06-08-%E5%9C%A8-gcp-%E4%B8%8A%E9%83%A8%E7%BD%B2-nextcloud-%E7%9B%B8%E5%85%B3%E6%8A%98%E8%85%BE/</guid>
+        <description>zzndb&#39;s world https://blog.zzndb.me/posts/2019-06-08-%E5%9C%A8-gcp-%E4%B8%8A%E9%83%A8%E7%BD%B2-nextcloud-%E7%9B%B8%E5%85%B3%E6%8A%98%E8%85%BE/ -&lt;p&gt;上个月折腾上了 Google Cloud Platform 的车，记录在其上部署 Nextcloud 相关的经历，由于成文在搭建之后回忆写出，难免有步骤缺失/错误，欢迎指正。&lt;/p&gt;
 &lt;p&gt;主要内容：在 GCP 上创建 openSUSE 实例、LNMP+Nextcloud+SSL (certbot) 、Mailgun 的一个应用场景、GCP IPV6&lt;/p&gt;
 &lt;h1 id=&#34;install-opensuse-on-gcp&#34;&gt;Install openSUSE on GCP&lt;/h1&gt;
 &lt;p&gt;如果在 GCP 上建过 VM 实例，有看一看提供的镜像，就会发现并没有 openSUSE ，去 GCP &lt;a herf=&#34;https://cloud.google.com/&#34; target=&#34;_blank&#34;&gt;官网&lt;/a&gt;搜索一下就会找到&lt;a herf=&#34;https://cloud.google.com/compute/docs/images#community_supported_images&#34; target=&#34;_blank&#34;&gt;这个&lt;/a&gt; Images 页面，对应的 Community supported images 部分就有我大蜥蜴，貌似只提供了提供 gcloud 命令行工具安装的操作。&lt;/p&gt;
@@ -451,14 +451,14 @@ rm -rf /mnt/nextcloud_data
 &lt;/ol&gt;
 &lt;/li&gt;
 &lt;li&gt;主机和路径规则（参考下图，主机部分为你的网站域名
-&lt;img src=&#34;https://blog.zzndb.ml/images/2019/06/33335814.png&#34; alt=&#34;20190608150616153_1716322239.png&#34;&gt;&lt;/li&gt;
+&lt;img src=&#34;https://blog.zzndb.me/images/2019/06/33335814.png&#34; alt=&#34;20190608150616153_1716322239.png&#34;&gt;&lt;/li&gt;
 &lt;li&gt;前端配置：
 &lt;ol&gt;
 &lt;li&gt;新建前端 IP 和端口，写个名字，协议 HTTP ，IP 版本选择 IPV6 ，地址选择之前创建的全局地址，端口 80 。&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/li&gt;
 &lt;li&gt;检查并最终确认（参考下图
-&lt;img src=&#34;https://blog.zzndb.ml/images/2019/06/2647942956.png&#34; alt=&#34;20190608151146809_819181156.png&#34;&gt;&lt;/li&gt;
+&lt;img src=&#34;https://blog.zzndb.me/images/2019/06/2647942956.png&#34; alt=&#34;20190608151146809_819181156.png&#34;&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/li&gt;
 &lt;li&gt;
@@ -484,18 +484,18 @@ rm -rf /mnt/nextcloud_data
 &lt;li&gt;&lt;a href=&#34;https://docs.nextcloud.com/server/16/admin_manual/installation/source_installation.html&#34;&gt;https://docs.nextcloud.com/server/16/admin_manual/installation/source_installation.html&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://certbot.eff.org/lets-encrypt/leap-nginx&#34;&gt;https://certbot.eff.org/lets-encrypt/leap-nginx&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://certbot.eff.org/docs/using.html&#34;&gt;https://certbot.eff.org/docs/using.html&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;- https://blog.zzndb.ml/posts/2019-06-08-%E5%9C%A8-gcp-%E4%B8%8A%E9%83%A8%E7%BD%B2-nextcloud-%E7%9B%B8%E5%85%B3%E6%8A%98%E8%85%BE/ - </description>
+&lt;/ul&gt;- https://blog.zzndb.me/posts/2019-06-08-%E5%9C%A8-gcp-%E4%B8%8A%E9%83%A8%E7%BD%B2-nextcloud-%E7%9B%B8%E5%85%B3%E6%8A%98%E8%85%BE/ - </description>
         </item>
     
     
     
         <item>
         <title>启用域名邮箱</title>
-        <link>https://blog.zzndb.ml/posts/2019-05-11-%E5%90%AF%E7%94%A8%E5%9F%9F%E5%90%8D%E9%82%AE%E7%AE%B1/</link>
+        <link>https://blog.zzndb.me/posts/2019-05-11-%E5%90%AF%E7%94%A8%E5%9F%9F%E5%90%8D%E9%82%AE%E7%AE%B1/</link>
         <pubDate>Sat, 11 May 2019 17:51:00 +0800</pubDate>
         
-        <guid>https://blog.zzndb.ml/posts/2019-05-11-%E5%90%AF%E7%94%A8%E5%9F%9F%E5%90%8D%E9%82%AE%E7%AE%B1/</guid>
-        <description>zzndb&#39;s world https://blog.zzndb.ml/posts/2019-05-11-%E5%90%AF%E7%94%A8%E5%9F%9F%E5%90%8D%E9%82%AE%E7%AE%B1/ -&lt;p&gt;其实最开始只是因为没有一个好的评论回复邮件提醒解决方案，然后现在感觉有点香啊。&lt;/p&gt;
+        <guid>https://blog.zzndb.me/posts/2019-05-11-%E5%90%AF%E7%94%A8%E5%9F%9F%E5%90%8D%E9%82%AE%E7%AE%B1/</guid>
+        <description>zzndb&#39;s world https://blog.zzndb.me/posts/2019-05-11-%E5%90%AF%E7%94%A8%E5%9F%9F%E5%90%8D%E9%82%AE%E7%AE%B1/ -&lt;p&gt;其实最开始只是因为没有一个好的评论回复邮件提醒解决方案，然后现在感觉有点香啊。&lt;/p&gt;
 &lt;p&gt;TL;DR: 利用 Mailgun 弄了域名邮箱，顺便解决了博客评论邮件提醒的问题。&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;UP: 2020-06-16 18:02&lt;/p&gt;
@@ -520,18 +520,18 @@ rm -rf /mnt/nextcloud_data
 &lt;p&gt;&lt;del&gt;感觉有了自己的域名邮箱，逼格高了不少啊，香！！&lt;/del&gt;&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;done！&lt;/p&gt;
-&lt;p&gt;&lt;del&gt;又水了一篇:laughing:&lt;/del&gt;&lt;/p&gt;- https://blog.zzndb.ml/posts/2019-05-11-%E5%90%AF%E7%94%A8%E5%9F%9F%E5%90%8D%E9%82%AE%E7%AE%B1/ - </description>
+&lt;p&gt;&lt;del&gt;又水了一篇:laughing:&lt;/del&gt;&lt;/p&gt;- https://blog.zzndb.me/posts/2019-05-11-%E5%90%AF%E7%94%A8%E5%9F%9F%E5%90%8D%E9%82%AE%E7%AE%B1/ - </description>
         </item>
     
     
     
         <item>
         <title>install PostgreSQL on openSUSE</title>
-        <link>https://blog.zzndb.ml/posts/2019-05-10-install-postgresql-on-opensuse/</link>
+        <link>https://blog.zzndb.me/posts/2019-05-10-install-postgresql-on-opensuse/</link>
         <pubDate>Fri, 10 May 2019 01:03:00 +0800</pubDate>
         
-        <guid>https://blog.zzndb.ml/posts/2019-05-10-install-postgresql-on-opensuse/</guid>
-        <description>zzndb&#39;s world https://blog.zzndb.ml/posts/2019-05-10-install-postgresql-on-opensuse/ -&lt;p&gt;Install &lt;em&gt;PostgreSQL&lt;/em&gt; on openSUSE and use &lt;em&gt;pgAdmin4&lt;/em&gt; connect it.&lt;/p&gt;
+        <guid>https://blog.zzndb.me/posts/2019-05-10-install-postgresql-on-opensuse/</guid>
+        <description>zzndb&#39;s world https://blog.zzndb.me/posts/2019-05-10-install-postgresql-on-opensuse/ -&lt;p&gt;Install &lt;em&gt;PostgreSQL&lt;/em&gt; on openSUSE and use &lt;em&gt;pgAdmin4&lt;/em&gt; connect it.&lt;/p&gt;
 &lt;p&gt;Test on current &lt;em&gt;openSUSE Tumbleweed 20190507&lt;/em&gt;&lt;/p&gt;
 &lt;h1 id=&#34;install-postgresql&#34;&gt;install PostgreSQL&lt;/h1&gt;
 &lt;h2 id=&#34;tldr&#34;&gt;TL;DR&lt;/h2&gt;
@@ -592,15 +592,15 @@ sudo zypper in --no-recommends pgadmin4
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;create a server to connect
-&lt;img src=&#34;https://blog.zzndb.ml/images/2019/05/3646942119.png&#34; alt=&#34;20190510004440083_1562003910.png&#34;&gt;&lt;/p&gt;
+&lt;img src=&#34;https://blog.zzndb.me/images/2019/05/3646942119.png&#34; alt=&#34;20190510004440083_1562003910.png&#34;&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;fill in name what you like
-&lt;img src=&#34;https://blog.zzndb.ml/images/2019/05/3093534281.png&#34; alt=&#34;20190510004640937_1339893440.png&#34;&gt;&lt;/p&gt;
+&lt;img src=&#34;https://blog.zzndb.me/images/2019/05/3093534281.png&#34; alt=&#34;20190510004640937_1339893440.png&#34;&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;fill in host name and other according what you set (default postgre user example
-&lt;img src=&#34;https://blog.zzndb.ml/images/2019/05/2414132339.png&#34; alt=&#34;20190510004852543_83761894.png&#34;&gt;&lt;/p&gt;
+&lt;img src=&#34;https://blog.zzndb.me/images/2019/05/2414132339.png&#34; alt=&#34;20190510004852543_83761894.png&#34;&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;h1 id=&#34;more&#34;&gt;more?&lt;/h1&gt;
@@ -613,18 +613,18 @@ sudo zypper in --no-recommends pgadmin4
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
-&lt;p&gt;end!&lt;/p&gt;- https://blog.zzndb.ml/posts/2019-05-10-install-postgresql-on-opensuse/ - </description>
+&lt;p&gt;end!&lt;/p&gt;- https://blog.zzndb.me/posts/2019-05-10-install-postgresql-on-opensuse/ - </description>
         </item>
     
     
     
         <item>
         <title>scrcpy--首次独立OBS打包</title>
-        <link>https://blog.zzndb.ml/posts/2019-04-23-scrcpy--%E9%A6%96%E6%AC%A1%E7%8B%AC%E7%AB%8Bobs%E6%89%93%E5%8C%85/</link>
+        <link>https://blog.zzndb.me/posts/2019-04-23-scrcpy--%E9%A6%96%E6%AC%A1%E7%8B%AC%E7%AB%8Bobs%E6%89%93%E5%8C%85/</link>
         <pubDate>Tue, 23 Apr 2019 15:42:00 +0800</pubDate>
         
-        <guid>https://blog.zzndb.ml/posts/2019-04-23-scrcpy--%E9%A6%96%E6%AC%A1%E7%8B%AC%E7%AB%8Bobs%E6%89%93%E5%8C%85/</guid>
-        <description>zzndb&#39;s world https://blog.zzndb.ml/posts/2019-04-23-scrcpy--%E9%A6%96%E6%AC%A1%E7%8B%AC%E7%AB%8Bobs%E6%89%93%E5%8C%85/ -&lt;p&gt;记首次独立OBS打包&lt;/p&gt;
+        <guid>https://blog.zzndb.me/posts/2019-04-23-scrcpy--%E9%A6%96%E6%AC%A1%E7%8B%AC%E7%AB%8Bobs%E6%89%93%E5%8C%85/</guid>
+        <description>zzndb&#39;s world https://blog.zzndb.me/posts/2019-04-23-scrcpy--%E9%A6%96%E6%AC%A1%E7%8B%AC%E7%AB%8Bobs%E6%89%93%E5%8C%85/ -&lt;p&gt;记首次独立OBS打包&lt;/p&gt;
 &lt;p&gt;UP：2019-04-24 13:18:46 星期三&lt;/p&gt;
 &lt;hr&gt;
 &lt;h1 id=&#34;缘由&#34;&gt;缘由&lt;/h1&gt;
@@ -783,7 +783,7 @@ install -Dm 0644 server/scrcpy-server.jar %{buildroot}/usr/local/share/%{name}/s
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;osc ar &lt;span style=&#34;color:#75715e&#34;&gt;# auto add or remove file&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;osc vc &lt;span style=&#34;color:#75715e&#34;&gt;# change file&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;osc ci &lt;span style=&#34;color:#75715e&#34;&gt;# commit&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://blog.zzndb.ml/images/2019/04/417551773.png&#34; alt=&#34;2019-04-23_10-58.png&#34;&gt;&lt;/p&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://blog.zzndb.me/images/2019/04/417551773.png&#34; alt=&#34;2019-04-23_10-58.png&#34;&gt;&lt;/p&gt;
 &lt;p&gt;yeah！&lt;/p&gt;
 &lt;h1 id=&#34;总结&#34;&gt;总结&lt;/h1&gt;
 &lt;blockquote&gt;
@@ -805,18 +805,18 @@ install -Dm 0644 server/scrcpy-server.jar %{buildroot}/usr/local/share/%{name}/s
 &lt;li&gt;手动安装的文件权限问题（一开始给可执行文件上了&lt;code&gt;0644&lt;/code&gt;:joy:&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;然后是我打包的这个包的&lt;a href=&#34;https://build.opensuse.org/package/show/home:zzndb/scrcpy&#34;&gt;地址&lt;/a&gt;，自己在 TW 测试过没啥问题，如果有有&lt;em&gt;投屏，远程控制&lt;/em&gt; 的需求的用大蜥蜴的 Android 用户，又不想自己编译，又苦于默认源里没有，欢迎使用我的源:kissing_heart:，已 watch 该项目的 release 应该会保持更新。&lt;del&gt;（这应该用得有点意思&lt;/del&gt;&lt;/p&gt;
-&lt;p&gt;done！&lt;/p&gt;- https://blog.zzndb.ml/posts/2019-04-23-scrcpy--%E9%A6%96%E6%AC%A1%E7%8B%AC%E7%AB%8Bobs%E6%89%93%E5%8C%85/ - </description>
+&lt;p&gt;done！&lt;/p&gt;- https://blog.zzndb.me/posts/2019-04-23-scrcpy--%E9%A6%96%E6%AC%A1%E7%8B%AC%E7%AB%8Bobs%E6%89%93%E5%8C%85/ - </description>
         </item>
     
     
     
         <item>
         <title>AdBox 折腾记</title>
-        <link>https://blog.zzndb.ml/posts/2019-02-25-adbox-%E6%8A%98%E8%85%BE%E8%AE%B0/</link>
+        <link>https://blog.zzndb.me/posts/2019-02-25-adbox-%E6%8A%98%E8%85%BE%E8%AE%B0/</link>
         <pubDate>Mon, 25 Feb 2019 07:19:00 +0800</pubDate>
         
-        <guid>https://blog.zzndb.ml/posts/2019-02-25-adbox-%E6%8A%98%E8%85%BE%E8%AE%B0/</guid>
-        <description>zzndb&#39;s world https://blog.zzndb.ml/posts/2019-02-25-adbox-%E6%8A%98%E8%85%BE%E8%AE%B0/ -&lt;p&gt;对家里几年前办宽带给的联通 IPTV 盒子的一些折腾。&lt;/p&gt;
+        <guid>https://blog.zzndb.me/posts/2019-02-25-adbox-%E6%8A%98%E8%85%BE%E8%AE%B0/</guid>
+        <description>zzndb&#39;s world https://blog.zzndb.me/posts/2019-02-25-adbox-%E6%8A%98%E8%85%BE%E8%AE%B0/ -&lt;p&gt;对家里几年前办宽带给的联通 IPTV 盒子的一些折腾。&lt;/p&gt;
 &lt;p&gt;UP: 2019-02-25 11:18:24 星期一&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;盒子&lt;code&gt;build.prop&lt;/code&gt;的部分产品信息&lt;/p&gt;
@@ -980,7 +980,7 @@ install -Dm 0644 server/scrcpy-server.jar %{buildroot}/usr/local/share/%{name}/s
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;│   └── MANIFEST.MF
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;...
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;对应架构的文件，公共文件，许可协议，一个什么信息包？不太清楚，不过我知道那个目录里面的&lt;code&gt;update-binary&lt;/code&gt;文件是一个&lt;code&gt;sh&lt;/code&gt;脚本文件，也就是 SuperSU 的安装步骤。&lt;/p&gt;
-&lt;p&gt;打开&lt;code&gt;META-INF/com/google/android/uptate-binary&lt;/code&gt;，你会发现，在脚本之前有两百多行的安装指导（不能对 boot 进行刷入，只好选择 &lt;code&gt;&amp;quot;SYSTEM&amp;quot; INSTALL&lt;/code&gt;方式，V2.82-SR5 文档&lt;strong&gt;部分摘取&lt;/strong&gt;如下，&lt;em&gt;其他机型手动安装请参考&lt;/em&gt; &lt;a href=&#34;https://blog.zzndb.ml/images/2019/02/32535640.txt&#34; target=&#34;_blank&#34;&gt;SuperSU_Manual_Install_V2.82-SR5.txt&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;打开&lt;code&gt;META-INF/com/google/android/uptate-binary&lt;/code&gt;，你会发现，在脚本之前有两百多行的安装指导（不能对 boot 进行刷入，只好选择 &lt;code&gt;&amp;quot;SYSTEM&amp;quot; INSTALL&lt;/code&gt;方式，V2.82-SR5 文档&lt;strong&gt;部分摘取&lt;/strong&gt;如下，&lt;em&gt;其他机型手动安装请参考&lt;/em&gt; &lt;a href=&#34;https://blog.zzndb.me/images/2019/02/32535640.txt&#34; target=&#34;_blank&#34;&gt;SuperSU_Manual_Install_V2.82-SR5.txt&lt;/a&gt;&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# ----- &amp;#34;SYSTEM&amp;#34; INSTALL -----&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# To install SuperSU properly, aside from cleaning old versions and&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# other superuser-type apps from the system, the following files need to&lt;/span&gt;
@@ -1081,7 +1081,7 @@ install -Dm 0644 server/scrcpy-server.jar %{buildroot}/usr/local/share/%{name}/s
 &lt;p&gt;说到路由，我去&lt;code&gt;ip route&lt;/code&gt;看了看，好嘛，默认是走 PPPOE 的 gateway，改改看看&lt;code&gt;ip route replace default via 192.168.12.1&lt;/code&gt;，去打开小电视看了看，还真行，然后&lt;em&gt;通过 Tasker 自动更改默认路由&lt;/em&gt; 的方案全票通过了。&lt;del&gt;实际上发现这个操作之前在 iptables 上鸽了很久&lt;/del&gt;&lt;/p&gt;
 &lt;p&gt;去 Tasker &lt;a href=&#34;https://tasker.joaoapps.com/download.html&#34;&gt;官网&lt;/a&gt;下载了 Android 4.4 能用的版本，在手机上弄好配置文件，&lt;code&gt;adb push&lt;/code&gt;到盒子，导入，测试，启用。**通过简单地打开特定应用，再根据网络连接情况，得到网关地址，更改网关地址，关闭特定应用，获取网关地址，改回网关地址。**算是实现了自由的网络切换。&lt;/p&gt;
 &lt;p&gt;贴上一张具体任务实现「任务编辑界面图」，就一目了然了
-&lt;img src=&#34;https://blog.zzndb.ml/images/2019/02/1665112908.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;img src=&#34;https://blog.zzndb.me/images/2019/02/1665112908.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;通过 shell 运行命令，获取地址（广播地址 brd /远端接口 peer），相应修改为网关地址，在运行&lt;code&gt;ip  route replace default via xx&lt;/code&gt;更改即可&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -1089,18 +1089,18 @@ install -Dm 0644 server/scrcpy-server.jar %{buildroot}/usr/local/share/%{name}/s
 &lt;h2 id=&#34;other&#34;&gt;Other&lt;/h2&gt;
 &lt;p&gt;在准备利用 Wireshark 抓包找固件下载地址获取 boot.img 的时候，其实还有更多的发现，在茫茫 http 请求中，发现了一些 POST 上传，根据地址命名应该是上传系统 log 之类的东西，倒是确实没发现什么应用列表啊之类的数据问题，谁知道呢，或与在非 ASCII 数据里面有些什么呢？&lt;del&gt;在这个隐私毫无的时代&lt;/del&gt;&lt;/p&gt;
 &lt;p&gt;回到这个盒子来看，在装了第三方桌面后，我才发现，这个 Android 4.4.2 真是深度定制&lt;del&gt;阉割&lt;/del&gt;，连个系统设置都被阉割了，开始还想着装了第三方桌面进设置去连个 wifi 结果发现，连设置都没有，然后搞出了上面的一堆操作，或许将来升个级就啥都得重新来过了，ban 掉升级的 ip 的想法出现了，但没真去 ban ，或许将来升级之后操作会更有挑战性呢？（通过驱动层面封掉后面的 USB 口？装的 app 全删掉，装进系统的也顺便重置，真是美滋滋呢！&lt;/p&gt;
-&lt;p&gt;完&lt;/p&gt;- https://blog.zzndb.ml/posts/2019-02-25-adbox-%E6%8A%98%E8%85%BE%E8%AE%B0/ - </description>
+&lt;p&gt;完&lt;/p&gt;- https://blog.zzndb.me/posts/2019-02-25-adbox-%E6%8A%98%E8%85%BE%E8%AE%B0/ - </description>
         </item>
     
     
     
         <item>
         <title>树莓派温控风扇（GPIO&amp;三极管）</title>
-        <link>https://blog.zzndb.ml/posts/2018-09-25-%E6%A0%91%E8%8E%93%E6%B4%BE%E6%B8%A9%E6%8E%A7%E9%A3%8E%E6%89%87gpio%E4%B8%89%E6%9E%81%E7%AE%A1/</link>
+        <link>https://blog.zzndb.me/posts/2018-09-25-%E6%A0%91%E8%8E%93%E6%B4%BE%E6%B8%A9%E6%8E%A7%E9%A3%8E%E6%89%87gpio%E4%B8%89%E6%9E%81%E7%AE%A1/</link>
         <pubDate>Tue, 25 Sep 2018 22:56:00 +0800</pubDate>
         
-        <guid>https://blog.zzndb.ml/posts/2018-09-25-%E6%A0%91%E8%8E%93%E6%B4%BE%E6%B8%A9%E6%8E%A7%E9%A3%8E%E6%89%87gpio%E4%B8%89%E6%9E%81%E7%AE%A1/</guid>
-        <description>zzndb&#39;s world https://blog.zzndb.ml/posts/2018-09-25-%E6%A0%91%E8%8E%93%E6%B4%BE%E6%B8%A9%E6%8E%A7%E9%A3%8E%E6%89%87gpio%E4%B8%89%E6%9E%81%E7%AE%A1/ -&lt;p&gt;让树莓派不算太吃灰的一小步:joy:&lt;/p&gt;
+        <guid>https://blog.zzndb.me/posts/2018-09-25-%E6%A0%91%E8%8E%93%E6%B4%BE%E6%B8%A9%E6%8E%A7%E9%A3%8E%E6%89%87gpio%E4%B8%89%E6%9E%81%E7%AE%A1/</guid>
+        <description>zzndb&#39;s world https://blog.zzndb.me/posts/2018-09-25-%E6%A0%91%E8%8E%93%E6%B4%BE%E6%B8%A9%E6%8E%A7%E9%A3%8E%E6%89%87gpio%E4%B8%89%E6%9E%81%E7%AE%A1/ -&lt;p&gt;让树莓派不算太吃灰的一小步:joy:&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;2018-10-01 16:44:05 星期一&lt;/p&gt;
 &lt;ul&gt;
@@ -1127,7 +1127,7 @@ install -Dm 0644 server/scrcpy-server.jar %{buildroot}/usr/local/share/%{name}/s
 &lt;p&gt;Warning: while connecting up simple components to the GPIO pins is perfectly safe, it&amp;rsquo;s important to be careful how you wire things up. LEDs should have resistors to limit the current passing through them. &lt;strong&gt;Do not use 5V for 3V3 components. Do not connect motors directly to the GPIO pins, instead use an H-bridge circuit or a motor controller board.&lt;/strong&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;里面提到了用H桥和电机控制板，考虑到功能单一我还是用三极管来控制吧。顺便复习一下模电，大致的三极管开关电路，如下，利用一个&lt;code&gt;NPN&lt;/code&gt;型三极管加上一个&lt;code&gt;GPIO&lt;/code&gt;口的不同输出状态实现，只要&lt;code&gt;IO&lt;/code&gt;口能提供电流即可使三极管导通
-&lt;img src=&#34;https://blog.zzndb.ml/images/2018/09/229487526.png&#34; alt=&#34;三极管开关控制电路&#34;&gt;&lt;/p&gt;
+&lt;img src=&#34;https://blog.zzndb.me/images/2018/09/229487526.png&#34; alt=&#34;三极管开关控制电路&#34;&gt;&lt;/p&gt;
 &lt;h2 id=&#34;shell-操作gpio&#34;&gt;shell 操作GPIO&lt;/h2&gt;
 &lt;p&gt;接下来就是如何控制&lt;code&gt;GPIO&lt;/code&gt;口，&lt;a href=&#34;https://www.raspberrypi.org/documentation/usage/gpio/README.md&#34;&gt;树莓派官方GPIO文档&lt;/a&gt;里面关于 Programming with GPIO 的部分有&lt;code&gt;Scratch，Python&lt;/code&gt;的文档，可是这俩我都不会，&lt;code&gt;shell&lt;/code&gt;脚本还会一点，而且作为一个万物皆文件的&lt;code&gt;Linux&lt;/code&gt;怎么可能不能直接操作呢？于是找到了这篇&lt;a href=&#34;https://luketopia.net/2013/07/28/raspberry-pi-gpio-via-the-shell/&#34;&gt;Blog&lt;/a&gt;，知道了大致直接操作&lt;code&gt;GPIO&lt;/code&gt;的几个步骤。&lt;/p&gt;
 &lt;p&gt;在树莓派的&lt;code&gt;/sys/class&lt;/code&gt;虚拟文件系统路径下有&lt;code&gt;gpio&lt;/code&gt;的对应的设备模型文件夹&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;里面的目录树大致如下：&lt;/p&gt;
@@ -1249,29 +1249,29 @@ install -Dm 0644 server/scrcpy-server.jar %{buildroot}/usr/local/share/%{name}/s
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;WantedBy&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;multi-user.target&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;放在&lt;code&gt;/usr/lib/systemd/system/&lt;/code&gt;中，执行&lt;code&gt;systemctl enable Fan.service&lt;/code&gt;开启自启动&lt;code&gt;systemd start Fan.service&lt;/code&gt;启动&lt;/p&gt;
 &lt;h2 id=&#34;实物图&#34;&gt;实物图&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.zzndb.ml/images/2018/09/614717856.jpg&#34; alt=&#34;实物图&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.zzndb.me/images/2018/09/614717856.jpg&#34; alt=&#34;实物图&#34;&gt;&lt;/p&gt;
 &lt;h1 id=&#34;other&#34;&gt;Other&lt;/h1&gt;
 &lt;p&gt;但是问题又来了，我怎么样才能在没有烙铁等高级操作工具的情况下将这个东西尽量放在亚克力外壳里面 &amp;lt;(=￣_￣|||)&amp;gt;&lt;/p&gt;
 &lt;p&gt;研究研究。。。&lt;/p&gt;
-&lt;section class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
+&lt;div class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
 &lt;hr&gt;
 &lt;ol&gt;
-&lt;li id=&#34;fn:1&#34; role=&#34;doc-endnote&#34;&gt;
+&lt;li id=&#34;fn:1&#34;&gt;
 &lt;p&gt;&lt;a href=&#34;https://www.ibm.com/developerworks/cn/linux/l-cn-sysfs/index.html&#34;&gt;https://www.ibm.com/developerworks/cn/linux/l-cn-sysfs/index.html&lt;/a&gt;&amp;#160;&lt;a href=&#34;#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;/section&gt;- https://blog.zzndb.ml/posts/2018-09-25-%E6%A0%91%E8%8E%93%E6%B4%BE%E6%B8%A9%E6%8E%A7%E9%A3%8E%E6%89%87gpio%E4%B8%89%E6%9E%81%E7%AE%A1/ - </description>
+&lt;/div&gt;- https://blog.zzndb.me/posts/2018-09-25-%E6%A0%91%E8%8E%93%E6%B4%BE%E6%B8%A9%E6%8E%A7%E9%A3%8E%E6%89%87gpio%E4%B8%89%E6%9E%81%E7%AE%A1/ - </description>
         </item>
     
     
     
         <item>
         <title>No.6 AC</title>
-        <link>https://blog.zzndb.ml/posts/2017-07-22-no.6-ac/</link>
+        <link>https://blog.zzndb.me/posts/2017-07-22-no.6-ac/</link>
         <pubDate>Sat, 22 Jul 2017 14:56:00 +0800</pubDate>
         
-        <guid>https://blog.zzndb.ml/posts/2017-07-22-no.6-ac/</guid>
-        <description>zzndb&#39;s world https://blog.zzndb.ml/posts/2017-07-22-no.6-ac/ -&lt;p&gt;依旧easy难度&lt;/p&gt;
+        <guid>https://blog.zzndb.me/posts/2017-07-22-no.6-ac/</guid>
+        <description>zzndb&#39;s world https://blog.zzndb.me/posts/2017-07-22-no.6-ac/ -&lt;p&gt;依旧easy难度&lt;/p&gt;
 &lt;!--more--&gt;
 &lt;p&gt;&lt;strong&gt;Description:&lt;/strong&gt;
 &lt;em&gt;Determine whether an integer is a palindrome. Do this without extra space.&lt;/em&gt;
@@ -1301,9 +1301,9 @@ install -Dm 0644 server/scrcpy-server.jar %{buildroot}/usr/local/share/%{name}/s
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;by the way 用到了上一道题的 reverse 然后与原来数比较，排除负数。&lt;/p&gt;
 &lt;!--more--&gt;
 &lt;p&gt;&lt;strong&gt;FullWeb:&lt;/strong&gt;
-&lt;img src=&#34;https://blog.zzndb.ml/images/2017/07/745528676.png&#34; alt=&#34;&#34;&gt;
+&lt;img src=&#34;https://blog.zzndb.me/images/2017/07/745528676.png&#34; alt=&#34;&#34;&gt;
 顺便看了看detail，真可怕
-&lt;img src=&#34;https://blog.zzndb.ml/images/2017/07/2158846997.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;img src=&#34;https://blog.zzndb.me/images/2017/07/2158846997.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;!--more--&gt;
 &lt;p&gt;好吧，又看了看其他人的，恩很溜，成功浓缩到了八行，but其实没啥区别:stuck_out_tongue:：&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;Solution&lt;/span&gt; {
@@ -1320,18 +1320,18 @@ install -Dm 0644 server/scrcpy-server.jar %{buildroot}/usr/local/share/%{name}/s
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    }
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;};
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;好吧&lt;/p&gt;
-&lt;p&gt;以上&lt;/p&gt;- https://blog.zzndb.ml/posts/2017-07-22-no.6-ac/ - </description>
+&lt;p&gt;以上&lt;/p&gt;- https://blog.zzndb.me/posts/2017-07-22-no.6-ac/ - </description>
         </item>
     
     
     
         <item>
         <title>Number5 AC</title>
-        <link>https://blog.zzndb.ml/posts/2017-07-21-number5-ac/</link>
+        <link>https://blog.zzndb.me/posts/2017-07-21-number5-ac/</link>
         <pubDate>Fri, 21 Jul 2017 10:40:00 +0800</pubDate>
         
-        <guid>https://blog.zzndb.ml/posts/2017-07-21-number5-ac/</guid>
-        <description>zzndb&#39;s world https://blog.zzndb.ml/posts/2017-07-21-number5-ac/ -&lt;p&gt;思路值得学习
+        <guid>https://blog.zzndb.me/posts/2017-07-21-number5-ac/</guid>
+        <description>zzndb&#39;s world https://blog.zzndb.me/posts/2017-07-21-number5-ac/ -&lt;p&gt;思路值得学习
 &lt;strong&gt;Description:&lt;/strong&gt;
 &lt;em&gt;Reverse digits of an integer.&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Example1: x = 123, return 321
@@ -1352,11 +1352,11 @@ The input is assumed to be a 32-bit signed integer. Your function should return 
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    }
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;};
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;FullWeb:&lt;/strong&gt;
-&lt;img src=&#34;https://blog.zzndb.ml/images/2017/07/1309455879.png&#34; alt=&#34;&#34;&gt;
+&lt;img src=&#34;https://blog.zzndb.me/images/2017/07/1309455879.png&#34; alt=&#34;&#34;&gt;
 &lt;strong&gt;ThoughtFulPoint:&lt;/strong&gt;&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;re &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; re&lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;10&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; x&lt;span style=&#34;color:#f92672&#34;&gt;%&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;10&lt;/span&gt;;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            x &lt;span style=&#34;color:#f92672&#34;&gt;/=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;10&lt;/span&gt;;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;以上&lt;/p&gt;- https://blog.zzndb.ml/posts/2017-07-21-number5-ac/ - </description>
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;以上&lt;/p&gt;- https://blog.zzndb.me/posts/2017-07-21-number5-ac/ - </description>
         </item>
     
     
