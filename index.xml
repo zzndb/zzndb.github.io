@@ -6,9 +6,132 @@
     <description>Recent content on zzndb&#39;s world</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 04 Apr 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 31 Dec 2022 21:42:00 +0800</lastBuildDate>
     
         <atom:link href="https://blog.zzndb.me/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+        <item>
+        <title>Run openSUSE in your Chrombook Crostini</title>
+        <link>https://blog.zzndb.me/posts/opensuse_in_crostini/</link>
+        <pubDate>Sat, 31 Dec 2022 21:42:00 +0800</pubDate>
+        
+        <guid>https://blog.zzndb.me/posts/opensuse_in_crostini/</guid>
+        <description>zzndb&#39;s world https://blog.zzndb.me/posts/opensuse_in_crostini/ -&lt;p&gt;又一次手抖在进入了开发者模式的 Chromebook 开机确认关闭完整性校验时按了 Enter，去年某鱼入手的星星星的 Chromebook Pro 重置了……&lt;/p&gt;
+&lt;p&gt;好在之前有在吃灰前备份大部分数据到外置 SD 卡上，趁这次机会重新配置一遍随便完成这篇早该完成（大概是打的所需配置包基本稳定的去年十月份）的踩坑记录，随便完成今年的第一篇也是最后一篇博客更新。内容基于当前 ChromeOS 版本 108 的配置记录以及去年的笔记备份。&lt;/p&gt;
+&lt;h2 id=&#34;tl-dr&#34;&gt;TL;DR&lt;/h2&gt;
+&lt;p&gt;总所周知目前 ChromeOS 的 Linux 环境是跑在一个虚拟机中的 LXD 容器，所以基本上分两步：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;新建和默认 Debian 额外设备配置相同的 openSUSE 容器，并在其中配置所需的一揽子配置来完成和外部 ChromeOS 交互集成。&lt;/li&gt;
+&lt;li&gt;替换在 Crostini 中默认运行的 Debian 容器为 openSUSE 容器。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;配置容器&#34;&gt;配置容器&lt;/h2&gt;
+&lt;p&gt;在操作之前需要已启用 Linux 环境，也就是有了一个叫 &lt;code&gt;termina&lt;/code&gt; 的虚拟机跑着默认叫 &lt;code&gt;penguin&lt;/code&gt; 的 Debian 容器&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;ctrl+alt+t&lt;/strong&gt; 快捷键呼出 &lt;strong&gt;crosh&lt;/strong&gt; 窗口，键入 &lt;code&gt;vms list&lt;/code&gt; 确认虚拟机 &lt;code&gt;termina&lt;/code&gt; 存在&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;vsh termina&lt;/code&gt; 进入虚拟机，键入 &lt;code&gt;lxc list&lt;/code&gt; 确认容器 &lt;code&gt;penguin&lt;/code&gt; 存在&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;接着正常使用 lxc 创建一个 openSUSE 容器&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 参考流程&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;lxc remote add tuna-images https://mirrors.tuna.tsinghua.edu.cn/lxc-images/ --protocol&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;simplestreams
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;lxc launch tuna-images:opensuse/15.4 oS
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;lxc stop oS
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;按照原有 &lt;code&gt;penguin&lt;/code&gt; 配置我们新的容器&lt;/p&gt;
+&lt;p&gt;建议自行对照 &lt;code&gt;lxc config show penguin&lt;/code&gt; 进行配置&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 参考流程&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;lxc config device add oS ssh_host_key disk source&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;/run/sshd/penguin/ssh_host_key path&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;/dev/.ssh/ssh_host_key
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;lxc config device add oS ssh_authorized_keys disk source&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;/run/sshd/penguin/ssh_host_key path&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;/dev/.ssh/ssh_authorized_keys
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;lxc config device add oS container_token disk source&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;/run/tokens/penguin_token path&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;/dev/.container_token
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 之前好像没有这个设备，还是照着配了&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;lxc config device add oS /dev/snd/pcmC0D0c unix-char path&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;/dev/snd/pcmC0D0c mode&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;0666&lt;/span&gt; minor&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;24&lt;/span&gt; major&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;116&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;进入新的容器进行必要配置&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 参考流程&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;lxc start oS
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;lxc exec oS -- bash
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 修改root密码，后续会用到&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;passwd
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 后续配置包中配置了 wheel 所在组免密操作&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;groupadd wheel
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 新建用户，建议还是和启用 Linux 环境时取的用户名一致，以下以 name_here 指代&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;useradd -m -u &lt;span style=&#34;color:#ae81ff&#34;&gt;1000&lt;/span&gt; -g users -G wheel name_here
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;usermod -aG audio zdb &lt;span style=&#34;color:#75715e&#34;&gt;# pluseaudio&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;passwd name_here
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;zypper in --no-recommends vim dracut
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 建议修改如下配置，默认不安装推荐&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;vim /etc/zypp/zypper.conf
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# installRecommends = no&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;zypper ar obs://home:zzndb001 zzndb001
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sed -i &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;s|/openSUSE_Leap_|/|&amp;#39;&lt;/span&gt; /etc/zypp/repos.d/zzndb001.repo
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;zypper in cros-container-guest-tools
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;exit
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;接下来使用普通用户完成剩下配置&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;lxc stop penguin
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;lxc console oS
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 使用上面创建用户登录&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 启用集成相关服务&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;systemctl --user enable cros-garcon
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;systemctl --user enable sommelier@0
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;systemctl --user enable sommelier@1
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;systemctl --user enable sommelier-x@0
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;systemctl --user enable sommelier-x@1
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;systemctl --user enable cros-sftp
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;loginctl enable-linger name_here
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# Audio&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;cp -rT /etc/skel/.config/pulse/ ~/.config/pulse
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;exit
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;替换容器&#34;&gt;替换容器&lt;/h2&gt;
+&lt;p&gt;完成上面的配置，直接在回到的 &lt;code&gt;termina&lt;/code&gt; 虚拟机中完成容器替换&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;lxc move penguin&lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;,-bak&lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;lxc move oS penguin
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;就，字面上的替换……&lt;/p&gt;
+&lt;p&gt;自此，使用 ChromeOS 自带终端启动 &lt;code&gt;penguin&lt;/code&gt; 容器环境即可进入 openSUSE 的终端&lt;/p&gt;
+&lt;h2 id=&#34;测试-可选配置&#34;&gt;测试/可选配置&lt;/h2&gt;
+&lt;p&gt;装个 gvim 看下桌面能不能拿到图标&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo zypper in gvim
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;装个 opi，来方便的搜索/替换相关软件&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo zypper in opi
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;opi codecs
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;装个 libnotify-tools，来测试通知&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo zypper in libnotify-tools
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;notify-send &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Hi!&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;通过自带文件管理器可以共享目录到 Linux 环境，可以在 &lt;code&gt;/mnt/chromeos/&lt;/code&gt; 目录下找到&lt;/p&gt;
+&lt;p&gt;装个 mpv，来放首歌&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo zypper in mpv
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;mpv /mnt/chromeos/MyFiles/Downloads/a.mp3
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;也可以直接使用文件管理器通过 Linux 环境应用直接打开。&lt;/p&gt;
+&lt;h2 id=&#34;存在的问题&#34;&gt;存在的问题&lt;/h2&gt;
+&lt;p&gt;目前就发现在自带文件管理器中看不到默认能看到的 Linux 环境用户目录文件，还不清楚原因。&lt;/p&gt;
+&lt;h2 id=&#34;reference&#34;&gt;Reference&lt;/h2&gt;
+&lt;p&gt;在打包 &lt;code&gt;cros-container-guest-tools&lt;/code&gt; 时有参考&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://src.fedoraproject.org/rpms/cros-guest-tools&#34;&gt;https://src.fedoraproject.org/rpms/cros-guest-tools&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://aur.archlinux.org/cgit/aur.git/tree/PKGBUILD?h=cros-container-guest-tools-git&#34;&gt;https://aur.archlinux.org/cgit/aur.git/tree/PKGBUILD?h=cros-container-guest-tools-git&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;在踩坑替换默认容器及相关配置时有参考&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://wiki.archlinux.org/title/Chrome_OS_devices/Crostini&#34;&gt;https://wiki.archlinux.org/title/Chrome_OS_devices/Crostini&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+- https://blog.zzndb.me/posts/opensuse_in_crostini/ - </description>
+        </item>
     
     
     
@@ -1322,42 +1445,6 @@ install -Dm 0644 server/scrcpy-server.jar %{buildroot}/usr/local/share/%{name}/s
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;};
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;好吧&lt;/p&gt;
 &lt;p&gt;以上&lt;/p&gt;- https://blog.zzndb.me/posts/2017-07-22-no.6-ac/ - </description>
-        </item>
-    
-    
-    
-        <item>
-        <title>Number5 AC</title>
-        <link>https://blog.zzndb.me/posts/2017-07-21-number5-ac/</link>
-        <pubDate>Fri, 21 Jul 2017 10:40:00 +0800</pubDate>
-        
-        <guid>https://blog.zzndb.me/posts/2017-07-21-number5-ac/</guid>
-        <description>zzndb&#39;s world https://blog.zzndb.me/posts/2017-07-21-number5-ac/ -&lt;p&gt;思路值得学习
-&lt;strong&gt;Description:&lt;/strong&gt;
-&lt;em&gt;Reverse digits of an integer.&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;Example1: x = 123, return 321
-Example2: x = -123, return -321&lt;/em&gt;
-&lt;em&gt;click to show spoilers.&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;Note:
-The input is assumed to be a 32-bit signed integer. Your function should return 0 when the reversed integer overflows.&lt;/em&gt;
-&lt;strong&gt;Code:&lt;/strong&gt;&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;Solution&lt;/span&gt; {
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; reverse(&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; x) {
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;       &lt;span style=&#34;color:#66d9ef&#34;&gt;long&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;long&lt;/span&gt; re &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#66d9ef&#34;&gt;while&lt;/span&gt;(x) {
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            re &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; re&lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;10&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; x&lt;span style=&#34;color:#f92672&#34;&gt;%&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;10&lt;/span&gt;;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            x &lt;span style=&#34;color:#f92672&#34;&gt;/=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;10&lt;/span&gt;;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        }
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; (re&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;INT_MAX &lt;span style=&#34;color:#f92672&#34;&gt;||&lt;/span&gt; re&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;INT_MIN) &lt;span style=&#34;color:#f92672&#34;&gt;?&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt; re;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    }
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;};
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;FullWeb:&lt;/strong&gt;
-&lt;img src=&#34;https://blog.zzndb.me/images/2017/07/1309455879.png&#34; alt=&#34;&#34;&gt;
-&lt;strong&gt;ThoughtFulPoint:&lt;/strong&gt;&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;re &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; re&lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;10&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; x&lt;span style=&#34;color:#f92672&#34;&gt;%&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;10&lt;/span&gt;;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            x &lt;span style=&#34;color:#f92672&#34;&gt;/=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;10&lt;/span&gt;;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;以上&lt;/p&gt;- https://blog.zzndb.me/posts/2017-07-21-number5-ac/ - </description>
         </item>
     
     

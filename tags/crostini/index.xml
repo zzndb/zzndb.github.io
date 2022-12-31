@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>OBS on zzndb&#39;s world</title>
-    <link>https://blog.zzndb.me/tags/obs/</link>
-    <description>Recent content in OBS on zzndb&#39;s world</description>
+    <title>Crostini on zzndb&#39;s world</title>
+    <link>https://blog.zzndb.me/tags/crostini/</link>
+    <description>Recent content in Crostini on zzndb&#39;s world</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 31 Dec 2022 21:42:00 +0800</lastBuildDate><atom:link href="https://blog.zzndb.me/tags/obs/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 31 Dec 2022 21:42:00 +0800</lastBuildDate><atom:link href="https://blog.zzndb.me/tags/crostini/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Run openSUSE in your Chrombook Crostini</title>
       <link>https://blog.zzndb.me/posts/opensuse_in_crostini/</link>
@@ -21,15 +21,6 @@ ctrl+alt+t 快捷键呼出 crosh 窗口，键入 vms list 确认虚拟机 termin
 vsh termina 进入虚拟机，键入 lxc list 确认容器 penguin 存在
 接着正常使用 lxc 创建一个 openSUSE 容器
 # 参考流程 lxc remote add tuna-images https://mirrors.</description>
-    </item>
-    
-    <item>
-      <title>scrcpy--首次独立OBS打包</title>
-      <link>https://blog.zzndb.me/posts/2019-04-23-scrcpy--%E9%A6%96%E6%AC%A1%E7%8B%AC%E7%AB%8Bobs%E6%89%93%E5%8C%85/</link>
-      <pubDate>Tue, 23 Apr 2019 15:42:00 +0800</pubDate>
-      
-      <guid>https://blog.zzndb.me/posts/2019-04-23-scrcpy--%E9%A6%96%E6%AC%A1%E7%8B%AC%E7%AB%8Bobs%E6%89%93%E5%8C%85/</guid>
-      <description>&lt;p&gt;记首次独立OBS打包&lt;/p&gt;</description>
     </item>
     
   </channel>
