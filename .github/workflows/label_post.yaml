@@ -26,10 +26,21 @@ jobs:
         id: check
         uses: octokit/request-action@v2.x
         with:
-          route: GET /repos/{owner}/{repo}/labels/:name
-          owner: zzndb
-          repo: zzndb.github.io
+          route: GET /repos/:repository/labels/:name
+          repository: ${{ github.repository }}
           name: ${{ steps.get_env.outputs.post_hash }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: New new issue with above env
+        if: ${{ failure() && steps.check.outputs.status == 404 }}
+        uses: octokit/request-action@v2.x
+        with:
+          route: POST /repos/:repository/issues
+          repository: ${{ github.repository }}
+          title: ${{ steps.get_env.outputs.post_name }}
+          body: ${{ steps.get_env.outputs.post_url }}
+          labels: '["Gitalk", ${{ steps.get_env.outputs.post_hash }} ]'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
