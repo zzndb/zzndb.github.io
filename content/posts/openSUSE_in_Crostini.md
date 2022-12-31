@@ -3,7 +3,7 @@ title = "Run openSUSE in your Chrombook Crostini"
 author = ["zzndb"]
 description = "Chromebook Crostini 上跑 openSUSE 作为默认 Linux 环境的踩坑指北。"
 date = 2022-12-31T21:42:00+08:00
-lastmod = 2022-12-31T22:34:59+08:00
+lastmod = 2022-12-31T22:46:58+08:00
 tags = ["packaging", "OBS", "Crostini", "openSUSE"]
 categories = ["forfun"]
 draft = false
@@ -16,7 +16,7 @@ draft = false
 
 ## TL;DR {#tl-dr}
 
-总所周知目前 ChromeOS 的 Linux 环境是跑在一个虚拟机中的 LXD 容器，所以基本上分两步：
+众所周知目前 ChromeOS 的 Linux 环境是跑在一个虚拟机中的 LXD 容器，所以基本上分两步：
 
 1.  新建和默认 Debian 额外设备配置相同的 openSUSE 容器，并在其中配置所需的一揽子配置来完成和外部 ChromeOS 交互集成。
 2.  替换在 Crostini 中默认运行的 Debian 容器为 openSUSE 容器。
