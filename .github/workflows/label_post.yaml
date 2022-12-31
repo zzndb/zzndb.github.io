@@ -24,10 +24,11 @@ jobs:
 
       - name: check issue existence
         id: check
-        uses: octokit/request-action@v2.0.26
+        uses: octokit/request-action@v2.x
         with:
-          route: GET /repos/:repository/labels/:name
-          repository: ${{ github.repository }}
+          route: GET /repos/{owner}/{repo}/labels/:name
+          owner: zzndb
+          repo: zzndb.github.io
           name: ${{ steps.get_env.outputs.post_hash }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
