@@ -24,7 +24,7 @@ jobs:
 
       - name: check issue existence
         id: check
-        uses: octokit/request-action@v2.x
+        uses: octokit/request-action@v2.0.26
         with:
           route: GET /repos/:repository/labels/:name
           repository: ${{ github.repository }}
