@@ -1,0 +1,466 @@
+<?xml-stylesheet href="/rss.xsl" type="text/xsl"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>zzndb&#39;s world</title>
+    <link>https://blog.zzndb.me/</link>
+    <description>Recent content on zzndb&#39;s world</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 04 Apr 2021 00:00:00 +0000</lastBuildDate>
+    
+        <atom:link href="https://blog.zzndb.me/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+        <item>
+        <title>Number4 AC</title>
+        <link>https://blog.zzndb.me/posts/2017-07-20-number4-ac/</link>
+        <pubDate>Thu, 20 Jul 2017 23:14:00 +0800</pubDate>
+        
+        <guid>https://blog.zzndb.me/posts/2017-07-20-number4-ac/</guid>
+        <description>zzndb&#39;s world https://blog.zzndb.me/posts/2017-07-20-number4-ac/ -&lt;p&gt;话不多说，一道easy难度的题&lt;/p&gt;
+&lt;!--more--&gt;
+&lt;p&gt;&lt;em&gt;Given an array consisting of n integers, find the contiguous subarray of given length k that has the maximum average value. And you need to output the maximum average value.&lt;/em&gt;
+&lt;strong&gt;Description:&lt;/strong&gt;
+*Example 1:
+Input: [1,12,-5,-6,50,3], k = 4
+Output: 12.75
+Explanation: Maximum average is (12-5-6+50)/4 = 51/4 = 12.75
+Note:
+1 &amp;lt;= k &amp;lt;= n &amp;lt;= 30,000.
+Elements of the given array will be in the range [-10,000, 10,000].
+*&lt;!--more--&gt;
+&lt;strong&gt;Mycode:&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;Solution&lt;/span&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;double&lt;/span&gt; findMaxAverage(vector&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&amp;amp;&lt;/span&gt; nums, &lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; k) {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#66d9ef&#34;&gt;auto&lt;/span&gt; be &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; nums.begin(), en &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; nums.end();
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#66d9ef&#34;&gt;double&lt;/span&gt; sum &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; tmp0 &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;, tmp1 &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt;(&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; i &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; k; i &lt;span style=&#34;color:#f92672&#34;&gt;!=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;; &lt;span style=&#34;color:#f92672&#34;&gt;--&lt;/span&gt;i, &lt;span style=&#34;color:#f92672&#34;&gt;++&lt;/span&gt;be){
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            tmp1 &lt;span style=&#34;color:#f92672&#34;&gt;+=&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt;be;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        sum &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; tmp1;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt;(; be &lt;span style=&#34;color:#f92672&#34;&gt;!=&lt;/span&gt; en; &lt;span style=&#34;color:#f92672&#34;&gt;++&lt;/span&gt;be){
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            tmp0 &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; tmp1 &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt;(be &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt; k) &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt;be;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt;(tmp0 &lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt; sum){
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                sum &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; tmp0;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            tmp1 &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; tmp0;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; sum&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;k;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;};
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;!--more--&gt;
+&lt;p&gt;全页截图：
+&lt;img src=&#34;https://blog.zzndb.me/images/2017/07/3019175156.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;以上&lt;/p&gt;
+&lt;p&gt;:stuck_out_tongue_closed_eyes:&lt;/p&gt;- https://blog.zzndb.me/posts/2017-07-20-number4-ac/ - </description>
+        </item>
+    
+    
+    
+        <item>
+        <title>WTD定时器</title>
+        <link>https://blog.zzndb.me/posts/2017-07-17-wtd%E5%AE%9A%E6%97%B6%E5%99%A8/</link>
+        <pubDate>Mon, 17 Jul 2017 00:52:00 +0800</pubDate>
+        
+        <guid>https://blog.zzndb.me/posts/2017-07-17-wtd%E5%AE%9A%E6%97%B6%E5%99%A8/</guid>
+        <description>zzndb&#39;s world https://blog.zzndb.me/posts/2017-07-17-wtd%E5%AE%9A%E6%97%B6%E5%99%A8/ -&lt;p&gt;另一种学习笔记记录方式&lt;/p&gt;
+&lt;h2 id=&#34;思维导图&#34;&gt;思维导图&lt;/h2&gt;
+&lt;p&gt;因为对电子的偏好，正好有个机会，于是自然的想参加不久后的&lt;em&gt;电子设计竞赛&lt;/em&gt;当然误打误撞来了计算机的我，当然是零基础入门了，面对看起来颇为复杂的&lt;em&gt;MSP430G2&lt;/em&gt;单片机指导书，感觉效率太低下了，刚好看到有人推荐&lt;strong&gt;xmind&lt;/strong&gt;这一LINUX下也有的思维导图工具，赶紧装在了我的大蜥蜴上，正好看到了WTD看门狗定时器这一章，所以赶紧用上了，成果如下：&lt;img src=&#34;https://blog.zzndb.me/images/2017/07/253397290.png&#34; alt=&#34;WDT 看门狗定时器.png&#34;&gt;&lt;a href=&#34;https://blog.zzndb.me/images/2017/07/420233643.svg&#34;&gt;WDT 看门狗定时器.svg&lt;/a&gt;
+额，差不多就这个样子，当然都是现学现用，感觉用了思维导图关于这章的知识点是要清晰很多了，感觉还算良好。
+:joy: :joy:&lt;/p&gt;
+&lt;p&gt;以上&lt;/p&gt;
+&lt;p&gt;&lt;del&gt;[1]图文无关:stuck_out_tongue:来自2017 年父亲节Google &lt;a href=&#34;https://www.google.com/doodles/fathers-day-2017&#34;&gt;Doodle&lt;/a&gt;&lt;/del&gt;&lt;/p&gt;- https://blog.zzndb.me/posts/2017-07-17-wtd%E5%AE%9A%E6%97%B6%E5%99%A8/ - </description>
+        </item>
+    
+    
+    
+        <item>
+        <title>第一次AC的LeetCode</title>
+        <link>https://blog.zzndb.me/posts/2017-03-22-%E7%AC%AC%E4%B8%80%E6%AC%A1ac%E7%9A%84leetcode/</link>
+        <pubDate>Wed, 22 Mar 2017 14:50:00 +0800</pubDate>
+        
+        <guid>https://blog.zzndb.me/posts/2017-03-22-%E7%AC%AC%E4%B8%80%E6%AC%A1ac%E7%9A%84leetcode/</guid>
+        <description>zzndb&#39;s world https://blog.zzndb.me/posts/2017-03-22-%E7%AC%AC%E4%B8%80%E6%AC%A1ac%E7%9A%84leetcode/ -&lt;p&gt;是的，第一次&lt;/p&gt;
+&lt;p&gt;当然前面也看过两道，貌似都是选的easy难度的。:joy:
+当然听着室友淡定的谈着两百多道，一百多道，，，&lt;/p&gt;
+&lt;p&gt;那又怎样，还是蛮激动的:stuck_out_tongue:&lt;/p&gt;
+&lt;p&gt;当然其间犯了很多低级问题，以及情况考虑不完全等智商问题:confused:？看了看那个简单的 C 例子，我，，，,特地来记录一下:joy:&lt;/p&gt;
+&lt;p&gt;就是这个简单的数组题通过率也老高了的&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;485. Max Consecutive Ones&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;题目描述：&lt;em&gt;Given a binary array, find the maximum number of consecutive 1s in this array.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;举例：
+&lt;em&gt;Input: [1,1,0,1,1,1]
+Output: 3
+Explanation: The first two digits or the last three digits are consecutive 1s.
+The maximum number of consecutive 1s is 3.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;C例子代码如下&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-c&#34; data-lang=&#34;c&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;findMaxConsecutiveOnes&lt;/span&gt;(&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; nums, &lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; numsSize) {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; max &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; sum &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; (&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; i&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;; i&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;numsSize; i&lt;span style=&#34;color:#f92672&#34;&gt;++&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;     sum &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; (sum&lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt;nums[i])&lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt;nums[i];
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;     &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt;(max&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;sum){max&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;sum;}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt; }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; max;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;看看他的行数，我就不贴我的渣渣代码了，二十多行，也没有任何技巧？可言。
+在我看来 &lt;code&gt;sum = (sum+nums[i])*nums[i];&lt;/code&gt;为这例，我所不及的地方。
+巧妙用了 1 与 0 在乘法运算中对结果带来的差异&lt;/p&gt;
+&lt;p&gt;以上，纪念第一次AC&lt;/p&gt;- https://blog.zzndb.me/posts/2017-03-22-%E7%AC%AC%E4%B8%80%E6%AC%A1ac%E7%9A%84leetcode/ - </description>
+        </item>
+    
+    
+    
+        <item>
+        <title>奔跑吧大蜥蜴</title>
+        <link>https://blog.zzndb.me/posts/2017-03-20-%E5%A5%94%E8%B7%91%E5%90%A7%E5%A4%A7%E8%9C%A5%E8%9C%B4/</link>
+        <pubDate>Mon, 20 Mar 2017 20:05:00 +0800</pubDate>
+        
+        <guid>https://blog.zzndb.me/posts/2017-03-20-%E5%A5%94%E8%B7%91%E5%90%A7%E5%A4%A7%E8%9C%A5%E8%9C%B4/</guid>
+        <description>zzndb&#39;s world https://blog.zzndb.me/posts/2017-03-20-%E5%A5%94%E8%B7%91%E5%90%A7%E5%A4%A7%E8%9C%A5%E8%9C%B4/ -&lt;p&gt;&lt;a href=&#34;https://www.opensuse.org&#34; target=&#34;_blank&#34;&gt;&lt;strong&gt;openSUSE tumbleeweed&lt;/strong&gt;&lt;/a&gt;　嗯，大蜥蜴 配置备忘&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;begin edit&lt;/strong&gt; 2017-03-20 20:10:25 星期一&lt;br&gt;
+&lt;strong&gt;last edit&lt;/strong&gt; 2018-11-09 08:47:32 星期五&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;配置源&#34;&gt;配置源：&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Google-Chrome&lt;/strong&gt;
+&lt;a href=&#34;http://dl.google.com/linux/chrome/rpm/stable/x86_64&#34;&gt;http://dl.google.com/linux/chrome/rpm/stable/x86_64&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.google.com/linuxrepositories/&#34; title=&#34;Detail&#34;&gt;Detail&lt;/a&gt;:&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;下载并导入密钥：
+&lt;code&gt;wget https://dl.google.com/linux/linux_signing_key.pub sudo rpm --import linux_signing_key.pub&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;安装&lt;/li&gt;
+&lt;li&gt;ps：目前已入&lt;code&gt;chromium&lt;/code&gt; SUSE编译，默认源里自带,能不折腾就少折腾还能直接用&lt;a href=&#34;https://software.opensuse.org/search&#34; title=&#34;obs&#34;&gt;obs&lt;/a&gt;的one click install（毕竟时间宝贵&lt;del&gt;处于人生早上五点多中的我不禁感叹&lt;/del&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Packman&lt;/strong&gt;&lt;br&gt;
+&lt;a href=&#34;https://mirrors.tuna.tsinghua.edu.cn/packman/suse/openSUSE_Tumbleweed/&#34;&gt;https://mirrors.tuna.tsinghua.edu.cn/packman/suse/openSUSE_Tumbleweed/&lt;/a&gt; (主要是一些版权相关官方源缺乏的 比如各种解码器)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;~~Wine
+&lt;a href=&#34;http://download.opensuse.org/repositories/Emulators:/Wine/openSUSE_Tumbleweed/~~(&#34;&gt;http://download.opensuse.org/repositories/Emulators:/Wine/openSUSE_Tumbleweed/~~(&lt;/a&gt;已弃用感觉并无多大意义)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;openSUSE_zh&lt;/strong&gt;&lt;br&gt;
+&lt;a href=&#34;http://download.opensuse.org/repositories/home:/opensuse_zh/openSUSE_Tumbleweed/&#34;&gt;http://download.opensuse.org/repositories/home:/opensuse_zh/openSUSE_Tumbleweed/&lt;/a&gt; (一些本地化应用)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;~~ ownCloud Server Version stable (openSUSE_Leap_42.2)
+&lt;a href=&#34;http://download.owncloud.org/download/repositories/stable/openSUSE_Leap_42.2&#34;&gt;http://download.owncloud.org/download/repositories/stable/openSUSE_Leap_42.2&lt;/a&gt; ~~ (已弃用 往事不要再提)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Nametrac&lt;/strong&gt;&lt;br&gt;
+&lt;a href=&#34;http://download.opensuse.org/repositories/home:/namtrac:/subpixel/openSUSE_Factory/&#34;&gt;http://download.opensuse.org/repositories/home:/namtrac:/subpixel/openSUSE_Factory/&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Detail&lt;br&gt;
+主要是利用源里的&lt;code&gt;libfreetype6&lt;/code&gt;对字体进行渲染(因为德国大佬的版权意识，默认源的版本渲染较差 &lt;del&gt;感觉还是比较明显应该非玄学:joy:&lt;/del&gt;)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;X11:Bumblebee&lt;/strong&gt;&lt;br&gt;
+&lt;a href=&#34;https://download.opensuse.org/repositories/X11:/Bumblebee/openSUSE_Tumbleweed/&#34;&gt;https://download.opensuse.org/repositories/X11:/Bumblebee/openSUSE_Tumbleweed/&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Detail&lt;br&gt;
+独显相关折腾wiki-&amp;gt;&lt;a href=&#34;https://en.opensuse.org/SDB:NVIDIA_Bumblebee&#34; title=&#34;SDB:NVIDIA_Bumblebee&#34;&gt;SDB:NVIDIA_Bumblebee&lt;/a&gt;
+&lt;strong&gt;oss &amp;amp;&amp;amp; non-oss&lt;/strong&gt;&lt;br&gt;
+自带，由于潜在的网络问题可用国内的&lt;a href=&#34;https://mirrors.tuna.tsinghua.edu.cn/opensuse/tumbleweed/repo/&#34; title=&#34;tuna&#34;&gt;tuna&lt;/a&gt;、&lt;a href=&#34;https://mirrors.ustc.edu.cn/opensuse/tumbleweed/repo/&#34; title=&#34;ustc&#34;&gt;ustc&lt;/a&gt; 等代替&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;wiki&#34;&gt;wiki&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;最初接触某样东西 官方的文档通常是最行之有效的学习方法&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://opensuse-guide.org/ &#34; target=&#34;_blank&#34;&gt;&lt;strong&gt;openSUSE官方帮助文档&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&amp;lt;a = href=&amp;ldquo;&lt;a href=&#34;https://lug.ustc.edu.cn/sites/opensuse-guide/index.php%22&#34;&gt;https://lug.ustc.edu.cn/sites/opensuse-guide/index.php&amp;quot;&lt;/a&gt; target=&amp;quot;_bank&amp;rdquo;&amp;gt;&lt;strong&gt;配置文档中文版&lt;/strong&gt;&lt;/a&gt;（感谢来自中科大的翻译）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;字体&#34;&gt;字体&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;文泉驿微米黑 &lt;code&gt;wqy-microhei-fonts&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;思源黑体 &lt;code&gt;noto-sans-sc-*&lt;/code&gt; &lt;code&gt;noto-serif-sc-*&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;自用terminal &lt;code&gt;Source Code Pro&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;另对于 wps 字体缺失: &lt;a href=&#34;https://my.oschina.net/renwofei423/blog/635798&#34; title=&#34;详情看这儿&#34;&gt;详情看这儿&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;btrfs-balance&#34;&gt;Btrfs Balance&lt;/h3&gt;
+&lt;p&gt;每次 Balance 都卡得想骂娘，得知其实没多少必要频繁 Balance 遂关闭之&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://en.opensuse.org/SDB:Disable_btrfsmaintenance&#34; target=&#34;_blank&#34;&gt;Disable_btrfsmaintenance&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;quartusii--modelsim_ase&#34;&gt;quartusii &amp;amp; modelsim_ase&lt;/h3&gt;
+&lt;p&gt;根据&lt;a href=&#34;https://wiki.archlinux.org/index.php/Altera_Design_Software#Manual_installation&#34;&gt;Archwiki&lt;/a&gt;及实践证实，正常安装17.1以上版本&lt;code&gt;quartusii&lt;/code&gt;确实会挂起，无响应&lt;/p&gt;
+&lt;p&gt;Solution: 分别安装&lt;code&gt;Help &amp;amp; modelsim&lt;/code&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;modelsim打不开，如上wiki也提到，同时根据&lt;a href=&#34;https://twoerner.blogspot.com/2017/10/running-modelsim-altera-from-quartus.html&#34;&gt;这里&lt;/a&gt;的步骤，解决&lt;/p&gt;
+&lt;p&gt;Solution: 编译32bit freetype2 2.5 之前版本，将得到的&lt;code&gt;lib&lt;/code&gt;目录添加到其运行环境&lt;code&gt;LD_LIBRARY_PATH&lt;/code&gt;即可&lt;/p&gt;
+&lt;p&gt;这里我在&lt;code&gt;${quartusiiInstallVersion}/modelsim_ase/vco&lt;/code&gt;文件较为靠上的位置添加了&lt;code&gt;lib&lt;/code&gt;目录&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# just for example&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# vco file line 10&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;export LD_LIBRARY_PATH&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;/my/compile/file/dir/freetype-2.4.7-32bit/lib&amp;#34;&lt;/span&gt;:$LD_LIBRARY_PATH
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;other&#34;&gt;other&lt;/h3&gt;
+&lt;p&gt;值得借鉴的初始化配置&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.mawenbao.com/note/opensuse-tumbleweed-summary.html&#34; target=&#34;_blank&#34;&gt;人家的博客&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;p&gt;还有这个 &amp;mdash;- owncloud 相关：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.logcg.com/archives/2007.html&#34; target=&#34;_blank&#34;&gt;还是人家的博客&lt;/a&gt;
+写得不错:laughing:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;就这样&lt;/p&gt;
+&lt;p&gt;以上&lt;/p&gt;- https://blog.zzndb.me/posts/2017-03-20-%E5%A5%94%E8%B7%91%E5%90%A7%E5%A4%A7%E8%9C%A5%E8%9C%B4/ - </description>
+        </item>
+    
+    
+    
+        <item>
+        <title>关于typecho的链接后台打开设置</title>
+        <link>https://blog.zzndb.me/posts/2017-02-19-%E5%85%B3%E4%BA%8Etypecho%E7%9A%84%E9%93%BE%E6%8E%A5%E5%90%8E%E5%8F%B0%E6%89%93%E5%BC%80%E8%AE%BE%E7%BD%AE/</link>
+        <pubDate>Sun, 19 Feb 2017 11:02:00 +0800</pubDate>
+        
+        <guid>https://blog.zzndb.me/posts/2017-02-19-%E5%85%B3%E4%BA%8Etypecho%E7%9A%84%E9%93%BE%E6%8E%A5%E5%90%8E%E5%8F%B0%E6%89%93%E5%BC%80%E8%AE%BE%E7%BD%AE/</guid>
+        <description>zzndb&#39;s world https://blog.zzndb.me/posts/2017-02-19-%E5%85%B3%E4%BA%8Etypecho%E7%9A%84%E9%93%BE%E6%8E%A5%E5%90%8E%E5%8F%B0%E6%89%93%E5%BC%80%E8%AE%BE%E7%BD%AE/ -&lt;p&gt;不久前的前两篇文章链接都是单纯插入链接，毕竟以前没怎么用过&lt;strong&gt;Markdown&lt;/strong&gt;，然后&lt;/p&gt;
+&lt;p&gt;发现。文章的链接都是在当前页面打开，so覆盖掉当前显示:worried:表示尴尬。&lt;/p&gt;
+&lt;p&gt;遂去搜索了一下，发现这取决于博客平台，然后typecho自带的mark down解析这样，换成&lt;a href=&#34;https://dt27.org/&#34; target=&#34;_blank&#34;&gt;DT27&lt;/a&gt;的markdown插件也是这样，好吧。&lt;/p&gt;
+&lt;p&gt;这篇&lt;a href=&#34;https://github.com/GcsSloop/AndroidNote/blob/master/Course/Markdown/markdown-link.md&#34; target=&#34;_blank&#34;&gt;github文章&lt;/a&gt;表面了这一点&lt;/p&gt;
+&lt;p&gt;So,我把前面文章的链接全&lt;strong&gt;手动&lt;/strong&gt;&lt;code&gt;html标签&lt;/code&gt;:expressionless:毕竟小白，如有大神赐教，不甚感激。&lt;/p&gt;
+&lt;p&gt;如上，链接都用&lt;code&gt;html标签&lt;/code&gt;表示，当然都很简单，格式例：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;a&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;href&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;https://blog.zzndb.com.cn&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;target&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;_blank&amp;#34;&lt;/span&gt;&amp;gt;zzndb&amp;#39;s world&amp;lt;/&lt;span style=&#34;color:#f92672&#34;&gt;a&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;效果：&lt;a href=&#34;https://blog.zzndb.com.cn&#34; target=&#34;_blank&#34;&gt;zzndb&amp;rsquo;s world&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;貌似只有这样:confused:&lt;/p&gt;
+&lt;p&gt;以上&lt;/p&gt;- https://blog.zzndb.me/posts/2017-02-19-%E5%85%B3%E4%BA%8Etypecho%E7%9A%84%E9%93%BE%E6%8E%A5%E5%90%8E%E5%8F%B0%E6%89%93%E5%BC%80%E8%AE%BE%E7%BD%AE/ - </description>
+        </item>
+    
+    
+    
+        <item>
+        <title>全站SSL</title>
+        <link>https://blog.zzndb.me/posts/2017-02-19-%E5%85%A8%E7%AB%99ssl/</link>
+        <pubDate>Sun, 19 Feb 2017 00:36:00 +0800</pubDate>
+        
+        <guid>https://blog.zzndb.me/posts/2017-02-19-%E5%85%A8%E7%AB%99ssl/</guid>
+        <description>zzndb&#39;s world https://blog.zzndb.me/posts/2017-02-19-%E5%85%A8%E7%AB%99ssl/ -&lt;p&gt;&lt;strong&gt;2017年2月18发生好多&amp;hellip;..&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;想为站点添加SSL证书，也就是链接旁的小绿锁，想了想好久前在buyssl花了貌似五六块购买的一年证书还没用呢（因为不会:expressionless:），然后想着今天开干，然后我失败了，真麻烦:expressionless: 还把服务器文件破坏了，还没备份:expressionless: 想着把面板卸了重装，也许可以，机智的备份了web+数据库然后重装。。。:shit:可以问题更多了，，，
+机智的我继续重装，(⊙﹏⊙)额安装失败:confused:什么鬼。。。。。&lt;/p&gt;
+&lt;p&gt;无数次过去，又发现不会恢复数据库:confounded:搜索到的是什么鬼，完全没对上文件路径嘛?&lt;/p&gt;
+&lt;p&gt;机智的趁着有ftp下载了web+数据库，重装系统妈蛋:unamused:&lt;/p&gt;
+&lt;p&gt;然后遇到了宝塔面板，然后不出意外的无法导入数据库文件，:expressionless:翻了翻手机chrome浏览器真⑥我发现了它缓存了所以页面，虽然有些没更新 :neutral_face:，:satisfied:还被我发现了诡异的显示页面方式，嘿嘿比没有好，统统复制下来，，，，，&lt;/p&gt;
+&lt;p&gt;然后就有了前面三篇&lt;del&gt;伪时间&lt;/del&gt;文章:wink:&lt;/p&gt;
+&lt;p&gt;宝塔面板，配置SSL真心方便:satisfied:然后，你们可以看到链接旁的小绿锁:sunglasses:
+然后，现在凌晨快一点了。。。。19号:sob:&lt;/p&gt;
+&lt;p&gt;以上，纯属吐槽一下:stuck_out_tongue:&lt;/p&gt;- https://blog.zzndb.me/posts/2017-02-19-%E5%85%A8%E7%AB%99ssl/ - </description>
+        </item>
+    
+    
+    
+        <item>
+        <title>About</title>
+        <link>https://blog.zzndb.me/about/</link>
+        <pubDate>Sat, 18 Feb 2017 00:00:00 +0000</pubDate>
+        
+        <guid>https://blog.zzndb.me/about/</guid>
+        <description>zzndb&#39;s world https://blog.zzndb.me/about/ -&lt;h2 id=&#34;这里是&#34;&gt;&lt;strong&gt;这里是？&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;这里会放些自己写的各种流水帐，记些有的没的……&lt;/p&gt;
+&lt;p&gt;主要是给自己看，当然如果有幸一些东西能对你有所帮助，那感觉还是蛮好的。&lt;/p&gt;
+&lt;h2 id=&#34;关于我&#34;&gt;&lt;strong&gt;关于我？&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;A computer professional graduate.&lt;/p&gt;
+&lt;p&gt;不过，总的来看是啥也不会……&lt;/p&gt;
+&lt;p&gt;还尽喜欢整些有的没的，比如 Android、Linux 搞机&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.opensuse.org/#Tumbleweed&#34;&gt;openSUSE Tumbleweed&lt;/a&gt; 作为桌面系统日常使用中……&lt;/p&gt;
+&lt;p&gt;在接触 Emacs+Evil 前主用 Vim ，神之编辑器系统做得还不赖&lt;/p&gt;
+&lt;p&gt;一个无情的 &lt;a href=&#34;https://build.opensuse.org&#34;&gt;OBS&lt;/a&gt; 入门级打包工，主要整些自己用源里没有的包，自己动手丰衣足食嘛！&lt;/p&gt;
+&lt;p&gt;……&lt;/p&gt;
+&lt;h2 id=&#34;联系我&#34;&gt;&lt;strong&gt;联系我？&lt;/strong&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Email: &lt;code&gt;echo &amp;quot;enpuZGIwMDFAZ21haWwuY29tCg==&amp;quot; | base64 -d&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;TG: @zzndb&lt;/li&gt;
+&lt;li&gt;PGP 指纹：&lt;code&gt;2944 7B45 7B33 2FF3 C6DE  F8B9 6106 CD71 758D 94DF&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;PGP 公钥：&lt;a href=&#34;https://github.com/zzndb.gpg&#34;&gt;https://github.com/zzndb.gpg&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+- https://blog.zzndb.me/about/ - </description>
+        </item>
+    
+    
+    
+        <item>
+        <title>Friends</title>
+        <link>https://blog.zzndb.me/links/</link>
+        <pubDate>Sat, 18 Feb 2017 00:00:00 +0000</pubDate>
+        
+        <guid>https://blog.zzndb.me/links/</guid>
+        <description>zzndb&#39;s world https://blog.zzndb.me/links/ -&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://rilzob.com/&#34;&gt;极氙世界&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+- https://blog.zzndb.me/links/ - </description>
+        </item>
+    
+    
+    
+        <item>
+        <title>关于adaway替换hosts的图文及资源分享</title>
+        <link>https://blog.zzndb.me/posts/2017-02-17-%E5%85%B3%E4%BA%8Eadaway%E6%9B%BF%E6%8D%A2hosts%E7%9A%84%E5%9B%BE%E6%96%87%E5%8F%8A%E8%B5%84%E6%BA%90%E5%88%86%E4%BA%AB/</link>
+        <pubDate>Fri, 17 Feb 2017 10:00:00 +0800</pubDate>
+        
+        <guid>https://blog.zzndb.me/posts/2017-02-17-%E5%85%B3%E4%BA%8Eadaway%E6%9B%BF%E6%8D%A2hosts%E7%9A%84%E5%9B%BE%E6%96%87%E5%8F%8A%E8%B5%84%E6%BA%90%E5%88%86%E4%BA%AB/</guid>
+        <description>zzndb&#39;s world https://blog.zzndb.me/posts/2017-02-17-%E5%85%B3%E4%BA%8Eadaway%E6%9B%BF%E6%8D%A2hosts%E7%9A%84%E5%9B%BE%E6%96%87%E5%8F%8A%E8%B5%84%E6%BA%90%E5%88%86%E4%BA%AB/ -&lt;h2 id=&#34;正式第二篇&#34;&gt;正式第二篇&lt;/h2&gt;
+&lt;h6&gt;
+其实是第1.5篇=.=
+&lt;/h6&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.zzndb.me/images/2017/02/2225108911.gif&#34; alt=&#34;winter-solstice-2016-northern-hemisphere-4788310770712576-hp2x.gif&#34;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;关于android端替换hosts达到fq目的 ^_+&lt;/li&gt;
+&lt;li&gt;开始咯&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;首先adaway顾名思义广告快走，利用它通过换hosts重定向广告ip达到屏蔽广告目的，我们也可以拿他来换hosts飞越疯人院 ^0^首先adaway顾名思义广告快走，利用它通过换hosts重定向广告ip达到屏蔽广告目的，我们也可以拿他来换hosts飞越疯人院 ^0^
+多说无益上正文：
+需要以下工具或权限&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;root权限&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://drive.google.com/open?id=0B6fM8TXXPW5QRE5wdHZkcERiQ0U&#34; target=&#34;blank&#34;&gt;钛备份一枚&lt;/a&gt;（暂提供pro版，有经济实力请支持正版） tip：&lt;a href=&#34;http://www.coolapk.com/apk/com.keramidas.TitaniumBackup&#34; target=&#34;_balnk&#34;&gt;钛备份酷安链接&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://drive.google.com/file/d/0B6fM8TXXPW5QOWdwaHNjRlRBclU/view?usp=drivesdk&#34; target=&#34;_blank&#34;&gt;adaway钛备份自用备份资源&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;敏捷的大脑与灵活的小手&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;大概意思就是通过钛备份恢复我的自用备份，然后进adaway更新hosts&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;安装钛备份，进入授予root权限，关闭钛备份（杀死后台）&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;将资源解压，将三个文件放到sd卡根目录（这里指有钛备份文件夹的）找到文件夹&lt;code&gt;TitaniumBackup&lt;/code&gt;并把三文件放入&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;进入钛备份，点击&lt;code&gt;备份/还原&lt;/code&gt;下滑找到adaway那只白鸟 ^0^ &lt;code&gt;点击 点击恢复 程序+数据&lt;/code&gt; 完成后退出钛备份&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;进入adaway 赋予root权限&lt;code&gt;点击下载文件并屏蔽广告&lt;/code&gt;提示重启重启即可,完成后应该差不多如下所示
+&lt;img src=&#34;https://blog.zzndb.me/images/2017/02/3645199827.png&#34; alt=&#34;Screenshot_20170217-003217.png&#34;&gt;
+The end！&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;隐藏tip：本人分享资源或引用链多需飞越疯人院&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;以上！&lt;/p&gt;- https://blog.zzndb.me/posts/2017-02-17-%E5%85%B3%E4%BA%8Eadaway%E6%9B%BF%E6%8D%A2hosts%E7%9A%84%E5%9B%BE%E6%96%87%E5%8F%8A%E8%B5%84%E6%BA%90%E5%88%86%E4%BA%AB/ - </description>
+        </item>
+    
+    
+    
+        <item>
+        <title>试着去看看另外一个世界</title>
+        <link>https://blog.zzndb.me/posts/2017-02-16-%E8%AF%95%E7%9D%80%E5%8E%BB%E7%9C%8B%E7%9C%8B%E5%8F%A6%E5%A4%96%E4%B8%80%E4%B8%AA%E4%B8%96%E7%95%8C/</link>
+        <pubDate>Thu, 16 Feb 2017 20:51:00 +0800</pubDate>
+        
+        <guid>https://blog.zzndb.me/posts/2017-02-16-%E8%AF%95%E7%9D%80%E5%8E%BB%E7%9C%8B%E7%9C%8B%E5%8F%A6%E5%A4%96%E4%B8%80%E4%B8%AA%E4%B8%96%E7%95%8C/</guid>
+        <description>zzndb&#39;s world https://blog.zzndb.me/posts/2017-02-16-%E8%AF%95%E7%9D%80%E5%8E%BB%E7%9C%8B%E7%9C%8B%E5%8F%A6%E5%A4%96%E4%B8%80%E4%B8%AA%E4%B8%96%E7%95%8C/ -&lt;p&gt;&lt;strong&gt;信仰&lt;/strong&gt;
+&lt;img src=&#34;https://blog.zzndb.me/images/2017/02/1455974186.gif&#34; alt=&#34;holidays-2017-eastern-europe-day-2-5670496677920768-hp2x.gif&#34;&gt;&lt;/p&gt;
+&lt;h4 id=&#34;第一篇正式的博客&#34;&gt;第一篇正式的博客=.=。&lt;/h4&gt;
+&lt;p&gt;因为众所周知的的原因，我们要面对着这不怎么自由的互联网&lt;!--more--&gt;(&lt;a href=&#34;https://github.com/racaljk/hosts/wiki/%E5%85%B3%E4%BA%8E%E4%B8%AD%E5%9B%BD%E7%9A%84%E4%BA%92%E8%81%94%E7%BD%91&#34; target=&#34;_blank&#34;&gt;关于不怎么自由 Github 上的的一篇文章&lt;/a&gt;),以及我们大多数人还要面对的，那不怎么良心的进入互联网的入口&amp;mdash;国内的各种搜索引擎，像什么百毒之流，对，就是那个有着各种垃圾推广，什么莆田系，什么医疗竞价排名&amp;hellip;.的那个。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;在此愿那正处另一世界同计算机的学长，一切安好&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;有点偏了貌似O.O，话说回来，其实国内除了以百毒为首的搜索引擎外还有大微软家的 &lt;a href=&#34;http://cn.bing.com/&#34; target=&#34;_balnk&#34;&gt;bing[必应]&lt;/a&gt; 搜索可以使用，
+所以我强势推荐不造比百毒强多少倍的 Google ，那么接下来我就说说我使用 Google 的姿势。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;总之一句话：&amp;ldquo;珍爱生命，远离百毒!&amp;quot;。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;p&gt;好了上正题了，敲黑板，记重点咯^_^，目前为止我所了解到的&lt;a href=&#34;https://zh.wikipedia.org/wiki/%E7%AA%81%E7%A0%B4%E7%BD%91%E7%BB%9C%E5%AE%A1%E6%9F%A5&#34; target=&#34;_blank&#34;&gt;fq&lt;/a&gt;方法有：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;通过修改 hosts 文件 fq （ hosts 文件为一系统文件，目前看来任何系统都有这个文件&lt;a href=&#34;https://zh.wikipedia.org/wiki/Hosts%E6%96%87%E4%BB%B6&#34; target=&#34;_blank&#34;&gt; hosts 在 wikipedia &lt;/a&gt;上的解释）&lt;/li&gt;
+&lt;li&gt;通过在未被墙的地方的服务器远程代理访问。（如喜闻乐见的 VPN、ss、ssr&amp;hellip;)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;p&gt;对于方法1，我们可以通过各种手段更改系统的 hosts 文件，这里给上自己目前在用的 hosts 源&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://raw.githubusercontent.com/racaljk/hosts/master/hosts&#34;&gt;https://raw.githubusercontent.com/racaljk/hosts/master/hosts&lt;/a&gt; ( fq 源）&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://raw.githubusercontent.com/lack006/Android-Hosts-L/master/hosts_files/2016_hosts/RE_full&#34;&gt;https://raw.githubusercontent.com/lack006/Android-Hosts-L/master/hosts_files/2016_hosts/RE_full&lt;/a&gt; ( fq 源）&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://raw.githubusercontent.com/vokins/yhosts/master/hosts&#34;&gt;https://raw.githubusercontent.com/vokins/yhosts/master/hosts&lt;/a&gt; ( AD 源）&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://raw.githubusercontent.com/lack006/Android-Hosts-L/master/hosts_files/2016_hosts/AD&#34;&gt;https://raw.githubusercontent.com/lack006/Android-Hosts-L/master/hosts_files/2016_hosts/AD&lt;/a&gt; ( AD 源）&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;楼上四个源是我自己在用的四个，后边括号标明这是什么源：** fq 源 _ 当然是翻越疯人院用的啦； AD 源 _ 当然是屏蔽广告的咯。**&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;tip：hosts 为一个文本文档，也就是上述链接的内容&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;当然要更改 hosts 文件就必须要有修改系统文件的权利，so大致对各种系统进行说明如下&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Android&lt;/strong&gt;：需要 root 权限，通过各种工具将楼上网页内容替为系统&lt;code&gt;/system/etc/hosts&lt;/code&gt;文件，如&lt;a href=&#34;http://www.coolapk.com/apk/org.adaway&#34; target=&#34;_balnk&#34;&gt; adaway &lt;/a&gt;等工具，当然也可以长按网页内容保存成名为 hosts 的文件（注意没有后缀），然后复制到&lt;code&gt;/system/etc&lt;/code&gt;目录下覆盖，即可。&lt;a href=&#34;https://blog.zzndb.com.cn/index.php/archives/14/&#34; target=&#34;_blank&#34;&gt;关于 adaway 配置图文资源分享&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;ios&lt;/strong&gt;：因为你们都懂的原因，并没有ios设备 ^^ 目的都一样替换 hosts 这里附上第一个&lt;a href=&#34;https://github.com/racaljk/hosts&#34; target=&#34;_blank&#34;&gt;fq的hosts的github地址&lt;/a&gt;里面有各种系统 hosts 文件位置，替换工具等&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;mac&lt;/strong&gt;:同上的原因，同上操作&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;windows&lt;/strong&gt;：这里既可以同上去参照，也可以试试这个偶尔在贴吧看见的&lt;a href=&#34;https://drive.google.com/open?id=0B6fM8TXXPW5QOGg3bHc3X3U3VU0&#34; target=&#34;_blank&#34;&gt;大佬写的批处理文件&lt;/a&gt;下载下来双击运行，看提示操作就好
+.
+.
+.
+. 其他各种系统照这个&lt;a href=&#34;https://github.com/racaljk/hosts&#34; target=&#34;_blank&#34;&gt; fq   的 hosts 的 github 地址&lt;/a&gt;这里的说明操作就好&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;大致说完了换 hosts 文件 fq 的方法，值得一提的是 hosts 是&lt;strong&gt;有时效性&lt;/strong&gt;的 why? Because of &lt;a href=&#34;https://zh.wikipedia.org/wiki/%E9%98%B2%E7%81%AB%E9%95%BF%E5%9F%8E&#34; target=&#34;_balnk&#34;&gt;G F W!&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;在此也向各位维护 hosts 的各位大佬致敬&lt;/strong&gt;:+1:&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;em&gt;楼上的去广告 hosts 原理见&lt;a href=&#34;https://zh.wikipedia.org/wiki/Hosts%E6%96%87%E4%BB%B6&#34; target=&#34;_blank&#34;&gt; hosts 在 wikipedia &lt;/a&gt;上的解释请自行替换食用&lt;/em&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;对于方法2，没什么好说的，那么请允许我来梳理一下我的飞越抗争史吧！:relaxed:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;最开始接触 Goolge 大法是因为玩一手游，最开始用过&lt;a href=&#34;https://zh.wikipedia.org/wiki/Fqrouter&#34; target=&#34;_blank&#34;&gt; fqrouter &lt;/a&gt;(已挂)、&lt;a href=&#34;https://zh.wikipedia.org/wiki/%E8%B3%BD%E9%A2%A8&#34; target=&#34;_balnk&#34;&gt;赛风&lt;/a&gt;&lt;em&gt;向他们致敬&lt;/em&gt;*、以及各种     vpn 应用&amp;hellip;这一些统统应该叫做 VPN 吧！ 再后来的
+&lt;a href=&#34;https://zh.wikipedia.org/wiki/Shadowsocks&#34; target=&#34;_blank&#34;&gt;shadowsocks&lt;/a&gt;、
+&lt;a href=&#34;https://github.com/breakwa11/shadowsocks-rss&#34; target=&#34;_blank&#34;&gt;SSR&lt;/a&gt; 这俩应该是现在主流的飞越方式吧！
+其实任何人都可以去购买未墙区域的 vps 自己来搭建代理服务器，用前面两种工具实现 fq代理，而且教程也不少，有意请自行 google 。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;当然最便捷还说自己去找提供这个服务的供应商购买服务。&lt;del&gt;貌似该上&lt;strong&gt;广告&lt;/strong&gt;了，咳咳&lt;/del&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;并没有&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;告别墙内毒瘤&lt;a href=&#34;https://google.com/ncr&#34; target=&#34;_blank&#34;&gt; Google &lt;/a&gt;你值得拥有！(建议食用左边链接 Google，或自行在&lt;code&gt;google.com&lt;/code&gt;后加上&lt;code&gt;/ncr&lt;/code&gt;其意义为no country restrictions无国家限制，不造为什么我对&lt;code&gt;google.hk&lt;/code&gt;不怎么爽
+&lt;img src=&#34;https://blog.zzndb.me/images/2017/02/720628806.png&#34; alt=&#34;IMG_20170216_222530.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;tip：链接资源或引用链多需飞越&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;n6&gt;&lt;del&gt;如有获取困难请联系，楼下评论即可&lt;/del&gt;&lt;/n6&gt;
+.
+以上&lt;/p&gt;- https://blog.zzndb.me/posts/2017-02-16-%E8%AF%95%E7%9D%80%E5%8E%BB%E7%9C%8B%E7%9C%8B%E5%8F%A6%E5%A4%96%E4%B8%80%E4%B8%AA%E4%B8%96%E7%95%8C/ - </description>
+        </item>
+    
+    
+  </channel>
+</rss> 

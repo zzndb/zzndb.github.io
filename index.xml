@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml-stylesheet href="/rss.xsl" type="text/xsl"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>zzndb&#39;s world</title>
@@ -6,222 +6,1360 @@
     <description>Recent content on zzndb&#39;s world</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 04 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.zzndb.me/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>bc round to the specified number of decimal places</title>
-      <link>https://blog.zzndb.me/posts/20210404203010-bc_round_to_the_specified_number_of_decimal_places/</link>
-      <pubDate>Sun, 04 Apr 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://blog.zzndb.me/posts/20210404203010-bc_round_to_the_specified_number_of_decimal_places/</guid>
-      <description>bc ，一个命令行计算器， dc 的继承者？ 也许是继承者，不过更是 POSIX 标准的一部分
-bc -l &amp;lt;&amp;lt;&amp;lt; &amp;#34;1/3&amp;#34; 0.3333333333333333 提供了 scale 变量来控制结果小数位数
-bc -l &amp;lt;&amp;lt;&amp;lt; &amp;#34;scale=3; 1/3&amp;#34; 0.333 不过大概是出于精度考虑有时 scale 并不能得到指定结果精度
-bc -l &amp;lt;&amp;lt;&amp;lt; &amp;#34;scale=3; a=0.333333; a+0&amp;#34; 0.333333 可以通过对高精度小数进行除一操作得到指定结果精度（貌似有对其除就行）
-bc -l &amp;lt;&amp;lt;&amp;lt; &amp;#34;scale=3; a=0.333333; a/1&amp;#34; 0.333 对指定位数小数进行舍入
-bc -l &amp;lt;&amp;lt;&amp;lt; &amp;#34;scale=3; a=0.333333; r=10^scale; ((a+a)*r+0.5)/r&amp;#34; 0.667 需要注意的是，在舍入前有进行会影响精度的操作（如做除法）会按指定位数丢失后面精度，让后面的一通舍入操作失败
-bc -l &amp;lt;&amp;lt;&amp;lt; &amp;#34;scale=3; a=0.333333; r=10^scale; ((a+a)/1*r+0.5)/r&amp;#34; 0.666 不过，这对这个看起来只是个计算器，而实则是个任意精度计算语言（An arbitrary precision calculator language）的 bc 来说不算啥问题，你可以先算好，再限制精度来计算舍入。
-bc -l &amp;lt;&amp;lt;&amp;lt; &amp;#34;a=0.333333; ra=(a+a)/1; scale=3; r=10^scale; (ra*r+0.</description>
-    </item>
+    <lastBuildDate>Sun, 04 Apr 2021 00:00:00 +0000</lastBuildDate>
     
-    <item>
-      <title>Shell Problems On LeetCode</title>
-      <link>https://blog.zzndb.me/posts/2020-03-02-shell-problems-on-leetcode/</link>
-      <pubDate>Mon, 02 Mar 2020 16:28:00 +0800</pubDate>
-      
-      <guid>https://blog.zzndb.me/posts/2020-03-02-shell-problems-on-leetcode/</guid>
-      <description>&lt;p&gt;目前只有四道（已经一年多过去了还是只有四道。。。&lt;/p&gt;</description>
-    </item>
+        <atom:link href="https://blog.zzndb.me/index.xml" rel="self" type="application/rss+xml" />
     
-    <item>
-      <title>在 GCP 上部署 Nextcloud 相关折腾</title>
-      <link>https://blog.zzndb.me/posts/2019-06-08-%E5%9C%A8-gcp-%E4%B8%8A%E9%83%A8%E7%BD%B2-nextcloud-%E7%9B%B8%E5%85%B3%E6%8A%98%E8%85%BE/</link>
-      <pubDate>Sat, 08 Jun 2019 15:53:00 +0800</pubDate>
-      
-      <guid>https://blog.zzndb.me/posts/2019-06-08-%E5%9C%A8-gcp-%E4%B8%8A%E9%83%A8%E7%BD%B2-nextcloud-%E7%9B%B8%E5%85%B3%E6%8A%98%E8%85%BE/</guid>
-      <description>&lt;p&gt;上个月折腾上了 Google Cloud Platform 的车，记录在其上部署 Nextcloud 相关的经历，由于成文在搭建之后回忆写出，难免有步骤缺失/错误，欢迎指正。&lt;/p&gt;
-&lt;p&gt;主要内容：在 GCP 上创建 openSUSE 实例、LNMP+Nextcloud+SSL (certbot) 、Mailgun 的一个应用场景、GCP IPV6&lt;/p&gt;</description>
-    </item>
     
-    <item>
-      <title>启用域名邮箱</title>
-      <link>https://blog.zzndb.me/posts/2019-05-11-%E5%90%AF%E7%94%A8%E5%9F%9F%E5%90%8D%E9%82%AE%E7%AE%B1/</link>
-      <pubDate>Sat, 11 May 2019 17:51:00 +0800</pubDate>
-      
-      <guid>https://blog.zzndb.me/posts/2019-05-11-%E5%90%AF%E7%94%A8%E5%9F%9F%E5%90%8D%E9%82%AE%E7%AE%B1/</guid>
-      <description>&lt;p&gt;其实最开始只是因为没有一个好的评论回复邮件提醒解决方案，然后现在感觉有点香啊。&lt;/p&gt;
-&lt;p&gt;TL;DR: 利用 Mailgun 弄了域名邮箱，顺便解决了博客评论邮件提醒的问题。&lt;/p&gt;</description>
-    </item>
     
-    <item>
-      <title>install PostgreSQL on openSUSE</title>
-      <link>https://blog.zzndb.me/posts/2019-05-10-install-postgresql-on-opensuse/</link>
-      <pubDate>Fri, 10 May 2019 01:03:00 +0800</pubDate>
-      
-      <guid>https://blog.zzndb.me/posts/2019-05-10-install-postgresql-on-opensuse/</guid>
-      <description>&lt;p&gt;Install &lt;em&gt;PostgreSQL&lt;/em&gt; on openSUSE and use &lt;em&gt;pgAdmin4&lt;/em&gt; connect it.&lt;/p&gt;
-&lt;p&gt;Test on current &lt;em&gt;openSUSE Tumbleweed 20190507&lt;/em&gt;&lt;/p&gt;</description>
-    </item>
+        <item>
+        <title>bc round to the specified number of decimal places</title>
+        <link>https://blog.zzndb.me/posts/20210404203010-bc_round_to_the_specified_number_of_decimal_places/</link>
+        <pubDate>Sun, 04 Apr 2021 00:00:00 +0000</pubDate>
+        
+        <guid>https://blog.zzndb.me/posts/20210404203010-bc_round_to_the_specified_number_of_decimal_places/</guid>
+        <description>zzndb&#39;s world https://blog.zzndb.me/posts/20210404203010-bc_round_to_the_specified_number_of_decimal_places/ -&lt;p&gt;&lt;code&gt;bc&lt;/code&gt; ，一个命令行计算器， &lt;del&gt;&lt;code&gt;dc&lt;/code&gt; 的继承者？&lt;/del&gt; 也许是继承者，不过更是 POSIX 标准的一部分&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;bc -l &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;1/3&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;0.3333333333333333
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;提供了 &lt;strong&gt;scale&lt;/strong&gt; 变量来控制结果小数位数&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;bc -l &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;scale=3; 1/3&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;0.333
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;不过大概是出于精度考虑有时 &lt;strong&gt;scale&lt;/strong&gt; 并不能得到指定结果精度&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;bc -l &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;scale=3; a=0.333333; a+0&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;0.333333
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;可以通过对高精度小数进行除一操作得到指定结果精度（貌似有对其除就行）&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;bc -l &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;scale=3; a=0.333333; a/1&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;0.333
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;对指定位数小数进行舍入&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;bc -l &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;scale=3; a=0.333333; r=10^scale; ((a+a)*r+0.5)/r&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;0.667
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;需要注意的是，在舍入前有进行会影响精度的操作（如做除法）会按指定位数丢失后面精度，让后面的一通舍入操作失败&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;bc -l &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;scale=3; a=0.333333; r=10^scale; ((a+a)/1*r+0.5)/r&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;0.666
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;不过，这对这个看起来只是个计算器，而实则是个任意精度计算语言（An arbitrary precision calculator language）的 &lt;code&gt;bc&lt;/code&gt; 来说不算啥问题，你可以先算好，再限制精度来计算舍入。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;bc -l &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;a=0.333333; ra=(a+a)/1; scale=3; r=10^scale; (ra*r+0.5)/r&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;0.667
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;details&gt;
+&lt;summary&gt;
+既然是个语言，你还能在里面编程……
+&lt;/summary&gt;
+&lt;p class=&#34;details&#34;&gt;
+&lt;p&gt;来自其 manpage 中一个计算自然常数 e 的 1-10 次幂估算值的例子：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;bc -l &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;         scale = 20
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;         define e(x){
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;             auto a, b, c, i, s
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;             a = 1
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;             b = 1
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;             s = 1
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;             for (i = 1; 1 == 1; i++){
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;                 a = a*x
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;                 b = b*i
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;                 c = a/b
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;                 if (c == 0) {
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;                      return(s)
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;                 }
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;                 s = s+c
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;             }
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;         }
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;         for (i = 1; i &amp;lt;= 10; ++i) {
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;             e(i)
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;         }
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;2.718281828459045&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;7.38905609893065&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;20.085536923187668&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;54.598150033144236&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;148.4131591025766&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;403.4287934927351&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;1096.6331584284585&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;2980.9579870417283&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;8103.083927575384&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;22026.465794806718&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;不过 POSIX 标准里的 &lt;code&gt;bc&lt;/code&gt; 并没有位运算…… sigh&lt;/p&gt;
+&lt;/p&gt;
+&lt;/details&gt;
+&lt;p&gt;BTW，直接用 &lt;code&gt;printf&lt;/code&gt; 格式化也能进行舍入&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;printf &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;%.3f&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;$(&lt;/span&gt;bc -l &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;scale=3; a=0.333333; a+a&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;0.667
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;reference&#34;&gt;Reference&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;bc&lt;/code&gt; manpages&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://askubuntu.com/a/863756&#34;&gt;https://askubuntu.com/a/863756&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://askubuntu.com/a/179949&#34;&gt;https://askubuntu.com/a/179949&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+- https://blog.zzndb.me/posts/20210404203010-bc_round_to_the_specified_number_of_decimal_places/ - </description>
+        </item>
     
-    <item>
-      <title>scrcpy--首次独立OBS打包</title>
-      <link>https://blog.zzndb.me/posts/2019-04-23-scrcpy--%E9%A6%96%E6%AC%A1%E7%8B%AC%E7%AB%8Bobs%E6%89%93%E5%8C%85/</link>
-      <pubDate>Tue, 23 Apr 2019 15:42:00 +0800</pubDate>
-      
-      <guid>https://blog.zzndb.me/posts/2019-04-23-scrcpy--%E9%A6%96%E6%AC%A1%E7%8B%AC%E7%AB%8Bobs%E6%89%93%E5%8C%85/</guid>
-      <description>&lt;p&gt;记首次独立OBS打包&lt;/p&gt;</description>
-    </item>
     
-    <item>
-      <title>AdBox 折腾记</title>
-      <link>https://blog.zzndb.me/posts/2019-02-25-adbox-%E6%8A%98%E8%85%BE%E8%AE%B0/</link>
-      <pubDate>Mon, 25 Feb 2019 07:19:00 +0800</pubDate>
-      
-      <guid>https://blog.zzndb.me/posts/2019-02-25-adbox-%E6%8A%98%E8%85%BE%E8%AE%B0/</guid>
-      <description>&lt;p&gt;对家里几年前办宽带给的联通 IPTV 盒子的一些折腾。&lt;/p&gt;</description>
-    </item>
     
-    <item>
-      <title>树莓派温控风扇（GPIO&amp;三极管）</title>
-      <link>https://blog.zzndb.me/posts/2018-09-25-%E6%A0%91%E8%8E%93%E6%B4%BE%E6%B8%A9%E6%8E%A7%E9%A3%8E%E6%89%87gpio%E4%B8%89%E6%9E%81%E7%AE%A1/</link>
-      <pubDate>Tue, 25 Sep 2018 22:56:00 +0800</pubDate>
-      
-      <guid>https://blog.zzndb.me/posts/2018-09-25-%E6%A0%91%E8%8E%93%E6%B4%BE%E6%B8%A9%E6%8E%A7%E9%A3%8E%E6%89%87gpio%E4%B8%89%E6%9E%81%E7%AE%A1/</guid>
-      <description>&lt;p&gt;让树莓派不算太吃灰的一小步:joy:&lt;/p&gt;</description>
-    </item>
+        <item>
+        <title>Shell Problems On LeetCode</title>
+        <link>https://blog.zzndb.me/posts/2020-03-02-shell-problems-on-leetcode/</link>
+        <pubDate>Mon, 02 Mar 2020 16:28:00 +0800</pubDate>
+        
+        <guid>https://blog.zzndb.me/posts/2020-03-02-shell-problems-on-leetcode/</guid>
+        <description>zzndb&#39;s world https://blog.zzndb.me/posts/2020-03-02-shell-problems-on-leetcode/ -&lt;p&gt;目前只有四道（已经一年多过去了还是只有四道。。。&lt;/p&gt;
+&lt;h1 id=&#34;192-word-frequency&#34;&gt;192 Word Frequency&lt;/h1&gt;
+&lt;p&gt;题目链接：&lt;a target=&#34;_blank&#34; href=&#34;https://leetcode.com/problems/word-frequency/&#34;&gt;&lt;a href=&#34;https://leetcode.com/problems/word-frequency/&#34;&gt;https://leetcode.com/problems/word-frequency/&lt;/a&gt;&lt;/a&gt;
+用人话说的题目描述：
+给你一个文本 &lt;code&gt;words.txt&lt;/code&gt; 里面包含若干行英文句子，统计每个单词的词频，以降序输出
+例如输入：&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;the day is sunny the the
+the sunny is is
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;正确输出：&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;the 4
+is 3
+sunny 2
+day 1
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;一年前-ac-版本&#34;&gt;一年前 AC 版本：&lt;/h2&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;cat words.txt | sed -E &amp;#34;s/( )+/\n/g&amp;#34; | awk &amp;#39;{a[$0]++;} END {for (i in a) print i &amp;#34; &amp;#34; a[i];}&amp;#39; | sort -nrk 2 -t &amp;#39; &amp;#39; | awk &amp;#39;$2!=&amp;#34;&amp;#34; {print $0}&amp;#39;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;貌似我当年并不知道 &lt;code&gt;tr&lt;/code&gt; ？竟然用 &lt;code&gt;sed&lt;/code&gt; 进行空格替换处理，还贴心的为&lt;code&gt;sort&lt;/code&gt;指定了分隔符，还二次使用了 &lt;code&gt;awk&lt;/code&gt; 就为了去除可能在单词间多余的空格的情况。&lt;/p&gt;
+&lt;p&gt;也许是因为使用了不应该有的 &lt;code&gt;cat&lt;/code&gt; 以及不知道 &lt;code&gt;tr&lt;/code&gt; 使用了叫重的 &lt;code&gt;sed + awk&lt;/code&gt; 完成本应该一个 &lt;code&gt;tr&lt;/code&gt; 就能完成的工作，最后耗时 8ms ，现在来看打败了 8.85% 的 AC 提交者。&lt;/p&gt;
+&lt;h2 id=&#34;现在的-ac-版本&#34;&gt;现在的 AC 版本：&lt;/h2&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;tr -s &amp;#34; &amp;#34; &amp;#34;\n&amp;#34; &amp;lt; words.txt | awk &amp;#39;BEING{}{key[$1]++}END{for (i in key) print i&amp;#34; &amp;#34;key[i]}&amp;#39; | sort -rnk 2
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;code&gt;tr&lt;/code&gt;：预处理文本，格式化为每行一个单词，为后续处理做准备&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;-s&lt;/code&gt;：压缩重复匹配，这里处理单词间多于一个空格的情况&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&amp;quot; &amp;quot; &amp;quot;\n&amp;quot;&lt;/code&gt;：替换前一个匹配空格到后面字符，这里替换为回车&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&amp;lt;&lt;/code&gt;：直接重定向输入，避免使用无意义的 &lt;code&gt;cat&lt;/code&gt; 程序&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;words.txt&lt;/code&gt;：目标文本&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;code&gt;awk&lt;/code&gt;：完成主要的词频统计
+&lt;code&gt;sort&lt;/code&gt;：完成最后降序排序&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;-r&lt;/code&gt;：降序&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;-n&lt;/code&gt;：根据数字值排序&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;-k&lt;/code&gt;：指定排序关键字位置，这里为 2&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;最后耗时 0ms 打败 100% 的提交者？内存占用 3.3 MB 打败 86.21% 提交者。&lt;/p&gt;
+&lt;h1 id=&#34;193-valid-phone-numbers&#34;&gt;193 Valid Phone Numbers&lt;/h1&gt;
+&lt;p&gt;题目链接：&lt;a target=&#34;_blank&#34; href=&#34;https://leetcode.com/problems/valid-phone-numbers/&#34;&gt;&lt;a href=&#34;https://leetcode.com/problems/valid-phone-numbers/&#34;&gt;https://leetcode.com/problems/valid-phone-numbers/&lt;/a&gt;&lt;/a&gt;
+用人话说的题目描述：
+给你一个文本文件&lt;code&gt;file.txt&lt;/code&gt;每行包含一个电话号码，给你正确的格式要求&lt;code&gt;(xxx) xxx-xxxx or xxx-xxx-xxxx&lt;/code&gt;打印出正确的电话号码&lt;/p&gt;
+&lt;p&gt;这个在一年前就试过了各种实现，都不太理想，让我现在想通过正则匹配实现，我也差不多只能想到&lt;code&gt;grep，awk，sed&lt;/code&gt;来做，结果都不太好，最好还是 8ms 的运行时间，他们实现都大同小异，无非是用类似&lt;code&gt;^((\([0-9]{3}\)\ )|([0-9]{3}-))[0-9]{3}-[0-9]{4}*$&lt;/code&gt;来匹配，当然实现中得注意命令行字符的意义，该转义转义（详见&lt;code&gt;regex&lt;/code&gt; &lt;a target=&#34;_blank&#34; href=https://linux.die.net/man/7/regex&gt;manpage&lt;/a&gt;）。&lt;/p&gt;
+&lt;h2 id=&#34;一个-grep-版本&#34;&gt;一个 &lt;code&gt;grep&lt;/code&gt; 版本：&lt;/h2&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;grep &amp;#34;^\(\(([0-9]\{3\})\ \)\|\([0-9]\{3\}-\)\)[0-9]\{3\}-[0-9]\{4\}$&amp;#34; file.txt
+&lt;/code&gt;&lt;/pre&gt;&lt;h1 id=&#34;194-transpose-file&#34;&gt;194 Transpose File&lt;/h1&gt;
+&lt;p&gt;题目链接：&lt;a target=&#34;_blank&#34; href=&#34;https://leetcode.com/problems/transpose-file/&#34;&gt;&lt;a href=&#34;https://leetcode.com/problems/transpose-file/&#34;&gt;https://leetcode.com/problems/transpose-file/&lt;/a&gt;&lt;/a&gt;
+用人话说的题目描述：
+给你一个文本文件&lt;code&gt;file.txt&lt;/code&gt;将内容进行转置。
+输入例如：&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;ame age
+alice 21
+ryan 30
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;正确输出：&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;name alice ryan
+age 21 30
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;因为之前太菜一直没做出来，就只有现在的版本了。&lt;/p&gt;
+&lt;h2 id=&#34;现在的-ac-版本-1&#34;&gt;现在的 AC 版本：&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;awk -F&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39; &amp;#39;&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;BEGIN {
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;    count=0;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;# read all to a array
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;    for (j=1; j&amp;lt;=NF; j++){
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;        count++; 
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;        key[count]=$j;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;    } 
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;    row=NR;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;    col=NF;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;END {
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;    for (i=1; i&amp;lt;=col; i++){
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;        tmp=&amp;#34;&amp;#34;;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;        for (j=0; j&amp;lt;row; j++){
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;            if(tmp == &amp;#34;&amp;#34;) {
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;                tmp=key[i+col*j];
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;            } 
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;            else {
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;                tmp=tmp&amp;#34; &amp;#34;key[i+col*j];
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;            }
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;        } 
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;    print tmp;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;    }
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;}&amp;#39;&lt;/span&gt; file.txt
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;在 &lt;code&gt;awk&lt;/code&gt; 的 &lt;code&gt;BEGIN&lt;/code&gt; 部分初始化计数变量便于将所有字符串写入一个数组；在中间每一行都执行部分，通过内置变量 &lt;code&gt;NF&lt;/code&gt; 得到列数，以将一行内容依次写入数组，顺便更新计数变量，得到行列数&lt;code&gt;row &amp;amp; col&lt;/code&gt;；最后的 &lt;code&gt;END&lt;/code&gt; 部分俩 &lt;code&gt;for&lt;/code&gt; 循环打印转置后的每一行。&lt;/p&gt;
+&lt;p&gt;最关键的就是转置的算法，这里我通过观察找到的这个规律：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;转置后有之前列数行，所以第一个 for 使用列数计数，从 1 开始是为了便于得到数组值（其实为 0 后面加 1 还更统一&lt;/li&gt;
+&lt;li&gt;转置后每一行有之前行数个元素，所以使用行数计数，从 0 开始是为了便于计算元素之前位置&lt;/li&gt;
+&lt;li&gt;通过具体例子分析不难得出后面元素值的计算公式&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;1  2  3  4
+5  6  7  8
+9  10 11 12
+    ↓
+1  5  9       #  1     1+col   1+col*(row-1)
+2  6  10  =   #  2     2+col   3+col*(row-1)
+3  7  11      #  *     *       *
+4  8  12      #  col   col+col col+col*(row-1)
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;del&gt;我上面这是什么玩意儿？？&lt;/del&gt;&lt;/p&gt;
+&lt;p&gt;最后耗时 4 ms 打败 98.17% 的提交者，内存占用 4.6 MB。&lt;/p&gt;
+&lt;h1 id=&#34;195-tenth-line&#34;&gt;195 Tenth Line&lt;/h1&gt;
+&lt;p&gt;题目链接：&lt;a target=&#34;_blank&#34; href=&#34;https://leetcode.com/problems/tenth-line/&#34;&gt;&lt;a href=&#34;https://leetcode.com/problems/tenth-line/&#34;&gt;https://leetcode.com/problems/tenth-line/&lt;/a&gt;&lt;/a&gt;
+用人话说的题目描述：
+给你一个文本文件&lt;code&gt;file.txt&lt;/code&gt;输出第十行。&lt;/p&gt;
+&lt;p&gt;一道真正的简单题，直接用 &lt;code&gt;awk&lt;/code&gt; 或者 &lt;code&gt;sed&lt;/code&gt; 指定行号就行&lt;/p&gt;
+&lt;h2 id=&#34;sed-的-ac-版本&#34;&gt;&lt;code&gt;sed&lt;/code&gt; 的 AC 版本&lt;/h2&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;sed -n 10p file.txt
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;-n&lt;/code&gt;：等效于 &lt;code&gt;--quiet or --silent&lt;/code&gt;，抑制默认的匹配输出&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;10&lt;/code&gt;：指定行号&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;p&lt;/code&gt;：打印匹配
+最后耗时 0 ms。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;经试验用 &lt;code&gt;awk&lt;/code&gt; 打印耗时 4 ms ，大概是 &lt;code&gt;awk&lt;/code&gt; 依旧对每行都处理了，而 &lt;code&gt;sed&lt;/code&gt; 直接输出对应行了。&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;以上。&lt;/p&gt;- https://blog.zzndb.me/posts/2020-03-02-shell-problems-on-leetcode/ - </description>
+        </item>
     
-    <item>
-      <title>No.6 AC</title>
-      <link>https://blog.zzndb.me/posts/2017-07-22-no.6-ac/</link>
-      <pubDate>Sat, 22 Jul 2017 14:56:00 +0800</pubDate>
-      
-      <guid>https://blog.zzndb.me/posts/2017-07-22-no.6-ac/</guid>
-      <description></description>
-    </item>
     
-    <item>
-      <title>Number5 AC</title>
-      <link>https://blog.zzndb.me/posts/2017-07-21-number5-ac/</link>
-      <pubDate>Fri, 21 Jul 2017 10:40:00 +0800</pubDate>
-      
-      <guid>https://blog.zzndb.me/posts/2017-07-21-number5-ac/</guid>
-      <description></description>
-    </item>
     
-    <item>
-      <title>Number4 AC</title>
-      <link>https://blog.zzndb.me/posts/2017-07-20-number4-ac/</link>
-      <pubDate>Thu, 20 Jul 2017 23:14:00 +0800</pubDate>
-      
-      <guid>https://blog.zzndb.me/posts/2017-07-20-number4-ac/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>WTD定时器</title>
-      <link>https://blog.zzndb.me/posts/2017-07-17-wtd%E5%AE%9A%E6%97%B6%E5%99%A8/</link>
-      <pubDate>Mon, 17 Jul 2017 00:52:00 +0800</pubDate>
-      
-      <guid>https://blog.zzndb.me/posts/2017-07-17-wtd%E5%AE%9A%E6%97%B6%E5%99%A8/</guid>
-      <description>&lt;p&gt;另一种学习笔记记录方式&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>第一次AC的LeetCode</title>
-      <link>https://blog.zzndb.me/posts/2017-03-22-%E7%AC%AC%E4%B8%80%E6%AC%A1ac%E7%9A%84leetcode/</link>
-      <pubDate>Wed, 22 Mar 2017 14:50:00 +0800</pubDate>
-      
-      <guid>https://blog.zzndb.me/posts/2017-03-22-%E7%AC%AC%E4%B8%80%E6%AC%A1ac%E7%9A%84leetcode/</guid>
-      <description>&lt;p&gt;是的，第一次&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>奔跑吧大蜥蜴</title>
-      <link>https://blog.zzndb.me/posts/2017-03-20-%E5%A5%94%E8%B7%91%E5%90%A7%E5%A4%A7%E8%9C%A5%E8%9C%B4/</link>
-      <pubDate>Mon, 20 Mar 2017 20:05:00 +0800</pubDate>
-      
-      <guid>https://blog.zzndb.me/posts/2017-03-20-%E5%A5%94%E8%B7%91%E5%90%A7%E5%A4%A7%E8%9C%A5%E8%9C%B4/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://www.opensuse.org&#34; target=&#34;_blank&#34;&gt;&lt;strong&gt;openSUSE tumbleeweed&lt;/strong&gt;&lt;/a&gt;　嗯，大蜥蜴 配置备忘&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>关于typecho的链接后台打开设置</title>
-      <link>https://blog.zzndb.me/posts/2017-02-19-%E5%85%B3%E4%BA%8Etypecho%E7%9A%84%E9%93%BE%E6%8E%A5%E5%90%8E%E5%8F%B0%E6%89%93%E5%BC%80%E8%AE%BE%E7%BD%AE/</link>
-      <pubDate>Sun, 19 Feb 2017 11:02:00 +0800</pubDate>
-      
-      <guid>https://blog.zzndb.me/posts/2017-02-19-%E5%85%B3%E4%BA%8Etypecho%E7%9A%84%E9%93%BE%E6%8E%A5%E5%90%8E%E5%8F%B0%E6%89%93%E5%BC%80%E8%AE%BE%E7%BD%AE/</guid>
-      <description>&lt;p&gt;不久前的前两篇文章链接都是单纯插入链接，毕竟以前没怎么用过&lt;strong&gt;Markdown&lt;/strong&gt;，然后&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>全站SSL</title>
-      <link>https://blog.zzndb.me/posts/2017-02-19-%E5%85%A8%E7%AB%99ssl/</link>
-      <pubDate>Sun, 19 Feb 2017 00:36:00 +0800</pubDate>
-      
-      <guid>https://blog.zzndb.me/posts/2017-02-19-%E5%85%A8%E7%AB%99ssl/</guid>
-      <description>&lt;p&gt;&lt;strong&gt;2017年2月18发生好多&amp;hellip;..&lt;/strong&gt;&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>About</title>
-      <link>https://blog.zzndb.me/about/</link>
-      <pubDate>Sat, 18 Feb 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://blog.zzndb.me/about/</guid>
-      <description>这里是？ 这里会放些自己写的各种流水帐，记些有的没的……
-主要是给自己看，当然如果有幸一些东西能对你有所帮助，那感觉还是蛮好的。
-关于我？ A computer professional graduate.
-不过，总的来看是啥也不会……
-还尽喜欢整些有的没的，比如 Android、Linux 搞机
-openSUSE Tumbleweed 作为桌面系统日常使用中……
-在接触 Emacs+Evil 前主用 Vim ，神之编辑器系统做得还不赖
-一个无情的 OBS 入门级打包工，主要整些自己用源里没有的包，自己动手丰衣足食嘛！
-……
-联系我？ Email: echo &amp;quot;enpuZGIwMDFAZ21haWwuY29tCg==&amp;quot; | base64 -d TG: @zzndb PGP 指纹：2944 7B45 7B33 2FF3 C6DE F8B9 6106 CD71 758D 94DF PGP 公钥：https://github.com/zzndb.gpg </description>
-    </item>
-    
-    <item>
-      <title>Friends</title>
-      <link>https://blog.zzndb.me/links/</link>
-      <pubDate>Sat, 18 Feb 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://blog.zzndb.me/links/</guid>
-      <description> 极氙世界 </description>
-    </item>
-    
-    <item>
-      <title>关于adaway替换hosts的图文及资源分享</title>
-      <link>https://blog.zzndb.me/posts/2017-02-17-%E5%85%B3%E4%BA%8Eadaway%E6%9B%BF%E6%8D%A2hosts%E7%9A%84%E5%9B%BE%E6%96%87%E5%8F%8A%E8%B5%84%E6%BA%90%E5%88%86%E4%BA%AB/</link>
-      <pubDate>Fri, 17 Feb 2017 10:00:00 +0800</pubDate>
-      
-      <guid>https://blog.zzndb.me/posts/2017-02-17-%E5%85%B3%E4%BA%8Eadaway%E6%9B%BF%E6%8D%A2hosts%E7%9A%84%E5%9B%BE%E6%96%87%E5%8F%8A%E8%B5%84%E6%BA%90%E5%88%86%E4%BA%AB/</guid>
-      <description>&lt;h2 id=&#34;正式第二篇&#34;&gt;正式第二篇&lt;/h2&gt;
-&lt;h6&gt;
-其实是第1.5篇=.=
-&lt;/h6&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.zzndb.me/images/2017/02/2225108911.gif&#34; alt=&#34;winter-solstice-2016-northern-hemisphere-4788310770712576-hp2x.gif&#34;&gt;&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>试着去看看另外一个世界</title>
-      <link>https://blog.zzndb.me/posts/2017-02-16-%E8%AF%95%E7%9D%80%E5%8E%BB%E7%9C%8B%E7%9C%8B%E5%8F%A6%E5%A4%96%E4%B8%80%E4%B8%AA%E4%B8%96%E7%95%8C/</link>
-      <pubDate>Thu, 16 Feb 2017 20:51:00 +0800</pubDate>
-      
-      <guid>https://blog.zzndb.me/posts/2017-02-16-%E8%AF%95%E7%9D%80%E5%8E%BB%E7%9C%8B%E7%9C%8B%E5%8F%A6%E5%A4%96%E4%B8%80%E4%B8%AA%E4%B8%96%E7%95%8C/</guid>
-      <description>&lt;p&gt;&lt;strong&gt;信仰&lt;/strong&gt;
-&lt;img src=&#34;https://blog.zzndb.me/images/2017/02/1455974186.gif&#34; alt=&#34;holidays-2017-eastern-europe-day-2-5670496677920768-hp2x.gif&#34;&gt;&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>2017年2月16日再次装上了Typecho</title>
-      <link>https://blog.zzndb.me/posts/2017-02-16-2017%E5%B9%B42%E6%9C%8816%E6%97%A5%E5%86%8D%E6%AC%A1%E8%A3%85%E4%B8%8A%E4%BA%86typecho/</link>
-      <pubDate>Thu, 16 Feb 2017 12:34:00 +0800</pubDate>
-      
-      <guid>https://blog.zzndb.me/posts/2017-02-16-2017%E5%B9%B42%E6%9C%8816%E6%97%A5%E5%86%8D%E6%AC%A1%E8%A3%85%E4%B8%8A%E4%BA%86typecho/</guid>
-      <description>&lt;h1 id=&#34;有感&#34;&gt;有感&lt;/h1&gt;
+        <item>
+        <title>在 GCP 上部署 Nextcloud 相关折腾</title>
+        <link>https://blog.zzndb.me/posts/2019-06-08-%E5%9C%A8-gcp-%E4%B8%8A%E9%83%A8%E7%BD%B2-nextcloud-%E7%9B%B8%E5%85%B3%E6%8A%98%E8%85%BE/</link>
+        <pubDate>Sat, 08 Jun 2019 15:53:00 +0800</pubDate>
+        
+        <guid>https://blog.zzndb.me/posts/2019-06-08-%E5%9C%A8-gcp-%E4%B8%8A%E9%83%A8%E7%BD%B2-nextcloud-%E7%9B%B8%E5%85%B3%E6%8A%98%E8%85%BE/</guid>
+        <description>zzndb&#39;s world https://blog.zzndb.me/posts/2019-06-08-%E5%9C%A8-gcp-%E4%B8%8A%E9%83%A8%E7%BD%B2-nextcloud-%E7%9B%B8%E5%85%B3%E6%8A%98%E8%85%BE/ -&lt;p&gt;上个月折腾上了 Google Cloud Platform 的车，记录在其上部署 Nextcloud 相关的经历，由于成文在搭建之后回忆写出，难免有步骤缺失/错误，欢迎指正。&lt;/p&gt;
+&lt;p&gt;主要内容：在 GCP 上创建 openSUSE 实例、LNMP+Nextcloud+SSL (certbot) 、Mailgun 的一个应用场景、GCP IPV6&lt;/p&gt;
+&lt;h1 id=&#34;install-opensuse-on-gcp&#34;&gt;Install openSUSE on GCP&lt;/h1&gt;
+&lt;p&gt;如果在 GCP 上建过 VM 实例，有看一看提供的镜像，就会发现并没有 openSUSE ，去 GCP &lt;a herf=&#34;https://cloud.google.com/&#34; target=&#34;_blank&#34;&gt;官网&lt;/a&gt;搜索一下就会找到&lt;a herf=&#34;https://cloud.google.com/compute/docs/images#community_supported_images&#34; target=&#34;_blank&#34;&gt;这个&lt;/a&gt; Images 页面，对应的 Community supported images 部分就有我大蜥蜴，貌似只提供了提供 gcloud 命令行工具安装的操作。&lt;/p&gt;
+&lt;p&gt;安装 gcloud 详见&lt;a herf=&#34;https://cloud.google.com/sdk/docs/quickstart-linux&#34; target=&#34;_blank&#34;&gt;官方文档&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;选择创建 openSUSE 实例&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;# 获取镜像列表，通常没有最新的，不过我大蜥蜴跨版本升级都不是事儿！
+gcloud compute images list --project opensuse-cloud --no-standard-images
+# 比如当前我得到如下结果
+NAME                          PROJECT         FAMILY         DEPRECATED  STATUS
+opensuse-leap-15-v20181106    opensuse-cloud  opensuse-leap              READY
+opensuse-leap-42-3-v20180116  opensuse-cloud  opensuse-leap              READY
+
+# 选择镜像创建，貌似没有提供选项选择镜像，默认会选新的，
+# 以下 zone 可通过 gcloud compute zone list 获得
+# 或者使用 http://www.gcping.com 测延迟选对应区域
+gcloud compute instances create instance_name --image-family opensuse-leap --image-project opensuse-cloud --zone zone
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;没什么问题的话就会正常创建好，去网页 console 调整具体配置，添加 SSH 密钥等（当然你也可以提供刚才的创建命令指定，详情参见具体文档。&lt;/p&gt;
+&lt;p&gt;然后贴下我大蜥蜴 Leap 日常跨版本升级步骤：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;修改软件源为最新版本（如 Leap 15 -&amp;gt; Leap 15.1&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;sed -i &amp;#39;s/15.0/15.1/g&amp;#39; /etc/zypp/repos.d/*.repo
+&lt;/code&gt;&lt;/pre&gt;&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;dist-upgrade&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;sudo zypper dup
+&lt;/code&gt;&lt;/pre&gt;&lt;h1 id=&#34;lnmp&#34;&gt;LNMP&lt;/h1&gt;
 &lt;blockquote&gt;
-&lt;p&gt;Maybe nobody can see this except me &amp;gt;.&lt;Maybe nobody can see this except me &gt;.&amp;lt;&lt;/p&gt;
-&lt;/blockquote&gt;</description>
-    </item>
+&lt;p&gt;为什么是LNMP？
+主要是这个博客是用的 Nginx 以及当年没搞明白服务器配置，便上了不清真的面板，而现在这个被抛弃的面板，还顶着 php 5.4 ，还各种不好使了，像什么管理端口之类的东西完全没反应还让这 lj 服务器假死，还不如直接手动上 iptables ，反正都绕不过它。便决定什么时候得去掉这面板，自己动手，这个就当学习和练手了。（所以之后应该也会记录一下，看会不会翻车了。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;以下操作主要参考女王几年前写的蜥蜴wiki &lt;a herf=&#34;https://zh.opensuse.org/SDB:%E6%90%AD%E5%BB%BALNMP%E6%9C%8D%E5%8A%A1%E5%99%A8&#34; target=&#34;_blank&#34;&gt;SDB:搭建LNMP服务器&lt;/a&gt;，以及自己踩的坑。&lt;/p&gt;
+&lt;p&gt;安装 Nginx，PHP-fpm，mariadb&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;sudo zypper in nginx php7-fpm
+sudo zypper in mariadb mariadb-tools php7-mysql
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;利用自带脚本进行数据库安全配置，如设置管理员密码，和一些不安全设置的移除（一路&lt;code&gt;y&lt;/code&gt;就行，具体执行操作可参考对应提示&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;mysql_secure_installation
+&lt;/code&gt;&lt;/pre&gt;&lt;blockquote&gt;
+&lt;p&gt;如果也不会 LNMP 配置可参照上述 wiki 进行 &lt;code&gt;hello wrold&lt;/code&gt; 级网站配置，先熟悉熟悉基本操作。主要是创建独立 vhosts 网站配置，解析 HTML，配合 php-fpm 解析 PHP 文件，基础 ssl 配置等等。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;创建 nextcloud 网站 vhosts 配置文件（参考官方文档 &lt;a herf=&#34;https://docs.nextcloud.com/server/16/admin_manual/installation/nginx.html&#34; target=&#34;_blank&#34;&gt;installation/nginx&lt;/a&gt;&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;vim /etc/nginx/vhost.d/your.domain.conf
+# 根据实际情况 copy 对应上述官方文档提供的配置文件
+# 修改实际情况修改 server_name ssl_certificate ssl_certificate_key 等区域
+# 根据配置注释进行一些可选修改
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;修改 php-fpm 配置文件（主配置文件 php-fpm.conf 使用默认设置即可，或者根据注释内容自行修改，www.conf 在默认配置的基础上配置用户用户组。&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;cp /etc/php7/fpm/php-fpm.conf.default /etc/php7/fpm/php-fpm.conf
+cp /etc/php7/fpm/php-fpm.d/www.conf.default /etc/php7/fpm/php-fpm.d/www.conf
+vim /etc/php7/fpm/php-fpm.d/www.conf
+# 修改用户，用户组为 接下来要装的 nextcloud 文件的用户与用户组，保证具有访问权限
+# 这里还没装可以预设一个，如 wwwrun www
+# 大概在23行左右修改为
+user = wwwrun
+group = www
+...
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;安装 Nextcloud 所需 php 模块（参考蜥蜴编译的版本 &lt;a herf=&#34;https://build.opensuse.org/package/view_file/openSUSE:Factory/nextcloud/nextcloud.spec &#34; target=&#34;_blank&#34;&gt;spec文件&lt;/a&gt;，&lt;a herf=&#34;https://docs.nextcloud.com/server/16/admin_manual/installation/source_installation.html#prerequisites-for-manual-installation&#34; target=&#34;_blank&#34;&gt;官方文档&lt;/a&gt;&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;sudo zypper in php7-curl php7-gd php7-mbstring php7 openssl php7-posix php7-zip php7-zlib php7-intl php7-bz2 php7-fileinfo php7-pear php7-openssl php7-opcache
+# 还有一些可选，详见上官方文档
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;配置 LNMP 自启动&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;systemctl enable nginx
+systemctl enable php-fpm
+systemctl enable mysql
+&lt;/code&gt;&lt;/pre&gt;&lt;h1 id=&#34;ssl&#34;&gt;SSL&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;早就有闻 letsencrypt ，采用对应 certbot 实现证书配置，配置自动 renew&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;使用 certbot 要求有正确配置域名解析！&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;一般域名提供商都会提供DNS解析？比如在配置这个nextcloud用的&lt;a herf=&#34;https://www.freenom.com&#34; target=&#34;_blank&#34;&gt;freenom&lt;/a&gt;免域名费 .ml 域名，就带了DNS解析，直接配置 A/AAAA 记录（IPV4/6）指向对应服务器地址即可。或者拿着域名去 &lt;a herf=&#34;https://www.cloudflare.com&#34; target=&#34;_blank&#34;&gt;Cloudflare&lt;/a&gt;，还随便上了 CDN 大船。(注意这里如果选择类似 CDN 的解析，由于其一般自带SSL证书，和普通 DNS 解析操作步骤有所不同。约定以下内容称**「普通解析」域名对应 IP 即为服务器 IP；「非普通解析」域名对应 IP 可为上层 CDN 提供的 IP**&lt;/p&gt;
+&lt;p&gt;安装 certbot 和 其 nginx 插件（如果非普通 DNS 解析还需安装对应插件 &lt;a herf=&#34;https://certbot.eff.org/docs/packaging.html&#34; target=&#34;_blank&#34;&gt;参见这里&lt;/a&gt; 名为 certbot-dns-xx 的包名&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;sudo zypper install certbot python3-certbot-nginx
+# 比如 选择 cloudflare 还需安装 certbot-dns-cloudflare, 源里具体包名可先 zypper search 得到，如下 cloudflare 的
+sudo zypper install python3-certbot-dns-cloudflare
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;创建证书 &lt;strong&gt;「普通解析」&lt;/strong&gt;&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;sudo certbot --nginx
+# 根据提示操作即可，可自动配置到网站配置文件
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;del&gt;创建证书（非普通解析以 Cloudflare 为例）&lt;/del&gt;（其实还并不清楚具体区别，先用了上述方法再上的 Cloudflare&lt;/p&gt;
+&lt;p&gt;考虑到 certbot 创建的证书有效期不算久，不过 certbot 有 renew 的功能，加上我在具体操作时为了在 GCP 上实现 IPV6 访问，建立了负载均衡器，在&lt;strong&gt;负载均衡器前端需要网站证书&lt;/strong&gt;（话说我现在上了 Cloudflare 日常访问证书已经变了，可负载均衡器貌似还在用之前默认配置的真正的证书正常运行），所以有了下面这个结合我之前弄的 Mailgun 实现的 &lt;strong&gt;certbot 更新证书自动邮件通知&lt;/strong&gt;，并将证书作为附件发送。&lt;/p&gt;
+&lt;h2 id=&#34;mail-notify-after-renewed-certifacates&#34;&gt;Mail notify after renewed certifacates&lt;/h2&gt;
+&lt;p&gt;根据 certbot &lt;a herf=&#34;https://certbot.eff.org/docs/&#34; target=&#34;_blank&#34;&gt;文档&lt;/a&gt;中如下内容实现&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Hooks will only be run if a certificate is due for renewal
+When Certbot detects that a certificate is due for renewal, &lt;code&gt;--pre-hook&lt;/code&gt; and &lt;code&gt;--post-hook&lt;/code&gt; hooks run before and after each attempt to renew it. If you want your hook to run only after a successful renewal, use &lt;code&gt;--deploy-hook&lt;/code&gt; in a command like this.
+You can also specify hooks by placing files in subdirectories of Certbot’s configuration directory.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;将如下脚本放置在 certbot 配置目录&lt;code&gt;/etc/letsencrypt/renewal-hooks/deploy&lt;/code&gt;，每当部署 renew 证书之后便会运行该目录下脚本&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;#!/usr/bin/env bash
+log_file=/var/log/letsencrypt/letsencrypt.log
+cert_file=/tmp/certificates.tar.bz2
+
+# tar certificates
+tar -cjf $cert_file -C /etc/letsencrypt/live -h .
+
+# send mail
+curl -s --user &amp;#39;api:YOUR-MAILGUN-KEY&amp;#39; \  # replace your maingun key
+    https://api.mailgun.net/v3/YOUR-MAILGUN-DOMAIN/messages \ # need replace
+    -F from=&amp;#39;&amp;lt;YOU@YOUR_DOMAIN_NAME&amp;gt;&amp;#39; \ # need replace
+    -F to=&amp;#39;foo@example.com&amp;#39; \ # need replace
+    -F subject=&amp;#39;Certificates Renew Notification&amp;#39; \
+    -F text=&amp;#39;like subject says&amp;#39; \
+    -F text=&amp;#39;check the new certificates and change it on your gcp balance loader!&amp;#39; \
+    -F attachment=@$log_file \
+    -F attachment=@$cert_file
+
+# delete certificates
+[[ -f $cert_file ]] &amp;amp;&amp;amp; rm -f $cert_file
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;上述脚本大致就是将当前 certbot 运行日志和所有证书文件通过 Mailgun 以邮件形式发送（已经将我的 api key 和邮箱都去掉了，上述注释 &lt;code&gt;replace&lt;/code&gt; 所在行需要进行替换）。&lt;/p&gt;
+&lt;p&gt;部署上述脚本 &lt;code&gt;mail_notify.sh&lt;/code&gt;，并添加 certbot 自动更新定时任务 &lt;strong&gt;「普通解析」&lt;/strong&gt;&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;cp mail_notify.sh /etc/letsencrypt/renewal-hooks/deploy
+
+# add to cron
+sudo crontab -e
+# enter follow https://certbot.eff.org/lets-encrypt/leap-nginx
+0 0,12 * * * python -c &amp;#39;import random; import time; time.sleep(random.random() * 3600)&amp;#39; &amp;amp;&amp;amp; certbot renew
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;对应的 &lt;strong&gt;「非普通解析」&lt;/strong&gt;，除在创建定时任务时运行命令不同外还需配置访问对应 DNS 的配置文件，以下以 Cloudflare 为例，具体得到配置文件 &lt;code&gt;cloudflare.ini&lt;/code&gt; 请&lt;a herf=&#34;https://certbot-dns-cloudflare.readthedocs.io/en/stable/index.html#module-certbot_dns_cloudflare&#34; target=&#34;_blank&#34;&gt;参见模块文档&lt;/a&gt;，添加定时任务如下&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;sudo crontab -e
+0 0,12 * * * python -c &amp;#39;import random; import time; time.sleep(random.random() * 3600)&amp;#39; &amp;amp;&amp;amp; certbot renew --dns-cloudflare --dns-cloud-flare-credentials /path/to/your/cloudflare.ini
+&lt;/code&gt;&lt;/pre&gt;&lt;hr&gt;
+&lt;blockquote&gt;
+&lt;p&gt;由于说它证书时间不长还是有几个月的，上述脚本并没有经过实际验证，只是手动运行试过感觉良好，这不刚才为写这篇&lt;del&gt;流水帐&lt;/del&gt;试了试，貌似它每次部署成功都会运行一次脚本，所以如果你有多个站点地址，更新成功多少次就会发多少次。。。好吧不管了，看最后一个邮件即可。（手动苦笑&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&#34;nextcloud&#34;&gt;Nextcloud&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;由于源里面的 Nextcloud 绑定了 Apache 所以选择手动安装方式&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;以下部分&lt;a herf=&#34;https://en.opensuse.org/SDB:Nextcloud&#34; target=&#34;_blank&#34;&gt;参考文档&lt;/a&gt;&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;# sudo needed
+
+mkdir /mnt/nextcloud_data
+chmod -R 0770 /mnt/nextcloud_data
+chown wwwrun /mnt/nextcloud_data
+
+wget https://download.nextcloud.com/server/releases/latest-16.zip
+wget https://download.nextcloud.com/server/releases/latest-16.zip.md5
+
+# check md5sum
+cat latest-16.zip.md5
+md5sum latest-16.zip
+
+rm latest-16.zip.md5
+unzip latest-16.zip
+rm latest-16.zip
+
+cp -r nextcloud /srv/www/htdocs
+chown -R wwwrun /srv/www/htdocs/nextcloud/
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;部署到对应目录之后，修改前文创建的网站配置文件 &lt;code&gt;/etc/nginx/vhost.d/your.domain.conf&lt;/code&gt;
+将&lt;code&gt;root&lt;/code&gt;之后路径修改为&lt;code&gt;/srv/www/htdocs/nextcloud/;&lt;/code&gt;&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;    ...
+    root /srv/www/htdocs/nextcloud/;
+    ...
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;创建 nextcloud 数据库&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;# login
+mysql -u root -p
+# create database
+create database nextcloud;
+# create nextcloud user
+create user nextclouduser@localhost identified by &amp;#39;some-password-here&amp;#39;;
+# grant all privileges on nextcloud
+grant all privileges on nextcloud.* to nextclouduser@localhost identified by &amp;#39;some-password-here&amp;#39;;
+# exit
+exit;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;启动 LNMP&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;systemctl start nginx
+systemctl start php-fpm
+systemctl start mysql
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;访问服务器地址进行 nextcloud 配置，填写用户名密码，数据库用户名密码，数据存放位置。&lt;/p&gt;
+&lt;p&gt;一切配置正常之后，删掉之前的安装文件&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;# after running check
+rm -rf /mnt/nextcloud_data
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;玄学优化&#34;&gt;玄学优化&lt;/h2&gt;
+&lt;p&gt;感觉没啥好说的，参见 &lt;a href=&#34;https://yourdomain.xx/settings/admin/overview&#34;&gt;https://yourdomain.xx/settings/admin/overview&lt;/a&gt; 界面，根据提示文档安装模块调整参数进行优化即可。&lt;/p&gt;
+&lt;h1 id=&#34;gcp-ipv6&#34;&gt;GCP IPV6&lt;/h1&gt;
+&lt;p&gt;说了半天， &lt;del&gt;貌似并没有联系上题目的 GCP&lt;/del&gt;&lt;em&gt;联系上了，加了安装大蜥蜴的第一个环节：），&lt;/em&gt; 来讲讲我在 &lt;strong&gt;GCP 上利用负载均衡器实现 IPV6 访问&lt;/strong&gt; 走过的坑吧！&lt;/p&gt;
+&lt;p&gt;总所周知（并不），GCP 默认创建的 VM 实例默认只给了 IPV4 地址，这对于处在免费 IPV6 还算通畅的校园网环境下的我貌似就不怎么友好了，不过常见的服务应该都能通过 &lt;strong&gt;「负载均衡」&lt;/strong&gt; 实现 IPV6 访问。（GCP 负载均衡规则按时收费，前 5 条负载平衡规则价格看地区，总的来说地区前 5 条一个价，其实主要负载均衡的收费是流量收费，按转发量收费，同样地区统一定价，详见 &lt;a herf=&#34;https://cloud.google.com/compute/pricing#lb&#34; target=&#34;_blank&#34;&gt;文档&lt;/a&gt; ）&lt;/p&gt;
+&lt;p&gt;以下以为一个网站负载均衡为例（HTTP+HTTPS）（以下内容参考自己的配置，&lt;strong&gt;仅供参考&lt;/strong&gt;）&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;首先得到你的 GCP 全局 IPV6 地址&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;在网页操控台的 「 VPC 网络」选项卡的「外部 IP 地址」子选项卡下选择「保留静态地址」，然后选择 全局 IPV6 即可。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;将你的「VM 实例 」添加到「实例组」&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;在网页操控台的 「Compute Engine」 选项卡的 「实例组」 子选项卡下选择 「创建实例组」，然后选择 「新建非托管式实例组」，取个名字，选择位置（一般选择实例所在区域）等（网络什么的默认就行）参数。&lt;/li&gt;
+&lt;li&gt;选择刚才的创建实例组，「修改组」，添加上你的 「VM 实例」。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;新建网站 HTTP 负载平衡器&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;在网页操控台的 「网络服务」 选项卡的「负载平衡」子选项卡下选择「创建负载平衡器」，选择 「HTTP(S) 负载平衡」&lt;/li&gt;
+&lt;li&gt;后端配置：
+&lt;ol&gt;
+&lt;li&gt;创建后端服务如 &lt;code&gt;cloud-check-80&lt;/code&gt; ，协议选择 HTTP ，命名端口如 &lt;code&gt;http&lt;/code&gt; ，超时默认 30 就行，后端类型选择 「实例组」，具体后端选择刚才创建实例组，填写端口号 80 ，其他可以默认，获按需修改。&lt;/li&gt;
+&lt;li&gt;然后是下面的 「运行状况检查」，新建一个如叫 &lt;code&gt;cloud-check-80&lt;/code&gt; 的状况检查，填写名字，选择协议 TCP ，端口 80 无代理协议，后面默认即可。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;主机和路径规则（参考下图，主机部分为你的网站域名
+&lt;img src=&#34;https://blog.zzndb.me/images/2019/06/33335814.png&#34; alt=&#34;20190608150616153_1716322239.png&#34;&gt;&lt;/li&gt;
+&lt;li&gt;前端配置：
+&lt;ol&gt;
+&lt;li&gt;新建前端 IP 和端口，写个名字，协议 HTTP ，IP 版本选择 IPV6 ，地址选择之前创建的全局地址，端口 80 。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;检查并最终确认（参考下图
+&lt;img src=&#34;https://blog.zzndb.me/images/2019/06/2647942956.png&#34; alt=&#34;20190608151146809_819181156.png&#34;&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;新建 HTTPS 负载平衡器&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;参考上述 HTTP 负载平衡器，将前后端以及运行状况检查的端口换成443，协议换成 HTTPS 即可。&lt;/li&gt;
+&lt;li&gt;其他不同地方主要是，HTTPS 负载平衡器前端需要提供网站证书，选择创建证书，并将自己证书 公钥、链、私钥上传创建即可。其他地方保持默认即可。（需要证书这也是前文我将 certbot renew 的证书通过邮件发送的原因）&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;p&gt;当然由于前五条规则一个价格，你可以创建更多规则，如实现 SSH 的 IPV6 访问等，通过 「TCP 负载平衡」实现即可，由于 GCP 负载平衡的前端端口有限，可以指定顺眼的端口，只要转发到后端对应端口即可。&lt;/p&gt;
+&lt;h1 id=&#34;reference&#34;&gt;Reference&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;感谢上述参考连接，及以下文章/档&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://sellingfreesoftwareforaliving.blogspot.com/2018/05/opensuse-leap-423-on-google-cloud.html&#34;&gt;https://sellingfreesoftwareforaliving.blogspot.com/2018/05/opensuse-leap-423-on-google-cloud.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://en.opensuse.org/SDB:Nextcloud&#34;&gt;https://en.opensuse.org/SDB:Nextcloud&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://docs.nextcloud.com/server/16/admin_manual/installation/nginx.html&#34;&gt;https://docs.nextcloud.com/server/16/admin_manual/installation/nginx.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://help.nextcloud.com/t/howto-change-move-data-directory-after-installation/17170&#34;&gt;https://help.nextcloud.com/t/howto-change-move-data-directory-after-installation/17170&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.scalingphpbook.com/blog/2014/02/14/best-zend-opcache-settings.html&#34;&gt;https://www.scalingphpbook.com/blog/2014/02/14/best-zend-opcache-settings.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://docs.nextcloud.com/server/16/admin_manual/installation/source_installation.html&#34;&gt;https://docs.nextcloud.com/server/16/admin_manual/installation/source_installation.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://certbot.eff.org/lets-encrypt/leap-nginx&#34;&gt;https://certbot.eff.org/lets-encrypt/leap-nginx&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://certbot.eff.org/docs/using.html&#34;&gt;https://certbot.eff.org/docs/using.html&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;- https://blog.zzndb.me/posts/2019-06-08-%E5%9C%A8-gcp-%E4%B8%8A%E9%83%A8%E7%BD%B2-nextcloud-%E7%9B%B8%E5%85%B3%E6%8A%98%E8%85%BE/ - </description>
+        </item>
+    
+    
+    
+        <item>
+        <title>启用域名邮箱</title>
+        <link>https://blog.zzndb.me/posts/2019-05-11-%E5%90%AF%E7%94%A8%E5%9F%9F%E5%90%8D%E9%82%AE%E7%AE%B1/</link>
+        <pubDate>Sat, 11 May 2019 17:51:00 +0800</pubDate>
+        
+        <guid>https://blog.zzndb.me/posts/2019-05-11-%E5%90%AF%E7%94%A8%E5%9F%9F%E5%90%8D%E9%82%AE%E7%AE%B1/</guid>
+        <description>zzndb&#39;s world https://blog.zzndb.me/posts/2019-05-11-%E5%90%AF%E7%94%A8%E5%9F%9F%E5%90%8D%E9%82%AE%E7%AE%B1/ -&lt;p&gt;其实最开始只是因为没有一个好的评论回复邮件提醒解决方案，然后现在感觉有点香啊。&lt;/p&gt;
+&lt;p&gt;TL;DR: 利用 Mailgun 弄了域名邮箱，顺便解决了博客评论邮件提醒的问题。&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;UP: 2020-06-16 18:02&lt;/p&gt;
+&lt;h1 id=&#34;更新&#34;&gt;更新&lt;/h1&gt;
+&lt;p&gt;自2020年6月起对于之前的白嫖用户，你只有最多1250的免费邮件额度，之后便开始以每1000封邮件0.80美刀的价格开始收费，除了邮件转发的其他东西估计也没给白嫖用户剩啥了。毕竟白嫖也不好对此说啥，另外听说Yandex给提供免费域名邮箱，就是不知道API能不能和Mailgun一样友好，之后有机会会去试一试。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;邮件提醒插件&#34;&gt;邮件提醒插件&lt;/h1&gt;
+&lt;p&gt;几年前刚弄这个也不会有人来的博客的时候就有找过 typecho 的这种邮件评论插件，用来告知有人来留下了脚印，不然就得自己反复上线检查 ，然后就找到一个「CommentToMail」用上了，现在 Github 还能&lt;a href=&#34;https://github.com/search?q=typecho+mail&amp;amp;ref=opensearch&#34;&gt;找到&lt;/a&gt;它及一些衍生版本。它本身是利用已有邮箱通过「PHP」的如「PHPMailer」的库进行邮件发送，由于自己是个&lt;del&gt;假&lt;/del&gt;谷粉，邮箱不多 Gmail 倒是有几个，便去单独注册了一个开始了这并不稳的使用，不知道是不是插件本身的问题，还是 Gmail 比较特殊，一直都不稳定，时好时坏，当然因为并没有人来的缘故:worried:，就搁这儿没管它了。&lt;/p&gt;
+&lt;p&gt;然后时隔一年多今天莫名的又来试了试，嗯，还是不好使，在辗转几个衍生插件之后，发现一些插件中除了原始的「smtp」之类的方式还有一个叫做「&lt;a href=&#34;https://www.mailgun.com/&#34; target=&#34;_blank&#34;&gt;Mailgun&lt;/a&gt;」的东西，就去了解了一下&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;10,000 emails free every month.&lt;/strong&gt;
+&lt;strong&gt;Powerful APIs&lt;/strong&gt; that enable you to send, receive and track email effortlessly.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;看着不错嘛，注册，登录，照着文档看了看，绑定了信用卡（不然就只有一个试用「domains」，反正账户可以设置月最大邮件发送数，&lt;strong&gt;设置成10K&lt;/strong&gt;:relieved:），然后开启了新世界大门。&lt;/p&gt;
+&lt;p&gt;然后照着自带的「domain」教程，去tx云添加了解析，得到了有解析指向「mailgun」的域名「zzndb.com.cn」，拿着 key 和 domain 去插件测试了一下评论邮件提醒效果，稳得不行。（欢迎看到这儿的dalao们留个脚印测试测试:wink:&lt;/p&gt;
+&lt;h1 id=&#34;域名邮箱&#34;&gt;域名邮箱&lt;/h1&gt;
+&lt;p&gt;在域名对应「domain setting」可以新建 「SMTP credentials」，使用这个相当于我们自建的域名邮箱（如test@zzndb.com.cn）会&lt;strong&gt;通过 Mailgun 提供的 SMTP server 实现邮件的发送&lt;/strong&gt;，再加上它的另一个功能「&lt;strong&gt;Receiving Routes」进行邮件转发，就能实现邮件的接收&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;这里我把它转发到了我的一个主「Gmail」帐号，配合 tg 的 Gmail bot ，在目前的网络环境下~~（毕竟有v6校园网）~~不要太爽，在Gmail里添加这个邮箱（&lt;a href=&#34;https://medium.com/issacaption/using-a-custom-domain-in-gmail-for-free-with-mailgun-and-sendgrid-2c54e681f378&#34; target=&#34;_blank&#34;&gt;参见&lt;/a&gt;），就能直接通过Gmail发送这个域名邮箱的邮件。&lt;/p&gt;
+&lt;p&gt;这里放出域名邮箱地址~~（照旧不直接给~~
+&lt;code&gt;echo &amp;quot;emRiQHp6bmRiLmNvbS5jbgo=&amp;quot; | base64 -d&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;当然「Maingun」毕竟是提供面向开发者的邮件发送服务，有多种方便API还能直接通过「curl」发送邮件:joy:，还附送了其他如反垃圾的机制~~，还不要钱~~。&lt;/p&gt;
+&lt;p&gt;&lt;del&gt;感觉有了自己的域名邮箱，逼格高了不少啊，香！！&lt;/del&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;done！&lt;/p&gt;
+&lt;p&gt;&lt;del&gt;又水了一篇:laughing:&lt;/del&gt;&lt;/p&gt;- https://blog.zzndb.me/posts/2019-05-11-%E5%90%AF%E7%94%A8%E5%9F%9F%E5%90%8D%E9%82%AE%E7%AE%B1/ - </description>
+        </item>
+    
+    
+    
+        <item>
+        <title>install PostgreSQL on openSUSE</title>
+        <link>https://blog.zzndb.me/posts/2019-05-10-install-postgresql-on-opensuse/</link>
+        <pubDate>Fri, 10 May 2019 01:03:00 +0800</pubDate>
+        
+        <guid>https://blog.zzndb.me/posts/2019-05-10-install-postgresql-on-opensuse/</guid>
+        <description>zzndb&#39;s world https://blog.zzndb.me/posts/2019-05-10-install-postgresql-on-opensuse/ -&lt;p&gt;Install &lt;em&gt;PostgreSQL&lt;/em&gt; on openSUSE and use &lt;em&gt;pgAdmin4&lt;/em&gt; connect it.&lt;/p&gt;
+&lt;p&gt;Test on current &lt;em&gt;openSUSE Tumbleweed 20190507&lt;/em&gt;&lt;/p&gt;
+&lt;h1 id=&#34;install-postgresql&#34;&gt;install PostgreSQL&lt;/h1&gt;
+&lt;h2 id=&#34;tldr&#34;&gt;TL;DR&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://en.opensuse.org/SDB:PostgreSQL&#34; target=&#34;_blank&#34;&gt;see wiki&lt;/a&gt;
+&lt;del&gt;RTFM&lt;/del&gt;&lt;/p&gt;
+&lt;h2 id=&#34;self-tl-version&#34;&gt;self TL version&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;just write my operation for example&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;lines begin &amp;lsquo;#&amp;rsquo; are human read comment &lt;strong&gt;Do Not Just Copy Past All Line&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# install postgresql from factory repo (oss)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo zypper in postgresql postgresql-server postgresql-contrib
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# enable postgresql service start at boot&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;systemctl enable postgresql
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# start postgresql service&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;systemctl start postgresql
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;# create database, user &amp;amp; grant super user ..
+su
+su postgres # switch to user &amp;#39;postgres&amp;#39;
+psql # run postgresql interactive terminal
+
+CREATE DATABASE &amp;lt;database&amp;gt;;
+CREATE USER &amp;lt;username&amp;gt; WITH ENCRYPTED PASSWORD &amp;#39;&amp;lt;passwd&amp;gt;&amp;#39;;
+ALTER USER &amp;lt;username&amp;gt; WITH SUPERUSER;
+ALTER DATABASE &amp;lt;database&amp;gt; OWNER TO &amp;lt;username&amp;gt;;
+
+# change default admin user &amp;#39;postgres&amp;#39; password to login from &amp;#39;pgadmin4&amp;#39; below
+\password
+
+# exit interactive terminal
+\q
+
+# more psql info plz check its usage (in psql interactive terminal run &amp;#39;\?&amp;#39; to get help
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;edit config file to use password connect to postgresql
+use your favorite editor change &lt;code&gt;/var/ib/pgsql/data/pg_hba.conf&lt;/code&gt; (&lt;em&gt;sudo needed&lt;/em&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;change&lt;/strong&gt;&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;# IPv4 local connections:
+host    all             all             127.0.0.1/32            ident
+# IPv6 local connections:
+host    all             all             ::1/128                 ident
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;to&lt;/strong&gt;&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;
+# IPv4 local connections:
+host    all             all             127.0.0.1/32            trust
+# IPv6 local connections:
+host    all             all             ::1/128                 trust
+&lt;/code&gt;&lt;/pre&gt;&lt;hr&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;# restart postgresql to apply change
+systemctl restart postgresql
+&lt;/code&gt;&lt;/pre&gt;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;# install pgadmin for more friendly ui
+sudo zypper in --no-recommends pgadmin4
+# run it through application &amp;#39;pgAdmin4&amp;#39; shortcut or just run &amp;#39;pgAdmin4&amp;#39; from terminal
+&lt;/code&gt;&lt;/pre&gt;&lt;h1 id=&#34;connect-use-pgadmin4&#34;&gt;connect use pgadmin4&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;create a server to connect
+&lt;img src=&#34;https://blog.zzndb.me/images/2019/05/3646942119.png&#34; alt=&#34;20190510004440083_1562003910.png&#34;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;fill in name what you like
+&lt;img src=&#34;https://blog.zzndb.me/images/2019/05/3093534281.png&#34; alt=&#34;20190510004640937_1339893440.png&#34;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;fill in host name and other according what you set (default postgre user example
+&lt;img src=&#34;https://blog.zzndb.me/images/2019/05/2414132339.png&#34; alt=&#34;20190510004852543_83761894.png&#34;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;more&#34;&gt;more?&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;more PostgreSQL usage please check &lt;a href=&#34;https://www.postgresql.org/docs/&#34; target=&#34;_blank&#34;&gt;official doc&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;may useful &lt;a href=&#34;https://pgtune.leopard.in.ua/&#34; target=&#34;_blank&#34;&gt;link&lt;/a&gt; optimise PostgreSQL&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;p&gt;end!&lt;/p&gt;- https://blog.zzndb.me/posts/2019-05-10-install-postgresql-on-opensuse/ - </description>
+        </item>
+    
+    
+    
+        <item>
+        <title>scrcpy--首次独立OBS打包</title>
+        <link>https://blog.zzndb.me/posts/2019-04-23-scrcpy--%E9%A6%96%E6%AC%A1%E7%8B%AC%E7%AB%8Bobs%E6%89%93%E5%8C%85/</link>
+        <pubDate>Tue, 23 Apr 2019 15:42:00 +0800</pubDate>
+        
+        <guid>https://blog.zzndb.me/posts/2019-04-23-scrcpy--%E9%A6%96%E6%AC%A1%E7%8B%AC%E7%AB%8Bobs%E6%89%93%E5%8C%85/</guid>
+        <description>zzndb&#39;s world https://blog.zzndb.me/posts/2019-04-23-scrcpy--%E9%A6%96%E6%AC%A1%E7%8B%AC%E7%AB%8Bobs%E6%89%93%E5%8C%85/ -&lt;p&gt;记首次独立OBS打包&lt;/p&gt;
+&lt;p&gt;UP：2019-04-24 13:18:46 星期三&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;缘由&#34;&gt;缘由&lt;/h1&gt;
+&lt;p&gt;软工项目（一个简单的扒每日一图设置壁纸的&lt;a href=&#34;https://github.com/Rilzob/WallPaper/&#34;&gt;Android程序&lt;/a&gt;）差不多完成 &lt;del&gt;（并没有&lt;/del&gt;，然后就是汇报了，考虑到自己手机一直保有图片存档，到时的缓存页面可能会好看一点，便提议用我手机展示。考虑到教室的投影设备，自己用的大蜥蜴，展示人也非自己，果然还是找个东西上教室电脑投屏比较好。然后就想到了之前『数字系统程序设计』作业，在提交的视频里面的骚操作（通过手机拍视频，得到板子反映，手机屏幕实时显示在电脑屏幕上，然后电脑上面录屏操作）所用到的一个开源软件&lt;a href=&#34;https://github.com/Genymobile/scrcpy&#34;&gt;scrcpy&lt;/a&gt;，去看了看，有 windows 版本，便准备了 32/64 位版本，然后考虑到自己数据线不太好使了，偶尔断线，去展示的人可能还不会操作重连 :joy: ，就决定利用吃灰的网卡走 adb_over_net ，写了个 bat 脚本，开个热点，手机连上并打开 adb_over_net，再来一个 bat 脚本执行一下 adb 连接操作和 scrcpy 运行操作，虚拟机，真机测试了一下感觉没啥问题。（&lt;del&gt;还没展示，就是不确定教室电脑能不能管理员运行批处理脚本建热点&lt;/del&gt; 教室电脑32位还行，还好提前准备好了，因为热点没有分享网络连接，出来一些问题，不过都无所谓了。&lt;/p&gt;
+&lt;p&gt;SO？这和 OBS 打包 scrcpy 有啥关系？&lt;/p&gt;
+&lt;p&gt;好吧，跑偏了，其实是准备用这个的时候，去看了看以前自己本地编译的版本，随手更新了一下，编译失败，去 &lt;a href=&#34;http://software.opensuse.org&#34;&gt;http://software.opensuse.org&lt;/a&gt; 搜了一下，有不过没在 Factory 源里面，然后想起来自己还有个&lt;a href=&#34;https://build.opensuse.org/project/show/home:zzndb&#34;&gt;自己的源&lt;/a&gt;，于是就有了这个计划，把它放到自己的OBS源，统一管理:smile:，说不定还能方便他人？&lt;/p&gt;
+&lt;p&gt;然后又想起前几天，大蜥蜴 tg 群里和 dalao 扯打包自己只会参考别人 &lt;a href=&#34;https://zh.opensuse.org/openSUSE:Specfile_guidelines&#34;&gt;spec 文件&lt;/a&gt;，（自己其实也不想啊:joy:，还不是因为菜）就决定这次自己独立打个包试试。&lt;del&gt;（然后昨晚上两点多才睡觉&lt;/del&gt;&lt;/p&gt;
+&lt;p&gt;以上，打包还算成功（至少能用:sweat_smile:），遂成此文记录。&lt;/p&gt;
+&lt;h1 id=&#34;开始&#34;&gt;开始&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;好歹自己也打包过俩软件了，还是有点经验（雾&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;首先在自己本地的OBS项目目录建立新项目 &lt;a href=&#34;https://openbuildservice.org/help/manuals/obs-beginners-guide/&#34;&gt;前期具体初始化操作参见&lt;/a&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;osc mkpac scrcpy
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;然后在项目目录下扒下最新源代码，和这里必要的 prebuild &lt;code&gt;scrcpy-server-v1.8.jar&lt;/code&gt;文件（就不考虑自己编译 server 了，还得 android sdk&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;wget https://github.com/Genymobile/scrcpy/archive/v1.8.tar.gz
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;wget https://github.com/Genymobile/scrcpy/releases/download/v1.8/scrcpy-server-v1.8.jar
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;源代码改个标准名字&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;mv v1.8.tar.gz scrcpy-1.8.tar.gz
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;开写 spec 文件&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;vim scrcpy.spec &lt;span style=&#34;color:#75715e&#34;&gt;# 默认加载了模板 spec 文件&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;写了写 &lt;code&gt;Name, Version, Summary, Licence, Url，Source&lt;/code&gt;
+从官方实验&lt;code&gt;Hardware&lt;/code&gt;源里面，剽窃了&lt;code&gt;Group&lt;/code&gt;信息&lt;code&gt;Hardware/Mobile&lt;/code&gt;:satisfied:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;记首次&lt;del&gt;独立&lt;/del&gt;OBS打包&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;差不多这样：&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-spec&#34; data-lang=&#34;spec&#34;&gt;Name:           scrcpy
+Version:        1.8
+Release:        0
+Summary:        Display and control your Android device
+# FIXME: Select a correct license from https://github.com/openSUSE/spec-cleaner#spdx-licenses
+License:        Apache-2.0
+# FIXME: use correct group, see &amp;#34;https://en.opensuse.org/openSUSE:Package_group_guidelines&amp;#34;
+Group:          Hardware/Mobile
+Url:            https://github.com/Genymobile/scrcpy
+Source:         %{name}-%{version}.tar.gz   
+Source1:        %{name}-server-v%{version}.jar
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;然后照 github 描述写了写&lt;code&gt;%description&lt;/code&gt;部分&lt;/p&gt;
+&lt;p&gt;然后就是依赖了&lt;/p&gt;
+&lt;h2 id=&#34;依赖&#34;&gt;依赖&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;后面的编译测试中去掉了不需要的&lt;code&gt;ffmpeg-4，gcc&lt;/code&gt;依赖（前者是 Leap 没有，后者是尝试去掉，发现完全没影响:joy:，应该毕竟有&lt;code&gt;meson&lt;/code&gt;在了&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;然后它&lt;a href=&#34;https://github.com/Genymobile/scrcpy/blob/master/BUILD.md&#34;&gt;编译指南&lt;/a&gt;说还得 adb ？？&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;You need adb. It is available in the Android SDK platform tools, or packaged in your distribution (android-adb-tools).&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;找了找&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;zse android
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;zse adb
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;没有！！
+然后去 software.opensuse.org 搜了搜，没有！！
+遂放弃 adb ，跳过&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;后面发现，竟然没啥影响。。。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;然后说要 ffmepg 和 sdl2 然后随手一搜&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;zse --providers ffmpeg-4
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;zse --providers libSDL2-2_0-0
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;好家伙一堆。。。&lt;/p&gt;
+&lt;p&gt;看了看和大蜥蜴差不多的 Fedora 的依赖包名
+&lt;code&gt;SDL2-devel ffms2-devel meson gcc make&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;照着名字大概在源里找了找，尝试&lt;strong&gt;写上&lt;/strong&gt;了&lt;code&gt;ffmpeg-4, meson, gcc, libSDL2-devel&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;照着编译指南写了写&lt;code&gt;%build，%install&lt;/code&gt;部分。&lt;/p&gt;
+&lt;p&gt;先本地试试再说&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;osc build --local-package openSUSE_Tumbleweed x86_64 scrcpy.spec
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;看了看报错&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Dependency &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;libavformat&amp;#34;&lt;/span&gt; not found
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;再次在源里寻找，尝试&lt;strong&gt;添加&lt;/strong&gt;了&lt;code&gt;ffmpeg-4-libavformat-devel&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;再次尝试，看起来依赖问题没有了，报&lt;code&gt;scrcpy-server.jar&lt;/code&gt;相关的错，去本地的编译目录看了看，还真没有我给的 server 文件，难道还得自己操作源文件？&lt;/p&gt;
+&lt;h2 id=&#34;编译安装&#34;&gt;编译安装&lt;/h2&gt;
+&lt;p&gt;一顿操作之后&amp;hellip;&lt;/p&gt;
+&lt;p&gt;好吧，看来源代码之类的会自己解压过去，&lt;strong&gt;其他文件还得自己在&lt;code&gt;%prep&lt;/code&gt;预编译阶段复制过去&lt;/strong&gt;&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-spec&#34; data-lang=&#34;spec&#34;&gt;%prep
+%setup -q
+cp %{_sourcedir}/%{name}-server-v%{version}.jar .
+
+%build
+cp %{name}-server-v%{version}.jar server/scrcpy-server.jar
+meson x --buildtype release --strip -Db_lto=true -Dprebuilt_server=./server/scrcpy-server.jar
+cd x
+ninja
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;开始在&lt;code&gt;%{install}&lt;/code&gt;部分直接用编译指南给的&lt;code&gt;ninja -install&lt;/code&gt;给了和我本地编译一样的错误，貌似是找不到规则，看了看编译指南的描述，貌似就安装了两个文件，看了看编译得到的东西也就一个可执行文件，考虑自己安装好了&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-spec&#34; data-lang=&#34;spec&#34;&gt;%install
+install -Dm 0755 x/app/scrcpy %{buildroot}%{_bindir}/%{name}
+install -Dm 0644 server/scrcpy-server.jar %{buildroot}/usr/local/share/%{name}/scrcpy-server.jar
+&lt;/code&gt;&lt;/pre&gt;&lt;blockquote&gt;
+&lt;p&gt;在这儿还有一个坑，我开始以为 server 文件放&lt;code&gt;/usr/share&lt;/code&gt;也行和可执行文件类似，后面尝试发现它貌似写死的目录&lt;code&gt;/usr/local/share&lt;/code&gt;，并不会自己去找。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;文件处理&#34;&gt;文件处理&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;上面安装的文件都得在这声明，遇到文件夹归属问题，得加上%dir 声明一下该文件夹&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;按照模板改了改&lt;code&gt;%license，和%doc&lt;/code&gt;部分，添加了上面安装的两个文件，声明了对公共目录&lt;code&gt;/usr/local/share&lt;/code&gt;的归属&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-spec&#34; data-lang=&#34;spec&#34;&gt;%files
+%license LICENSE
+%doc README.md
+%{_bindir}/%{name}
+/usr/local/share/%{name}/scrcpy-server.jar
+
+%dir /usr/local/share/%{name}
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;然后&lt;code&gt;%changelog&lt;/code&gt;保持默认为空，毕竟有&lt;code&gt;.changes&lt;/code&gt;文件&lt;/p&gt;
+&lt;p&gt;最后完整spec&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-spec&#34; data-lang=&#34;spec&#34;&gt;# 省略前面 Copyright
+
+Name:           scrcpy
+Version:        1.8
+Release:        0
+Summary:        Display and control your Android device
+# FIXME: Select a correct license from https://github.com/openSUSE/spec-cleaner#spdx-licenses
+License:        Apache-2.0
+# FIXME: use correct group, see &amp;#34;https://en.opensuse.org/openSUSE:Package_group_guidelines&amp;#34;
+Group:          Hardware/Mobile
+Url:            https://github.com/Genymobile/scrcpy
+Source:         %{name}-%{version}.tar.gz   
+Source1:        %{name}-server-v%{version}.jar
+BuildRequires:  ffmpeg-4-libavformat-devel  
+BuildRequires:  libSDL2-devel  
+BuildRequires:  meson
+
+%description
+This application provides display and control of Android devices connected on 
+USB. It does not require any root access
+
+%prep
+%setup -q
+cp %{_sourcedir}/%{name}-server-v%{version}.jar . 
+
+%build
+cp %{name}-server-v%{version}.jar server/scrcpy-server.jar
+meson x --buildtype release --strip -Db_lto=true -Dprebuilt_server=./server/scrcpy-server.jar
+cd x
+ninja
+
+%install
+install -Dm 0755 x/app/scrcpy %{buildroot}%{_bindir}/%{name}
+install -Dm 0644 server/scrcpy-server.jar %{buildroot}/usr/local/share/%{name}/scrcpy-server.jar
+
+%files
+%license LICENSE
+%doc README.md
+%{_bindir}/%{name}
+/usr/local/share/%{name}/scrcpy-server.jar
+
+%dir /usr/local/share/%{name}
+
+%changelog
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;然后写 &lt;code&gt;.change&lt;/code&gt;文件，提交编译&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;osc ar &lt;span style=&#34;color:#75715e&#34;&gt;# auto add or remove file&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;osc vc &lt;span style=&#34;color:#75715e&#34;&gt;# change file&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;osc ci &lt;span style=&#34;color:#75715e&#34;&gt;# commit&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://blog.zzndb.me/images/2019/04/417551773.png&#34; alt=&#34;2019-04-23_10-58.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;yeah！&lt;/p&gt;
+&lt;h1 id=&#34;总结&#34;&gt;总结&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;其实是这个包打包还算简单，毕竟纯 cli ，就两文件。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;通过这次的独立~~（严格来说不能算~~的OBS打包，还是收获挺多的&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;编译安装过程的非源代码文件处理得手动做&lt;/li&gt;
+&lt;li&gt;get到一些默认的 macro 宏（巩固？
+&lt;code&gt;%{buildroot}=/builddir/SOURCE/name/&lt;/code&gt;
+&lt;code&gt;%{_sourcedir}=/builddir/SOURCE/&lt;/code&gt;
+&lt;code&gt;%{_builddir}=/builddir/&lt;/code&gt;
+&lt;code&gt;%{_datadir}=/usr/share/&lt;/code&gt;
+&lt;code&gt;%{_bindir}=/usr/bin&lt;/code&gt;
+&lt;a href=&#34;https://zh.opensuse.org/openSUSE:Packaging_Conventions_RPM_Macros&#34;&gt;常见RPM宏&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;安装的文件都得在&lt;code&gt;%{file}&lt;/code&gt;部分声明&lt;/li&gt;
+&lt;li&gt;手动安装的文件权限问题（一开始给可执行文件上了&lt;code&gt;0644&lt;/code&gt;:joy:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;然后是我打包的这个包的&lt;a href=&#34;https://build.opensuse.org/package/show/home:zzndb/scrcpy&#34;&gt;地址&lt;/a&gt;，自己在 TW 测试过没啥问题，如果有有&lt;em&gt;投屏，远程控制&lt;/em&gt; 的需求的用大蜥蜴的 Android 用户，又不想自己编译，又苦于默认源里没有，欢迎使用我的源:kissing_heart:，已 watch 该项目的 release 应该会保持更新。&lt;del&gt;（这应该用得有点意思&lt;/del&gt;&lt;/p&gt;
+&lt;p&gt;done！&lt;/p&gt;- https://blog.zzndb.me/posts/2019-04-23-scrcpy--%E9%A6%96%E6%AC%A1%E7%8B%AC%E7%AB%8Bobs%E6%89%93%E5%8C%85/ - </description>
+        </item>
+    
+    
+    
+        <item>
+        <title>AdBox 折腾记</title>
+        <link>https://blog.zzndb.me/posts/2019-02-25-adbox-%E6%8A%98%E8%85%BE%E8%AE%B0/</link>
+        <pubDate>Mon, 25 Feb 2019 07:19:00 +0800</pubDate>
+        
+        <guid>https://blog.zzndb.me/posts/2019-02-25-adbox-%E6%8A%98%E8%85%BE%E8%AE%B0/</guid>
+        <description>zzndb&#39;s world https://blog.zzndb.me/posts/2019-02-25-adbox-%E6%8A%98%E8%85%BE%E8%AE%B0/ -&lt;p&gt;对家里几年前办宽带给的联通 IPTV 盒子的一些折腾。&lt;/p&gt;
+&lt;p&gt;UP: 2019-02-25 11:18:24 星期一&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;盒子&lt;code&gt;build.prop&lt;/code&gt;的部分产品信息&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;...
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ro.build.version.release&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;4.4.2
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;...
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ro.product.model&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;GF-WM28H
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ro.product.brand&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;HiSTBAndroidV5
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ro.product.name&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;Hi3798MV100
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ro.product.device&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;Hi3798MV100
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ro.product.board&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;bigfish
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ro.product.cpu.abi&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;armeabi-v7a
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ro.product.cpu.abi2&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;armeabi
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ro.product.manufacturer&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;Hisilicon
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;...
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;最开始拿着&lt;code&gt;GF-WM28H&lt;/code&gt;（盒子后面有写） Google 一下，第一页全是卖它的遥控器的&amp;hellip; 还好第二页有个靠谱的 &lt;a href=&#34;https://www.v2ex.com/t/342195&#34;&gt;V2EX 上的&lt;/a&gt;折腾，看了看貌似还不是一个版本？从&lt;code&gt;build.prop&lt;/code&gt;来看我家这个貌似是某为海思半导体的 SOC ？至于 RAM 我估计就1G，ROM 根据自带系统设置里面显示貌似也就剩几百 MB 了，粗略估计2G ROM&amp;hellip;&lt;/p&gt;
+&lt;p&gt;然后他是拆机串口进去的&lt;code&gt;root shell&lt;/code&gt;，我在学校倒是有&lt;code&gt;USB-TTL&lt;/code&gt;的模块（折腾树莓派的时候入的），可是家里没有，还得拆机，手残党必然妈见打系列啊，只好作罢。&lt;/p&gt;
+&lt;p&gt;虽然不甘心的我还是试了试放 apk 文件到 U盘 进自带的文件管理里面，真找不到文件，屏蔽后缀关键词海星。当然天真的我最开始还以为是专门识别特定后缀，为此还用 shell 脚本复制 apk 为各种后缀组合（也不知道我为啥假定后缀名是三位 :relaxed:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; i in &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;a-zA-Z&lt;span style=&#34;color:#f92672&#34;&gt;}{&lt;/span&gt;a-zA-Z&lt;span style=&#34;color:#f92672&#34;&gt;}{&lt;/span&gt;a-zA-Z&lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;do&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    cp xx.apk xx.$i
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;done&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;当然结果可想而知，就三位可能性也太多，试了几百种后缀然后放弃。&lt;/p&gt;
+&lt;p&gt;然后尝试使用各种什么&lt;code&gt;当贝市场&lt;/code&gt;之类的工具通过局域网内 WIFI 云投送方式安装时才发现，设置突然要起了密码，去搜了几个试了试&lt;code&gt;6321&lt;/code&gt;进去了，然后连接设置没有了 WIFI 连接，猜测是系统更新后，修补这个可能的漏洞:joy:，无奈再次作罢。&lt;/p&gt;
+&lt;h1 id=&#34;折腾背景&#34;&gt;折腾背景&lt;/h1&gt;
+&lt;p&gt;前不久给家里另一个老电视在 pdd 入了一个裴讯T1，帯了&lt;strong&gt;双公头 USB 刷机线&lt;/strong&gt;，给 裴讯T1 刷了几次系统后，突然想起来这个 AdBox 也有 USB 口 会不会有啥进展，然后就去试了试。&lt;/p&gt;
+&lt;p&gt;AdBox 一共两个 USB 口盒子旁边的一个口 adb 没什么反应，后面各种接口里面藏的 USB 口，&lt;strong&gt;能直接 adb 连进去&lt;/strong&gt;，还是熟悉的&lt;code&gt;#&lt;/code&gt; root 用户，那不是装个 app 轻轻松松的事情&lt;/p&gt;
+&lt;p&gt;装了在&lt;a href=&#34;https://www.right.com.cn/forum/&#34;&gt;恩山论坛&lt;/a&gt;给 T1 找的一个桌面，安装可以直接用 adb 也可以直接复制到对应系统目录&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 在用户终端下&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;adb install xx.apk
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;## or&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;adb push xx.apk dir &lt;span style=&#34;color:#75715e&#34;&gt;# dir -&amp;gt; system: /system/app or user: /data/app/&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;adb shell chmod &lt;span style=&#34;color:#ae81ff&#34;&gt;644&lt;/span&gt; /dir/to/apk
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;## 注：安装为系统软件需先挂载 /system 可写&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;adb shell mount -o rw,remount /system/
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;然后问题又来了，这个 AdBox 直接连的光猫的一个口，走的是 IPTV 的内网，并没有连接互联网，装个什么小电视tv版还没有网&amp;hellip;&lt;/p&gt;
+&lt;p&gt;下面大概记一下对 AdBox 内部的一些调教&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;wifi 连接&lt;/li&gt;
+&lt;li&gt;busybox&lt;/li&gt;
+&lt;li&gt;supersu&lt;/li&gt;
+&lt;li&gt;adb_over_net&lt;/li&gt;
+&lt;li&gt;网络切换&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;wifi-连接&#34;&gt;wifi 连接&lt;/h2&gt;
+&lt;p&gt;连上 USB 通过&lt;code&gt;adb shell&lt;/code&gt;进入 AdBox 之后，通过&lt;code&gt;ip addr&lt;/code&gt;发现了一个叫&lt;code&gt;wlan0&lt;/code&gt;的接口，看来只是在设置里面隐藏了而已嘛，结合对一堆文件的各种&lt;code&gt;cat, more&lt;/code&gt;找到了 wifi 配置文件&lt;code&gt;/data/misc/wifi/wpa_supplicant.conf&lt;/code&gt;，按照树莓派 wifi 配置经验，添加对应 wifi 配置文件，重启 wifi 即可，大致操作如下&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 在用户终端下&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;## 先把配置文件拉过来修改了再放回去，我试了试这盒子貌似并没有编辑器，vi nano 都没有&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;adb pull /data/misc/wifi/wpa_supplicant.conf
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;## 利用 wpa_passphrase 生成 wifi 配置 写入 配置文件&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo wpa_passphrase ap_name ap_passwd &amp;gt;&amp;gt; wpa_supplicant.conf
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;## 把配置文件放回去&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;adb push wpa_supplicant.conf /data/misc/wifi/wpa_supplicant.conf
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;## 如添加多个 wifi 配置 可为其分配不同的优先级 &lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;### 用你喜欢的工具 修改配置文件 在单个配置文件中 添加 priority=num &lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;### num 越大 优先级越高 更改后文件示例如下&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;...
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;network&lt;span style=&#34;color:#f92672&#34;&gt;={&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        ssid&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;testAP&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#75715e&#34;&gt;#psk=&amp;#34;........&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        psk&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;07e6ec3fe54e703b7cc97c1d904831cc885a35e1e0846fcf024c93c7c796efa1
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        priority&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;network&lt;span style=&#34;color:#f92672&#34;&gt;={&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        ssid&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;dlink&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#75715e&#34;&gt;#psk=&amp;#34;,,,,,,,,&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        psk&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;e333a9536c3eff494847ea639cd73316eb0fdb9a3e533edad240e730cd259bf2
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        priority&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;### 上述就是我最终的具体配置情况（当然密码做了处理，&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;### testAP 是我在本机建立的用来测试的热点，优先级比dlink高，方便调试&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;## 重启 wifi&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;svc wifi disable
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;svc wifi enable
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;busybox&#34;&gt;busybox&lt;/h2&gt;
+&lt;p&gt;由于电视遥控器操作的烦琐（其实 &lt;em&gt;某悟空遥控&lt;/em&gt; 还算是做得挺好的，就是不太纯粹，鼠标操作也只是能用），或者想用一些对 TV 操作不太友好的 app 就只好通过在其他平台上配置完毕，备份配置，在盒子上恢复，不过某些 app 的配置想要利用像&lt;a href=&#34;https://play.google.com/store/apps/details?id=com.keramidas.TitaniumBackup&#34;&gt;钛备份&lt;/a&gt;之类的 Android 神器恢复，可惜需要 ROOT ，说到 ROOT 我就去找了新锐&lt;a href=&#34;https://magiskmanager.com/&#34;&gt;Magsik Manager&lt;/a&gt;，安装之后，在安装界面，只好选择&lt;code&gt;Patch boot img&lt;/code&gt;，然后我就去找这个系统的&lt;code&gt;boot.img&lt;/code&gt;。&lt;/p&gt;
+&lt;h3 id=&#34;magisk&#34;&gt;Magisk？&lt;/h3&gt;
+&lt;p&gt;最开始我尝试直接去&lt;code&gt;/dev/block&lt;/code&gt;里面去找 boot 分区，然后用 cat 大法直接读取，找了一会儿在&lt;code&gt;/dev/block/platform/hi_mci.1/by-name&lt;/code&gt;目录找到了所有设备，&lt;code&gt;ls&lt;/code&gt;一下&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;/dev/block/platform/hi_mci.1/by-name &lt;span style=&#34;color:#75715e&#34;&gt;# ls&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;baseparam    facrootbox   kernel       pqparam      sdcard
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;bootargs     fastboot     loaderdb     private      stbid
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;cache        fastplay     logo         qbdata       system
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;deviceinfo   fastplaybak  logobak      qbflag       userapi
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;fackernel    hibdrv       misc         recovery     userdata
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;很好，并没有叫&lt;strong&gt;boot&lt;/strong&gt;的块设备，只好提取一些去分析分析找找看了，随即&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# AdBox 终端 位于上述目录 获取&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;cat xx &amp;gt; /tmp/xx.img
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 用户终端下 拉取文件&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;adb pull /tmp/xx.img
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 利用如 file 之类工具验证文件类型&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;file xx.img
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;开始尝试找，还好在尝试到&lt;code&gt;kernel.img&lt;/code&gt;时&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;file kernel.img
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;kernel/kernel.img: Android bootimg, kernel &lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;0x3008000&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;, ramdisk &lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;0x4000000&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;, page size: &lt;span style=&#34;color:#ae81ff&#34;&gt;16384&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;虽然貌似找到了，但还是不太确认，开始像通过检测更新抓包看能不能有所发现，后面尝试发现不知道是不是&lt;strong&gt;限制只能内网检测&lt;/strong&gt;，通过我的测试热点的更新请求返回状态都是&lt;code&gt;error&lt;/code&gt;，不管是尝试更改&lt;code&gt;build.prop&lt;/code&gt;版本，更新重试，还是直接修改请求版本参数，返回值都同样如此，只好作罢。&lt;/p&gt;
+&lt;p&gt;开始用 Magisk Manager 打补丁，放置到系统根目录，安装第三方文件管理，选择文件，然后，&lt;code&gt;unzip error&lt;/code&gt;不能解压，随即去搜了搜，他们说叫更新 busybox 试试，然后又回到了 &lt;strong&gt;busybox&lt;/strong&gt;。&lt;/p&gt;
+&lt;h3 id=&#34;busybox-1&#34;&gt;busybox?&lt;/h3&gt;
+&lt;p&gt;其实在&lt;code&gt;adb shell&lt;/code&gt;里面，对基本的系统的可执行文件目录&lt;code&gt;/system/bin&lt;/code&gt;和&lt;code&gt;/system/xbin&lt;/code&gt;看了看之后，我发现这 AdBox 上其实有 busybox 版本貌似是1.4x，记不太清了，13年编译的版本，只软链接&lt;code&gt;ln -s&lt;/code&gt;出了很少的东西，像&lt;code&gt;vi，xargs，sed，awk...&lt;/code&gt;那是都没链接出来。&lt;/p&gt;
+&lt;p&gt;之前折腾过交叉编译，貌似有编译过 busybox 去找了找，还真有，版本 v1.28.0 适合 armeabi，&lt;a href=&#34;https://yadi.sk/d/l-hZ5cL6J4evSg&#34;&gt;下载地址&lt;/a&gt;，一顿操作放到&lt;code&gt;/system/bin/&lt;/code&gt;下，然后链接你想要的命令&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;/system/bin/busybox ln -sf busybox the_command
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;重新链接了&lt;code&gt;unzip&lt;/code&gt;然后再次打开 Magisk Manager 还是错误，想起来之前在找 boot.img 时通过 adb 重启至 recovery fastboot&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 用户终端&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;adb reboot recovery
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;adb reboot fastboot
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;结果盒子均重启进入了系统，通过 recovery 刷入的方法行不通，只好作罢。那就去看看老将 &lt;strong&gt;SuperSU&lt;/strong&gt; 好了。&lt;/p&gt;
+&lt;h2 id=&#34;supersu&#34;&gt;SuperSU&lt;/h2&gt;
+&lt;p&gt;既然进不去 recovery （没有？
+那么就只好在有 root 权限的 adb shell 里面&lt;strong&gt;手动安装SuperSU&lt;/strong&gt;，去大神 Chainfire &lt;a href=&#34;http://download.chainfire.eu/supersu&#34;&gt;网站&lt;/a&gt;下载，解压缩后有如下目录结构&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 缩略其他架构目录&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;...
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;.
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;├── armv7
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;│   ├── libsupol.so
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;│   ├── su
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;│   ├── suinit
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;│   ├── sukernel
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;│   └── supolicy
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;├── common
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;│   ├── 000000deepsleep
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;│   ├── 99SuperSUDaemon
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;│   ├── avb
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;│   │   ├── BootSignature_Android.jar
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;│   │   ├── supersu.pk8
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;│   │   └── supersu.x509.der
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;│   ├── fbe_bypass.sh
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;│   ├── file_contexts
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;│   ├── file_contexts_image
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;│   ├── formats
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;│   │   ├── bzip2
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;│   │   ├── gzip.1
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;│   │   ├── gzip.2
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;│   │   ├── legz4
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;│   │   ├── lz4.1
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;│   │   ├── lz4.2
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;│   │   ├── lzma
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;│   │   ├── lzo
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;│   │   └── xz
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;│   ├── frp_install
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;│   ├── hexpatch
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;│   ├── init.supersu.rc
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;│   ├── init.supersu.rc.24
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;│   ├── init.supersu.rc.24.bindsbin
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;│   ├── init.supersu.rc.bindsbin
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;│   ├── install-recovery.sh
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;│   ├── launch_daemonsu.sh
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;│   ├── supersu_is_here
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;│   └── Superuser.apk
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;├── LICENSE
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;├── META-INF
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;│   ├── CERT.RSA
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;│   ├── CERT.SF
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;│   ├── com
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;│   │   └── google
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;│   │       └── android
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;│   │           ├── update-binary
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;│   │           └── updater-script
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;│   └── MANIFEST.MF
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;...
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;对应架构的文件，公共文件，许可协议，一个什么信息包？不太清楚，不过我知道那个目录里面的&lt;code&gt;update-binary&lt;/code&gt;文件是一个&lt;code&gt;sh&lt;/code&gt;脚本文件，也就是 SuperSU 的安装步骤。&lt;/p&gt;
+&lt;p&gt;打开&lt;code&gt;META-INF/com/google/android/uptate-binary&lt;/code&gt;，你会发现，在脚本之前有两百多行的安装指导（不能对 boot 进行刷入，只好选择 &lt;code&gt;&amp;quot;SYSTEM&amp;quot; INSTALL&lt;/code&gt;方式，V2.82-SR5 文档&lt;strong&gt;部分摘取&lt;/strong&gt;如下，&lt;em&gt;其他机型手动安装请参考&lt;/em&gt; &lt;a href=&#34;https://blog.zzndb.me/images/2019/02/32535640.txt&#34; target=&#34;_blank&#34;&gt;SuperSU_Manual_Install_V2.82-SR5.txt&lt;/a&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# ----- &amp;#34;SYSTEM&amp;#34; INSTALL -----&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# To install SuperSU properly, aside from cleaning old versions and&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# other superuser-type apps from the system, the following files need to&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# be installed:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# API   source                        target                              chmod   chcon                       required&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 7-19  common/Superuser.apk          /system/app/Superuser.apk           0644    u:object_r:system_file:s0   gui&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 17+   common/install-recovery.sh    /system/etc/install-recovery.sh     0755    *1                          required&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 17+                                 /system/bin/install-recovery.sh     (symlink to /system/etc/...)        required&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# *1: same as /system/bin/toolbox: u:object_r:system_file:s0 if API &amp;lt; 20, u:object_r:toolbox_exec:s0 if API &amp;gt;= 20&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 7+    ARCH/su *2                    /system/xbin/su                     *3      u:object_r:system_file:s0   required&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 7+                                  /system/bin/.ext/.su                *3      u:object_r:system_file:s0   gui&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 17+                                 /system/xbin/daemonsu               0755    u:object_r:system_file:s0   required&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# *2: su.pie for 17+ x86(_32) only&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# *3: 06755 if API &amp;lt; 18, 0755 if API &amp;gt;= 18&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 17+   common/99SuperSUDaemon *6     /system/etc/init.d/99SuperSUDaemon  0755    u:object_r:system_file:s0   optional&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# *6: only place this file if /system/etc/init.d is present&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 17+   &amp;#39;echo 1 &amp;gt;&amp;#39; or &amp;#39;touch&amp;#39; *7      /system/etc/.installed_su_daemon    0644    u:object_r:system_file:s0   optional&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# *7: the file just needs to exist or some recoveries will nag you. Even with it there, it may still happen.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# After installation, run &amp;#39;/system/xbin/su --install&amp;#39;, which may need to&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# perform some additional installation steps. Ideally, at one point,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# a lot of this script will be moved there.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;简单来说就是按照他的要求对应系统 API 等级，将对应文件放在对应位置，给予适当权限 chmod ，正确的对象安全上下文 chcon。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;对与 AdBox 来说，&lt;em&gt;因为 Android 4.4.2 其 API = 19 架构 armeabi 是属于 armv7的&lt;/em&gt;，按照上述文档具体操作如下&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 假设以将下载 zip 文件放入盒子 /tmp 目录 在 /tmp 目录下&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;mount -o rw,remount /system &lt;span style=&#34;color:#75715e&#34;&gt;# 挂载 /system/ 可读写&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;unzip file_name.zip
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;cp ./common/Superuser.apk /system/app/ 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;chmod &lt;span style=&#34;color:#ae81ff&#34;&gt;0644&lt;/span&gt; /system/app/Superuser.apk
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;chcon u:object_r:system_file:s0 /system/app/Superuser.apk
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;cp ./common/install-recovery.sh /system/etc/install-recovery.sh
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;chmod &lt;span style=&#34;color:#ae81ff&#34;&gt;0755&lt;/span&gt; /system/etc/install-recovery.sh
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;chcon u:object_r:system_file:s0 /system/etc/install-recovery.sh
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ln -s /system/etc/install-recovery.sh /system/bin/install-recovery.sh
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;cp ./armv7/su /system/xbin/su
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;chmod &lt;span style=&#34;color:#ae81ff&#34;&gt;0755&lt;/span&gt; /system/xbin/su
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;chcon u:object_r:system_file:s0 /system/xbin/su
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;mkdir -p /system/bin/.ext/ &lt;span style=&#34;color:#75715e&#34;&gt;# 创建这个目录&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;cp ./armv7/su /system/bin/.ext/.su
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;chmod &lt;span style=&#34;color:#ae81ff&#34;&gt;0755&lt;/span&gt; /system/bin/.ext/.su
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;chcon u:object_r:system_file:s0 /system/bin/.ext/.su
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;cp ./armv7/su /system/xbin/daemonsu
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;chmod &lt;span style=&#34;color:#ae81ff&#34;&gt;0755&lt;/span&gt; /system/xbin/daemonsu
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;chcon u:object_r:system_file:s0 /system/xbin/daemonsu
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;echo &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt; &amp;gt; /system/etc/.installed_su_daemon &lt;span style=&#34;color:#75715e&#34;&gt;# 将 1 写入这个文件，创建这个文件&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;chmod &lt;span style=&#34;color:#ae81ff&#34;&gt;0644&lt;/span&gt; /system/etc/.installed_su_daemon
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;chcon u:object_r:system_file:s0 /system/etc/.installed_su_daemon
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;/system/xbin/su --install
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 最好删掉 原来的/system/bin/su 如果有的话，文档里没有在这里放置 su&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;rm /system/bin/su
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;mount -o ro,remount /system &lt;span style=&#34;color:#75715e&#34;&gt;# 挂载回 /system 只读&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;完成上述步骤之后，重启进入 &lt;strong&gt;超级授权&lt;/strong&gt; 应该就可用了。&lt;/p&gt;
+&lt;p&gt;有了 ROOT 权限就能装很多有意思的 app 了，比如 钛备份，Tasker，afwall。&lt;/p&gt;
+&lt;h2 id=&#34;adb_over_net&#34;&gt;adb_over_net&lt;/h2&gt;
+&lt;p&gt;其实这里要解决的问题只要就是，AdBox 默认有一条 iptables 规则过滤了 adb_over_net 要用到的 5555 端口。&lt;/p&gt;
+&lt;p&gt;在折腾上面那一堆东西之前，其实我就在尝试通过自建的热点，通过&lt;code&gt;adb connect ip&lt;/code&gt;去尝试连接，当然发现失败是报错&lt;code&gt;time out&lt;/code&gt;，猜想就是被过滤了。通过 USB adb 进去&lt;code&gt;iptables --list-rules&lt;/code&gt;，确实发现了一条过滤规则，&lt;code&gt;DROP&lt;/code&gt; 掉到 5555 的连接，由于找不到配置文件，最开始就写了个脚本去删掉它&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# adbox_iptables file in /system/bin/&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;INPUTL&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;$(&lt;/span&gt;iptables --list INPUT --line-numbers -n | grep &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;^[0-9]&amp;#39;&lt;/span&gt; | grep 5555&lt;span style=&#34;color:#66d9ef&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;echo &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;$INPUTL&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# LENTH=$(echo &amp;#34;$INPUTL&amp;#34; | wc -l)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;DROPINPUTL&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;$(&lt;/span&gt;echo &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;$INPUTL&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt; | grep DROP&lt;span style=&#34;color:#66d9ef&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt; -n &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;$DROPINPUTL&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt;;&lt;span style=&#34;color:#66d9ef&#34;&gt;then&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        echo &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;delete DROP rule&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        num&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;$(&lt;/span&gt;echo &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;$DROPINPUTL&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt; | awk &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;{print $1}&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        echo &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;$num&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt; | xargs -I &lt;span style=&#34;color:#f92672&#34;&gt;{}&lt;/span&gt; iptables --delete INPUT &lt;span style=&#34;color:#f92672&#34;&gt;{}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;fi&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;INPUTL&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;$(&lt;/span&gt;iptables --list INPUT --line-numbers -n | grep &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;^[0-9]&amp;#39;&lt;/span&gt; | grep 5555&lt;span style=&#34;color:#66d9ef&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# add rule&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; ! echo &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;$INPUTL&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt; | grep -q 5555;&lt;span style=&#34;color:#66d9ef&#34;&gt;then&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    iptables -A INPUT -p tcp -m tcp -s 192.168.12.0/24 --dport &lt;span style=&#34;color:#ae81ff&#34;&gt;5555&lt;/span&gt; -j ACCEPT
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;fi&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;echo &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;now INPUT rule contain port 5555 list&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;iptables --list INPUT --line-numbers -n | grep &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;^[0-9]&amp;#39;&lt;/span&gt; | grep &lt;span style=&#34;color:#ae81ff&#34;&gt;5555&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;也很容易看出，其实就是找到规则删掉它，并添加一条新的规则，允许特定网段连接（即我的 testAP 的网段&lt;/p&gt;
+&lt;p&gt;之后，又给 AdBox 添加了&lt;code&gt;init.d&lt;/code&gt;支持，通过这个 &lt;a href=&#34;https://forum.xda-developers.com/showthread.php?t=1933849&#34;&gt;XDA&lt;/a&gt; 帖子作者提供的脚本，实现了开机自启动应用这条规则，即简单写个 sh 脚本调用我上面的&lt;code&gt;adbox_iptable&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;在我装完 Afwall 想对应用进行防火墙控制之后~~（其实是天真的想，我禁用了你的 LAN 联网，你是不是就只有去用 WLAN 了呢？见后文&lt;strong&gt;网络切换&lt;/strong&gt;~~，由于其也依赖 init.d 开机自启动初始化 iptables ，造成了可能我刚改完规则，afwall 的启动脚本后来就全部&lt;code&gt;iptables -F xx&lt;/code&gt;了。&lt;/p&gt;
+&lt;p&gt;现在我使用 Tasker 手动（自动也行，主要是等 afwall 改完）实现对规则的修改，建一个任务直接运行上面脚本即可，改都不用改 :laughing:&lt;/p&gt;
+&lt;h2 id=&#34;网络切换&#34;&gt;网络切换&lt;/h2&gt;
+&lt;p&gt;由于 IPTV 走内网，在同时连接 wifi 和 PPP0E 的情况下，默认是走 PPPOE 的，而这里面又没有连接互联网，所以得进行网络切换。&lt;/p&gt;
+&lt;p&gt;最开始我一直在研究 iptables 对特定应用转发其在 ppp0 上的包到 wlan0 上，然后发现按照 sf 上面一顿操作之后，还是没好使。还通过各种教程研究 iptables 的使用&amp;hellip;，是不是只能对应端口转发？是不是得去操作路由啊？&lt;/p&gt;
+&lt;p&gt;说到路由，我去&lt;code&gt;ip route&lt;/code&gt;看了看，好嘛，默认是走 PPPOE 的 gateway，改改看看&lt;code&gt;ip route replace default via 192.168.12.1&lt;/code&gt;，去打开小电视看了看，还真行，然后&lt;em&gt;通过 Tasker 自动更改默认路由&lt;/em&gt; 的方案全票通过了。&lt;del&gt;实际上发现这个操作之前在 iptables 上鸽了很久&lt;/del&gt;&lt;/p&gt;
+&lt;p&gt;去 Tasker &lt;a href=&#34;https://tasker.joaoapps.com/download.html&#34;&gt;官网&lt;/a&gt;下载了 Android 4.4 能用的版本，在手机上弄好配置文件，&lt;code&gt;adb push&lt;/code&gt;到盒子，导入，测试，启用。**通过简单地打开特定应用，再根据网络连接情况，得到网关地址，更改网关地址，关闭特定应用，获取网关地址，改回网关地址。**算是实现了自由的网络切换。&lt;/p&gt;
+&lt;p&gt;贴上一张具体任务实现「任务编辑界面图」，就一目了然了
+&lt;img src=&#34;https://blog.zzndb.me/images/2019/02/1665112908.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;通过 shell 运行命令，获取地址（广播地址 brd /远端接口 peer），相应修改为网关地址，在运行&lt;code&gt;ip  route replace default via xx&lt;/code&gt;更改即可&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;提供下我的「网络切换+adb_over_net端口打开」&lt;a href=&#34;https://yadi.sk/d/1169VS8Jid2xQw&#34;&gt;Tasker 配置文件&lt;/a&gt;，如果有人需要（应该不会有:joy:，供参考。&lt;/p&gt;
+&lt;h2 id=&#34;other&#34;&gt;Other&lt;/h2&gt;
+&lt;p&gt;在准备利用 Wireshark 抓包找固件下载地址获取 boot.img 的时候，其实还有更多的发现，在茫茫 http 请求中，发现了一些 POST 上传，根据地址命名应该是上传系统 log 之类的东西，倒是确实没发现什么应用列表啊之类的数据问题，谁知道呢，或与在非 ASCII 数据里面有些什么呢？&lt;del&gt;在这个隐私毫无的时代&lt;/del&gt;&lt;/p&gt;
+&lt;p&gt;回到这个盒子来看，在装了第三方桌面后，我才发现，这个 Android 4.4.2 真是深度定制&lt;del&gt;阉割&lt;/del&gt;，连个系统设置都被阉割了，开始还想着装了第三方桌面进设置去连个 wifi 结果发现，连设置都没有，然后搞出了上面的一堆操作，或许将来升个级就啥都得重新来过了，ban 掉升级的 ip 的想法出现了，但没真去 ban ，或许将来升级之后操作会更有挑战性呢？（通过驱动层面封掉后面的 USB 口？装的 app 全删掉，装进系统的也顺便重置，真是美滋滋呢！&lt;/p&gt;
+&lt;p&gt;完&lt;/p&gt;- https://blog.zzndb.me/posts/2019-02-25-adbox-%E6%8A%98%E8%85%BE%E8%AE%B0/ - </description>
+        </item>
+    
+    
+    
+        <item>
+        <title>树莓派温控风扇（GPIO&amp;三极管）</title>
+        <link>https://blog.zzndb.me/posts/2018-09-25-%E6%A0%91%E8%8E%93%E6%B4%BE%E6%B8%A9%E6%8E%A7%E9%A3%8E%E6%89%87gpio%E4%B8%89%E6%9E%81%E7%AE%A1/</link>
+        <pubDate>Tue, 25 Sep 2018 22:56:00 +0800</pubDate>
+        
+        <guid>https://blog.zzndb.me/posts/2018-09-25-%E6%A0%91%E8%8E%93%E6%B4%BE%E6%B8%A9%E6%8E%A7%E9%A3%8E%E6%89%87gpio%E4%B8%89%E6%9E%81%E7%AE%A1/</guid>
+        <description>zzndb&#39;s world https://blog.zzndb.me/posts/2018-09-25-%E6%A0%91%E8%8E%93%E6%B4%BE%E6%B8%A9%E6%8E%A7%E9%A3%8E%E6%89%87gpio%E4%B8%89%E6%9E%81%E7%AE%A1/ -&lt;p&gt;让树莓派不算太吃灰的一小步:joy:&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;2018-10-01 16:44:05 星期一&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;更新自启动及脚本v2&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;2018-09-29 22:32:01 星期六&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;更新在openSUSE上的gpio操作及gpio文档&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;2018-09-25 22:56:21 星期二&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;缘由&#34;&gt;缘由&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&#34;https://blog.zzndb.com.cn/forfun/raspberrypi00.html&#34; title=&#34;前不久&#34;&gt;前不久&lt;/a&gt;某宝购入的树莓派亚克力外壳给送了一个小风扇，给出的连接建议就是直接接在04和06pin那两个相邻的5VDC端和地端上，等于就是直接供电，感觉不太优雅´ ▽ ` )ﾉ，也会比较费电（还在找有什么能给会断电的宿舍放置的树莓派维持供电的简单方法，，目前正在测试充电宝，，，），所以决定得搞一搞这个风扇（到手树莓派鸽了这么久了终于开动了o&amp;lt;(=////▽////=)&amp;gt;o）。&lt;/p&gt;
+&lt;h1 id=&#34;准备&#34;&gt;准备&lt;/h1&gt;
+&lt;h2 id=&#34;得到温度&#34;&gt;得到温度&lt;/h2&gt;
+&lt;p&gt;考虑要温控首先得先知道它的温度，遂在&lt;a href=&#34;https://elinux.org/RPiconfig&#34;&gt;Embedded Linux Wiki这里&lt;/a&gt;找到了树莓派获取温度的方法&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;To monitor the Raspberry Pi&amp;rsquo;s temperature, look at: &lt;code&gt;/sys/class/thermal/thermal_zone0/temp&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;返回的是五位未格式化的温度值（如&lt;code&gt;41231&lt;/code&gt;）,同样通过这个&lt;code&gt;vcgencmd measure_temp&lt;/code&gt;能得到格式化的温度值（如&lt;code&gt;41.2&#39;C&lt;/code&gt;)&lt;/p&gt;
+&lt;h2 id=&#34;实现开关&#34;&gt;实现开关&lt;/h2&gt;
+&lt;p&gt;然后是得能控制风扇，经过实验直接将风扇接在&lt;code&gt;GPIO&lt;/code&gt;上只能看到扇叶轻微转动然后停止，通过一番查找发现在&lt;a href=&#34;https://www.raspberrypi.org/documentation/usage/gpio/README.md&#34;&gt;树莓派官方GPIO文档&lt;/a&gt;里注明了警告&amp;lt;(ˉ▽ˉ；=)&amp;gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Warning: while connecting up simple components to the GPIO pins is perfectly safe, it&amp;rsquo;s important to be careful how you wire things up. LEDs should have resistors to limit the current passing through them. &lt;strong&gt;Do not use 5V for 3V3 components. Do not connect motors directly to the GPIO pins, instead use an H-bridge circuit or a motor controller board.&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;里面提到了用H桥和电机控制板，考虑到功能单一我还是用三极管来控制吧。顺便复习一下模电，大致的三极管开关电路，如下，利用一个&lt;code&gt;NPN&lt;/code&gt;型三极管加上一个&lt;code&gt;GPIO&lt;/code&gt;口的不同输出状态实现，只要&lt;code&gt;IO&lt;/code&gt;口能提供电流即可使三极管导通
+&lt;img src=&#34;https://blog.zzndb.me/images/2018/09/229487526.png&#34; alt=&#34;三极管开关控制电路&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;shell-操作gpio&#34;&gt;shell 操作GPIO&lt;/h2&gt;
+&lt;p&gt;接下来就是如何控制&lt;code&gt;GPIO&lt;/code&gt;口，&lt;a href=&#34;https://www.raspberrypi.org/documentation/usage/gpio/README.md&#34;&gt;树莓派官方GPIO文档&lt;/a&gt;里面关于 Programming with GPIO 的部分有&lt;code&gt;Scratch，Python&lt;/code&gt;的文档，可是这俩我都不会，&lt;code&gt;shell&lt;/code&gt;脚本还会一点，而且作为一个万物皆文件的&lt;code&gt;Linux&lt;/code&gt;怎么可能不能直接操作呢？于是找到了这篇&lt;a href=&#34;https://luketopia.net/2013/07/28/raspberry-pi-gpio-via-the-shell/&#34;&gt;Blog&lt;/a&gt;，知道了大致直接操作&lt;code&gt;GPIO&lt;/code&gt;的几个步骤。&lt;/p&gt;
+&lt;p&gt;在树莓派的&lt;code&gt;/sys/class&lt;/code&gt;虚拟文件系统路径下有&lt;code&gt;gpio&lt;/code&gt;的对应的设备模型文件夹&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;里面的目录树大致如下：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;.
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;├── export
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;├── gpio3 -&amp;gt; ../../devices/platform/soc/3f200000.gpio/gpiochip0/gpio/gpio3
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;├── gpiochip0 -&amp;gt; ../../devices/platform/soc/3f200000.gpio/gpio/gpiochip0
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;├── gpiochip128 -&amp;gt; ../../devices/gpiochip1/gpio/gpiochip128
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;└── unexport
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;3&lt;/span&gt; directories, &lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt; files
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;具体&lt;code&gt;gpio&lt;/code&gt;口链接文件夹下目录结构：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;.
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;├── active_low
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;├── device -&amp;gt; ../../../gpiochip0
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;├── direction
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;├── edge
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;├── power
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;│   ├── autosuspend_delay_ms
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;│   ├── control
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;│   ├── runtime_active_time
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;│   ├── runtime_status
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;│   └── runtime_suspended_time
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;├── subsystem -&amp;gt; ../../../../../../../class/gpio
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;├── uevent
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;└── value
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;3&lt;/span&gt; directories, &lt;span style=&#34;color:#ae81ff&#34;&gt;10&lt;/span&gt; files
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;详细配置文档见&lt;a href=&#34;https://www.kernel.org/doc/Documentation/gpio/sysfs.txt&#34;&gt;Kernel里的GPIO文档&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;简单使用一个&lt;code&gt;GPIO&lt;/code&gt;口步骤：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;启用&lt;code&gt;num&lt;/code&gt;号&lt;code&gt;GPIO&lt;/code&gt;口：&lt;code&gt;echo num /sys/class/gpio/export&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;对&lt;code&gt;export，unexport&lt;/code&gt;文件赋值即可启用或者禁用对应的&lt;code&gt;GPIO&lt;/code&gt;口&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;设置&lt;code&gt;I/O&lt;/code&gt;：&lt;code&gt;echo inOrOut /sys/class/gpio/gpionum/direction&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;设置电平：&lt;code&gt;echo 1Or0 /sys/class/gpio/gpionum/value&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;其中0为低电平，1为高电平&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;最后实现就是对应的&lt;code&gt;shell&lt;/code&gt;脚本的编写，以及具体温度区间的选择，自启动等问题&lt;/p&gt;
+&lt;h1 id=&#34;实战&#34;&gt;实战&lt;/h1&gt;
+&lt;p&gt;当前测试版本用到了下列器件：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;RaspberryPi 3B+ x1&lt;/li&gt;
+&lt;li&gt;随亚克力外壳附赠 5V～0.2A 风扇 x1&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.mouser.com/ds/2/149/SS8050-117753.pdf&#34;&gt;S8050&lt;/a&gt; 三极管 x1&lt;/li&gt;
+&lt;li&gt;1k 电阻 x1&lt;/li&gt;
+&lt;li&gt;面包板 x1&lt;/li&gt;
+&lt;li&gt;各种杜邦线 xN&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;shell-脚本&#34;&gt;Shell 脚本&lt;/h2&gt;
+&lt;p&gt;具体&lt;code&gt;shell&lt;/code&gt;如下&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#!/bin/bash
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# version 0.2&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# Mon Sep 24 13:54:09 UTC 2018&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# use raspberrypi gpio3 and triode to control the fan&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# run fan when temp above 50&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# stop run when temp lower 38&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ionum&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;461&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;initdir&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;/sys/class/gpio
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#iodir=/sys/class/gpio/gpio3&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;iodir&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;/sys/class/gpio/gpio$ionum
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;temp&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# init GPIO&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt; -d $iodir &lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt;; &lt;span style=&#34;color:#66d9ef&#34;&gt;then&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        echo out &amp;gt; $iodir/direction
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;else&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        echo $ionum &amp;gt; $initdir/export
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        echo out &amp;gt; $iodir/direction
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;fi&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# get temp&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;function&lt;/span&gt; getTemp&lt;span style=&#34;color:#f92672&#34;&gt;()&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        temp&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;$(&lt;/span&gt;cat /sys/class/thermal/thermal_zone0/temp&lt;span style=&#34;color:#66d9ef&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# on &amp;amp; off&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;function&lt;/span&gt; ON_OFF&lt;span style=&#34;color:#f92672&#34;&gt;()&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; getTemp &lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;((&lt;/span&gt;$temp &amp;gt; 50000&lt;span style=&#34;color:#f92672&#34;&gt;))&lt;/span&gt;; &lt;span style=&#34;color:#66d9ef&#34;&gt;then&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                echo &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt; &amp;gt; $iodir/value   &lt;span style=&#34;color:#75715e&#34;&gt;# run fan&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#66d9ef&#34;&gt;elif&lt;/span&gt; getTemp &lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;((&lt;/span&gt;$temp &amp;lt; 38000&lt;span style=&#34;color:#f92672&#34;&gt;))&lt;/span&gt;; &lt;span style=&#34;color:#66d9ef&#34;&gt;then&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                echo &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt; &amp;gt; $iodir/value   &lt;span style=&#34;color:#75715e&#34;&gt;# stop fan&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#66d9ef&#34;&gt;fi&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# main loop&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;while&lt;/span&gt; true; &lt;span style=&#34;color:#66d9ef&#34;&gt;do&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        ON_OFF
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        sleep &lt;span style=&#34;color:#ae81ff&#34;&gt;5&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;done&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;p&gt;在大蜥蜴上直接&lt;code&gt;echo 3 &amp;gt; /sys/class/gpio/export&lt;/code&gt;貌似不行，显示&lt;code&gt;write error: Invalid argument&lt;/code&gt;&lt;br&gt;
+在&lt;a href=&#34;https://lists.opensuse.org/opensuse-arm/2016-05/msg00032.html&#34;&gt;大蜥蜴arm邮件列表&lt;/a&gt;发现问题解决方法&lt;br&gt;
+替换为&lt;code&gt;/sys/class/gpio/&lt;/code&gt;目录的&lt;code&gt;gpiochipxx&lt;/code&gt;的xx加上偏移量实现如：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# ls&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;export  gpiochip458  unexport
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# echo 461 &amp;gt; ./export&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# ls&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;export  gpio461  gpiochip458  unexport
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;所以改进版v2如上&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;然后是自启动：
+在&lt;code&gt;debian&lt;/code&gt;系（如&lt;code&gt;raspbian&lt;/code&gt;）中，可以直接将脚本文件写入&lt;code&gt;/etc/rc.local&lt;/code&gt;中，这也是树莓派官方文档提供的自启动方法&lt;/p&gt;
+&lt;p&gt;在大蜥蜴中貌似并没有这个文件，&lt;a href=&#34;https://forum.suse.org.cn/t/topic/9331&#34; title=&#34;听说已弃用&#34;&gt;听说已弃用&lt;/a&gt;，那就写个&lt;code&gt;systemd service``Fan.service&lt;/code&gt;来启动吧，如下&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-systemd&#34; data-lang=&#34;systemd&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;[Unit]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;Description&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;Fan Boot service&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;[Service]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;User&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;root&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;Group&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;root&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;ExecStart&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;/usr/local/config/Fanboot.sh&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;[Install]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;WantedBy&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;multi-user.target&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;放在&lt;code&gt;/usr/lib/systemd/system/&lt;/code&gt;中，执行&lt;code&gt;systemctl enable Fan.service&lt;/code&gt;开启自启动&lt;code&gt;systemd start Fan.service&lt;/code&gt;启动&lt;/p&gt;
+&lt;h2 id=&#34;实物图&#34;&gt;实物图&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.zzndb.me/images/2018/09/614717856.jpg&#34; alt=&#34;实物图&#34;&gt;&lt;/p&gt;
+&lt;h1 id=&#34;other&#34;&gt;Other&lt;/h1&gt;
+&lt;p&gt;但是问题又来了，我怎么样才能在没有烙铁等高级操作工具的情况下将这个东西尽量放在亚克力外壳里面 &amp;lt;(=￣_￣|||)&amp;gt;&lt;/p&gt;
+&lt;p&gt;研究研究。。。&lt;/p&gt;
+&lt;div class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
+&lt;hr&gt;
+&lt;ol&gt;
+&lt;li id=&#34;fn:1&#34;&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.ibm.com/developerworks/cn/linux/l-cn-sysfs/index.html&#34;&gt;https://www.ibm.com/developerworks/cn/linux/l-cn-sysfs/index.html&lt;/a&gt;&amp;#160;&lt;a href=&#34;#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;- https://blog.zzndb.me/posts/2018-09-25-%E6%A0%91%E8%8E%93%E6%B4%BE%E6%B8%A9%E6%8E%A7%E9%A3%8E%E6%89%87gpio%E4%B8%89%E6%9E%81%E7%AE%A1/ - </description>
+        </item>
+    
+    
+    
+        <item>
+        <title>No.6 AC</title>
+        <link>https://blog.zzndb.me/posts/2017-07-22-no.6-ac/</link>
+        <pubDate>Sat, 22 Jul 2017 14:56:00 +0800</pubDate>
+        
+        <guid>https://blog.zzndb.me/posts/2017-07-22-no.6-ac/</guid>
+        <description>zzndb&#39;s world https://blog.zzndb.me/posts/2017-07-22-no.6-ac/ -&lt;p&gt;依旧easy难度&lt;/p&gt;
+&lt;!--more--&gt;
+&lt;p&gt;&lt;strong&gt;Description:&lt;/strong&gt;
+&lt;em&gt;Determine whether an integer is a palindrome. Do this without extra space.&lt;/em&gt;
+&lt;em&gt;Some hints:&lt;/em&gt;
+&lt;em&gt;&lt;strong&gt;Could negative integers be palindromes? (ie, -1)&lt;/strong&gt;&lt;/em&gt;
+&lt;em&gt;If you are thinking of converting the integer to string, note the restriction of using extra space.&lt;/em&gt;
+&lt;em&gt;You could also try reversing an integer. However, if you have solved the problem &amp;ldquo;Reverse Integer&amp;rdquo;, you know that the reversed integer might overflow. How would you handle such case?&lt;/em&gt;
+&lt;em&gt;There is a more generic way of solving this problem.&lt;/em&gt;&lt;/p&gt;
+&lt;!--more--&gt;
+&lt;p&gt;**tip：**好吧上面粗体问句答案是「负数并不是回文数」&lt;/p&gt;
+&lt;!--more--&gt;
+&lt;p&gt;&lt;strong&gt;Code:&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;Solution&lt;/span&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;bool&lt;/span&gt; isPalindrome(&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; x) {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; tmp &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; x, re &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt;(x &lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;){
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            &lt;span style=&#34;color:#66d9ef&#34;&gt;while&lt;/span&gt;(x){
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;              re &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; re&lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;10&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; x&lt;span style=&#34;color:#f92672&#34;&gt;%&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;10&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;              x &lt;span style=&#34;color:#f92672&#34;&gt;/=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;10&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;          }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt;(re &lt;span style=&#34;color:#f92672&#34;&gt;==&lt;/span&gt; tmp) &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            &lt;span style=&#34;color:#66d9ef&#34;&gt;else&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        }&lt;span style=&#34;color:#66d9ef&#34;&gt;else&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;; 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;};
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;by the way 用到了上一道题的 reverse 然后与原来数比较，排除负数。&lt;/p&gt;
+&lt;!--more--&gt;
+&lt;p&gt;&lt;strong&gt;FullWeb:&lt;/strong&gt;
+&lt;img src=&#34;https://blog.zzndb.me/images/2017/07/745528676.png&#34; alt=&#34;&#34;&gt;
+顺便看了看detail，真可怕
+&lt;img src=&#34;https://blog.zzndb.me/images/2017/07/2158846997.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;!--more--&gt;
+&lt;p&gt;好吧，又看了看其他人的，恩很溜，成功浓缩到了八行，but其实没啥区别:stuck_out_tongue:：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;Solution&lt;/span&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;bool&lt;/span&gt; isPalindrome(&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; x) {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt;(x&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;||&lt;/span&gt; (x&lt;span style=&#34;color:#f92672&#34;&gt;!=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt;x&lt;span style=&#34;color:#f92672&#34;&gt;%&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;10&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;==&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;)) &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; false;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; sum&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#66d9ef&#34;&gt;while&lt;/span&gt;(x&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;sum)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            sum &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; sum&lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;10&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt;x&lt;span style=&#34;color:#f92672&#34;&gt;%&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;10&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            x &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; x&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;10&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; (x&lt;span style=&#34;color:#f92672&#34;&gt;==&lt;/span&gt;sum)&lt;span style=&#34;color:#f92672&#34;&gt;||&lt;/span&gt;(x&lt;span style=&#34;color:#f92672&#34;&gt;==&lt;/span&gt;sum&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;10&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;};
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;好吧&lt;/p&gt;
+&lt;p&gt;以上&lt;/p&gt;- https://blog.zzndb.me/posts/2017-07-22-no.6-ac/ - </description>
+        </item>
+    
+    
+    
+        <item>
+        <title>Number5 AC</title>
+        <link>https://blog.zzndb.me/posts/2017-07-21-number5-ac/</link>
+        <pubDate>Fri, 21 Jul 2017 10:40:00 +0800</pubDate>
+        
+        <guid>https://blog.zzndb.me/posts/2017-07-21-number5-ac/</guid>
+        <description>zzndb&#39;s world https://blog.zzndb.me/posts/2017-07-21-number5-ac/ -&lt;p&gt;思路值得学习
+&lt;strong&gt;Description:&lt;/strong&gt;
+&lt;em&gt;Reverse digits of an integer.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Example1: x = 123, return 321
+Example2: x = -123, return -321&lt;/em&gt;
+&lt;em&gt;click to show spoilers.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Note:
+The input is assumed to be a 32-bit signed integer. Your function should return 0 when the reversed integer overflows.&lt;/em&gt;
+&lt;strong&gt;Code:&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;Solution&lt;/span&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; reverse(&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; x) {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;       &lt;span style=&#34;color:#66d9ef&#34;&gt;long&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;long&lt;/span&gt; re &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#66d9ef&#34;&gt;while&lt;/span&gt;(x) {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            re &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; re&lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;10&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; x&lt;span style=&#34;color:#f92672&#34;&gt;%&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;10&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            x &lt;span style=&#34;color:#f92672&#34;&gt;/=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;10&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; (re&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;INT_MAX &lt;span style=&#34;color:#f92672&#34;&gt;||&lt;/span&gt; re&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;INT_MIN) &lt;span style=&#34;color:#f92672&#34;&gt;?&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt; re;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;};
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;FullWeb:&lt;/strong&gt;
+&lt;img src=&#34;https://blog.zzndb.me/images/2017/07/1309455879.png&#34; alt=&#34;&#34;&gt;
+&lt;strong&gt;ThoughtFulPoint:&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;re &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; re&lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;10&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; x&lt;span style=&#34;color:#f92672&#34;&gt;%&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;10&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            x &lt;span style=&#34;color:#f92672&#34;&gt;/=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;10&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;以上&lt;/p&gt;- https://blog.zzndb.me/posts/2017-07-21-number5-ac/ - </description>
+        </item>
+    
     
   </channel>
-</rss>
+</rss> 

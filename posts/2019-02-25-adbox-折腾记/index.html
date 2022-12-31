@@ -1,0 +1,1114 @@
+<!DOCTYPE html>
+<html><head>
+<title>AdBox 折腾记</title>
+
+
+
+
+<meta charset="utf-8">
+<meta name="X-UA-Compatible" content="IE=edge">
+<meta name="google-site-verification" content="">
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+<meta content="telephone=no" name="format-detection">
+<meta name="description" content="对 GF-WM28H 广告盒子的折腾">
+<meta name="renderer" content="webkit">
+<meta name="theme-color" content="#ffffff">
+
+
+
+
+
+
+
+
+
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-92199886-4', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+
+
+
+
+  
+
+
+
+
+
+
+      <script src="/js/toc.js"></script>
+    
+    <link type="text/css" rel="stylesheet" href="/vendor/css/bootstrap.min.css">
+<link rel="stylesheet" href="/scss/journal.min.c5d92f380bf10f6849c7ac487c7df2b22c081e0851e5339224f1ae29210b20d2.css" integrity="sha256-xdkvOAvxD2hJx6xIfH3ysiwIHghR5TOSJPGuKSELINI=" media="screen">
+
+
+
+<link rel="stylesheet" href="/scss/dark-mode.min.9f8d8c2df9285089d141edd4a50cb7506c7948e6ab79a29968dced1bd0ab7d22.css" integrity="sha256-n42MLfkoUInRQe3UpQy3UGx5SOareaKZaNztG9CrfSI=" media="screen">
+
+
+<link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Material+Icons">
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<script src="/vendor/js/md5.min.js"></script><script>
+  var gitalk = new Gitalk({
+  clientID: 'bcdd179c4f94968792d9',
+  clientSecret: 'f628bcd3c8d58385d50b807e842cce7ba9fd7f0d',
+  repo: 'zzndb.github.io',
+  owner: 'zzndb',
+  admin: ['zzndb'],
+  id: md5(location.pathname),
+  distractionFreeMode: 'false'
+  });
+  window.onload = function () {
+        gitalk.render('gitalk-container')
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+<body>
+    	<div id="app"><div id="sideContainer" class="side-container">
+    
+    <a class="a-block nav-head false" href="https://blog.zzndb.me">
+    
+        <div class="nav-title">
+            zzndb&#39;s world
+        </div>
+        
+        <div class="nav-subtitle">
+            All things will better soon...let&#39;s see...
+        </div>
+        
+    </a>
+
+    <div class="nav-link-list">
+        
+        
+            
+            
+            
+                
+            
+            
+            
+            <a class="a-block nav-link-item active" href="/posts">
+                Archive
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/categories">
+                Categories
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/tags">
+                Tags
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/links">
+                Friends
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/about">
+                About
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/index.xml">
+                RSS
+            </a>
+            
+        
+    </div>
+
+    
+
+    <div class="nav-footer">
+        
+Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> by <a href="https://risehere.net/">Rise</a>
+<br>
+Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a>'s <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> <br>
+<br>
+
+&copy;
+	
+	2021 zzndb&#39;s world
+	
+    本站遵循 <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" >CC-BY-NC 4.0 协议</a>
+
+    </div>
+    
+</div><div id="extraContainer" class="extra-container">
+    
+    
+    <div class="toc animated-visibility" :class="{ invisible: scrollY <= 140 }">
+
+
+	<div class="toc-content">
+	
+		
+		
+		
+		<center>- CATALOG -</center>
+		
+		
+		<ul>
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e6%8a%98%e8%85%be%e8%83%8c%e6%99%af" onclick="onNavClick(`#折腾背景-nav`)" id="折腾背景-nav">
+									折腾背景
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#wifi-%e8%bf%9e%e6%8e%a5" onclick="onNavClick(`#wifi-连接-nav`)" id="wifi-连接-nav">
+									wifi 连接
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#busybox" onclick="onNavClick(`#busybox-nav`)" id="busybox-nav">
+									busybox
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#magisk" onclick="onNavClick(`#magisk-nav`)" id="magisk-nav">
+									Magisk？
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#busybox-1" onclick="onNavClick(`#busybox-1-nav`)" id="busybox-1-nav">
+									busybox?
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+							
+								</ul>
+							
+						
+						
+						
+							<li>
+								<a href="#supersu" onclick="onNavClick(`#supersu-nav`)" id="supersu-nav">
+									SuperSU
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#adb_over_net" onclick="onNavClick(`#adb_over_net-nav`)" id="adb_over_net-nav">
+									adb_over_net
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e7%bd%91%e7%bb%9c%e5%88%87%e6%8d%a2" onclick="onNavClick(`#网络切换-nav`)" id="网络切换-nav">
+									网络切换
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#other" onclick="onNavClick(`#other-nav`)" id="other-nav">
+									Other
+								</a>
+							</li>
+						
+						
+					
+				
+			
+		</ul>
+	</div>
+
+</div>
+    
+    <div class="pagination">
+        <a id="globalBackToTop" class="pagination-action animated-visibility" href="#top" :class="{ invisible: scrollY == 0 }">
+            <i class="material-icons pagination-action-icon">
+                keyboard_arrow_up
+            </i>
+        </a>
+        
+        <a type="button" class="pagination-action" id="darkModeToggleButton">
+            <span class="material-icons pagination-action-icon" id="darkModeToggleIcon">
+                dark_mode
+            </span>
+        </a>
+        
+        
+    </div>
+</div>
+<div class="single-column-drawer-container" id="drawer"
+     v-bind:class="{ 'single-column-drawer-container-active': isDrawerOpen }">
+    <div class="drawer-content">
+        <div class="drawer-menu">
+            
+            
+            
+                
+                
+                
+                    
+                
+                
+                
+                <a class="a-block drawer-menu-item active" href="/posts">
+                    Archive
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/categories">
+                    Categories
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/tags">
+                    Tags
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/links">
+                    Friends
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/about">
+                    About
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/index.xml">
+                    RSS
+                </a>
+                
+            
+            
+            <div class="toc">
+
+
+	<div class="toc-content">
+	
+		
+		
+		
+		<center>- CATALOG -</center>
+		
+		
+		<ul>
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e6%8a%98%e8%85%be%e8%83%8c%e6%99%af" onclick="onNavClick(`#折腾背景-nav`)" id="折腾背景-nav">
+									折腾背景
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#wifi-%e8%bf%9e%e6%8e%a5" onclick="onNavClick(`#wifi-连接-nav`)" id="wifi-连接-nav">
+									wifi 连接
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#busybox" onclick="onNavClick(`#busybox-nav`)" id="busybox-nav">
+									busybox
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#magisk" onclick="onNavClick(`#magisk-nav`)" id="magisk-nav">
+									Magisk？
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#busybox-1" onclick="onNavClick(`#busybox-1-nav`)" id="busybox-1-nav">
+									busybox?
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+							
+								</ul>
+							
+						
+						
+						
+							<li>
+								<a href="#supersu" onclick="onNavClick(`#supersu-nav`)" id="supersu-nav">
+									SuperSU
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#adb_over_net" onclick="onNavClick(`#adb_over_net-nav`)" id="adb_over_net-nav">
+									adb_over_net
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e7%bd%91%e7%bb%9c%e5%88%87%e6%8d%a2" onclick="onNavClick(`#网络切换-nav`)" id="网络切换-nav">
+									网络切换
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#other" onclick="onNavClick(`#other-nav`)" id="other-nav">
+									Other
+								</a>
+							</li>
+						
+						
+					
+				
+			
+		</ul>
+	</div>
+
+</div>
+            
+        </div>
+    </div>
+</div>
+<transition name="fade">
+    <div id="drawer-mask" v-bind:class="{ 'single-column-drawer-mask': mounted }" v-if="isDrawerOpen" v-on:click="toggleDrawer"></div>
+</transition>
+<nav id="navBar" class="navbar sticky-top navbar-light single-column-nav-container">
+    <div id="navBackground" class="nav-background"></div>
+    <div class="container container-narrow nav-content">
+        <button id="nav_dropdown_btn" class="nav-dropdown-toggle" type="button" v-on:click="toggleDrawer">
+            <i class="material-icons">
+                menu
+            </i>
+        </button>
+        <a id="navTitle" class="navbar-brand" href="https://blog.zzndb.me">
+            zzndb&#39;s world
+        </a>
+        
+        <button type="button" class="nav-darkmode-toggle" id="darkModeToggleButton2">
+            <i class="material-icons" id="darkModeToggleIcon2">
+                dark_mode
+            </i>
+        </button>
+        
+    </div>
+</nav>
+<div class="single-column-header-container" id="pageHead"
+     v-bind:style="{ transform: 'translateZ(0px) translateY('+.3*scrollY+'px)', opacity: 1-navOpacity }">
+    <a href="https://blog.zzndb.me">
+        <div class="single-column-header-title">zzndb&#39;s world</div>
+        
+        <div class="single-column-header-subtitle">All things will better soon...let&#39;s see...</div>
+        
+
+    </a>
+</div>
+
+            <div id="content">
+                <div id="streamContainer" class="stream-container">
+
+    <div class="post-list-container post-list-container-shadow">
+        <div class="post">
+            
+            
+            
+
+            <div class="post-head-wrapper-text-only"
+                
+            >
+                <div class="post-title">
+                    AdBox 折腾记
+                    
+                    <div class="post-subtitle">
+                        对 GF-WM28H 广告盒子的折腾
+                    </div>
+                    
+                    <div class="post-meta">
+                        
+                        <time itemprop="datePublished">
+                            2019-02-25 07:19
+                        </time>
+                        
+
+                        
+                            <i class="material-icons" style="">folder</i>
+                                <a href="/categories/forfun">ForFun</a>
+                                &nbsp;
+                        
+
+                        
+                            <i class="material-icons" style="">label</i>
+                            
+                                <a href="/tags/shell-script">Shell Script</a>
+                                &nbsp;
+                            
+                                <a href="/tags/iptv%E7%9B%92%E5%AD%90">IPTV盒子</a>
+                                &nbsp;
+                            
+                                <a href="/tags/adb">adb</a>
+                                &nbsp;
+                            
+                                <a href="/tags/supersu">SuperSU</a>
+                                &nbsp;
+                            
+                                <a href="/tags/tasker">Tasker</a>
+                                &nbsp;
+                            
+                                <a href="/tags/root">Root</a>
+                                &nbsp;
+                            
+                                <a href="/tags/iptables">iptables</a>
+                                &nbsp;
+                            
+                        
+                        
+                    </div>
+                </div>
+            </div>
+            
+            <div class="post-body-wrapper">
+                
+                <div class="post-body" v-pre>
+                
+                    <p>对家里几年前办宽带给的联通 IPTV 盒子的一些折腾。</p>
+<p>UP: 2019-02-25 11:18:24 星期一</p>
+<hr>
+<p>盒子<code>build.prop</code>的部分产品信息</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>...
+</span></span><span style="display:flex;"><span>ro.build.version.release<span style="color:#f92672">=</span>4.4.2
+</span></span><span style="display:flex;"><span>...
+</span></span><span style="display:flex;"><span>ro.product.model<span style="color:#f92672">=</span>GF-WM28H
+</span></span><span style="display:flex;"><span>ro.product.brand<span style="color:#f92672">=</span>HiSTBAndroidV5
+</span></span><span style="display:flex;"><span>ro.product.name<span style="color:#f92672">=</span>Hi3798MV100
+</span></span><span style="display:flex;"><span>ro.product.device<span style="color:#f92672">=</span>Hi3798MV100
+</span></span><span style="display:flex;"><span>ro.product.board<span style="color:#f92672">=</span>bigfish
+</span></span><span style="display:flex;"><span>ro.product.cpu.abi<span style="color:#f92672">=</span>armeabi-v7a
+</span></span><span style="display:flex;"><span>ro.product.cpu.abi2<span style="color:#f92672">=</span>armeabi
+</span></span><span style="display:flex;"><span>ro.product.manufacturer<span style="color:#f92672">=</span>Hisilicon
+</span></span><span style="display:flex;"><span>...
+</span></span></code></pre></div><p>最开始拿着<code>GF-WM28H</code>（盒子后面有写） Google 一下，第一页全是卖它的遥控器的&hellip; 还好第二页有个靠谱的 <a href="https://www.v2ex.com/t/342195">V2EX 上的</a>折腾，看了看貌似还不是一个版本？从<code>build.prop</code>来看我家这个貌似是某为海思半导体的 SOC ？至于 RAM 我估计就1G，ROM 根据自带系统设置里面显示貌似也就剩几百 MB 了，粗略估计2G ROM&hellip;</p>
+<p>然后他是拆机串口进去的<code>root shell</code>，我在学校倒是有<code>USB-TTL</code>的模块（折腾树莓派的时候入的），可是家里没有，还得拆机，手残党必然妈见打系列啊，只好作罢。</p>
+<p>虽然不甘心的我还是试了试放 apk 文件到 U盘 进自带的文件管理里面，真找不到文件，屏蔽后缀关键词海星。当然天真的我最开始还以为是专门识别特定后缀，为此还用 shell 脚本复制 apk 为各种后缀组合（也不知道我为啥假定后缀名是三位 :relaxed:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#66d9ef">for</span> i in <span style="color:#f92672">{</span>a-zA-Z<span style="color:#f92672">}{</span>a-zA-Z<span style="color:#f92672">}{</span>a-zA-Z<span style="color:#f92672">}</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">do</span>
+</span></span><span style="display:flex;"><span>    cp xx.apk xx.$i
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">done</span>
+</span></span></code></pre></div><p>当然结果可想而知，就三位可能性也太多，试了几百种后缀然后放弃。</p>
+<p>然后尝试使用各种什么<code>当贝市场</code>之类的工具通过局域网内 WIFI 云投送方式安装时才发现，设置突然要起了密码，去搜了几个试了试<code>6321</code>进去了，然后连接设置没有了 WIFI 连接，猜测是系统更新后，修补这个可能的漏洞:joy:，无奈再次作罢。</p>
+<h1 id="折腾背景">折腾背景</h1>
+<p>前不久给家里另一个老电视在 pdd 入了一个裴讯T1，帯了<strong>双公头 USB 刷机线</strong>，给 裴讯T1 刷了几次系统后，突然想起来这个 AdBox 也有 USB 口 会不会有啥进展，然后就去试了试。</p>
+<p>AdBox 一共两个 USB 口盒子旁边的一个口 adb 没什么反应，后面各种接口里面藏的 USB 口，<strong>能直接 adb 连进去</strong>，还是熟悉的<code>#</code> root 用户，那不是装个 app 轻轻松松的事情</p>
+<p>装了在<a href="https://www.right.com.cn/forum/">恩山论坛</a>给 T1 找的一个桌面，安装可以直接用 adb 也可以直接复制到对应系统目录</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># 在用户终端下</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>adb install xx.apk
+</span></span><span style="display:flex;"><span><span style="color:#75715e">## or</span>
+</span></span><span style="display:flex;"><span>adb push xx.apk dir <span style="color:#75715e"># dir -&gt; system: /system/app or user: /data/app/</span>
+</span></span><span style="display:flex;"><span>adb shell chmod <span style="color:#ae81ff">644</span> /dir/to/apk
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">## 注：安装为系统软件需先挂载 /system 可写</span>
+</span></span><span style="display:flex;"><span>adb shell mount -o rw,remount /system/
+</span></span></code></pre></div><p>然后问题又来了，这个 AdBox 直接连的光猫的一个口，走的是 IPTV 的内网，并没有连接互联网，装个什么小电视tv版还没有网&hellip;</p>
+<p>下面大概记一下对 AdBox 内部的一些调教</p>
+<ul>
+<li>wifi 连接</li>
+<li>busybox</li>
+<li>supersu</li>
+<li>adb_over_net</li>
+<li>网络切换</li>
+</ul>
+<h2 id="wifi-连接">wifi 连接</h2>
+<p>连上 USB 通过<code>adb shell</code>进入 AdBox 之后，通过<code>ip addr</code>发现了一个叫<code>wlan0</code>的接口，看来只是在设置里面隐藏了而已嘛，结合对一堆文件的各种<code>cat, more</code>找到了 wifi 配置文件<code>/data/misc/wifi/wpa_supplicant.conf</code>，按照树莓派 wifi 配置经验，添加对应 wifi 配置文件，重启 wifi 即可，大致操作如下</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># 在用户终端下</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">## 先把配置文件拉过来修改了再放回去，我试了试这盒子貌似并没有编辑器，vi nano 都没有</span>
+</span></span><span style="display:flex;"><span>adb pull /data/misc/wifi/wpa_supplicant.conf
+</span></span><span style="display:flex;"><span><span style="color:#75715e">## 利用 wpa_passphrase 生成 wifi 配置 写入 配置文件</span>
+</span></span><span style="display:flex;"><span>sudo wpa_passphrase ap_name ap_passwd &gt;&gt; wpa_supplicant.conf
+</span></span><span style="display:flex;"><span><span style="color:#75715e">## 把配置文件放回去</span>
+</span></span><span style="display:flex;"><span>adb push wpa_supplicant.conf /data/misc/wifi/wpa_supplicant.conf
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">## 如添加多个 wifi 配置 可为其分配不同的优先级 </span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">### 用你喜欢的工具 修改配置文件 在单个配置文件中 添加 priority=num </span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">### num 越大 优先级越高 更改后文件示例如下</span>
+</span></span><span style="display:flex;"><span>...
+</span></span><span style="display:flex;"><span>network<span style="color:#f92672">={</span>
+</span></span><span style="display:flex;"><span>        ssid<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;testAP&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">#psk=&#34;........&#34;</span>
+</span></span><span style="display:flex;"><span>        psk<span style="color:#f92672">=</span>07e6ec3fe54e703b7cc97c1d904831cc885a35e1e0846fcf024c93c7c796efa1
+</span></span><span style="display:flex;"><span>        priority<span style="color:#f92672">=</span><span style="color:#ae81ff">2</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>network<span style="color:#f92672">={</span>
+</span></span><span style="display:flex;"><span>        ssid<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;dlink&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">#psk=&#34;,,,,,,,,&#34;</span>
+</span></span><span style="display:flex;"><span>        psk<span style="color:#f92672">=</span>e333a9536c3eff494847ea639cd73316eb0fdb9a3e533edad240e730cd259bf2
+</span></span><span style="display:flex;"><span>        priority<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">### 上述就是我最终的具体配置情况（当然密码做了处理，</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">### testAP 是我在本机建立的用来测试的热点，优先级比dlink高，方便调试</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">## 重启 wifi</span>
+</span></span><span style="display:flex;"><span>svc wifi disable
+</span></span><span style="display:flex;"><span>svc wifi enable
+</span></span></code></pre></div><h2 id="busybox">busybox</h2>
+<p>由于电视遥控器操作的烦琐（其实 <em>某悟空遥控</em> 还算是做得挺好的，就是不太纯粹，鼠标操作也只是能用），或者想用一些对 TV 操作不太友好的 app 就只好通过在其他平台上配置完毕，备份配置，在盒子上恢复，不过某些 app 的配置想要利用像<a href="https://play.google.com/store/apps/details?id=com.keramidas.TitaniumBackup">钛备份</a>之类的 Android 神器恢复，可惜需要 ROOT ，说到 ROOT 我就去找了新锐<a href="https://magiskmanager.com/">Magsik Manager</a>，安装之后，在安装界面，只好选择<code>Patch boot img</code>，然后我就去找这个系统的<code>boot.img</code>。</p>
+<h3 id="magisk">Magisk？</h3>
+<p>最开始我尝试直接去<code>/dev/block</code>里面去找 boot 分区，然后用 cat 大法直接读取，找了一会儿在<code>/dev/block/platform/hi_mci.1/by-name</code>目录找到了所有设备，<code>ls</code>一下</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>/dev/block/platform/hi_mci.1/by-name <span style="color:#75715e"># ls</span>
+</span></span><span style="display:flex;"><span>baseparam    facrootbox   kernel       pqparam      sdcard
+</span></span><span style="display:flex;"><span>bootargs     fastboot     loaderdb     private      stbid
+</span></span><span style="display:flex;"><span>cache        fastplay     logo         qbdata       system
+</span></span><span style="display:flex;"><span>deviceinfo   fastplaybak  logobak      qbflag       userapi
+</span></span><span style="display:flex;"><span>fackernel    hibdrv       misc         recovery     userdata
+</span></span></code></pre></div><p>很好，并没有叫<strong>boot</strong>的块设备，只好提取一些去分析分析找找看了，随即</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># AdBox 终端 位于上述目录 获取</span>
+</span></span><span style="display:flex;"><span>cat xx &gt; /tmp/xx.img
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 用户终端下 拉取文件</span>
+</span></span><span style="display:flex;"><span>adb pull /tmp/xx.img
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 利用如 file 之类工具验证文件类型</span>
+</span></span><span style="display:flex;"><span>file xx.img
+</span></span></code></pre></div><p>开始尝试找，还好在尝试到<code>kernel.img</code>时</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>file kernel.img
+</span></span><span style="display:flex;"><span>kernel/kernel.img: Android bootimg, kernel <span style="color:#f92672">(</span>0x3008000<span style="color:#f92672">)</span>, ramdisk <span style="color:#f92672">(</span>0x4000000<span style="color:#f92672">)</span>, page size: <span style="color:#ae81ff">16384</span>
+</span></span></code></pre></div><p>虽然貌似找到了，但还是不太确认，开始像通过检测更新抓包看能不能有所发现，后面尝试发现不知道是不是<strong>限制只能内网检测</strong>，通过我的测试热点的更新请求返回状态都是<code>error</code>，不管是尝试更改<code>build.prop</code>版本，更新重试，还是直接修改请求版本参数，返回值都同样如此，只好作罢。</p>
+<p>开始用 Magisk Manager 打补丁，放置到系统根目录，安装第三方文件管理，选择文件，然后，<code>unzip error</code>不能解压，随即去搜了搜，他们说叫更新 busybox 试试，然后又回到了 <strong>busybox</strong>。</p>
+<h3 id="busybox-1">busybox?</h3>
+<p>其实在<code>adb shell</code>里面，对基本的系统的可执行文件目录<code>/system/bin</code>和<code>/system/xbin</code>看了看之后，我发现这 AdBox 上其实有 busybox 版本貌似是1.4x，记不太清了，13年编译的版本，只软链接<code>ln -s</code>出了很少的东西，像<code>vi，xargs，sed，awk...</code>那是都没链接出来。</p>
+<p>之前折腾过交叉编译，貌似有编译过 busybox 去找了找，还真有，版本 v1.28.0 适合 armeabi，<a href="https://yadi.sk/d/l-hZ5cL6J4evSg">下载地址</a>，一顿操作放到<code>/system/bin/</code>下，然后链接你想要的命令</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>/system/bin/busybox ln -sf busybox the_command
+</span></span></code></pre></div><p>重新链接了<code>unzip</code>然后再次打开 Magisk Manager 还是错误，想起来之前在找 boot.img 时通过 adb 重启至 recovery fastboot</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># 用户终端</span>
+</span></span><span style="display:flex;"><span>adb reboot recovery
+</span></span><span style="display:flex;"><span>adb reboot fastboot
+</span></span></code></pre></div><p>结果盒子均重启进入了系统，通过 recovery 刷入的方法行不通，只好作罢。那就去看看老将 <strong>SuperSU</strong> 好了。</p>
+<h2 id="supersu">SuperSU</h2>
+<p>既然进不去 recovery （没有？
+那么就只好在有 root 权限的 adb shell 里面<strong>手动安装SuperSU</strong>，去大神 Chainfire <a href="http://download.chainfire.eu/supersu">网站</a>下载，解压缩后有如下目录结构</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># 缩略其他架构目录</span>
+</span></span><span style="display:flex;"><span>...
+</span></span><span style="display:flex;"><span>.
+</span></span><span style="display:flex;"><span>├── armv7
+</span></span><span style="display:flex;"><span>│   ├── libsupol.so
+</span></span><span style="display:flex;"><span>│   ├── su
+</span></span><span style="display:flex;"><span>│   ├── suinit
+</span></span><span style="display:flex;"><span>│   ├── sukernel
+</span></span><span style="display:flex;"><span>│   └── supolicy
+</span></span><span style="display:flex;"><span>├── common
+</span></span><span style="display:flex;"><span>│   ├── 000000deepsleep
+</span></span><span style="display:flex;"><span>│   ├── 99SuperSUDaemon
+</span></span><span style="display:flex;"><span>│   ├── avb
+</span></span><span style="display:flex;"><span>│   │   ├── BootSignature_Android.jar
+</span></span><span style="display:flex;"><span>│   │   ├── supersu.pk8
+</span></span><span style="display:flex;"><span>│   │   └── supersu.x509.der
+</span></span><span style="display:flex;"><span>│   ├── fbe_bypass.sh
+</span></span><span style="display:flex;"><span>│   ├── file_contexts
+</span></span><span style="display:flex;"><span>│   ├── file_contexts_image
+</span></span><span style="display:flex;"><span>│   ├── formats
+</span></span><span style="display:flex;"><span>│   │   ├── bzip2
+</span></span><span style="display:flex;"><span>│   │   ├── gzip.1
+</span></span><span style="display:flex;"><span>│   │   ├── gzip.2
+</span></span><span style="display:flex;"><span>│   │   ├── legz4
+</span></span><span style="display:flex;"><span>│   │   ├── lz4.1
+</span></span><span style="display:flex;"><span>│   │   ├── lz4.2
+</span></span><span style="display:flex;"><span>│   │   ├── lzma
+</span></span><span style="display:flex;"><span>│   │   ├── lzo
+</span></span><span style="display:flex;"><span>│   │   └── xz
+</span></span><span style="display:flex;"><span>│   ├── frp_install
+</span></span><span style="display:flex;"><span>│   ├── hexpatch
+</span></span><span style="display:flex;"><span>│   ├── init.supersu.rc
+</span></span><span style="display:flex;"><span>│   ├── init.supersu.rc.24
+</span></span><span style="display:flex;"><span>│   ├── init.supersu.rc.24.bindsbin
+</span></span><span style="display:flex;"><span>│   ├── init.supersu.rc.bindsbin
+</span></span><span style="display:flex;"><span>│   ├── install-recovery.sh
+</span></span><span style="display:flex;"><span>│   ├── launch_daemonsu.sh
+</span></span><span style="display:flex;"><span>│   ├── supersu_is_here
+</span></span><span style="display:flex;"><span>│   └── Superuser.apk
+</span></span><span style="display:flex;"><span>├── LICENSE
+</span></span><span style="display:flex;"><span>├── META-INF
+</span></span><span style="display:flex;"><span>│   ├── CERT.RSA
+</span></span><span style="display:flex;"><span>│   ├── CERT.SF
+</span></span><span style="display:flex;"><span>│   ├── com
+</span></span><span style="display:flex;"><span>│   │   └── google
+</span></span><span style="display:flex;"><span>│   │       └── android
+</span></span><span style="display:flex;"><span>│   │           ├── update-binary
+</span></span><span style="display:flex;"><span>│   │           └── updater-script
+</span></span><span style="display:flex;"><span>│   └── MANIFEST.MF
+</span></span><span style="display:flex;"><span>...
+</span></span></code></pre></div><p>对应架构的文件，公共文件，许可协议，一个什么信息包？不太清楚，不过我知道那个目录里面的<code>update-binary</code>文件是一个<code>sh</code>脚本文件，也就是 SuperSU 的安装步骤。</p>
+<p>打开<code>META-INF/com/google/android/uptate-binary</code>，你会发现，在脚本之前有两百多行的安装指导（不能对 boot 进行刷入，只好选择 <code>&quot;SYSTEM&quot; INSTALL</code>方式，V2.82-SR5 文档<strong>部分摘取</strong>如下，<em>其他机型手动安装请参考</em> <a href="/images/2019/02/32535640.txt" target="_blank">SuperSU_Manual_Install_V2.82-SR5.txt</a></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span><span style="color:#75715e"># ----- &#34;SYSTEM&#34; INSTALL -----</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># To install SuperSU properly, aside from cleaning old versions and</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># other superuser-type apps from the system, the following files need to</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># be installed:</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># API   source                        target                              chmod   chcon                       required</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 7-19  common/Superuser.apk          /system/app/Superuser.apk           0644    u:object_r:system_file:s0   gui</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 17+   common/install-recovery.sh    /system/etc/install-recovery.sh     0755    *1                          required</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 17+                                 /system/bin/install-recovery.sh     (symlink to /system/etc/...)        required</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># *1: same as /system/bin/toolbox: u:object_r:system_file:s0 if API &lt; 20, u:object_r:toolbox_exec:s0 if API &gt;= 20</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 7+    ARCH/su *2                    /system/xbin/su                     *3      u:object_r:system_file:s0   required</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 7+                                  /system/bin/.ext/.su                *3      u:object_r:system_file:s0   gui</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 17+                                 /system/xbin/daemonsu               0755    u:object_r:system_file:s0   required</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># *2: su.pie for 17+ x86(_32) only</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># *3: 06755 if API &lt; 18, 0755 if API &gt;= 18</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 17+   common/99SuperSUDaemon *6     /system/etc/init.d/99SuperSUDaemon  0755    u:object_r:system_file:s0   optional</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># *6: only place this file if /system/etc/init.d is present</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 17+   &#39;echo 1 &gt;&#39; or &#39;touch&#39; *7      /system/etc/.installed_su_daemon    0644    u:object_r:system_file:s0   optional</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># *7: the file just needs to exist or some recoveries will nag you. Even with it there, it may still happen.</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># After installation, run &#39;/system/xbin/su --install&#39;, which may need to</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># perform some additional installation steps. Ideally, at one point,</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># a lot of this script will be moved there.</span>
+</span></span></code></pre></div><p><strong>简单来说就是按照他的要求对应系统 API 等级，将对应文件放在对应位置，给予适当权限 chmod ，正确的对象安全上下文 chcon。</strong></p>
+<p>对与 AdBox 来说，<em>因为 Android 4.4.2 其 API = 19 架构 armeabi 是属于 armv7的</em>，按照上述文档具体操作如下</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># 假设以将下载 zip 文件放入盒子 /tmp 目录 在 /tmp 目录下</span>
+</span></span><span style="display:flex;"><span>mount -o rw,remount /system <span style="color:#75715e"># 挂载 /system/ 可读写</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>unzip file_name.zip
+</span></span><span style="display:flex;"><span>cp ./common/Superuser.apk /system/app/ 
+</span></span><span style="display:flex;"><span>chmod <span style="color:#ae81ff">0644</span> /system/app/Superuser.apk
+</span></span><span style="display:flex;"><span>chcon u:object_r:system_file:s0 /system/app/Superuser.apk
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>cp ./common/install-recovery.sh /system/etc/install-recovery.sh
+</span></span><span style="display:flex;"><span>chmod <span style="color:#ae81ff">0755</span> /system/etc/install-recovery.sh
+</span></span><span style="display:flex;"><span>chcon u:object_r:system_file:s0 /system/etc/install-recovery.sh
+</span></span><span style="display:flex;"><span>ln -s /system/etc/install-recovery.sh /system/bin/install-recovery.sh
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>cp ./armv7/su /system/xbin/su
+</span></span><span style="display:flex;"><span>chmod <span style="color:#ae81ff">0755</span> /system/xbin/su
+</span></span><span style="display:flex;"><span>chcon u:object_r:system_file:s0 /system/xbin/su
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>mkdir -p /system/bin/.ext/ <span style="color:#75715e"># 创建这个目录</span>
+</span></span><span style="display:flex;"><span>cp ./armv7/su /system/bin/.ext/.su
+</span></span><span style="display:flex;"><span>chmod <span style="color:#ae81ff">0755</span> /system/bin/.ext/.su
+</span></span><span style="display:flex;"><span>chcon u:object_r:system_file:s0 /system/bin/.ext/.su
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>cp ./armv7/su /system/xbin/daemonsu
+</span></span><span style="display:flex;"><span>chmod <span style="color:#ae81ff">0755</span> /system/xbin/daemonsu
+</span></span><span style="display:flex;"><span>chcon u:object_r:system_file:s0 /system/xbin/daemonsu
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>echo <span style="color:#ae81ff">1</span> &gt; /system/etc/.installed_su_daemon <span style="color:#75715e"># 将 1 写入这个文件，创建这个文件</span>
+</span></span><span style="display:flex;"><span>chmod <span style="color:#ae81ff">0644</span> /system/etc/.installed_su_daemon
+</span></span><span style="display:flex;"><span>chcon u:object_r:system_file:s0 /system/etc/.installed_su_daemon
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>/system/xbin/su --install
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 最好删掉 原来的/system/bin/su 如果有的话，文档里没有在这里放置 su</span>
+</span></span><span style="display:flex;"><span>rm /system/bin/su
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>mount -o ro,remount /system <span style="color:#75715e"># 挂载回 /system 只读</span>
+</span></span></code></pre></div><p>完成上述步骤之后，重启进入 <strong>超级授权</strong> 应该就可用了。</p>
+<p>有了 ROOT 权限就能装很多有意思的 app 了，比如 钛备份，Tasker，afwall。</p>
+<h2 id="adb_over_net">adb_over_net</h2>
+<p>其实这里要解决的问题只要就是，AdBox 默认有一条 iptables 规则过滤了 adb_over_net 要用到的 5555 端口。</p>
+<p>在折腾上面那一堆东西之前，其实我就在尝试通过自建的热点，通过<code>adb connect ip</code>去尝试连接，当然发现失败是报错<code>time out</code>，猜想就是被过滤了。通过 USB adb 进去<code>iptables --list-rules</code>，确实发现了一条过滤规则，<code>DROP</code> 掉到 5555 的连接，由于找不到配置文件，最开始就写了个脚本去删掉它</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span><span style="color:#75715e"># adbox_iptables file in /system/bin/</span>
+</span></span><span style="display:flex;"><span>INPUTL<span style="color:#f92672">=</span><span style="color:#66d9ef">$(</span>iptables --list INPUT --line-numbers -n | grep <span style="color:#e6db74">&#39;^[0-9]&#39;</span> | grep 5555<span style="color:#66d9ef">)</span>
+</span></span><span style="display:flex;"><span>echo <span style="color:#e6db74">&#34;</span>$INPUTL<span style="color:#e6db74">&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># LENTH=$(echo &#34;$INPUTL&#34; | wc -l)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>DROPINPUTL<span style="color:#f92672">=</span><span style="color:#66d9ef">$(</span>echo <span style="color:#e6db74">&#34;</span>$INPUTL<span style="color:#e6db74">&#34;</span> | grep DROP<span style="color:#66d9ef">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> <span style="color:#f92672">[</span> -n <span style="color:#e6db74">&#34;</span>$DROPINPUTL<span style="color:#e6db74">&#34;</span> <span style="color:#f92672">]</span>;<span style="color:#66d9ef">then</span>
+</span></span><span style="display:flex;"><span>        echo <span style="color:#e6db74">&#34;delete DROP rule&#34;</span>
+</span></span><span style="display:flex;"><span>        num<span style="color:#f92672">=</span><span style="color:#66d9ef">$(</span>echo <span style="color:#e6db74">&#34;</span>$DROPINPUTL<span style="color:#e6db74">&#34;</span> | awk <span style="color:#e6db74">&#39;{print $1}&#39;</span><span style="color:#66d9ef">)</span>
+</span></span><span style="display:flex;"><span>        echo <span style="color:#e6db74">&#34;</span>$num<span style="color:#e6db74">&#34;</span> | xargs -I <span style="color:#f92672">{}</span> iptables --delete INPUT <span style="color:#f92672">{}</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">fi</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>INPUTL<span style="color:#f92672">=</span><span style="color:#66d9ef">$(</span>iptables --list INPUT --line-numbers -n | grep <span style="color:#e6db74">&#39;^[0-9]&#39;</span> | grep 5555<span style="color:#66d9ef">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># add rule</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> ! echo <span style="color:#e6db74">&#34;</span>$INPUTL<span style="color:#e6db74">&#34;</span> | grep -q 5555;<span style="color:#66d9ef">then</span>
+</span></span><span style="display:flex;"><span>    iptables -A INPUT -p tcp -m tcp -s 192.168.12.0/24 --dport <span style="color:#ae81ff">5555</span> -j ACCEPT
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">fi</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>echo <span style="color:#e6db74">&#34;now INPUT rule contain port 5555 list&#34;</span>
+</span></span><span style="display:flex;"><span>iptables --list INPUT --line-numbers -n | grep <span style="color:#e6db74">&#39;^[0-9]&#39;</span> | grep <span style="color:#ae81ff">5555</span>
+</span></span></code></pre></div><p>也很容易看出，其实就是找到规则删掉它，并添加一条新的规则，允许特定网段连接（即我的 testAP 的网段</p>
+<p>之后，又给 AdBox 添加了<code>init.d</code>支持，通过这个 <a href="https://forum.xda-developers.com/showthread.php?t=1933849">XDA</a> 帖子作者提供的脚本，实现了开机自启动应用这条规则，即简单写个 sh 脚本调用我上面的<code>adbox_iptable</code>。</p>
+<p>在我装完 Afwall 想对应用进行防火墙控制之后~~（其实是天真的想，我禁用了你的 LAN 联网，你是不是就只有去用 WLAN 了呢？见后文<strong>网络切换</strong>~~，由于其也依赖 init.d 开机自启动初始化 iptables ，造成了可能我刚改完规则，afwall 的启动脚本后来就全部<code>iptables -F xx</code>了。</p>
+<p>现在我使用 Tasker 手动（自动也行，主要是等 afwall 改完）实现对规则的修改，建一个任务直接运行上面脚本即可，改都不用改 :laughing:</p>
+<h2 id="网络切换">网络切换</h2>
+<p>由于 IPTV 走内网，在同时连接 wifi 和 PPP0E 的情况下，默认是走 PPPOE 的，而这里面又没有连接互联网，所以得进行网络切换。</p>
+<p>最开始我一直在研究 iptables 对特定应用转发其在 ppp0 上的包到 wlan0 上，然后发现按照 sf 上面一顿操作之后，还是没好使。还通过各种教程研究 iptables 的使用&hellip;，是不是只能对应端口转发？是不是得去操作路由啊？</p>
+<p>说到路由，我去<code>ip route</code>看了看，好嘛，默认是走 PPPOE 的 gateway，改改看看<code>ip route replace default via 192.168.12.1</code>，去打开小电视看了看，还真行，然后<em>通过 Tasker 自动更改默认路由</em> 的方案全票通过了。<del>实际上发现这个操作之前在 iptables 上鸽了很久</del></p>
+<p>去 Tasker <a href="https://tasker.joaoapps.com/download.html">官网</a>下载了 Android 4.4 能用的版本，在手机上弄好配置文件，<code>adb push</code>到盒子，导入，测试，启用。**通过简单地打开特定应用，再根据网络连接情况，得到网关地址，更改网关地址，关闭特定应用，获取网关地址，改回网关地址。**算是实现了自由的网络切换。</p>
+<p>贴上一张具体任务实现「任务编辑界面图」，就一目了然了
+<img src="/images/2019/02/1665112908.png" alt=""></p>
+<blockquote>
+<p>通过 shell 运行命令，获取地址（广播地址 brd /远端接口 peer），相应修改为网关地址，在运行<code>ip  route replace default via xx</code>更改即可</p>
+</blockquote>
+<p>提供下我的「网络切换+adb_over_net端口打开」<a href="https://yadi.sk/d/1169VS8Jid2xQw">Tasker 配置文件</a>，如果有人需要（应该不会有:joy:，供参考。</p>
+<h2 id="other">Other</h2>
+<p>在准备利用 Wireshark 抓包找固件下载地址获取 boot.img 的时候，其实还有更多的发现，在茫茫 http 请求中，发现了一些 POST 上传，根据地址命名应该是上传系统 log 之类的东西，倒是确实没发现什么应用列表啊之类的数据问题，谁知道呢，或与在非 ASCII 数据里面有些什么呢？<del>在这个隐私毫无的时代</del></p>
+<p>回到这个盒子来看，在装了第三方桌面后，我才发现，这个 Android 4.4.2 真是深度定制<del>阉割</del>，连个系统设置都被阉割了，开始还想着装了第三方桌面进设置去连个 wifi 结果发现，连设置都没有，然后搞出了上面的一堆操作，或许将来升个级就啥都得重新来过了，ban 掉升级的 ip 的想法出现了，但没真去 ban ，或许将来升级之后操作会更有挑战性呢？（通过驱动层面封掉后面的 USB 口？装的 app 全删掉，装进系统的也顺便重置，真是美滋滋呢！</p>
+<p>完</p>
+                    
+                    <HR width="100%" id="EOF">
+		    <p style="color:#777;">Last modified on 2019-02-25</p>
+                    
+                </div>
+            </div>
+            
+            
+            <nav class="post-pagination">
+
+                
+                <a class="newer-posts" href="/posts/2019-04-23-scrcpy--%E9%A6%96%E6%AC%A1%E7%8B%AC%E7%AB%8Bobs%E6%89%93%E5%8C%85/">
+			Next<br>scrcpy--首次独立OBS打包
+                </a>
+                
+                
+                
+                <a class="older-posts" href="/posts/2018-09-25-%E6%A0%91%E8%8E%93%E6%B4%BE%E6%B8%A9%E6%8E%A7%E9%A3%8E%E6%89%87gpio%E4%B8%89%E6%9E%81%E7%AE%A1/">
+			Previous<br>树莓派温控风扇（GPIO&amp;三极管）
+                </a>
+                
+            </nav>
+            <div class="post-comment-wrapper">
+                
+
+
+<div id="gitalk-container"></div>
+
+
+
+
+
+
+
+
+
+            </div>
+        </div>
+    </div>
+
+
+                    </div>
+            </div><div id="single-column-footer">
+Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> by <a href="https://risehere.net/">Rise</a>
+<br>
+Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a>'s <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> <br>
+<br>
+
+&copy;
+	
+	2021 zzndb&#39;s world
+	
+    本站遵循 <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" >CC-BY-NC 4.0 协议</a>
+</div>
+            </div>
+    
+    <script src="/js/journal.js"></script></body>
+</html>
