@@ -64,7 +64,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;groupadd wheel
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 新建用户，建议还是和启用 Linux 环境时取的用户名一致，以下以 name_here 指代&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;useradd -m -u &lt;span style=&#34;color:#ae81ff&#34;&gt;1000&lt;/span&gt; -g users -G wheel name_here
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;usermod -aG audio zdb &lt;span style=&#34;color:#75715e&#34;&gt;# pluseaudio&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;usermod -aG audio name_here &lt;span style=&#34;color:#75715e&#34;&gt;# pluseaudio&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;passwd name_here
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;zypper in --no-recommends vim dracut
