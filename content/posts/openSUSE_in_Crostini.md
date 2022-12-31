@@ -3,7 +3,7 @@ title = "Run openSUSE in your Chrombook Crostini"
 author = ["zzndb"]
 description = "Chromebook Crostini 上跑 openSUSE 作为默认 Linux 环境的踩坑指北。"
 date = 2022-12-31T21:42:00+08:00
-lastmod = 2022-12-31T22:46:58+08:00
+lastmod = 2023-01-01T01:26:52+08:00
 tags = ["packaging", "OBS", "Crostini", "openSUSE"]
 categories = ["forfun"]
 draft = false
@@ -59,7 +59,7 @@ draft = false
     groupadd wheel
     # 新建用户，建议还是和启用 Linux 环境时取的用户名一致，以下以 name_here 指代
     useradd -m -u 1000 -g users -G wheel name_here
-    usermod -aG audio zdb # pluseaudio
+    usermod -aG audio name_here # pluseaudio
     passwd name_here
 
     zypper in --no-recommends vim dracut
