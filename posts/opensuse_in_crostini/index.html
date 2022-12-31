@@ -646,7 +646,7 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
                     <p>又一次手抖在进入了开发者模式的 Chromebook 开机确认关闭完整性校验时按了 Enter，去年某鱼入手的星星星的 Chromebook Pro 重置了……</p>
 <p>好在之前有在吃灰前备份大部分数据到外置 SD 卡上，趁这次机会重新配置一遍随便完成这篇早该完成（大概是打的所需配置包基本稳定的去年十月份）的踩坑记录，随便完成今年的第一篇也是最后一篇博客更新。内容基于当前 ChromeOS 版本 108 的配置记录以及去年的笔记备份。</p>
 <h2 id="tl-dr">TL;DR</h2>
-<p>总所周知目前 ChromeOS 的 Linux 环境是跑在一个虚拟机中的 LXD 容器，所以基本上分两步：</p>
+<p>众所周知目前 ChromeOS 的 Linux 环境是跑在一个虚拟机中的 LXD 容器，所以基本上分两步：</p>
 <ol>
 <li>新建和默认 Debian 额外设备配置相同的 openSUSE 容器，并在其中配置所需的一揽子配置来完成和外部 ChromeOS 交互集成。</li>
 <li>替换在 Crostini 中默认运行的 Debian 容器为 openSUSE 容器。</li>
