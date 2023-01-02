@@ -2,13 +2,13 @@ baseURL = "https://blog.zzndb.me"
 languageCode = "en-us"
 title = "zzndb's world"
 theme = "diary"
-googleAnalytics = "UA-92199886-4"
 
 [params]
   AuthorName = "zzndb"
   subtitle = "All things will better soon...let's see..."
   enableEmoji = true
   enableGitalk = true
+  cloudflareToken = "7393df80b04d44cdb9233682c68cc474"
 
 [params.gitalk]
   owner = "zzndb"
