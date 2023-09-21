@@ -20,7 +20,7 @@
         <pubDate>Sat, 31 Dec 2022 21:42:00 +0800</pubDate>
         
         <guid>https://blog.zzndb.me/posts/opensuse_in_crostini/</guid>
-        <description>zzndb&#39;s world https://blog.zzndb.me/posts/opensuse_in_crostini/ -&lt;p&gt;又一次手抖在进入了开发者模式的 Chromebook 开机确认关闭完整性校验时按了 Enter，去年某鱼入手的星星星的 Chromebook Pro 重置了……&lt;/p&gt;
+        <description>zzndb&#39;s world&lt;p&gt;又一次手抖在进入了开发者模式的 Chromebook 开机确认关闭完整性校验时按了 Enter，去年某鱼入手的星星星的 Chromebook Pro 重置了……&lt;/p&gt;
 &lt;p&gt;好在之前有在吃灰前备份大部分数据到外置 SD 卡上，趁这次机会重新配置一遍随便完成这篇早该完成（大概是打的所需配置包基本稳定的去年十月份）的踩坑记录，随便完成今年的第一篇也是最后一篇博客更新。内容基于当前 ChromeOS 版本 108 的配置记录以及去年的笔记备份。&lt;/p&gt;
 &lt;h2 id=&#34;tl-dr&#34;&gt;TL;DR&lt;/h2&gt;
 &lt;p&gt;众所周知目前 ChromeOS 的 Linux 环境是跑在一个虚拟机中的 LXD 容器，所以基本上分两步：&lt;/p&gt;
@@ -132,7 +132,7 @@
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://wiki.archlinux.org/title/Chrome_OS_devices/Crostini&#34;&gt;https://wiki.archlinux.org/title/Chrome_OS_devices/Crostini&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-- https://blog.zzndb.me/posts/opensuse_in_crostini/ - </description>
+- https://blog.zzndb.me/posts/opensuse_in_crostini/</description>
         </item>
     
     
@@ -143,7 +143,7 @@
         <pubDate>Sun, 04 Apr 2021 00:00:00 +0000</pubDate>
         
         <guid>https://blog.zzndb.me/posts/20210404203010-bc_round_to_the_specified_number_of_decimal_places/</guid>
-        <description>zzndb&#39;s world https://blog.zzndb.me/posts/20210404203010-bc_round_to_the_specified_number_of_decimal_places/ -&lt;p&gt;&lt;code&gt;bc&lt;/code&gt; ，一个命令行计算器， &lt;del&gt;&lt;code&gt;dc&lt;/code&gt; 的继承者？&lt;/del&gt; 也许是继承者，不过更是 POSIX 标准的一部分&lt;/p&gt;
+        <description>zzndb&#39;s world&lt;p&gt;&lt;code&gt;bc&lt;/code&gt; ，一个命令行计算器， &lt;del&gt;&lt;code&gt;dc&lt;/code&gt; 的继承者？&lt;/del&gt; 也许是继承者，不过更是 POSIX 标准的一部分&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;bc -l &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;1/3&amp;#34;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;0.3333333333333333
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;提供了 &lt;strong&gt;scale&lt;/strong&gt; 变量来控制结果小数位数&lt;/p&gt;
@@ -240,7 +240,7 @@
 &lt;li&gt;&lt;a href=&#34;https://askubuntu.com/a/863756&#34;&gt;https://askubuntu.com/a/863756&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://askubuntu.com/a/179949&#34;&gt;https://askubuntu.com/a/179949&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-- https://blog.zzndb.me/posts/20210404203010-bc_round_to_the_specified_number_of_decimal_places/ - </description>
+- https://blog.zzndb.me/posts/20210404203010-bc_round_to_the_specified_number_of_decimal_places/</description>
         </item>
     
     
@@ -251,7 +251,7 @@
         <pubDate>Mon, 02 Mar 2020 16:28:00 +0800</pubDate>
         
         <guid>https://blog.zzndb.me/posts/2020-03-02-shell-problems-on-leetcode/</guid>
-        <description>zzndb&#39;s world https://blog.zzndb.me/posts/2020-03-02-shell-problems-on-leetcode/ -&lt;p&gt;目前只有四道（已经一年多过去了还是只有四道。。。&lt;/p&gt;
+        <description>zzndb&#39;s world&lt;p&gt;目前只有四道（已经一年多过去了还是只有四道。。。&lt;/p&gt;
 &lt;h1 id=&#34;192-word-frequency&#34;&gt;192 Word Frequency&lt;/h1&gt;
 &lt;p&gt;题目链接：&lt;a target=&#34;_blank&#34; href=&#34;https://leetcode.com/problems/word-frequency/&#34;&gt;&lt;a href=&#34;https://leetcode.com/problems/word-frequency/&#34;&gt;https://leetcode.com/problems/word-frequency/&lt;/a&gt;&lt;/a&gt;
 用人话说的题目描述：
@@ -364,7 +364,7 @@ age 21 30
 &lt;/ul&gt;
 &lt;p&gt;经试验用 &lt;code&gt;awk&lt;/code&gt; 打印耗时 4 ms ，大概是 &lt;code&gt;awk&lt;/code&gt; 依旧对每行都处理了，而 &lt;code&gt;sed&lt;/code&gt; 直接输出对应行了。&lt;/p&gt;
 &lt;hr&gt;
-&lt;p&gt;以上。&lt;/p&gt;- https://blog.zzndb.me/posts/2020-03-02-shell-problems-on-leetcode/ - </description>
+&lt;p&gt;以上。&lt;/p&gt;- https://blog.zzndb.me/posts/2020-03-02-shell-problems-on-leetcode/</description>
         </item>
     
     
@@ -375,7 +375,7 @@ age 21 30
         <pubDate>Sat, 08 Jun 2019 15:53:00 +0800</pubDate>
         
         <guid>https://blog.zzndb.me/posts/2019-06-08-%E5%9C%A8-gcp-%E4%B8%8A%E9%83%A8%E7%BD%B2-nextcloud-%E7%9B%B8%E5%85%B3%E6%8A%98%E8%85%BE/</guid>
-        <description>zzndb&#39;s world https://blog.zzndb.me/posts/2019-06-08-%E5%9C%A8-gcp-%E4%B8%8A%E9%83%A8%E7%BD%B2-nextcloud-%E7%9B%B8%E5%85%B3%E6%8A%98%E8%85%BE/ -&lt;p&gt;上个月折腾上了 Google Cloud Platform 的车，记录在其上部署 Nextcloud 相关的经历，由于成文在搭建之后回忆写出，难免有步骤缺失/错误，欢迎指正。&lt;/p&gt;
+        <description>zzndb&#39;s world&lt;p&gt;上个月折腾上了 Google Cloud Platform 的车，记录在其上部署 Nextcloud 相关的经历，由于成文在搭建之后回忆写出，难免有步骤缺失/错误，欢迎指正。&lt;/p&gt;
 &lt;p&gt;主要内容：在 GCP 上创建 openSUSE 实例、LNMP+Nextcloud+SSL (certbot) 、Mailgun 的一个应用场景、GCP IPV6&lt;/p&gt;
 &lt;h1 id=&#34;install-opensuse-on-gcp&#34;&gt;Install openSUSE on GCP&lt;/h1&gt;
 &lt;p&gt;如果在 GCP 上建过 VM 实例，有看一看提供的镜像，就会发现并没有 openSUSE ，去 GCP &lt;a herf=&#34;https://cloud.google.com/&#34; target=&#34;_blank&#34;&gt;官网&lt;/a&gt;搜索一下就会找到&lt;a herf=&#34;https://cloud.google.com/compute/docs/images#community_supported_images&#34; target=&#34;_blank&#34;&gt;这个&lt;/a&gt; Images 页面，对应的 Community supported images 部分就有我大蜥蜴，貌似只提供了提供 gcloud 命令行工具安装的操作。&lt;/p&gt;
@@ -610,7 +610,7 @@ rm -rf /mnt/nextcloud_data
 &lt;li&gt;&lt;a href=&#34;https://docs.nextcloud.com/server/16/admin_manual/installation/source_installation.html&#34;&gt;https://docs.nextcloud.com/server/16/admin_manual/installation/source_installation.html&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://certbot.eff.org/lets-encrypt/leap-nginx&#34;&gt;https://certbot.eff.org/lets-encrypt/leap-nginx&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://certbot.eff.org/docs/using.html&#34;&gt;https://certbot.eff.org/docs/using.html&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;- https://blog.zzndb.me/posts/2019-06-08-%E5%9C%A8-gcp-%E4%B8%8A%E9%83%A8%E7%BD%B2-nextcloud-%E7%9B%B8%E5%85%B3%E6%8A%98%E8%85%BE/ - </description>
+&lt;/ul&gt;- https://blog.zzndb.me/posts/2019-06-08-%E5%9C%A8-gcp-%E4%B8%8A%E9%83%A8%E7%BD%B2-nextcloud-%E7%9B%B8%E5%85%B3%E6%8A%98%E8%85%BE/</description>
         </item>
     
     
@@ -621,7 +621,7 @@ rm -rf /mnt/nextcloud_data
         <pubDate>Sat, 11 May 2019 17:51:00 +0800</pubDate>
         
         <guid>https://blog.zzndb.me/posts/2019-05-11-%E5%90%AF%E7%94%A8%E5%9F%9F%E5%90%8D%E9%82%AE%E7%AE%B1/</guid>
-        <description>zzndb&#39;s world https://blog.zzndb.me/posts/2019-05-11-%E5%90%AF%E7%94%A8%E5%9F%9F%E5%90%8D%E9%82%AE%E7%AE%B1/ -&lt;p&gt;其实最开始只是因为没有一个好的评论回复邮件提醒解决方案，然后现在感觉有点香啊。&lt;/p&gt;
+        <description>zzndb&#39;s world&lt;p&gt;其实最开始只是因为没有一个好的评论回复邮件提醒解决方案，然后现在感觉有点香啊。&lt;/p&gt;
 &lt;p&gt;TL;DR: 利用 Mailgun 弄了域名邮箱，顺便解决了博客评论邮件提醒的问题。&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;UP: 2020-06-16 18:02&lt;/p&gt;
@@ -646,7 +646,7 @@ rm -rf /mnt/nextcloud_data
 &lt;p&gt;&lt;del&gt;感觉有了自己的域名邮箱，逼格高了不少啊，香！！&lt;/del&gt;&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;done！&lt;/p&gt;
-&lt;p&gt;&lt;del&gt;又水了一篇:laughing:&lt;/del&gt;&lt;/p&gt;- https://blog.zzndb.me/posts/2019-05-11-%E5%90%AF%E7%94%A8%E5%9F%9F%E5%90%8D%E9%82%AE%E7%AE%B1/ - </description>
+&lt;p&gt;&lt;del&gt;又水了一篇:laughing:&lt;/del&gt;&lt;/p&gt;- https://blog.zzndb.me/posts/2019-05-11-%E5%90%AF%E7%94%A8%E5%9F%9F%E5%90%8D%E9%82%AE%E7%AE%B1/</description>
         </item>
     
     
@@ -657,7 +657,7 @@ rm -rf /mnt/nextcloud_data
         <pubDate>Fri, 10 May 2019 01:03:00 +0800</pubDate>
         
         <guid>https://blog.zzndb.me/posts/2019-05-10-install-postgresql-on-opensuse/</guid>
-        <description>zzndb&#39;s world https://blog.zzndb.me/posts/2019-05-10-install-postgresql-on-opensuse/ -&lt;p&gt;Install &lt;em&gt;PostgreSQL&lt;/em&gt; on openSUSE and use &lt;em&gt;pgAdmin4&lt;/em&gt; connect it.&lt;/p&gt;
+        <description>zzndb&#39;s world&lt;p&gt;Install &lt;em&gt;PostgreSQL&lt;/em&gt; on openSUSE and use &lt;em&gt;pgAdmin4&lt;/em&gt; connect it.&lt;/p&gt;
 &lt;p&gt;Test on current &lt;em&gt;openSUSE Tumbleweed 20190507&lt;/em&gt;&lt;/p&gt;
 &lt;h1 id=&#34;install-postgresql&#34;&gt;install PostgreSQL&lt;/h1&gt;
 &lt;h2 id=&#34;tldr&#34;&gt;TL;DR&lt;/h2&gt;
@@ -739,7 +739,7 @@ sudo zypper in --no-recommends pgadmin4
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
-&lt;p&gt;end!&lt;/p&gt;- https://blog.zzndb.me/posts/2019-05-10-install-postgresql-on-opensuse/ - </description>
+&lt;p&gt;end!&lt;/p&gt;- https://blog.zzndb.me/posts/2019-05-10-install-postgresql-on-opensuse/</description>
         </item>
     
     
@@ -750,7 +750,7 @@ sudo zypper in --no-recommends pgadmin4
         <pubDate>Tue, 23 Apr 2019 15:42:00 +0800</pubDate>
         
         <guid>https://blog.zzndb.me/posts/2019-04-23-scrcpy--%E9%A6%96%E6%AC%A1%E7%8B%AC%E7%AB%8Bobs%E6%89%93%E5%8C%85/</guid>
-        <description>zzndb&#39;s world https://blog.zzndb.me/posts/2019-04-23-scrcpy--%E9%A6%96%E6%AC%A1%E7%8B%AC%E7%AB%8Bobs%E6%89%93%E5%8C%85/ -&lt;p&gt;记首次独立OBS打包&lt;/p&gt;
+        <description>zzndb&#39;s world&lt;p&gt;记首次独立OBS打包&lt;/p&gt;
 &lt;p&gt;UP：2019-04-24 13:18:46 星期三&lt;/p&gt;
 &lt;hr&gt;
 &lt;h1 id=&#34;缘由&#34;&gt;缘由&lt;/h1&gt;
@@ -931,7 +931,7 @@ install -Dm 0644 server/scrcpy-server.jar %{buildroot}/usr/local/share/%{name}/s
 &lt;li&gt;手动安装的文件权限问题（一开始给可执行文件上了&lt;code&gt;0644&lt;/code&gt;:joy:&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;然后是我打包的这个包的&lt;a href=&#34;https://build.opensuse.org/package/show/home:zzndb/scrcpy&#34;&gt;地址&lt;/a&gt;，自己在 TW 测试过没啥问题，如果有有&lt;em&gt;投屏，远程控制&lt;/em&gt; 的需求的用大蜥蜴的 Android 用户，又不想自己编译，又苦于默认源里没有，欢迎使用我的源:kissing_heart:，已 watch 该项目的 release 应该会保持更新。&lt;del&gt;（这应该用得有点意思&lt;/del&gt;&lt;/p&gt;
-&lt;p&gt;done！&lt;/p&gt;- https://blog.zzndb.me/posts/2019-04-23-scrcpy--%E9%A6%96%E6%AC%A1%E7%8B%AC%E7%AB%8Bobs%E6%89%93%E5%8C%85/ - </description>
+&lt;p&gt;done！&lt;/p&gt;- https://blog.zzndb.me/posts/2019-04-23-scrcpy--%E9%A6%96%E6%AC%A1%E7%8B%AC%E7%AB%8Bobs%E6%89%93%E5%8C%85/</description>
         </item>
     
     
@@ -942,7 +942,7 @@ install -Dm 0644 server/scrcpy-server.jar %{buildroot}/usr/local/share/%{name}/s
         <pubDate>Mon, 25 Feb 2019 07:19:00 +0800</pubDate>
         
         <guid>https://blog.zzndb.me/posts/2019-02-25-adbox-%E6%8A%98%E8%85%BE%E8%AE%B0/</guid>
-        <description>zzndb&#39;s world https://blog.zzndb.me/posts/2019-02-25-adbox-%E6%8A%98%E8%85%BE%E8%AE%B0/ -&lt;p&gt;对家里几年前办宽带给的联通 IPTV 盒子的一些折腾。&lt;/p&gt;
+        <description>zzndb&#39;s world&lt;p&gt;对家里几年前办宽带给的联通 IPTV 盒子的一些折腾。&lt;/p&gt;
 &lt;p&gt;UP: 2019-02-25 11:18:24 星期一&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;盒子&lt;code&gt;build.prop&lt;/code&gt;的部分产品信息&lt;/p&gt;
@@ -1215,7 +1215,7 @@ install -Dm 0644 server/scrcpy-server.jar %{buildroot}/usr/local/share/%{name}/s
 &lt;h2 id=&#34;other&#34;&gt;Other&lt;/h2&gt;
 &lt;p&gt;在准备利用 Wireshark 抓包找固件下载地址获取 boot.img 的时候，其实还有更多的发现，在茫茫 http 请求中，发现了一些 POST 上传，根据地址命名应该是上传系统 log 之类的东西，倒是确实没发现什么应用列表啊之类的数据问题，谁知道呢，或与在非 ASCII 数据里面有些什么呢？&lt;del&gt;在这个隐私毫无的时代&lt;/del&gt;&lt;/p&gt;
 &lt;p&gt;回到这个盒子来看，在装了第三方桌面后，我才发现，这个 Android 4.4.2 真是深度定制&lt;del&gt;阉割&lt;/del&gt;，连个系统设置都被阉割了，开始还想着装了第三方桌面进设置去连个 wifi 结果发现，连设置都没有，然后搞出了上面的一堆操作，或许将来升个级就啥都得重新来过了，ban 掉升级的 ip 的想法出现了，但没真去 ban ，或许将来升级之后操作会更有挑战性呢？（通过驱动层面封掉后面的 USB 口？装的 app 全删掉，装进系统的也顺便重置，真是美滋滋呢！&lt;/p&gt;
-&lt;p&gt;完&lt;/p&gt;- https://blog.zzndb.me/posts/2019-02-25-adbox-%E6%8A%98%E8%85%BE%E8%AE%B0/ - </description>
+&lt;p&gt;完&lt;/p&gt;- https://blog.zzndb.me/posts/2019-02-25-adbox-%E6%8A%98%E8%85%BE%E8%AE%B0/</description>
         </item>
     
     
@@ -1226,7 +1226,7 @@ install -Dm 0644 server/scrcpy-server.jar %{buildroot}/usr/local/share/%{name}/s
         <pubDate>Tue, 25 Sep 2018 22:56:00 +0800</pubDate>
         
         <guid>https://blog.zzndb.me/posts/2018-09-25-%E6%A0%91%E8%8E%93%E6%B4%BE%E6%B8%A9%E6%8E%A7%E9%A3%8E%E6%89%87gpio%E4%B8%89%E6%9E%81%E7%AE%A1/</guid>
-        <description>zzndb&#39;s world https://blog.zzndb.me/posts/2018-09-25-%E6%A0%91%E8%8E%93%E6%B4%BE%E6%B8%A9%E6%8E%A7%E9%A3%8E%E6%89%87gpio%E4%B8%89%E6%9E%81%E7%AE%A1/ -&lt;p&gt;让树莓派不算太吃灰的一小步:joy:&lt;/p&gt;
+        <description>zzndb&#39;s world&lt;p&gt;让树莓派不算太吃灰的一小步:joy:&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;2018-10-01 16:44:05 星期一&lt;/p&gt;
 &lt;ul&gt;
@@ -1386,7 +1386,7 @@ install -Dm 0644 server/scrcpy-server.jar %{buildroot}/usr/local/share/%{name}/s
 &lt;p&gt;&lt;a href=&#34;https://www.ibm.com/developerworks/cn/linux/l-cn-sysfs/index.html&#34;&gt;https://www.ibm.com/developerworks/cn/linux/l-cn-sysfs/index.html&lt;/a&gt;&amp;#160;&lt;a href=&#34;#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;/div&gt;- https://blog.zzndb.me/posts/2018-09-25-%E6%A0%91%E8%8E%93%E6%B4%BE%E6%B8%A9%E6%8E%A7%E9%A3%8E%E6%89%87gpio%E4%B8%89%E6%9E%81%E7%AE%A1/ - </description>
+&lt;/div&gt;- https://blog.zzndb.me/posts/2018-09-25-%E6%A0%91%E8%8E%93%E6%B4%BE%E6%B8%A9%E6%8E%A7%E9%A3%8E%E6%89%87gpio%E4%B8%89%E6%9E%81%E7%AE%A1/</description>
         </item>
     
     
@@ -1397,7 +1397,7 @@ install -Dm 0644 server/scrcpy-server.jar %{buildroot}/usr/local/share/%{name}/s
         <pubDate>Sat, 22 Jul 2017 14:56:00 +0800</pubDate>
         
         <guid>https://blog.zzndb.me/posts/2017-07-22-no.6-ac/</guid>
-        <description>zzndb&#39;s world https://blog.zzndb.me/posts/2017-07-22-no.6-ac/ -&lt;p&gt;依旧easy难度&lt;/p&gt;
+        <description>zzndb&#39;s world&lt;p&gt;依旧easy难度&lt;/p&gt;
 &lt;!--more--&gt;
 &lt;p&gt;&lt;strong&gt;Description:&lt;/strong&gt;
 &lt;em&gt;Determine whether an integer is a palindrome. Do this without extra space.&lt;/em&gt;
@@ -1446,7 +1446,7 @@ install -Dm 0644 server/scrcpy-server.jar %{buildroot}/usr/local/share/%{name}/s
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    }
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;};
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;好吧&lt;/p&gt;
-&lt;p&gt;以上&lt;/p&gt;- https://blog.zzndb.me/posts/2017-07-22-no.6-ac/ - </description>
+&lt;p&gt;以上&lt;/p&gt;- https://blog.zzndb.me/posts/2017-07-22-no.6-ac/</description>
         </item>
     
     
@@ -1457,7 +1457,7 @@ install -Dm 0644 server/scrcpy-server.jar %{buildroot}/usr/local/share/%{name}/s
         <pubDate>Fri, 21 Jul 2017 10:40:00 +0800</pubDate>
         
         <guid>https://blog.zzndb.me/posts/2017-07-21-number5-ac/</guid>
-        <description>zzndb&#39;s world https://blog.zzndb.me/posts/2017-07-21-number5-ac/ -&lt;p&gt;思路值得学习
+        <description>zzndb&#39;s world&lt;p&gt;思路值得学习
 &lt;strong&gt;Description:&lt;/strong&gt;
 &lt;em&gt;Reverse digits of an integer.&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Example1: x = 123, return 321
@@ -1482,7 +1482,7 @@ The input is assumed to be a 32-bit signed integer. Your function should return 
 &lt;strong&gt;ThoughtFulPoint:&lt;/strong&gt;&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;re &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; re&lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;10&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; x&lt;span style=&#34;color:#f92672&#34;&gt;%&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;10&lt;/span&gt;;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            x &lt;span style=&#34;color:#f92672&#34;&gt;/=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;10&lt;/span&gt;;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;以上&lt;/p&gt;- https://blog.zzndb.me/posts/2017-07-21-number5-ac/ - </description>
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;以上&lt;/p&gt;- https://blog.zzndb.me/posts/2017-07-21-number5-ac/</description>
         </item>
     
     
@@ -1493,7 +1493,7 @@ The input is assumed to be a 32-bit signed integer. Your function should return 
         <pubDate>Thu, 20 Jul 2017 23:14:00 +0800</pubDate>
         
         <guid>https://blog.zzndb.me/posts/2017-07-20-number4-ac/</guid>
-        <description>zzndb&#39;s world https://blog.zzndb.me/posts/2017-07-20-number4-ac/ -&lt;p&gt;话不多说，一道easy难度的题&lt;/p&gt;
+        <description>zzndb&#39;s world&lt;p&gt;话不多说，一道easy难度的题&lt;/p&gt;
 &lt;!--more--&gt;
 &lt;p&gt;&lt;em&gt;Given an array consisting of n integers, find the contiguous subarray of given length k that has the maximum average value. And you need to output the maximum average value.&lt;/em&gt;
 &lt;strong&gt;Description:&lt;/strong&gt;
@@ -1530,7 +1530,7 @@ Elements of the given array will be in the range [-10,000, 10,000].
 &lt;p&gt;全页截图：
 &lt;img src=&#34;https://blog.zzndb.me/images/2017/07/3019175156.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;以上&lt;/p&gt;
-&lt;p&gt;:stuck_out_tongue_closed_eyes:&lt;/p&gt;- https://blog.zzndb.me/posts/2017-07-20-number4-ac/ - </description>
+&lt;p&gt;:stuck_out_tongue_closed_eyes:&lt;/p&gt;- https://blog.zzndb.me/posts/2017-07-20-number4-ac/</description>
         </item>
     
     
@@ -1541,13 +1541,13 @@ Elements of the given array will be in the range [-10,000, 10,000].
         <pubDate>Mon, 17 Jul 2017 00:52:00 +0800</pubDate>
         
         <guid>https://blog.zzndb.me/posts/2017-07-17-wtd%E5%AE%9A%E6%97%B6%E5%99%A8/</guid>
-        <description>zzndb&#39;s world https://blog.zzndb.me/posts/2017-07-17-wtd%E5%AE%9A%E6%97%B6%E5%99%A8/ -&lt;p&gt;另一种学习笔记记录方式&lt;/p&gt;
+        <description>zzndb&#39;s world&lt;p&gt;另一种学习笔记记录方式&lt;/p&gt;
 &lt;h2 id=&#34;思维导图&#34;&gt;思维导图&lt;/h2&gt;
 &lt;p&gt;因为对电子的偏好，正好有个机会，于是自然的想参加不久后的&lt;em&gt;电子设计竞赛&lt;/em&gt;当然误打误撞来了计算机的我，当然是零基础入门了，面对看起来颇为复杂的&lt;em&gt;MSP430G2&lt;/em&gt;单片机指导书，感觉效率太低下了，刚好看到有人推荐&lt;strong&gt;xmind&lt;/strong&gt;这一LINUX下也有的思维导图工具，赶紧装在了我的大蜥蜴上，正好看到了WTD看门狗定时器这一章，所以赶紧用上了，成果如下：&lt;img src=&#34;https://blog.zzndb.me/images/2017/07/253397290.png&#34; alt=&#34;WDT 看门狗定时器.png&#34;&gt;&lt;a href=&#34;https://blog.zzndb.me/images/2017/07/420233643.svg&#34;&gt;WDT 看门狗定时器.svg&lt;/a&gt;
 额，差不多就这个样子，当然都是现学现用，感觉用了思维导图关于这章的知识点是要清晰很多了，感觉还算良好。
 :joy: :joy:&lt;/p&gt;
 &lt;p&gt;以上&lt;/p&gt;
-&lt;p&gt;&lt;del&gt;[1]图文无关:stuck_out_tongue:来自2017 年父亲节Google &lt;a href=&#34;https://www.google.com/doodles/fathers-day-2017&#34;&gt;Doodle&lt;/a&gt;&lt;/del&gt;&lt;/p&gt;- https://blog.zzndb.me/posts/2017-07-17-wtd%E5%AE%9A%E6%97%B6%E5%99%A8/ - </description>
+&lt;p&gt;&lt;del&gt;[1]图文无关:stuck_out_tongue:来自2017 年父亲节Google &lt;a href=&#34;https://www.google.com/doodles/fathers-day-2017&#34;&gt;Doodle&lt;/a&gt;&lt;/del&gt;&lt;/p&gt;- https://blog.zzndb.me/posts/2017-07-17-wtd%E5%AE%9A%E6%97%B6%E5%99%A8/</description>
         </item>
     
     
@@ -1558,7 +1558,7 @@ Elements of the given array will be in the range [-10,000, 10,000].
         <pubDate>Wed, 22 Mar 2017 14:50:00 +0800</pubDate>
         
         <guid>https://blog.zzndb.me/posts/2017-03-22-%E7%AC%AC%E4%B8%80%E6%AC%A1ac%E7%9A%84leetcode/</guid>
-        <description>zzndb&#39;s world https://blog.zzndb.me/posts/2017-03-22-%E7%AC%AC%E4%B8%80%E6%AC%A1ac%E7%9A%84leetcode/ -&lt;p&gt;是的，第一次&lt;/p&gt;
+        <description>zzndb&#39;s world&lt;p&gt;是的，第一次&lt;/p&gt;
 &lt;p&gt;当然前面也看过两道，貌似都是选的easy难度的。:joy:
 当然听着室友淡定的谈着两百多道，一百多道，，，&lt;/p&gt;
 &lt;p&gt;那又怎样，还是蛮激动的:stuck_out_tongue:&lt;/p&gt;
@@ -1585,7 +1585,7 @@ The maximum number of consecutive 1s is 3.&lt;/em&gt;&lt;/p&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;看看他的行数，我就不贴我的渣渣代码了，二十多行，也没有任何技巧？可言。
 在我看来 &lt;code&gt;sum = (sum+nums[i])*nums[i];&lt;/code&gt;为这例，我所不及的地方。
 巧妙用了 1 与 0 在乘法运算中对结果带来的差异&lt;/p&gt;
-&lt;p&gt;以上，纪念第一次AC&lt;/p&gt;- https://blog.zzndb.me/posts/2017-03-22-%E7%AC%AC%E4%B8%80%E6%AC%A1ac%E7%9A%84leetcode/ - </description>
+&lt;p&gt;以上，纪念第一次AC&lt;/p&gt;- https://blog.zzndb.me/posts/2017-03-22-%E7%AC%AC%E4%B8%80%E6%AC%A1ac%E7%9A%84leetcode/</description>
         </item>
     
     
@@ -1596,7 +1596,7 @@ The maximum number of consecutive 1s is 3.&lt;/em&gt;&lt;/p&gt;
         <pubDate>Mon, 20 Mar 2017 20:05:00 +0800</pubDate>
         
         <guid>https://blog.zzndb.me/posts/2017-03-20-%E5%A5%94%E8%B7%91%E5%90%A7%E5%A4%A7%E8%9C%A5%E8%9C%B4/</guid>
-        <description>zzndb&#39;s world https://blog.zzndb.me/posts/2017-03-20-%E5%A5%94%E8%B7%91%E5%90%A7%E5%A4%A7%E8%9C%A5%E8%9C%B4/ -&lt;p&gt;&lt;a href=&#34;https://www.opensuse.org&#34; target=&#34;_blank&#34;&gt;&lt;strong&gt;openSUSE tumbleeweed&lt;/strong&gt;&lt;/a&gt;　嗯，大蜥蜴 配置备忘&lt;/p&gt;
+        <description>zzndb&#39;s world&lt;p&gt;&lt;a href=&#34;https://www.opensuse.org&#34; target=&#34;_blank&#34;&gt;&lt;strong&gt;openSUSE tumbleeweed&lt;/strong&gt;&lt;/a&gt;　嗯，大蜥蜴 配置备忘&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;begin edit&lt;/strong&gt; 2017-03-20 20:10:25 星期一&lt;br&gt;
 &lt;strong&gt;last edit&lt;/strong&gt; 2018-11-09 08:47:32 星期五&lt;/p&gt;
@@ -1701,7 +1701,7 @@ The maximum number of consecutive 1s is 3.&lt;/em&gt;&lt;/p&gt;
 写得不错:laughing:&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;就这样&lt;/p&gt;
-&lt;p&gt;以上&lt;/p&gt;- https://blog.zzndb.me/posts/2017-03-20-%E5%A5%94%E8%B7%91%E5%90%A7%E5%A4%A7%E8%9C%A5%E8%9C%B4/ - </description>
+&lt;p&gt;以上&lt;/p&gt;- https://blog.zzndb.me/posts/2017-03-20-%E5%A5%94%E8%B7%91%E5%90%A7%E5%A4%A7%E8%9C%A5%E8%9C%B4/</description>
         </item>
     
     
@@ -1712,7 +1712,7 @@ The maximum number of consecutive 1s is 3.&lt;/em&gt;&lt;/p&gt;
         <pubDate>Sun, 19 Feb 2017 11:02:00 +0800</pubDate>
         
         <guid>https://blog.zzndb.me/posts/2017-02-19-%E5%85%B3%E4%BA%8Etypecho%E7%9A%84%E9%93%BE%E6%8E%A5%E5%90%8E%E5%8F%B0%E6%89%93%E5%BC%80%E8%AE%BE%E7%BD%AE/</guid>
-        <description>zzndb&#39;s world https://blog.zzndb.me/posts/2017-02-19-%E5%85%B3%E4%BA%8Etypecho%E7%9A%84%E9%93%BE%E6%8E%A5%E5%90%8E%E5%8F%B0%E6%89%93%E5%BC%80%E8%AE%BE%E7%BD%AE/ -&lt;p&gt;不久前的前两篇文章链接都是单纯插入链接，毕竟以前没怎么用过&lt;strong&gt;Markdown&lt;/strong&gt;，然后&lt;/p&gt;
+        <description>zzndb&#39;s world&lt;p&gt;不久前的前两篇文章链接都是单纯插入链接，毕竟以前没怎么用过&lt;strong&gt;Markdown&lt;/strong&gt;，然后&lt;/p&gt;
 &lt;p&gt;发现。文章的链接都是在当前页面打开，so覆盖掉当前显示:worried:表示尴尬。&lt;/p&gt;
 &lt;p&gt;遂去搜索了一下，发现这取决于博客平台，然后typecho自带的mark down解析这样，换成&lt;a href=&#34;https://dt27.org/&#34; target=&#34;_blank&#34;&gt;DT27&lt;/a&gt;的markdown插件也是这样，好吧。&lt;/p&gt;
 &lt;p&gt;这篇&lt;a href=&#34;https://github.com/GcsSloop/AndroidNote/blob/master/Course/Markdown/markdown-link.md&#34; target=&#34;_blank&#34;&gt;github文章&lt;/a&gt;表面了这一点&lt;/p&gt;
@@ -1721,7 +1721,7 @@ The maximum number of consecutive 1s is 3.&lt;/em&gt;&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;a&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;href&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;https://blog.zzndb.com.cn&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;target&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;_blank&amp;#34;&lt;/span&gt;&amp;gt;zzndb&amp;#39;s world&amp;lt;/&lt;span style=&#34;color:#f92672&#34;&gt;a&lt;/span&gt;&amp;gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;效果：&lt;a href=&#34;https://blog.zzndb.com.cn&#34; target=&#34;_blank&#34;&gt;zzndb&amp;rsquo;s world&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;貌似只有这样:confused:&lt;/p&gt;
-&lt;p&gt;以上&lt;/p&gt;- https://blog.zzndb.me/posts/2017-02-19-%E5%85%B3%E4%BA%8Etypecho%E7%9A%84%E9%93%BE%E6%8E%A5%E5%90%8E%E5%8F%B0%E6%89%93%E5%BC%80%E8%AE%BE%E7%BD%AE/ - </description>
+&lt;p&gt;以上&lt;/p&gt;- https://blog.zzndb.me/posts/2017-02-19-%E5%85%B3%E4%BA%8Etypecho%E7%9A%84%E9%93%BE%E6%8E%A5%E5%90%8E%E5%8F%B0%E6%89%93%E5%BC%80%E8%AE%BE%E7%BD%AE/</description>
         </item>
     
     
@@ -1732,7 +1732,7 @@ The maximum number of consecutive 1s is 3.&lt;/em&gt;&lt;/p&gt;
         <pubDate>Sun, 19 Feb 2017 00:36:00 +0800</pubDate>
         
         <guid>https://blog.zzndb.me/posts/2017-02-19-%E5%85%A8%E7%AB%99ssl/</guid>
-        <description>zzndb&#39;s world https://blog.zzndb.me/posts/2017-02-19-%E5%85%A8%E7%AB%99ssl/ -&lt;p&gt;&lt;strong&gt;2017年2月18发生好多&amp;hellip;..&lt;/strong&gt;&lt;/p&gt;
+        <description>zzndb&#39;s world&lt;p&gt;&lt;strong&gt;2017年2月18发生好多&amp;hellip;..&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;想为站点添加SSL证书，也就是链接旁的小绿锁，想了想好久前在buyssl花了貌似五六块购买的一年证书还没用呢（因为不会:expressionless:），然后想着今天开干，然后我失败了，真麻烦:expressionless: 还把服务器文件破坏了，还没备份:expressionless: 想着把面板卸了重装，也许可以，机智的备份了web+数据库然后重装。。。:shit:可以问题更多了，，，
 机智的我继续重装，(⊙﹏⊙)额安装失败:confused:什么鬼。。。。。&lt;/p&gt;
 &lt;p&gt;无数次过去，又发现不会恢复数据库:confounded:搜索到的是什么鬼，完全没对上文件路径嘛?&lt;/p&gt;
@@ -1741,7 +1741,7 @@ The maximum number of consecutive 1s is 3.&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;然后就有了前面三篇&lt;del&gt;伪时间&lt;/del&gt;文章:wink:&lt;/p&gt;
 &lt;p&gt;宝塔面板，配置SSL真心方便:satisfied:然后，你们可以看到链接旁的小绿锁:sunglasses:
 然后，现在凌晨快一点了。。。。19号:sob:&lt;/p&gt;
-&lt;p&gt;以上，纯属吐槽一下:stuck_out_tongue:&lt;/p&gt;- https://blog.zzndb.me/posts/2017-02-19-%E5%85%A8%E7%AB%99ssl/ - </description>
+&lt;p&gt;以上，纯属吐槽一下:stuck_out_tongue:&lt;/p&gt;- https://blog.zzndb.me/posts/2017-02-19-%E5%85%A8%E7%AB%99ssl/</description>
         </item>
     
     
@@ -1752,7 +1752,7 @@ The maximum number of consecutive 1s is 3.&lt;/em&gt;&lt;/p&gt;
         <pubDate>Fri, 17 Feb 2017 10:00:00 +0800</pubDate>
         
         <guid>https://blog.zzndb.me/posts/2017-02-17-%E5%85%B3%E4%BA%8Eadaway%E6%9B%BF%E6%8D%A2hosts%E7%9A%84%E5%9B%BE%E6%96%87%E5%8F%8A%E8%B5%84%E6%BA%90%E5%88%86%E4%BA%AB/</guid>
-        <description>zzndb&#39;s world https://blog.zzndb.me/posts/2017-02-17-%E5%85%B3%E4%BA%8Eadaway%E6%9B%BF%E6%8D%A2hosts%E7%9A%84%E5%9B%BE%E6%96%87%E5%8F%8A%E8%B5%84%E6%BA%90%E5%88%86%E4%BA%AB/ -&lt;h2 id=&#34;正式第二篇&#34;&gt;正式第二篇&lt;/h2&gt;
+        <description>zzndb&#39;s world&lt;h2 id=&#34;正式第二篇&#34;&gt;正式第二篇&lt;/h2&gt;
 &lt;h6&gt;
 其实是第1.5篇=.=
 &lt;/h6&gt;
@@ -1800,7 +1800,7 @@ The end！&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;&lt;strong&gt;隐藏tip：本人分享资源或引用链多需飞越疯人院&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;以上！&lt;/p&gt;- https://blog.zzndb.me/posts/2017-02-17-%E5%85%B3%E4%BA%8Eadaway%E6%9B%BF%E6%8D%A2hosts%E7%9A%84%E5%9B%BE%E6%96%87%E5%8F%8A%E8%B5%84%E6%BA%90%E5%88%86%E4%BA%AB/ - </description>
+&lt;p&gt;以上！&lt;/p&gt;- https://blog.zzndb.me/posts/2017-02-17-%E5%85%B3%E4%BA%8Eadaway%E6%9B%BF%E6%8D%A2hosts%E7%9A%84%E5%9B%BE%E6%96%87%E5%8F%8A%E8%B5%84%E6%BA%90%E5%88%86%E4%BA%AB/</description>
         </item>
     
     
@@ -1811,7 +1811,7 @@ The end！&lt;/p&gt;
         <pubDate>Thu, 16 Feb 2017 20:51:00 +0800</pubDate>
         
         <guid>https://blog.zzndb.me/posts/2017-02-16-%E8%AF%95%E7%9D%80%E5%8E%BB%E7%9C%8B%E7%9C%8B%E5%8F%A6%E5%A4%96%E4%B8%80%E4%B8%AA%E4%B8%96%E7%95%8C/</guid>
-        <description>zzndb&#39;s world https://blog.zzndb.me/posts/2017-02-16-%E8%AF%95%E7%9D%80%E5%8E%BB%E7%9C%8B%E7%9C%8B%E5%8F%A6%E5%A4%96%E4%B8%80%E4%B8%AA%E4%B8%96%E7%95%8C/ -&lt;p&gt;&lt;strong&gt;信仰&lt;/strong&gt;
+        <description>zzndb&#39;s world&lt;p&gt;&lt;strong&gt;信仰&lt;/strong&gt;
 &lt;img src=&#34;https://blog.zzndb.me/images/2017/02/1455974186.gif&#34; alt=&#34;holidays-2017-eastern-europe-day-2-5670496677920768-hp2x.gif&#34;&gt;&lt;/p&gt;
 &lt;h4 id=&#34;第一篇正式的博客&#34;&gt;第一篇正式的博客=.=。&lt;/h4&gt;
 &lt;p&gt;因为众所周知的的原因，我们要面对着这不怎么自由的互联网&lt;!--more--&gt;(&lt;a href=&#34;https://github.com/racaljk/hosts/wiki/%E5%85%B3%E4%BA%8E%E4%B8%AD%E5%9B%BD%E7%9A%84%E4%BA%92%E8%81%94%E7%BD%91&#34; target=&#34;_blank&#34;&gt;关于不怎么自由 Github 上的的一篇文章&lt;/a&gt;),以及我们大多数人还要面对的，那不怎么良心的进入互联网的入口&amp;mdash;国内的各种搜索引擎，像什么百毒之流，对，就是那个有着各种垃圾推广，什么莆田系，什么医疗竞价排名&amp;hellip;.的那个。&lt;/p&gt;
@@ -1890,7 +1890,7 @@ The end！&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;tip：链接资源或引用链多需飞越&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;n6&gt;&lt;del&gt;如有获取困难请联系，楼下评论即可&lt;/del&gt;&lt;/n6&gt;
 .
-以上&lt;/p&gt;- https://blog.zzndb.me/posts/2017-02-16-%E8%AF%95%E7%9D%80%E5%8E%BB%E7%9C%8B%E7%9C%8B%E5%8F%A6%E5%A4%96%E4%B8%80%E4%B8%AA%E4%B8%96%E7%95%8C/ - </description>
+以上&lt;/p&gt;- https://blog.zzndb.me/posts/2017-02-16-%E8%AF%95%E7%9D%80%E5%8E%BB%E7%9C%8B%E7%9C%8B%E5%8F%A6%E5%A4%96%E4%B8%80%E4%B8%AA%E4%B8%96%E7%95%8C/</description>
         </item>
     
     
@@ -1901,14 +1901,14 @@ The end！&lt;/p&gt;
         <pubDate>Thu, 16 Feb 2017 12:34:00 +0800</pubDate>
         
         <guid>https://blog.zzndb.me/posts/2017-02-16-2017%E5%B9%B42%E6%9C%8816%E6%97%A5%E5%86%8D%E6%AC%A1%E8%A3%85%E4%B8%8A%E4%BA%86typecho/</guid>
-        <description>zzndb&#39;s world https://blog.zzndb.me/posts/2017-02-16-2017%E5%B9%B42%E6%9C%8816%E6%97%A5%E5%86%8D%E6%AC%A1%E8%A3%85%E4%B8%8A%E4%BA%86typecho/ -&lt;h1 id=&#34;有感&#34;&gt;有感&lt;/h1&gt;
+        <description>zzndb&#39;s world&lt;h1 id=&#34;有感&#34;&gt;有感&lt;/h1&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Maybe nobody can see this except me &amp;gt;.&lt;Maybe nobody can see this except me &gt;.&amp;lt;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;&lt;em&gt;&lt;strong&gt;Do what i want what i should, for myself!!&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;&lt;del&gt;假装这篇文章是二月十六写的，but,十八发生了太多，so重新复制完成假装这篇文章是二月十六写的&lt;/del&gt;&lt;/p&gt;- https://blog.zzndb.me/posts/2017-02-16-2017%E5%B9%B42%E6%9C%8816%E6%97%A5%E5%86%8D%E6%AC%A1%E8%A3%85%E4%B8%8A%E4%BA%86typecho/ - </description>
+&lt;p&gt;&lt;del&gt;假装这篇文章是二月十六写的，but,十八发生了太多，so重新复制完成假装这篇文章是二月十六写的&lt;/del&gt;&lt;/p&gt;- https://blog.zzndb.me/posts/2017-02-16-2017%E5%B9%B42%E6%9C%8816%E6%97%A5%E5%86%8D%E6%AC%A1%E8%A3%85%E4%B8%8A%E4%BA%86typecho/</description>
         </item>
     
     
   </channel>
-</rss> 
+</rss>
