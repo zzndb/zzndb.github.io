@@ -5,7 +5,7 @@ theme = "diary"
 
 [params]
   AuthorName = "zzndb"
-  subtitle = "All things will better soon...let's see..."
+  subtitle = "If today were the last day of my life, would I want to do what I am about to do today?"
   enableEmoji = true
   enableGitalk = true
 
