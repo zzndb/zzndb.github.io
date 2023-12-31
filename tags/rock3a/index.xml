@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>rock3a on zzndb&#39;s world</title>
+    <link>https://blog.zzndb.me/tags/rock3a/</link>
+    <description>Recent content in rock3a on zzndb&#39;s world</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 31 Dec 2023 23:50:00 +0800</lastBuildDate>
+    <atom:link href="https://blog.zzndb.me/tags/rock3a/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How I Run openSUSE on Radxa ROCK 3A</title>
+      <link>https://blog.zzndb.me/posts/how_i_run_opensuse_on_radxa_rock_3a/</link>
+      <pubDate>Sun, 31 Dec 2023 23:50:00 +0800</pubDate>
+      <guid>https://blog.zzndb.me/posts/how_i_run_opensuse_on_radxa_rock_3a/</guid>
+      <description>又是一年的最后一天，为了完成今年份博客更新任务，来写下应该是拖了一个月左右的这篇应该是折腾记录的东西。有生之年应该还有续集，因为目前整体还没达到预期的状态，比如还不能直接从固态启动系统……&#xA;一些无关紧要的前情提要，碎碎念 大概是在去年七月份入手的 Radxa ROCK 3A，8G 内存版本。记得买之前正苦恼没有比较优雅的方法来挂之前整的一块 4T 移动硬盘，手里只有一个白嫖的树莓派 3B+，但碍于其 USB2.0 的速度，以及没有足够的电流来直接驱动，所以想要找一个至少得有 USB3.0 口子的板子来用，记得是在酷安看到有人分享类似需求来使用 rock3a 来折腾的经历，也没多想就在某宝入手了。到手之后才发现还是需要外接带供电的拓展坞才能稳定不掉盘。能选的系统不多，选了 Armbian 用着，顺便也开始想在这上面跑大蜥蜴，后来因为各种原因鸽了。&#xA;现在想来像在价格和生态方面都还挺坑的，当时我也没想到原来看似便宜的国产板子都差不多是这样，各玩儿各的，看似开源但不合到主线……&#xA;TL;DR 了解这个板子所用 SOC 的启动流程，一开始准备构建镜像 by hand，但涉及太多并不懂的知识，转而借助大蜥蜴的基础设施（openSUSE Build Service），打包需要的前置软件包 U-Boot，照着现有的 JeOS (Just Enough Operating System) KIWI 模板魔改。&#xA;因为有太多没懂的细节，所以本文想来不会有啥技术含量，就是个流水帐。 打包 U-Boot 至少在重新捡起来折腾这个板子的 23 年 11 月，U-Boot 官方源码已经有了这个板子的构建配置 rock-3a-rk3568_defconfig ，一开始走了弯路去研究 Radax 提供的 U-Boot 源码 确定需要的那什么 .img .bin .itb 文件怎么来的。后来才发现 U-Boot 文档中写得清楚又明白，连构建步骤都挨个写了，留下感动的泪水。&#xA;这个板子的 rk3568 在构建过程中需要使用到瑞芯微提供的实现私有的 binary 文件，于是仿照有开源实现的 arm-trusted-firmware-rk3399 使用 rockchip-linux/rkbin 打包了一个 arm-private-firmware-rk3568 来提供构建过程中需要用到的 bl31.elf 。这里直接使用三方二进制打包决定了在有开源实现之前，我整的这些东西是只有在自己分支项目玩玩儿了。</description>
+    </item>
+  </channel>
+</rss>

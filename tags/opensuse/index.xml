@@ -6,51 +6,42 @@
     <description>Recent content in openSUSE on zzndb&#39;s world</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 31 Dec 2022 21:42:00 +0800</lastBuildDate><atom:link href="https://blog.zzndb.me/tags/opensuse/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 31 Dec 2023 23:50:00 +0800</lastBuildDate>
+    <atom:link href="https://blog.zzndb.me/tags/opensuse/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How I Run openSUSE on Radxa ROCK 3A</title>
+      <link>https://blog.zzndb.me/posts/how_i_run_opensuse_on_radxa_rock_3a/</link>
+      <pubDate>Sun, 31 Dec 2023 23:50:00 +0800</pubDate>
+      <guid>https://blog.zzndb.me/posts/how_i_run_opensuse_on_radxa_rock_3a/</guid>
+      <description>又是一年的最后一天，为了完成今年份博客更新任务，来写下应该是拖了一个月左右的这篇应该是折腾记录的东西。有生之年应该还有续集，因为目前整体还没达到预期的状态，比如还不能直接从固态启动系统……&#xA;一些无关紧要的前情提要，碎碎念 大概是在去年七月份入手的 Radxa ROCK 3A，8G 内存版本。记得买之前正苦恼没有比较优雅的方法来挂之前整的一块 4T 移动硬盘，手里只有一个白嫖的树莓派 3B+，但碍于其 USB2.0 的速度，以及没有足够的电流来直接驱动，所以想要找一个至少得有 USB3.0 口子的板子来用，记得是在酷安看到有人分享类似需求来使用 rock3a 来折腾的经历，也没多想就在某宝入手了。到手之后才发现还是需要外接带供电的拓展坞才能稳定不掉盘。能选的系统不多，选了 Armbian 用着，顺便也开始想在这上面跑大蜥蜴，后来因为各种原因鸽了。&#xA;现在想来像在价格和生态方面都还挺坑的，当时我也没想到原来看似便宜的国产板子都差不多是这样，各玩儿各的，看似开源但不合到主线……&#xA;TL;DR 了解这个板子所用 SOC 的启动流程，一开始准备构建镜像 by hand，但涉及太多并不懂的知识，转而借助大蜥蜴的基础设施（openSUSE Build Service），打包需要的前置软件包 U-Boot，照着现有的 JeOS (Just Enough Operating System) KIWI 模板魔改。&#xA;因为有太多没懂的细节，所以本文想来不会有啥技术含量，就是个流水帐。 打包 U-Boot 至少在重新捡起来折腾这个板子的 23 年 11 月，U-Boot 官方源码已经有了这个板子的构建配置 rock-3a-rk3568_defconfig ，一开始走了弯路去研究 Radax 提供的 U-Boot 源码 确定需要的那什么 .img .bin .itb 文件怎么来的。后来才发现 U-Boot 文档中写得清楚又明白，连构建步骤都挨个写了，留下感动的泪水。&#xA;这个板子的 rk3568 在构建过程中需要使用到瑞芯微提供的实现私有的 binary 文件，于是仿照有开源实现的 arm-trusted-firmware-rk3399 使用 rockchip-linux/rkbin 打包了一个 arm-private-firmware-rk3568 来提供构建过程中需要用到的 bl31.elf 。这里直接使用三方二进制打包决定了在有开源实现之前，我整的这些东西是只有在自己分支项目玩玩儿了。</description>
+    </item>
     <item>
       <title>Run openSUSE in your Chrombook Crostini</title>
       <link>https://blog.zzndb.me/posts/opensuse_in_crostini/</link>
       <pubDate>Sat, 31 Dec 2022 21:42:00 +0800</pubDate>
-      
       <guid>https://blog.zzndb.me/posts/opensuse_in_crostini/</guid>
-      <description>又一次手抖在进入了开发者模式的 Chromebook 开机确认关闭完整性校验时按了 Enter，去年某鱼入手的星星星的 Chromebook Pro 重置了……
-好在之前有在吃灰前备份大部分数据到外置 SD 卡上，趁这次机会重新配置一遍随便完成这篇早该完成（大概是打的所需配置包基本稳定的去年十月份）的踩坑记录，随便完成今年的第一篇也是最后一篇博客更新。内容基于当前 ChromeOS 版本 108 的配置记录以及去年的笔记备份。
-TL;DR 众所周知目前 ChromeOS 的 Linux 环境是跑在一个虚拟机中的 LXD 容器，所以基本上分两步：
-新建和默认 Debian 额外设备配置相同的 openSUSE 容器，并在其中配置所需的一揽子配置来完成和外部 ChromeOS 交互集成。 替换在 Crostini 中默认运行的 Debian 容器为 openSUSE 容器。 配置容器 在操作之前需要已启用 Linux 环境，也就是有了一个叫 termina 的虚拟机跑着默认叫 penguin 的 Debian 容器
-ctrl+alt+t 快捷键呼出 crosh 窗口，键入 vms list 确认虚拟机 termina 存在
-vsh termina 进入虚拟机，键入 lxc list 确认容器 penguin 存在
-接着正常使用 lxc 创建一个 openSUSE 容器
-# 参考流程 lxc remote add tuna-images https://mirrors.</description>
+      <description>又一次手抖在进入了开发者模式的 Chromebook 开机确认关闭完整性校验时按了 Enter，去年某鱼入手的星星星的 Chromebook Pro 重置了……&#xA;好在之前有在吃灰前备份大部分数据到外置 SD 卡上，趁这次机会重新配置一遍随便完成这篇早该完成（大概是打的所需配置包基本稳定的去年十月份）的踩坑记录，随便完成今年的第一篇也是最后一篇博客更新。内容基于当前 ChromeOS 版本 108 的配置记录以及去年的笔记备份。&#xA;TL;DR 众所周知目前 ChromeOS 的 Linux 环境是跑在一个虚拟机中的 LXD 容器，所以基本上分两步：&#xA;新建和默认 Debian 额外设备配置相同的 openSUSE 容器，并在其中配置所需的一揽子配置来完成和外部 ChromeOS 交互集成。 替换在 Crostini 中默认运行的 Debian 容器为 openSUSE 容器。 配置容器 在操作之前需要已启用 Linux 环境，也就是有了一个叫 termina 的虚拟机跑着默认叫 penguin 的 Debian 容器&#xA;ctrl+alt+t 快捷键呼出 crosh 窗口，键入 vms list 确认虚拟机 termina 存在&#xA;vsh termina 进入虚拟机，键入 lxc list 确认容器 penguin 存在&#xA;接着正常使用 lxc 创建一个 openSUSE 容器&#xA;# 参考流程 lxc remote add tuna-images https://mirrors.</description>
     </item>
-    
     <item>
       <title>在 GCP 上部署 Nextcloud 相关折腾</title>
       <link>https://blog.zzndb.me/posts/2019-06-08-%E5%9C%A8-gcp-%E4%B8%8A%E9%83%A8%E7%BD%B2-nextcloud-%E7%9B%B8%E5%85%B3%E6%8A%98%E8%85%BE/</link>
       <pubDate>Sat, 08 Jun 2019 15:53:00 +0800</pubDate>
-      
       <guid>https://blog.zzndb.me/posts/2019-06-08-%E5%9C%A8-gcp-%E4%B8%8A%E9%83%A8%E7%BD%B2-nextcloud-%E7%9B%B8%E5%85%B3%E6%8A%98%E8%85%BE/</guid>
-      <description>&lt;p&gt;上个月折腾上了 Google Cloud Platform 的车，记录在其上部署 Nextcloud 相关的经历，由于成文在搭建之后回忆写出，难免有步骤缺失/错误，欢迎指正。&lt;/p&gt;
-&lt;p&gt;主要内容：在 GCP 上创建 openSUSE 实例、LNMP+Nextcloud+SSL (certbot) 、Mailgun 的一个应用场景、GCP IPV6&lt;/p&gt;</description>
+      <description>&lt;p&gt;上个月折腾上了 Google Cloud Platform 的车，记录在其上部署 Nextcloud 相关的经历，由于成文在搭建之后回忆写出，难免有步骤缺失/错误，欢迎指正。&lt;/p&gt;&#xA;&lt;p&gt;主要内容：在 GCP 上创建 openSUSE 实例、LNMP+Nextcloud+SSL (certbot) 、Mailgun 的一个应用场景、GCP IPV6&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>install PostgreSQL on openSUSE</title>
       <link>https://blog.zzndb.me/posts/2019-05-10-install-postgresql-on-opensuse/</link>
       <pubDate>Fri, 10 May 2019 01:03:00 +0800</pubDate>
-      
       <guid>https://blog.zzndb.me/posts/2019-05-10-install-postgresql-on-opensuse/</guid>
-      <description>&lt;p&gt;Install &lt;em&gt;PostgreSQL&lt;/em&gt; on openSUSE and use &lt;em&gt;pgAdmin4&lt;/em&gt; connect it.&lt;/p&gt;
-&lt;p&gt;Test on current &lt;em&gt;openSUSE Tumbleweed 20190507&lt;/em&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;Install &lt;em&gt;PostgreSQL&lt;/em&gt; on openSUSE and use &lt;em&gt;pgAdmin4&lt;/em&gt; connect it.&lt;/p&gt;&#xA;&lt;p&gt;Test on current &lt;em&gt;openSUSE Tumbleweed 20190507&lt;/em&gt;&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>奔跑吧大蜥蜴</title>
       <link>https://blog.zzndb.me/posts/2017-03-20-%E5%A5%94%E8%B7%91%E5%90%A7%E5%A4%A7%E8%9C%A5%E8%9C%B4/</link>
       <pubDate>Mon, 20 Mar 2017 20:05:00 +0800</pubDate>
-      
       <guid>https://blog.zzndb.me/posts/2017-03-20-%E5%A5%94%E8%B7%91%E5%90%A7%E5%A4%A7%E8%9C%A5%E8%9C%B4/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://www.opensuse.org&#34; target=&#34;_blank&#34;&gt;&lt;strong&gt;openSUSE tumbleeweed&lt;/strong&gt;&lt;/a&gt;　嗯，大蜥蜴 配置备忘&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

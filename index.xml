@@ -6,9 +6,84 @@
     <description>All posts on zzndb&#39;s world</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 31 Dec 2022 21:42:00 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 31 Dec 2023 23:50:00 +0800</lastBuildDate>
     
         <atom:link href="https://blog.zzndb.me/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+        <item>
+        <title>How I Run openSUSE on Radxa ROCK 3A</title>
+        <link>https://blog.zzndb.me/posts/how_i_run_opensuse_on_radxa_rock_3a/</link>
+        <pubDate>Sun, 31 Dec 2023 23:50:00 +0800</pubDate>
+        
+        <guid>https://blog.zzndb.me/posts/how_i_run_opensuse_on_radxa_rock_3a/</guid>
+        <description>&lt;p&gt;又是一年的最后一天，为了完成今年份博客更新任务，来写下应该是拖了一个月左右的这篇应该是折腾记录的东西。有生之年应该还有续集，因为目前整体还没达到预期的状态，比如还不能直接从固态启动系统……&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;一些无关紧要的前情提要，碎碎念&lt;/summary&gt;
+&lt;div class=&#34;details&#34;&gt;
+&lt;p&gt;大概是在去年七月份入手的 &lt;a href=&#34;https://wiki.radxa.com/Rock3/3a&#34;&gt;Radxa ROCK 3A&lt;/a&gt;，8G 内存版本。记得买之前正苦恼没有比较优雅的方法来挂之前整的一块 4T 移动硬盘，手里只有一个白嫖的树莓派 3B+，但碍于其 USB2.0 的速度，以及没有足够的电流来直接驱动，所以想要找一个至少得有 USB3.0 口子的板子来用，记得是在酷安看到有人分享类似需求来使用 rock3a 来折腾的经历，也没多想就在某宝入手了。到手之后才发现还是需要外接带供电的拓展坞才能稳定不掉盘。能选的系统不多，选了 Armbian 用着，顺便也开始想在这上面跑大蜥蜴，后来因为各种原因鸽了。&lt;/p&gt;
+&lt;p&gt;现在想来像在价格和生态方面都还挺坑的，当时我也没想到原来看似便宜的国产板子都差不多是这样，各玩儿各的，看似开源但不合到主线……&lt;/p&gt;
+&lt;/div&gt;
+&lt;/details&gt;
+&lt;h2 id=&#34;tl-dr&#34;&gt;TL;DR&lt;/h2&gt;
+&lt;p&gt;了解这个板子所用 SOC 的&lt;a href=&#34;https://opensource.rock-chips.com/wiki_Boot_option&#34;&gt;启动流程&lt;/a&gt;，一开始准备构建镜像 by hand，但涉及太多并不懂的知识，转而借助大蜥蜴的基础设施（&lt;a href=&#34;https://build.opensuse.org/&#34;&gt;openSUSE Build Service&lt;/a&gt;），打包需要的前置软件包 &lt;a href=&#34;http://www.denx.de/wiki/U-Boot&#34;&gt;U-Boot&lt;/a&gt;，照着现有的 JeOS (Just Enough Operating System) &lt;a href=&#34;https://osinside.github.io/kiwi/&#34;&gt;KIWI&lt;/a&gt; 模板魔改。&lt;/p&gt;
+
+&lt;div class=&#34;alert alert-warning&#34;&gt;
+    
+因为有太多没懂的细节，所以本文想来不会有啥技术含量，就是个流水帐。
+
+&lt;/div&gt;
+
+&lt;h2 id=&#34;打包-u-boot&#34;&gt;打包 U-Boot&lt;/h2&gt;
+&lt;p&gt;至少在重新捡起来折腾这个板子的 23 年 11 月，U-Boot 官方源码已经有了这个板子的构建配置 &lt;code&gt;rock-3a-rk3568_defconfig&lt;/code&gt; ，一开始走了弯路去研究 Radax 提供的 &lt;a href=&#34;http://www.denx.de/wiki/U-Boot&#34;&gt;U-Boot 源码&lt;/a&gt;
+确定需要的那什么 &lt;code&gt;.img .bin .itb&lt;/code&gt; 文件怎么来的。后来才发现 U-Boot &lt;a href=&#34;https://docs.u-boot.org/en/latest/board/rockchip/rockchip.html&#34;&gt;文档&lt;/a&gt;中写得清楚又明白，连构建步骤都挨个写了，留下感动的泪水。&lt;/p&gt;
+&lt;p&gt;这个板子的 rk3568 在构建过程中需要使用到瑞芯微提供的实现私有的 binary 文件，于是仿照有开源实现的 &lt;a href=&#34;https://build.opensuse.org/package/show/devel:ARM:Factory:Contrib:Rockchip/arm-trusted-firmware&#34;&gt;&lt;code&gt;arm-trusted-firmware-rk3399&lt;/code&gt;&lt;/a&gt; 使用 &lt;a href=&#34;https://github.com/rockchip-linux/rkbin&#34;&gt;rockchip-linux/rkbin&lt;/a&gt; 打包了一个 &lt;a href=&#34;https://build.opensuse.org/package/show/home:zzndb001:rk3568/arm-private-firmware-rk3568&#34;&gt;&lt;code&gt;arm-private-firmware-rk3568&lt;/code&gt;&lt;/a&gt; 来提供构建过程中需要用到的 &lt;code&gt;bl31.elf&lt;/code&gt; 。这里直接使用三方二进制打包决定了在有开源实现之前，我整的这些东西是只有在自己分支项目玩玩儿了。&lt;/p&gt;
+&lt;p&gt;参照其他瑞芯微板子修改 u-boot.spec 添加 &lt;code&gt;rock-3a-rk3568&lt;/code&gt; 相关配置，为了后续使用 Btrfs 还修改了下上游 defconfig 加上默认 Btrfs 构建参数。&lt;/p&gt;
+&lt;p&gt;目前与大蜥蜴上游项目的差异&lt;a href=&#34;https://build.opensuse.org/package/rdiff/home:zzndb001:rk3568/u-boot?opackage=u-boot&amp;amp;oproject=hardware%3Aboot&amp;amp;rev=37&#34;&gt;参见这里&lt;/a&gt;。(还有一些为了实现直接固态启动的构建参数修改尝试，以及后续为了使用板子自带 PWM 风扇接口启用了对应的接口的修改，不过这些都是后话了)&lt;/p&gt;
+&lt;h2 id=&#34;打包-jeos-镜像&#34;&gt;打包 JeOS 镜像&lt;/h2&gt;
+&lt;p&gt;同样是基于大蜥蜴&lt;a href=&#34;https://build.opensuse.org/package/show/openSUSE:Factory:ARM/JeOS&#34;&gt;上游 JeOS 包&lt;/a&gt;，参照已有的瑞芯微板子创建修改所需 KIWI 配置文件，&lt;a href=&#34;https://build.opensuse.org/package/rdiff/home:zzndb001:rk3568/JeOS?opackage=JeOS&amp;amp;oproject=openSUSE%3AFactory%3AARM&amp;amp;rev=20&#34;&gt;与大蜥蜴上游差异&lt;/a&gt;。&lt;/p&gt;
+&lt;p&gt;在配置文件中有两种启动方式&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;配置 U-Boot 启动 GRUB2，再由 GRUB2 启动系统&lt;/li&gt;
+&lt;li&gt;配置 U-Boot 直接加载，启动系统&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;两种方式区别是 U-Boot 在前面启动分区（&lt;a href=&#34;https://opensource.rock-chips.com/wiki_Boot_option&#34;&gt;启动流程&lt;/a&gt; boot.img 位置）读取的文件不同，U-Boot 会按照一定顺序去几个特定位置读取特定文件。这两种我试过都是可以的，目前仓库的可以通过两种方式启动，不过使用 boot.scr 的优先级高一些，会使用配置的这个启动脚本加载相关文件然后启动系统，当然也可以启动阶段任意键终止，在 U-Boot 终端使用 &lt;code&gt;bootefi&lt;/code&gt; 启动 GRUB2&lt;/p&gt;
+&lt;p&gt;前面说到无法直接从固态启动的问题就是，我没找到配置能在使用自带 SPI flash 的时候默认启用板子的 PCI，然后就会识别不到 NVMe 设备然后报错，后面通过使用其他设备如 micro sdcard 上同样的 U-Boot 进入就能够启用并正常进入在 NVMe 上的系统。&lt;/p&gt;
+&lt;h2 id=&#34;刷入镜像&#34;&gt;刷入镜像&lt;/h2&gt;
+&lt;p&gt;如果使用 micro sdcard 或者 emmc module 的 MMC 设备可以直接正常 dd 写入镜像然后使用，可参见&lt;a href=&#34;https://en.opensuse.org/Category:ARM_devices&#34;&gt;大蜥蜴任意 Arm 板子维基&lt;/a&gt;写入 JeOS 镜像部分，或者使用类似下面的命令，写入对应具体介质的 &lt;code&gt;/dev/mmcblk0&lt;/code&gt; 设备&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;xzcat /path/to/image.raw.xz | sudo dd bs&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;4M of&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;/dev/mmcblk0 iflag&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;fullblock oflag&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;direct status&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;progress; sync
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;但是想要使用 NVMe 设备，需要额外的 micro sdcard 或者 emmc module，并在其中写入镜像并启动进入，在系统中向 NVMe 设备再次写入镜像，因为镜像的启动配置中 NVMe 设备优先级比 MMC 设备高（bootdevs=&amp;ldquo;nvme mmc&amp;rdquo;），所以后续会直接使用 NVMe 设备中的系统。&lt;/p&gt;
+&lt;h2 id=&#34;一些问题&#34;&gt;一些问题&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;有线网卡无法直接使用，在&lt;a href=&#34;https://lore.kernel.org/lkml/CANAwSgTLL3nJ5pUuaFpKe8tc6oVREo_WOJ+_Q3kO3OmgPTa0Bw@mail.gmail.com/#r&#34;&gt;这里&lt;/a&gt;找到补丁，于是再次自己从大蜥蜴上游拉了 &lt;a href=&#34;https://build.opensuse.org/package/show/home:zzndb001:rk3568/kernel-source&#34;&gt;kernel-source&lt;/a&gt; 自己打了补丁，截止到写这篇文章还没合入主线&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;由于上面地址没直接给出补丁，这里给下补丁内容：&lt;/summary&gt;
+&lt;div class=&#34;details&#34;&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-patch&#34; data-lang=&#34;patch&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;diff --git a/arch/arm64/boot/dts/rockchip/rk3568-rock-3a.dts b/arch/arm64/boot/dts/rockchip/rk3568-rock-3a.dts
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;index e05ab11..a872184 100644
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;--- a/arch/arm64/boot/dts/rockchip/rk3568-rock-3a.dts
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;+++ b/arch/arm64/boot/dts/rockchip/rk3568-rock-3a.dts
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;@@ -583,7 +583,7 @@ &amp;amp;i2s2_2ch {
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt; &amp;amp;mdio1 {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    rgmii_phy1: ethernet-phy@0 {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;-		compatible = &amp;#34;ethernet-phy-ieee802.3-c22&amp;#34;;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;+        compatible = &amp;#34;ethernet-phy-id001c.c916&amp;#34;, &amp;#34;ethernet-phy-ieee802.3-c22&amp;#34;;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;&lt;/span&gt;        reg = &amp;lt;0x0&amp;gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        pinctrl-names = &amp;#34;default&amp;#34;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        pinctrl-0 = &amp;lt;&amp;amp;eth_phy_rst&amp;gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;/details&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;最后&#34;&gt;最后&lt;/h2&gt;
+&lt;p&gt;虽然前面出现过，但项目在&lt;a href=&#34;https://build.opensuse.org/project/show/home:zzndb001:rk3568&#34;&gt;这里&lt;/a&gt;，如果有人有需要也可以直接用里面 JeOS-rock3a 构建出的镜像文件&lt;/p&gt;
+&lt;p&gt;不过入坑这板子，还用大蜥蜴的估计就我了. :)&lt;/p&gt;
+&lt;p&gt;等我折腾出来了直接从固态启动，应该会更新个非流水帐的续集。&lt;/p&gt;
+zzndb&#39;s world - https://blog.zzndb.me/posts/how_i_run_opensuse_on_radxa_rock_3a/</description>
+        </item>
     
     
     
